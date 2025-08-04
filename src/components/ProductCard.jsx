@@ -32,7 +32,7 @@ export default function ProductCard({
     : 0;
 
   return (
-    <Card className="group relative w-full max-w-sm overflow-hidden rounded-xl border-0 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 pt-0">
+    <Card className="group relative w-full max-w-sm overflow-hidden rounded-xl border-0 shadow-sm. transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 pt-0">
       {/* Product Image */}
       <div className="relative h-56 overflow-hidden bg-gray-100">
         <Image

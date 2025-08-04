@@ -1,6 +1,8 @@
 import { Inter } from 'next/font/google'
 import "./globals.css";
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import SupportButtons from '@/components/SupportButtons';
 
 
 export const metadata = {
@@ -14,10 +16,12 @@ export default function RootLayout({ children }) {
       <body
         className={``}
       >
-       <div className='hidden lg:block'>
-           <Header/>
-       </div>
-        {children}
+       <Header/>
+         <div className=''>{children}</div>
+        <div>
+          <Footer/>
+        </div>
+        <SupportButtons/>
       </body>
     </html>
   );

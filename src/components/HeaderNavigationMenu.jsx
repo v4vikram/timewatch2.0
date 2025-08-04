@@ -2,7 +2,16 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react";
+import {
+  CircleCheckIcon,
+  CircleHelpIcon,
+  CircleIcon,
+  Car,
+  MapPin,
+  Lock,
+  Clock,
+  ChevronRight, Dumbbell, Users, ShieldCheck
+} from "lucide-react";
 
 import {
   NavigationMenu,
@@ -13,6 +22,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const components = [
   {
@@ -52,100 +62,286 @@ const components = [
   },
 ];
 
+
+
+const menuItems = [
+  {
+    label: "Home",
+    href: "/",
+    type: "link",
+  },
+  {
+    label: "Solutions",
+    type: "tabs",
+    tabs: [
+      {
+        value: "attendance-management",
+        label: "Attendance Management",
+        icon: Clock,
+        links: [
+          {
+            label: "Office & Field Attendance",
+            href: "/attendance-management/office-field-attendance",
+          },
+          {
+            label: "Mobile App with Geo-fencing",
+            href: "/attendance-management/mobile-app-geo-fencing",
+          },
+          {
+            label: "Shift & Payroll Integration",
+            href: "/attendance-management/shift-payroll-integration",
+          },
+        ],
+      },
+      {
+        value: "visitor-parking-management",
+        label: "Visitor & Parking Management",
+        icon: Car,
+        links: [
+          {
+            label: "QR Code Based Visitor Access",
+            href: "/visitor-parking/qr-code-visitor-access",
+          },
+          {
+            label: "Vehicle Entry Logs",
+            href: "/visitor-parking/vehicle-entry-logs",
+          },
+          {
+            label: "Contractor / Vendor Management",
+            href: "/visitor-parking/contractor-vendor-management",
+          },
+        ],
+      },
+      {
+        value: "gym-facility-access",
+        label: "Gym & Facility Access",
+        icon: Dumbbell,
+        links: [
+          {
+            label: "Member Check-in Integration",
+            href: "/gym-facility/member-check-in",
+          },
+          {
+            label: "Biometric Gate Control",
+            href: "/gym-facility/biometric-gate-control",
+          },
+        ],
+      },
+      {
+        value: "workforce-hrms",
+        label: "Workforce HRMS",
+        icon: Users,
+        links: [
+          {
+            label: "Cloud HRMS Platform",
+            href: "/hrms/cloud-platform",
+          },
+          {
+            label: "Leave & Payroll Management",
+            href: "/hrms/leave-payroll",
+          },
+          {
+            label: "Timesheet & Appraisals",
+            href: "/hrms/timesheet-appraisals",
+          },
+        ],
+      },
+      {
+        value: "security-management",
+        label: "Security Management",
+        icon: ShieldCheck,
+        links: [
+          {
+            label: "DFMD (Door Frame Metal Detectors)",
+            href: "/security/dfmd",
+          },
+          {
+            label: "Handheld Metal Detectors",
+            href: "/security/handheld-metal-detectors",
+          },
+          {
+            label: "X-Ray Baggage Scanners",
+            href: "/security/xray-baggage-scanners",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: "Products",
+    type: "grid",
+    items: components, // your existing products component array
+  },
+  {
+    label: "About",
+    href: "/about",
+    type: "link",
+  },
+  {
+    label: "Downloads",
+    href: "/download",
+    type: "link",
+  },
+  {
+    label: "Blogs",
+    href: "/blog",
+    type: "link",
+  },
+  {
+    label: "Contact",
+    href: "/contact",
+    type: "link",
+  },
+];
+
+
+console.log(menuItems);
 export function HeaderNavigationMenu() {
   return (
     <NavigationMenu viewport={false}>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className={"hover:bg-transparent hover:text-primary"}>
-            <Link href="/docs">Home</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className={"hover:!bg-transparent hover:!text-primary focus:!text-primary"}>Services</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
-                    href="/"
-                  >
-                    <div className="mt-4 mb-2 text-lg font-medium">
-                      shadcn/ui
-                    </div>
-                    <p className="text-muted-foreground text-sm leading-tight">
-                      Beautifully designed components built with Tailwind CSS.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className={"hover:!bg-transparent hover:!text-primary focus:!text-primary"}>Products</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+      <NavigationMenuList className="gap-4">
+        {menuItems.map((item, index) => {
+          const Icon = item.icon;
 
-        <NavigationMenuItem>
-          <NavigationMenuTrigger className={"hover:!bg-transparent hover:!text-primary focus:!text-primary"}>Solutions</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[200px] gap-4">
-              <li>
-                <NavigationMenuLink asChild>
-                  <Link href="#" className="flex-row items-center gap-2">
-                    <CircleHelpIcon />
-                    Backlog
+          if (item.type === "link") {
+            return (
+              <NavigationMenuItem key={index}>
+                <NavigationMenuLink
+                  asChild
+                  className="hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[17px] font-medium !text-secondary flex items-center gap-1"
+                >
+                  <Link href={item.href}>
+                    {Icon && <Icon size={18} />}
+                    {item.label}
                   </Link>
                 </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#" className="flex-row items-center gap-2">
-                    <CircleIcon />
-                    To Do
-                  </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link href="#" className="flex-row items-center gap-2">
-                    <CircleCheckIcon />
-                    Done
-                  </Link>
-                </NavigationMenuLink>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className={"hover:!bg-transparent hover:!text-primary focus:!text-primary"}>
-            <Link href="/About">About</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuLink asChild className={"hover:!bg-transparent hover:!text-primary focus:!text-primary"}>
-            <Link href="/contact">Contact</Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
+              </NavigationMenuItem>
+            );
+          }
+
+          if (item.type === "tabs") {
+            return (
+              <NavigationMenuItem key={index}>
+                <NavigationMenuTrigger className="hover:!bg-transparent hover:!text-primary focus:!text-primary text-[17px] font-medium !text-secondary flex items-center gap-1">
+                  {Icon && <Icon size={18} />}
+                  {item.label}
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className={"border border-primary"}>
+                  <Tabs
+                    defaultValue={item.tabs[0]?.value}
+                    // orientation="horizontical"
+                    className="flex flex-row w-full min-h-[200px] overflow-hidden space-x-4"
+                  >
+                    <TabsList className="flex flex-col space-y-2 border-r pr-2 shadow-none justify-start bg-transparent border-none border">
+                      {item.tabs.map((tab, index) => {
+                        const TabIcon = tab.icon;
+                        return (
+                          <TabsTrigger
+                            key={index}
+                            value={tab.value}
+                            className="gap-2 text-left mr-auto !shadow-none bg-secondary/10 data-[state=active]:bg-primary/80 data-[state=active]:text-white min-w-[230px] justify-start cursor-pointer border border-l-2 py-3 "
+                          >
+                            {TabIcon && (
+                              <TabIcon size={16} className="text-inherit" />
+                            )}
+                            {tab.label}
+                          </TabsTrigger>
+                        );
+                      })}
+                    </TabsList>
+                     {/* <hr className="h-[1000px] block w-[1px] bg-primary !mr-0"/> */}
+
+                    {item.tabs.map((tab, index) => (
+                      <div className="flex !m-0">
+                       
+                        <TabsContent
+                          key={index}
+                          value={tab.value}
+                          className="w-full"
+                        >
+                          <ul className="space-y-4 min-w-[190px]">
+                            {tab.links.map((link) => (
+                              <li key={link.href}>
+                                <Link
+                                  href={link.href}
+                                  className="flex items-center text-sm hover:text-primary group"
+                                >
+                                  <span className="relative flex items-center">
+                                    {/* Hidden by default, visible and moves right on hover */}
+                                    <ChevronRight
+                                      size={16}
+                                      className="absolute left-[-20px] opacity-0 transition-all duration-300 group-hover:left-0 group-hover:opacity-100 text-primary"
+                                    />
+                                    {/* Add left margin so text doesn't overlap hidden icon */}
+                                    <span className="pl-5">{link.label}</span>
+                                  </span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </TabsContent>
+                      </div>
+                    ))}
+                  </Tabs>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            );
+          }
+
+          if (item.type === "grid") {
+            return (
+              <NavigationMenuItem key={index}>
+                <NavigationMenuTrigger className="hover:!bg-transparent hover:!text-primary focus:!text-primary text-[17px] font-medium !text-secondary flex items-center gap-1">
+                  {Icon && <Icon size={18} />}
+                  {item.label}
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                    {item.items.map((component) => (
+                      <ListItem
+                        key={component.title}
+                        title={component.title}
+                        href={component.href}
+                      >
+                        {component.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            );
+          }
+
+          if (item.type === "custom") {
+            return (
+              <NavigationMenuItem key={index}>
+                <NavigationMenuTrigger className="hover:!bg-transparent hover:!text-primary focus:!text-primary text-[17px] font-medium !text-secondary flex items-center gap-1">
+                  {Icon && <Icon size={18} />}
+                  {item.label}
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[200px] gap-4">
+                    <li className="space-y-2">
+                      {item.items.map((link, i) => (
+                        <NavigationMenuLink key={i} asChild>
+                          <Link
+                            href={link.href}
+                            className="flex items-center gap-2 text-sm text-muted-foreground"
+                          >
+                            {link.icon && <link.icon size={16} />}
+                            {link.label}
+                          </Link>
+                        </NavigationMenuLink>
+                      ))}
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            );
+          }
+
+          return null;
+        })}
       </NavigationMenuList>
     </NavigationMenu>
   );
