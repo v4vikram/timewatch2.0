@@ -34,7 +34,7 @@ export function SearchBar() {
   }, []);
 
   const handleSelect = (product) => {
-    const url = `/market-place/${product.categoryName}/${product.subCategoryName}/${product.productName}`;
+    const url = `/products/${product.categoryName}/${product.subCategoryName}/${product.productName}`;
     router.push(url);
     setOpen(false);
   };

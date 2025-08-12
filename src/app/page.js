@@ -32,6 +32,7 @@ import {
 } from 'lucide-react';
 import HeroSection from "@/components/HeroSection";
 import HomePageForm from "@/components/HomePageForm";
+import FeaturedProducts from "@/components/products/FeaturedProducts";
 
 
 export const dynamic = 'auto'; // optional; ISR will still work
@@ -59,6 +60,12 @@ async function getFeaturedProducts() {
 
 export default async function HomePage() {
   const products = await getFeaturedProducts();
+  console.log(products)
+
+  let publishedProducts = products.filter((item) => item?.status == "published");
+
+
+
 
 
   return (
@@ -66,10 +73,19 @@ export default async function HomePage() {
       {/* <section>
         <BannerSwiper />
       </section> */}
-    <HeroSection/>
+      <div className="relative overflow-hidden">
+        {/* <div className="absolute">
+          <div className="w-screen h-[700px] relative">
+            <Image src={'/images/home-hero-bg.jpg'} fill alt="banner" title="banner" className="opacity-20 z-0 w-full h-full object-cover" />
+          </div>
+        </div> */}
 
+
+        <HeroSection />
+      </div>
+          {/* <FeaturedProducts/> */}
       {/* features products */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white" >
         <div className="container mx-auto px-4">
           {/* Section Header */}
           <div className="text-center mb-12">
@@ -86,137 +102,144 @@ export default async function HomePage() {
 
           {/* Products Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {products?.map((item) => (
-              <ProductCard
-                key={item?._id}
-                name={item?.productName || 'Product Title'}
-                price="129.99"
-                originalPrice="199.99"
-                image={`${process.env.NEXT_PUBLIC_BASE_URL}/${item?.productImage}`}
-                rating={4.5}
-                reviewCount={128}
-                badge="Best Seller"
-                description={item?.description || 'Product description goes here.'}
-              />
-            ))}
+            {
+              publishedProducts?.length > 0 ? (
+                publishedProducts?.map((item) => (
+                  <ProductCard
+                    key={item?._id}
+                    name={item?.productName || 'Product Title'}
+                    price="129.99"
+                    originalPrice="199.99"
+                    image={item?.productImage}
+                    rating={4.5}
+                    reviewCount={128}
+                    badge="Best Seller"
+                    description={item?.description || 'Product description goes here.'}
+                    categoryName={item?.categoryName || 'Category'}
+                    subCategoryName={item?.subCategoryName || 'Subcategory'}
+                  />
+                ))
+              ) : (<p className="text-gray-500 text-center col-span-12">Products in draft or not found</p>)
+            }
+
           </div>
         </div>
       </section>
 
-        {/* Benefits Section */}
-            <section id="benefits" className="py-20 bg-white">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
-                  <div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#6d6f72] mb-6">
-                      Why Choose <span className="text-primary">Time</span><span className="text-secondary">Watch</span>?
-                    </h2>
-                    <p className="text-xl text-gray-600 mb-8">
-                      Transform your workforce management with our cutting-edge
-                      solutions
-                    </p>
-      
-                    <div className="space-y-6">
-                      {[
-                        {
-                          icon: TrendingUp,
-                          title: "Increase Productivity",
-                          description:
-                            "Reduce time theft and improve workforce efficiency by up to 35%",
-                        },
-                        {
-                          icon: Shield,
-                          title: "Enhanced Security",
-                          description:
-                            "Eliminate buddy punching and unauthorized access with biometric authentication",
-                        },
-                        {
-                          icon: Zap,
-                          title: "Streamlined Operations",
-                          description:
-                            "Automate attendance tracking and integrate seamlessly with existing systems",
-                        },
-                        {
-                          icon: Target,
-                          title: "Accurate Reporting",
-                          description:
-                            "Generate precise reports for payroll, compliance, and performance analysis",
-                        },
-                      ].map((benefit, index) => (
-                        <div key={index} className="flex items-start space-x-4">
-                          <div className="w-12 h-12 bg-[#d63438]/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <benefit.icon className="w-6 h-6 text-[#d63438]" />
-                          </div>
-                          <div>
-                            <h3 className="text-lg font-semibold text-[#6d6f72] mb-2">
-                              {benefit.title}
-                            </h3>
-                            <p className="text-gray-600">{benefit.description}</p>
-                          </div>
-                        </div>
-                      ))}
+      {/* Benefits Section */}
+      <section id="benefits" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#6d6f72] mb-6">
+                Why Choose <span className="text-primary">Time</span><span className="text-secondary">Watch</span>?
+              </h2>
+              <p className="text-xl text-gray-600 mb-8">
+                Transform your workforce management with our cutting-edge
+                solutions
+              </p>
+
+              <div className="space-y-6">
+                {[
+                  {
+                    icon: TrendingUp,
+                    title: "Increase Productivity",
+                    description:
+                      "Reduce time theft and improve workforce efficiency by up to 35%",
+                  },
+                  {
+                    icon: Shield,
+                    title: "Enhanced Security",
+                    description:
+                      "Eliminate buddy punching and unauthorized access with biometric authentication",
+                  },
+                  {
+                    icon: Zap,
+                    title: "Streamlined Operations",
+                    description:
+                      "Automate attendance tracking and integrate seamlessly with existing systems",
+                  },
+                  {
+                    icon: Target,
+                    title: "Accurate Reporting",
+                    description:
+                      "Generate precise reports for payroll, compliance, and performance analysis",
+                  },
+                ].map((benefit, index) => (
+                  <div key={index} className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-[#d63438]/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <benefit.icon className="w-6 h-6 text-[#d63438]" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-[#6d6f72] mb-2">
+                        {benefit.title}
+                      </h3>
+                      <p className="text-gray-600">{benefit.description}</p>
                     </div>
                   </div>
-      
-                  <div className="relative">
-                    <div className="bg-gradient-to-br from-[#d63438]/10 to-[#6d6f72]/10 rounded-3xl p-8">
-                      <div className="bg-white rounded-2xl shadow-xl p-6">
-                        <div className="flex items-center justify-between mb-6">
-                          <h3 className="text-lg font-semibold text-[#6d6f72]">
-                            Live Dashboard
-                          </h3>
-                          <div className="flex items-center space-x-2 text-green-600">
-                            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                            <span className="text-sm">Live</span>
-                          </div>
-                        </div>
-      
-                        <div className="grid grid-cols-2 gap-4 mb-6">
-                          <div className="bg-green-50 p-4 rounded-xl">
-                            <div className="text-2xl font-bold text-green-600">
-                              847
-                            </div>
-                            <div className="text-sm text-green-800">
-                              Present Today
-                            </div>
-                          </div>
-                          <div className="bg-blue-50 p-4 rounded-xl">
-                            <div className="text-2xl font-bold text-blue-600">23</div>
-                            <div className="text-sm text-blue-800">On Leave</div>
-                          </div>
-                          <div className="bg-orange-50 p-4 rounded-xl">
-                            <div className="text-2xl font-bold text-orange-600">
-                              12
-                            </div>
-                            <div className="text-sm text-orange-800">
-                              Late Arrivals
-                            </div>
-                          </div>
-                          <div className="bg-purple-50 p-4 rounded-xl">
-                            <div className="text-2xl font-bold text-purple-600">
-                              98.5%
-                            </div>
-                            <div className="text-sm text-purple-800">
-                              Attendance Rate
-                            </div>
-                          </div>
-                        </div>
-      
-                        <div className="h-32 bg-gradient-to-r from-[#d63438]/20 to-[#6d6f72]/20 rounded-xl flex items-end justify-center space-x-2 p-4">
-                          {[40, 65, 45, 80, 55, 75, 60].map((height, index) => (
-                            <div
-                              key={index}
-                              className="bg-[#d63438] rounded-t"
-                              style={{ height: `${height}%`, width: "12px" }}
-                            ></div>
-                          ))}
-                        </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="bg-gradient-to-br from-[#d63438]/10 to-[#6d6f72]/10 rounded-3xl p-8">
+                <div className="bg-white rounded-2xl shadow-xl p-6">
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="text-lg font-semibold text-[#6d6f72]">
+                      Live Dashboard
+                    </h3>
+                    <div className="flex items-center space-x-2 text-green-600">
+                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                      <span className="text-sm">Live</span>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="bg-green-50 p-4 rounded-xl">
+                      <div className="text-2xl font-bold text-green-600">
+                        847
+                      </div>
+                      <div className="text-sm text-green-800">
+                        Present Today
+                      </div>
+                    </div>
+                    <div className="bg-blue-50 p-4 rounded-xl">
+                      <div className="text-2xl font-bold text-blue-600">23</div>
+                      <div className="text-sm text-blue-800">On Leave</div>
+                    </div>
+                    <div className="bg-orange-50 p-4 rounded-xl">
+                      <div className="text-2xl font-bold text-orange-600">
+                        12
+                      </div>
+                      <div className="text-sm text-orange-800">
+                        Late Arrivals
+                      </div>
+                    </div>
+                    <div className="bg-purple-50 p-4 rounded-xl">
+                      <div className="text-2xl font-bold text-purple-600">
+                        98.5%
+                      </div>
+                      <div className="text-sm text-purple-800">
+                        Attendance Rate
                       </div>
                     </div>
                   </div>
+
+                  <div className="h-32 bg-gradient-to-r from-[#d63438]/20 to-[#6d6f72]/20 rounded-xl flex items-end justify-center space-x-2 p-4">
+                    {[40, 65, 45, 80, 55, 75, 60].map((height, index) => (
+                      <div
+                        key={index}
+                        className="bg-[#d63438] rounded-t"
+                        style={{ height: `${height}%`, width: "12px" }}
+                      ></div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </section>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* get catalouge section */}
       {/* <section>
@@ -427,7 +450,7 @@ export default async function HomePage() {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {"Ready to revolutionize your workforce management? Let's talk!"}
-              
+
             </p>
           </div>
 
@@ -445,7 +468,7 @@ export default async function HomePage() {
               </div>
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-[#d63438]/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Headset  className="w-6 h-6 text-[#d63438]" />
+                  <Headset className="w-6 h-6 text-[#d63438]" />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-[#6d6f72] mb-2">Sales & Technical</h3>
@@ -477,7 +500,7 @@ export default async function HomePage() {
             </div>
 
             <div className="bg-gray-50 rounded-2xl p-8">
-            <HomePageForm/>
+              <HomePageForm />
             </div>
           </div>
         </div>
@@ -485,6 +508,6 @@ export default async function HomePage() {
 
 
     </main>
-    
+
   );
 }

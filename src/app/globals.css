@@ -153,3 +153,20 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 .sub-link:hover > .menu-right-icon{
   @apply opacity-100
 }
+.privacy-policy-page{
+  ul{
+    @apply list-disc pl-5 mt-2;
+  }
+  li{
+    @apply mb-3;
+  }
+  h1{
+    @apply text-2xl font-bold mb-4;
+  }
+  h2{
+    @apply text-2xl font-bold;
+  }
+  h3{
+    @apply text-xl font-bold mt-4;
+  }
+}

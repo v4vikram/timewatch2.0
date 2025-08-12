@@ -5,11 +5,21 @@ const nextConfig = {
       {
         protocol: 'http',
         hostname: 'localhost',
-        port: '3001', 
+        port: '3001',
         pathname: '/**',
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/backend/:path*',
+        destination: 'http://localhost:3001/api/:path*',
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
+
+

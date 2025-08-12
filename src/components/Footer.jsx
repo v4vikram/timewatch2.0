@@ -6,6 +6,8 @@ import {
   Twitter,
   Youtube,
   Linkedin,
+  Mail,
+  Phone,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -37,6 +39,21 @@ const socialLinks = [
     icon: Linkedin,
   },
 ];
+const quickLinks = [
+  { label: "About Us", href: "/about" },
+  { label: "Careers", href: "/careers" },
+  { label: "Download", href: "/download" },
+  { label: "Contact", href: "/contact" },
+];
+const footerLinks = [
+  // { label: "About Us", href: "/about" },
+  // { label: "Careers", href: "/careers" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms & Conditions", href: "/terms-conditions" },
+  { label: "Contact", href: "/contact" },
+  { label: "Disclaimer", href: "/disclaimer" },
+  // { label: "Download", href: "/download" },
+];
 
 const Footer = () => {
   return (
@@ -65,79 +82,66 @@ const Footer = () => {
             </p>
           </div>
 
+       
+
           <div>
-            <h3 className="text-lg font-semibold mb-4">Products</h3>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  TimeWatch Pro
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  TimeWatch Enterprise
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  TimeWatch Cloud
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  HRM Integration
-                </a>
-              </li>
+                  {quickLinks.map(({ label, href }) => (
+                <li key={label}>
+                  <Link
+                    href={href}
+                    className="hover:text-white transition-colors"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Support</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  API Reference
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Help Center
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Training
-                </a>
-              </li>
+              {footerLinks.map(({ label, href }) => (
+                <li key={label}>
+                  <Link
+                    href={href}
+                    className="hover:text-white transition-colors"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+             <div>
+            <h3 className="text-lg font-semibold mb-4">CONTACT DETAILS</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  About Us
+              <li className="flex flex-col leading-[20px]">
+                <span className="text-white pr-2 font-semibold">
+                  Email:
+                </span>
+                <a href="mailto:sales@timewatchindia.com" className="hover:text-white transition-colors">
+                    sales@timewatchindia.com
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Careers
+              <li className="flex flex-col leading-[20px]">
+                <span className="text-white pr-2 font-semibold">Phone:</span>
+                <a href="tel:+91-95999 53923" className="hover:text-white transition-colors">
+                   +91-95999 53923
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:text-white transition-colors">
-                  Privacy Policy
+              <li className="flex flex-col leading-[20px]">
+                <span className="text-white pr-2 font-semibold">Sales & Technical:</span>
+                <a href="tel:011-4191-6615" className="hover:text-white transition-colors">
+                  011-4191-6615
                 </a>
               </li>
-              <li>
+              <li className="flex flex-col leading-[20px]">
+                <span className="text-white pr-2 font-semibold">Address:</span>
                 <a href="#" className="hover:text-white transition-colors">
-                  Terms of Service
+                 D-162, Okhla Phase - I New Delhi - 110020
                 </a>
               </li>
             </ul>

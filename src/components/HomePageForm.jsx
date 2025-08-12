@@ -10,7 +10,7 @@ const validationSchema = Yup.object({
     .required("Phone is required")
     .matches(/^[0-9]{10}$/, "Phone must be 10 digits"),
   email: Yup.string().email("Invalid email"),
-  company: Yup.string(),
+  location: Yup.string(),
   message: Yup.string(),
 });
 
@@ -19,7 +19,7 @@ const HomePageForm = () => {
     name: "",
     phone: "",
     email: "",
-    company: "",
+    location: "",
     message: "",
   };
 
@@ -89,12 +89,12 @@ const HomePageForm = () => {
 
         <div>
           <label className="block text-sm font-medium text-[#6d6f72] mb-2">
-            Company
+            Location
           </label>
           <Field
             type="text"
-            name="company"
-            placeholder="Your Company"
+            name="location"
+            placeholder="Your Location"
             className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#d63438] focus:border-transparent outline-none transition-all"
           />
         </div>

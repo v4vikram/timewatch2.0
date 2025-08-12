@@ -7,7 +7,6 @@ import ProductFilter from "@/components/ProductFilter";
 import { products } from "@/data/products";
 import FilterContent from "@/components/FilterContent";
 import seoFriendlySlug from "@/lib/seoFriendlySlug";
-import { Button } from "@/components/ui/button";
 
 const productCategories = [
   {
@@ -75,7 +74,7 @@ const productCategories = [
 ];
 
 export default function CatLayout({ children }) {
-  const [cat, setCat] = useState("");
+  const [cat, setCat] = useState("time-attendance-and-access-control");
   const [subCat, setSubCat] = useState("");
   const [filterProducts, setFilterProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -84,54 +83,53 @@ export default function CatLayout({ children }) {
   const paramKeys = Object.keys(params);
   const slug = paramKeys.find((p) => p === "slug");
 
-
-  // reset filter
-  const handleResetFilter = () => {
-    setSearchQuery("");
-    setCat("time-attendance-and-access-control");
-  };
-
-  const getAllProducts = () => {
-    return products.flatMap((pro) =>
-      pro.subCategories?.flatMap((subCat) => subCat.products || [])
-    );
-  };
-
-  // when page load then show all products
-  console.log(cat, subCat);
   useEffect(() => {
-    // setCat(null)
-    // setSubCat(null);
-    if (!cat && !subCat) {
-      console.log("Loading all products");
-      setFilterProducts(getAllProducts());
-    }
+    if (params?.cat) setCat(params.cat);
+    if (params?.subCat) setSubCat(params.subCat);
   }, [params]);
 
-  // when category or subcategory changes then filter products
+  // ✅ Reset search when subcategory changes
   useEffect(() => {
-    const filterCat = products.find(
-      (pro) => seoFriendlySlug(pro.categoryName) === cat
+    setSearchQuery("");
+  }, [subCat]);
+
+  useEffect(() => {
+    const category = products.find(
+      (item) => seoFriendlySlug(item.categoryName) === cat
     );
 
-    const filterProducts = filterCat?.subCategories
-      ?.filter((subcat) => {
-        return seoFriendlySlug(subcat.subCategoryName) === subCat;
-      })
-      .flatMap((subcat) => subcat.products || []);
+    if (!category) return;
 
     if (subCat) {
-      setFilterProducts(filterProducts);
+      const subCategory = category.subCategories.find(
+        (sub) => seoFriendlySlug(sub.subCategoryName) === subCat
+      );
+      setFilterProducts(subCategory?.products || []);
+    } else {
+      const allProducts = category.subCategories.flatMap(
+        (sub) => sub.products || []
+      );
+      console.log("allProducts", allProducts);
+      setFilterProducts(allProducts);
     }
-  }, [subCat]);
+  }, [cat, subCat]);
+
+  const filteredResults = useMemo(() => {
+
+    if (!searchQuery.trim()) return filterProducts;
+
+    return filterProducts.filter((product) =>
+      product.productName.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [searchQuery, filterProducts]);
+  console.log("filteredResults", filteredResults);
 
   if (slug) {
     return <div className="">{children}</div>;
   } else {
     return (
-      <div className="pt-10 bg-gray-50/50">
-        <div className="container">
-           <div className="flex gap-8">
+      <div className="container mt-10">
+        <div className="flex gap-8">
           {/* Left Sidebar */}
           <div>
             <ProductFilter
@@ -146,22 +144,19 @@ export default function CatLayout({ children }) {
           {/* Right Content */}
           <div className="flex-1 space-y-4">
             {/* Search bar */}
-            {/* <div className="flex justify-end">
-              <Button onClick={handleResetFilter}>Reset</Button>
+            <div className="flex justify-end">
               <Input
                 placeholder="Search products..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="max-w-[260px]"
               />
-            </div> */}
+            </div>
 
             {/* Products */}
-            <FilterContent filterProducts={filterProducts} />
+            <FilterContent filterProducts={filteredResults} />
           </div>
         </div>
-        </div>
-       
       </div>
     );
   }

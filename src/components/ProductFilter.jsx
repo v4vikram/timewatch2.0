@@ -16,22 +16,33 @@ const ProductFilter = ({
   subCat,
   setCat,
   setSubCat,
-  setIsSubCatClick
+  setIsSubCatClick,
 }) => {
   return (
-    <div className="w-full max-w-sm bg-white rounded-xl border p-4 shadow-sm space-y-2">
+    <div className="w-full max-w-sm bg-white rounded-xl border border-primary/20 p-4 shadow-sm space-y-2">
       <Accordion type="multiple" className="w-full">
         {productCategories.map((category, idx) => (
-          <AccordionItem value={`item-${idx}`} key={idx}>
-            <AccordionTrigger className="text-sm font-semibold capitalize">
-              <Link
+          <AccordionItem
+            value={`item-${idx}`}
+            key={idx}
+            className={"border-b border-primary/20"}
+          >
+            <AccordionTrigger
+              className="text-sm font-semibold capitalize hover:!no-underline hover:!outline-none pb-2 cursor-pointer"
+              onClick={() => {
+                setCat(seoFriendlySlug(category?.categoryName));
+              }}
+            >
+              {category.categoryName}
+              {/* <Link
                 href={`/products/${seoFriendlySlug(category?.categoryName)}`}
                 onClick={() => {
                   setCat(seoFriendlySlug(category?.categoryName))
                 }}
+                className=""
               >
                 {category.categoryName}
-              </Link>
+              </Link> */}
             </AccordionTrigger>
             <AccordionContent className="pl-4">
               <ul className="space-y-1">
@@ -41,7 +52,7 @@ const ProductFilter = ({
                     href={`/products/${seoFriendlySlug(
                       category?.categoryName
                     )}/${seoFriendlySlug(sub)}`}
-                    className="block"
+                    className="block text-[14px] font-medium hover:text-primary"
                     onClick={() => setSubCat(seoFriendlySlug(sub))}
                   >
                     {sub}

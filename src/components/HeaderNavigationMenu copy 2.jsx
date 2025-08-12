@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 
 import {
@@ -21,7 +21,6 @@ import axiosInstance from "@/lib/axiosInstance";
 import seoFriendlySlug from "@/lib/seoFriendlySlug";
 
 export function HeaderNavigationMenu() {
-  const [activeTab, setActiveTab] = useState(products[0]?.categoryName);
   return (
     <NavigationMenu viewport={false}>
       <NavigationMenuList className="gap-4">
@@ -36,72 +35,70 @@ export function HeaderNavigationMenu() {
         <NavigationMenuItem>
           <NavigationMenuTrigger className="hover:!bg-transparent hover:!text-primary focus:!text-primary text-[17px] font-medium !text-secondary flex items-center gap-1">
             {/* {Icon && <Icon size={18} />} */}
-            <Link href={"/products"}>Products</Link>
+            <Link href={"/products"}>
+            Products
+            </Link>
           </NavigationMenuTrigger>
           <NavigationMenuContent
-            className={
-              "container border border-gray-100 bg-gray-50 !shadow-none left-[50%] translate-x-[-47.7%] !w-[98vw]"
-            }
+            className={"border border-primary !w-[98vw] -translate-x-[44.95%] left-1/2."}
           >
             <Tabs
-              value={activeTab}
-              onValueChange={setActiveTab}
+              defaultValue={products[0]?.categoryName}
+              // orientation="horizontical"
               className="flex flex-row w-full min-h-[260px] overflow-hidden space-x-4"
             >
               {/* list */}
-              <div className="bg-gray-50 rounded-sm">
-                <TabsList className="flex flex-col space-y-2 border-r pr-2 shadow-none justify-start bg-transparent border-none">
-                  {products?.map((pro, index) => (
+              <TabsList className="flex flex-col space-y-2 border-r pr-2 shadow-none justify-start bg-transparent border-none border">
+                {products?.map((pro, index) => {
+                  // const TabIcon = tab.icon;
+                  // console.log("pro", pro);
+                  return (
                     <TabsTrigger
                       key={index}
                       value={pro.categoryName}
-                      onMouseEnter={() => setActiveTab(pro.categoryName)} // hover instead of click
-                      className="gap-2 text-left mr-auto !shadow-none bg-transparent 
-              data-[state=active]:bg-primary/80 data-[state=active]:text-white 
-              min-w-[300px] cursor-pointer border border-l-2 py-3 flex items-center justify-between"
+                      className="gap-2 text-left mr-auto !shadow-none bg-secondary/10 data-[state=active]:bg-primary/80 data-[state=active]:text-white min-w-[300px] justify-start cursor-pointer border border-l-2 py-3 "
                     >
-                      {pro.categoryName} {activeTab === pro.categoryName && (<span><ChevronRight/></span>)} 
+                      {/* {TabIcon && (
+                        <TabIcon size={16} className="text-inherit" />
+                      )} */}
+                      {pro.categoryName}
                     </TabsTrigger>
-                  ))}
-                </TabsList>
-              </div>
+                  );
+                })}
+              </TabsList>
 
               {/* content */}
               {products?.map((pro, productIndex) => (
-                <TabsContent
-                  key={productIndex}
-                  value={pro.categoryName}
-                  className="w-full"
-                >
-                  <ul className="space-y-4 flex flex-wrap gap-x-20">
-                    {pro?.subCategories
-                      ?.slice()
-                      ?.sort((a, b) => b.products.length - a.products.length)
-                      .map((subCat, catIndex) => (
-                        <li key={catIndex} className="w-1/6">
+                <div className="flex !m-0" key={productIndex}>
+                  <TabsContent
+                    key={productIndex}
+                    value={pro.categoryName}
+                    className="w-full"
+                  >
+                    <ul className="space-y-4 grid grid-cols-4 gap-4">
+                      {pro?.subCategories?.map((subCat, catIndex) => (
+                        <li key={catIndex}>
                           <span className="text-black font-semibold block mb-1">
                             {subCat.subCategoryName}
                           </span>
 
                           {subCat?.products
-                            ?.slice(0, 10)
+                            ?.slice(0, 3)
                             .map((product, subCatIndex) => (
                               <Link
                                 key={subCatIndex}
-                                href={`/products/${seoFriendlySlug(
-                                  pro.categoryName
-                                )}/${seoFriendlySlug(
-                                  subCat.subCategoryName
-                                )}/${seoFriendlySlug(product.productName)}`}
+                                href={`/products/${seoFriendlySlug(pro.categoryName)}/${seoFriendlySlug(subCat.subCategoryName)}/${seoFriendlySlug(product.productName)}`}
                                 className="block text-[16px] hover:text-primary mb-1"
                               >
+                                {/* {console.log("product", pro)} */}
                                 {product.productName}
                               </Link>
                             ))}
                         </li>
                       ))}
-                  </ul>
-                </TabsContent>
+                    </ul>
+                  </TabsContent>
+                </div>
               ))}
             </Tabs>
           </NavigationMenuContent>
