@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_BK_URL,
+  baseURL: "https://timewatch-dashboard-bk-311005204045.europe-west1.run.app/api",
   // timeout: 10000,
 });
 

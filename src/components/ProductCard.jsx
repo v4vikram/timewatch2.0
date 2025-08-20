@@ -48,7 +48,7 @@ export default function ProductCard({
         {/* {console.log("Image URL:",  image)} */}
         {image !== undefined ? (
           <Image
-            src={`${process.env.NEXT_PUBLIC_BASE_URL}/${image}`}
+            src={image}
             alt={name}
             fill
             sizes="400"

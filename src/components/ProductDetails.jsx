@@ -17,10 +17,10 @@ import {
 import Link from "next/link";
 
 const ProductDetails = ({ product }) => {
-  console.log("Product Details:", product);
+  // console.log("Product Details:", product);
   if (!product) return null;
 
-  console.log("Rendering Product Details for:", product);
+  // console.log("Rendering Product Details for:", product);
 
   return (
     <div className="w-[1300px] mx-auto px-4 py-10">
@@ -30,9 +30,7 @@ const ProductDetails = ({ product }) => {
         <div className="w-[550px]">
           <div className="w-[550px] h-[500px] relative bg-gray-50 rounded-lg">
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_URL}/${
-                product.productImage || "images/demo-product.png"
-              }`}
+              src={`${product.productImage || "images/demo-product.png"}`}
               fill
               sizes="400px"
               alt={product.productName || "Product title"}
@@ -58,9 +56,7 @@ const ProductDetails = ({ product }) => {
                   >
                     <div className="w-[50px] h-[50px] relative">
                       <Image
-                        src={`${process.env.NEXT_PUBLIC_BASE_URL}/${
-                          feature.image || "images/demo-product.png"
-                        }`}
+                        src={`${feature.image || "images/demo-product.png"}`}
                         alt={feature.title}
                         fill
                         sizes="50px"
@@ -79,9 +75,7 @@ const ProductDetails = ({ product }) => {
           <div className="flex gap-2">
             {product?.datasheetFile && (
               <Link
-                href={
-                  process.env.NEXT_PUBLIC_BASE_URL + "/" + product.datasheetFile
-                }
+                href={product.datasheetFile}
                 target="_blank"
                 download
                 className="flex flex-col justify-center w-[10rem] bg-gray-50 rounded-sm p-2 items-center"
@@ -92,11 +86,7 @@ const ProductDetails = ({ product }) => {
             )}
             {product?.connectionDiagramFile && (
               <Link
-                href={
-                  process.env.NEXT_PUBLIC_BASE_URL +
-                  "/" +
-                  product.connectionDiagramFile
-                }
+                href={product.connectionDiagramFile}
                 target="_blank"
                 download
                 className="flex flex-col justify-center w-[10rem] bg-gray-50 rounded-sm p-2 items-center"
@@ -107,11 +97,7 @@ const ProductDetails = ({ product }) => {
             )}
             {product?.userManualFile && (
               <Link
-                href={
-                  process.env.NEXT_PUBLIC_BASE_URL +
-                  "/" +
-                  product.userManualFile
-                }
+                href={product.userManualFile}
                 target="_blank"
                 download
                 className="flex flex-col justify-center w-[10rem] bg-gray-50 rounded-sm p-2 items-center"

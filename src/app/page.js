@@ -45,18 +45,20 @@ export const metadata = {
 
 // ISR: Regenerate every 1 hour (3600 seconds)
 async function getFeaturedProducts() {
-  const res = await axiosInstance.get(`/product`, {
-    next: { revalidate: 3600 }, // ⏳ Revalidates every 1 hour
-  });
-
-  // console.log(res)
-  // return
-  if (!res.ok) {
-    console.log("Network error")
-  };
-
-  return res?.data?.products
+  try {
+    const res = await axiosInstance.get(`/product`);
+    return res.data?.products || [];
+  } catch (error) {
+    if (error.code === "ECONNREFUSED") {
+      console.error("Backend not running or unreachable");
+    } else {
+      console.error("Error fetching products:", error.message);
+    }
+    // return empty array or null so UI doesn't crash
+    return [];
+  }
 }
+
 
 export default async function HomePage() {
   const products = await getFeaturedProducts();
@@ -83,7 +85,7 @@ export default async function HomePage() {
 
         <HeroSection />
       </div>
-          {/* <FeaturedProducts/> */}
+      {/* <FeaturedProducts/> */}
       {/* features products */}
       <section className="py-16 bg-white" >
         <div className="container mx-auto px-4">

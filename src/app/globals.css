@@ -170,3 +170,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     @apply text-xl font-bold mt-4;
   }
 }
+
+.react-tel-input .flag-dropdown, .selected-flag {
+   @apply !rounded-tl-[12px] !rounded-bl-[12px]
+  }
