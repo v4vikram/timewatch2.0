@@ -25,10 +25,16 @@ export function HeaderNavigationMenu() {
   const { products, getFormatedProduct } = useProductStore();
   const [activeTab, setActiveTab] = useState(products[0]?.categoryName);
 
-  console.log("products", products);
   useEffect(() => {
     getFormatedProduct();
   }, []);
+
+  useEffect(() => {
+    if (products.length > 0) {
+      setActiveTab(products[0].categoryName);
+    }
+  }, [products]);
+
   return (
     <NavigationMenu viewport={false}>
       <NavigationMenuList className="gap-4">
