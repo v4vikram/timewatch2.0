@@ -54,7 +54,7 @@ export default function ProductCard({
             alt={name}
             fill
             sizes="400"
-            className="object-contain w-full h-full transition-transform duration-500 group-hover:scale-105 py-8"
+            className="object-contain w-full h-full transition-transform duration-500 group-hover:scale-105 py-0"
           />
         ) : (
           <Image
@@ -62,7 +62,7 @@ export default function ProductCard({
             alt={name}
             fill
             sizes="400"
-            className="object-contain w-full h-full transition-transform duration-500 group-hover:scale-105 py-8"
+            className="object-contain w-full h-full transition-transform duration-500 group-hover:scale-105 py-0"
           />
         )}
 

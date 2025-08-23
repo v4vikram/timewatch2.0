@@ -15,6 +15,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import Link from "next/link";
+import FaqDropdown from "./FaqDropdown";
 
 const ProductDetails = ({ product }) => {
   // console.log("Product Details:", product);
@@ -34,7 +35,7 @@ const ProductDetails = ({ product }) => {
               fill
               sizes="400px"
               alt={product.productName || "Product title"}
-              className="object-contain lg:p-24"
+              className="object-contain lg:p-16"
             />
           </div>
         </div>
@@ -131,9 +132,9 @@ const ProductDetails = ({ product }) => {
       </div>
 
       {/* Tabs Section */}
-      <div className="mt-10">
+      <div className="mt-10 ">
         <h2 className="text-3xl font-bold mb-4">Product Specifications</h2>
-        <Table>
+        <Table className={''}>
           <TableCaption>Product Specifications</TableCaption>
           <TableHeader>
             <TableRow>
@@ -153,6 +154,13 @@ const ProductDetails = ({ product }) => {
           </TableBody>
         </Table>
       </div>
+      
+      {product.productFaq && (
+        <div className="bg-gray-50 p-3 rounded-sm mt-10">
+         <h2 className="text-2xl font-bold mb-0">FAQ</h2>
+          <FaqDropdown productFaq={product.productFaq} />
+        </div>
+      )}
     </div>
   );
 };

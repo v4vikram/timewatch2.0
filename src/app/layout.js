@@ -3,6 +3,13 @@ import "./globals.css";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SupportButtons from '@/components/SupportButtons';
+import { Rajdhani } from "next/font/google";
+
+const rajdhani = Rajdhani({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"], // only the weights you need
+  display: "swap", // ensures fallback font shows first
+});
 
 
 export const metadata = {
@@ -12,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={rajdhani.className}>
       <body
         className={``}
       >

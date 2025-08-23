@@ -28,7 +28,7 @@ const ContactSchema = Yup.object().shape({
   phone: Yup.string()
     .required("Phone number is required")
     .matches(/^[0-9]{10,15}$/, "Enter a valid phone number"),
-  email: Yup.string().email("Enter a valid email").notRequired(),
+  email: Yup.string().email("Enter a valid email").required("Email is required"),
   location: Yup.string().notRequired(),
   message: Yup.string().notRequired(),
 });
@@ -165,14 +165,14 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <div className="inline-flex items-center space-x-2 bg-[#d63438]/10 text-[#d63438] px-4 py-2 rounded-full text-sm font-medium">
+            <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
               <Award className="w-4 h-4" />
               <span>Industry Leading Solution</span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold text-[#6d6f72] leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-primary leading-tight">
               Perfect Presence,
-              <span className="text-[#d63438]"> Perfect Control</span>
+              <span className="text-secondary"> Perfect Control</span>
             </h1>
 
             <p className="text-xl text-gray-600 leading-relaxed">
@@ -183,13 +183,13 @@ const HeroSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <ContactFormDialog>
-                <button className="bg-[#d63438] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#b82c30] transition-all transform hover:scale-105 flex items-center justify-center cursor-pointer space-x-2">
+                <button className="bg-primary text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#b82c30] transition-all transform hover:scale-105 flex items-center justify-center cursor-pointer space-x-2">
                   <span>Get Catalouge</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>
               </ContactFormDialog>
 
-              <button className="border-2 border-[#6d6f72] text-[#6d6f72] px-8 py-4 rounded-xl font-semibold hover:bg-[#6d6f72] hover:text-white transition-all flex items-center justify-center space-x-2">
+              <button className="border-2 border-sectext-secondary text-secondary px-8 py-4 rounded-xl font-semibold hover:bg-sectext-secondary hover:text-white transition-all flex items-center justify-center space-x-2">
                 <Play className="w-5 h-5" />
                 <span>Watch Demo</span>
               </button>
@@ -197,15 +197,15 @@ const HeroSection = () => {
 
             <div className="flex items-center space-x-8 pt-4 justify-center md:justify-start">
               {/* <div className="text-center">
-                <div className="text-2xl font-bold text-[#d63438]">50k+</div>
+                <div className="text-2xl font-bold text-primary">50k+</div>
                 <div className="text-sm text-gray-600">Active Users</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-[#d63438]">99.9%</div>
+                <div className="text-2xl font-bold text-primary">99.9%</div>
                 <div className="text-sm text-gray-600">Uptime</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-[#d63438]">24/7</div>
+                <div className="text-2xl font-bold text-primary">24/7</div>
                 <div className="text-sm text-gray-600">Support</div>
               </div> */}
               <Counter />
@@ -213,14 +213,14 @@ const HeroSection = () => {
           </div>
 
           <div className="relative">
-            <div className="relative bg-gradient-to-br from-[#d63438]/20 to-[#6d6f72]/20 rounded-3xl p-8">
+            <div className="relative bg-gradient-to-br from-[#d63438]/20 to-sectext-secondary/20 rounded-3xl p-8">
               <div className="bg-white rounded-2xl shadow-2xl p-8">
                 <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-[#d63438] rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
                     <Fingerprint className="w-7 h-7 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#6d6f72]">
+                    <h3 className="font-semibold text-secondary">
                       Biometric Scanner
                     </h3>
                     <p className="text-sm text-gray-600">
@@ -253,10 +253,10 @@ const HeroSection = () => {
             </div>
 
             {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-[#d63438] rounded-full flex items-center justify-center shadow-lg animate-pulse">
+            <div className="absolute -top-4 -right-4 w-20 h-20 bg-primary rounded-full flex items-center justify-center shadow-lg animate-pulse">
               <Shield className="w-10 h-10 text-white" />
             </div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-[#6d6f72] rounded-full flex items-center justify-center shadow-lg">
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-sectext-secondary rounded-full flex items-center justify-center shadow-lg">
               <BarChart3 className="w-8 h-8 text-white" />
             </div>
           </div>

@@ -35,7 +35,7 @@ export default function CatLayout({ children }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [phoneFilter, setPhoneFilter] = useState(false);
 
-   const sidebarRef = useRef(null);
+  const sidebarRef = useRef(null);
 
   const { cat, subCat, slug } = useParams();
   const params = useParams();
@@ -72,7 +72,8 @@ export default function CatLayout({ children }) {
       setLoading(true);
       try {
         const res = await axiosInstance.get(`/product`);
-        setFilterProd(res.data?.products || []);
+        let prod = res.data?.products.filter((p) => p.status === "published")
+        setFilterProd(prod || []);
       } catch (error) {
         console.error("Error fetching products:", error.message);
         setFilterProd([]);
@@ -134,7 +135,7 @@ export default function CatLayout({ children }) {
         <div className="xl:flex gap-8">
           {/* Left Sidebar */}
           <div
-          ref={sidebarRef}
+            ref={sidebarRef}
             className={`fixed top-0 left-0 z-20 lg:block transform transition-transform xl:sticky xl:top-[6.2rem] xl:translate-x-0 duration-700 ease-in-out h-screen bg-white
             ${phoneFilter ? "translate-x-0" : "-translate-x-[101%]"}`}
           >
