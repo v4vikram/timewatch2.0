@@ -53,7 +53,7 @@ export function HeaderNavigationMenu() {
           </NavigationMenuTrigger>
           <NavigationMenuContent
             className={
-              "container border border-gray-100 bg-gray-50 !shadow-none left-[50%] translate-x-[-47.7%] !w-[98vw]"
+              "container border border-gray-100 bg-gray-50 !shadow-none left-[50%] translate-x-[-42.7%] 2xl:translate-x-[-44%] !w-[98vw]"
             }
           >
             <Tabs
