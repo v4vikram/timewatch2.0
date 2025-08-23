@@ -87,7 +87,7 @@ export default async function HomePage() {
       </div>
       {/* <FeaturedProducts/> */}
       {/* features products */}
-      <section className="py-16 bg-white" >
+      <section className="pt-0 lg:py-16 bg-white" >
         <div className="container mx-auto px-4">
           {/* Section Header */}
           <div className="text-center mb-12">
@@ -106,7 +106,7 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {
               publishedProducts?.length > 0 ? (
-                publishedProducts?.map((item) => (
+                publishedProducts?.slice(0,4).map((item) => (
                   <ProductCard
                     key={item?._id}
                     name={item?.productName || 'Product Title'}
@@ -184,7 +184,7 @@ export default async function HomePage() {
             </div>
 
             <div className="relative">
-              <div className="bg-gradient-to-br from-[#d63438]/10 to-[#6d6f72]/10 rounded-3xl p-8">
+              <div className="bg-gradient-to-br from-[#d63438]/10 to-[#6d6f72]/10 rounded-3xl p-5 lg:p-8">
                 <div className="bg-white rounded-2xl shadow-xl p-6">
                   <div className="flex items-center justify-between mb-6">
                     <h3 className="text-lg font-semibold text-[#6d6f72]">
@@ -271,7 +271,7 @@ export default async function HomePage() {
       </section> */}
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-white">
+      <section id="features" className="lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#6d6f72] mb-4">
@@ -501,7 +501,7 @@ export default async function HomePage() {
               </div>
             </div>
 
-            <div className="bg-gray-50 rounded-2xl p-8">
+            <div className="bg-gray-50 rounded-2xl p-4 lg:p-8">
               <HomePageForm />
             </div>
           </div>

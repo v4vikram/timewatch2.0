@@ -11,7 +11,6 @@ import {
 } from "@/components/ui/command";
 import { useRouter } from "next/navigation";
 import axiosInstance from "@/lib/axiosInstance";
-import seoFriendlySlug from "@/lib/seoFriendlySlug";
 
 export function SearchBar() {
   const [open, setOpen] = useState(false);
@@ -52,7 +51,7 @@ export function SearchBar() {
   }, [query]);
 
   const handleSelect = (product) => {
-    const url = `/products/${seoFriendlySlug(product.categoryName)}/${seoFriendlySlug(product.subCategoryName)}/${seoFriendlySlug(product.productSlug)}`;
+    const url = `/products/${product.categoryName}/${product.subCategoryName}/${product.productSlug}`;
     router.push(url);
     setOpen(false);
   };
@@ -63,11 +62,11 @@ export function SearchBar() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="flex items-center justify-between gap-2 px-3 py-2 border. rounded-sm w-full text-sm hover:bg-muted transition"
+        className="flex items-center justify-between gap-2 px-3 py-2 border rounded-sm w-full text-sm hover:bg-muted transition"
       >
         <div className="flex items-center gap-x-2">
           <Search className="w-6 h-6 text-primary cursor-pointer" />
-          {/* Search Products... */}
+          Search Products...
         </div>
       </button>
 
@@ -88,7 +87,7 @@ export function SearchBar() {
                 className="cursor-pointer"
               >
                 <ChevronRightIcon className="mr-2 h-4 w-4" />
-                {p.productName}
+                {p.productName}hi
               </CommandItem>
             ))}
           </CommandGroup>

@@ -19,16 +19,9 @@ import { ChevronRight } from "lucide-react";
 
 import axiosInstance from "@/lib/axiosInstance";
 import seoFriendlySlug from "@/lib/seoFriendlySlug";
-import { useProductStore } from "@/store/useProductStore";
 
 export function HeaderNavigationMenu() {
-  const { products, getFormatedProduct } = useProductStore();
   const [activeTab, setActiveTab] = useState(products[0]?.categoryName);
-
-  console.log("products", products);
-  useEffect(() => {
-    getFormatedProduct();
-  }, []);
   return (
     <NavigationMenu viewport={false}>
       <NavigationMenuList className="gap-4">
@@ -67,12 +60,7 @@ export function HeaderNavigationMenu() {
               data-[state=active]:bg-primary/80 data-[state=active]:text-white 
               min-w-[300px] cursor-pointer border border-l-2 py-3 flex items-center justify-between"
                     >
-                      {pro.categoryName}{" "}
-                      {activeTab === pro.categoryName && (
-                        <span>
-                          <ChevronRight />
-                        </span>
-                      )}
+                      {pro.categoryName} {activeTab === pro.categoryName && (<span><ChevronRight/></span>)} 
                     </TabsTrigger>
                   ))}
                 </TabsList>

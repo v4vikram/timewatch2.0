@@ -2,23 +2,24 @@
 
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
 import * as Yup from "yup";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
+import axiosInstance from "@/lib/axiosInstance";
+import EmailSuccessPopup from "./forms/EmailSuccessPopup";
 
 const validationSchema = Yup.object({
   name: Yup.string().required("Name is required"),
   phone: Yup.string()
     .required("Phone is required")
-   .matches(/^\+?[0-9\s]{1,15}$/, "Phone must be up to 15 digits")
-,
+    .matches(/^\+?[0-9\s]{1,15}$/, "Phone must be up to 15 digits"),
   email: Yup.string().email("Invalid email").required("Email is required"),
   location: Yup.string(),
   message: Yup.string(),
 });
 
 const HomePageForm = () => {
+  const [isSuccess, setIsSuccess] = useState(false);
   const initialValues = {
     name: "",
     phone: "",
@@ -30,14 +31,39 @@ const HomePageForm = () => {
   return (
     <Formik
       initialValues={initialValues}
-      validationSchema={validationSchema}
-      onSubmit={(values, { resetForm }) => {
-        console.log("Form submitted:", values);
-        // resetForm();
+      // validationSchema={validationSchema}
+      onSubmit={async (values, { resetForm, setErrors }) => {
+        try {
+          // reset success state before new attempt
+          setIsSuccess(false);
+
+          const newCustomer = await axiosInstance.post(
+            `/form/customer`,
+            values
+          );
+
+          if (newCustomer?.status === 201) {
+            resetForm();
+            setIsSuccess(true); 
+          }
+        } catch (error) {
+          if (
+            error.response &&
+            error.response.data &&
+            error.response.data.errors
+          ) {
+            // Map backend validation errors into Formik
+            setErrors(error.response.data.errors);
+          } else {
+            console.error("Unexpected error", error);
+          }
+        }
       }}
     >
       {({ setFieldValue, values }) => (
         <Form className="space-y-6">
+          {isSuccess && <EmailSuccessPopup />}
+
           <div className="grid md:grid-cols-2 gap-6">
             {/* Name */}
             <div>

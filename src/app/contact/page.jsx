@@ -22,30 +22,30 @@ const ContactPage = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+91 9876543210", "+91 9876543211"],
-      subtitle: "Mon-Fri 9AM-6PM",
+      details: ["+91-95999 53923", "011-4191-6615"],
+      subtitle: "Support - 24/7",
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["contact@biometricpro.com", "support@biometricpro.com"],
+      details: ["sales@timewatchindia.com", "support@timewatchindia.com"],
       subtitle: "We'll respond within 24 hours",
     },
     {
       icon: MapPin,
       title: "Address",
-      details: ["123 Business Park", "Sector 44, Gurugram, Haryana 122003"],
+      details: ["D-162, Okhla Phase - I New Delhi - 110020"],
       subtitle: "Visit our office",
     },
-    {
-      icon: Clock,
-      title: "Business Hours",
-      details: [
-        "Monday - Friday: 9:00 AM - 6:00 PM",
-        "Saturday: 10:00 AM - 4:00 PM",
-      ],
-      subtitle: "Sunday: Closed",
-    },
+    // {
+    //   icon: Clock,
+    //   title: "Business Hours",
+    //   details: [
+    //     "Monday - Friday: 9:00 AM - 6:00 PM",
+    //     "Saturday: 10:00 AM - 4:00 PM",
+    //   ],
+    //   subtitle: "Sunday: Closed",
+    // },
   ];
 
   const services = [
@@ -92,7 +92,7 @@ const ContactPage = () => {
               <h3 className="text-lg font-semibold text-[#6d6f72] mb-2">
                 Call Us
               </h3>
-              <p className="text-gray-600">Speak directly with our experts</p>
+              <p className="text-gray-600">+91-95999 53923</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <Mail className="w-12 h-12 text-[#d63438] mx-auto mb-4" />
@@ -100,7 +100,7 @@ const ContactPage = () => {
                 Email Us
               </h3>
               <p className="text-gray-600">
-                Get detailed responses to your queries
+                sales@timewatchindia.com
               </p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg">
@@ -108,7 +108,7 @@ const ContactPage = () => {
               <h3 className="text-lg font-semibold text-[#6d6f72] mb-2">
                 Visit Us
               </h3>
-              <p className="text-gray-600">See our products in action</p>
+              <p className="text-gray-600">D-162, Okhla Phase - I New Delhi - 110020</p>
             </div>
           </div>
         </div>
@@ -117,11 +117,11 @@ const ContactPage = () => {
       {/* Main Contact Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
-              <div className="bg-gradient-to-r from-[#d63438] to-[#6d6f72] p-8 text-center">
-                <h2 className="text-3xl font-bold text-white mb-2">
+              <div className="bg-gradient-to-r from-[#d63438] to-[#6d6f72] px-8 py-4 text-center">
+                <h2 className="text-[1.5rem] lg:text-3xl font-bold text-white mb-2">
                   Send Us a Message
                 </h2>
                 <p className="text-white/90">
@@ -129,7 +129,7 @@ const ContactPage = () => {
                 </p>
               </div>
 
-              <div className="p-8">
+              <div className="p-4 lg:p-8">
                 {/* {submitStatus === "success" && (
                   <div className="mb-8 p-4 bg-green-50 border border-green-200 rounded-xl flex items-center">
                     <CheckCircle className="w-6 h-6 text-green-600 mr-3 flex-shrink-0" />
@@ -168,7 +168,7 @@ const ContactPage = () => {
               </div>
 
               {/* Contact Details */}
-              <div className="grid gap-6">
+              <div className="flex flex-col md:grid gap-6">
                 {contactInfo.map((info, index) => (
                   <div
                     key={index}
@@ -272,11 +272,11 @@ const ContactPage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-[#d63438] px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
               <Phone className="w-5 h-5 mr-2" />
-              Call Now: +91 9876543210
+              Call Now: +91-95999 53923
             </button>
             <button className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#d63438] transition-colors flex items-center justify-center">
               <Mail className="w-5 h-5 mr-2" />
-              Email: contact@biometricpro.com
+              <span className="hidden md:inline">Email: </span> sales@timewatchindia.com
             </button>
           </div>
         </div>

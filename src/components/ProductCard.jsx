@@ -41,8 +41,10 @@ export default function ProductCard({
     ? Math.round(((originalPrice - price) / originalPrice) * 100)
     : 0;
 
+    console.log("image", image)
+
   return (
-    <Card className="group relative w-full max-w-sm overflow-hidden rounded-xl border-0 shadow-sm. transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 pt-0">
+    <Card className="group relative w-full max-w-sm overflow-hidden rounded-sm border-0 shadow-sm. transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 pt-0">
       {/* Product Image */}
       <div className="relative h-56 overflow-hidden bg-gray-100">
         {/* {console.log("Image URL:",  image)} */}

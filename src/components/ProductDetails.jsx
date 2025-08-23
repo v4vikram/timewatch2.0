@@ -23,18 +23,18 @@ const ProductDetails = ({ product }) => {
   // console.log("Rendering Product Details for:", product);
 
   return (
-    <div className="w-[1300px] mx-auto px-4 py-10">
+    <div className="w-full 2xl:w-[1300px] mx-auto px-4 py-10">
       {/* Top Section */}
-      <div className="flex gap-20">
+      <div className="lg:flex gap-20">
         {/* Main Image */}
-        <div className="w-[550px]">
-          <div className="w-[550px] h-[500px] relative bg-gray-50 rounded-lg">
+        <div className="md:w-[550px]">
+          <div className="w-full h-[300px] md:w-[550px] md:h-[500px] relative bg-gray-50 rounded-lg">
             <Image
-              src={`${product.productImage || "images/demo-product.png"}`}
+              src={`${product.productImage || "/images/demo-product.png"}`}
               fill
               sizes="400px"
               alt={product.productName || "Product title"}
-              className="object-contain p-24"
+              className="object-contain lg:p-24"
             />
           </div>
         </div>
@@ -45,10 +45,10 @@ const ProductDetails = ({ product }) => {
           <p className="text-gray-600">{product.description}</p>
 
           {/* Features */}
-          {product.features && (
+          {product.features > 0 && (
             <div className="mt-2">
               <h2 className="text-2xl font-bold mb-3">Features</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2">
                 {product.features.map((feature, index) => (
                   <div
                     key={index}
@@ -56,7 +56,7 @@ const ProductDetails = ({ product }) => {
                   >
                     <div className="w-[50px] h-[50px] relative">
                       <Image
-                        src={`${feature.image || "images/demo-product.png"}`}
+                        src={`${feature.image}`}
                         alt={feature.title}
                         fill
                         sizes="50px"
@@ -71,7 +71,14 @@ const ProductDetails = ({ product }) => {
               </div>
             </div>
           )}
-          <h2 className="text-2xl font-bold mb-2 mt-4">Download</h2>
+          {(product?.datasheetFile ||
+            product?.connectionDiagramFile ||
+            product?.userManualFile) && (
+            <div className="mt-4">
+              <h2 className="text-2xl font-bold mb-2">Download</h2>
+            </div>
+          )}
+
           <div className="flex gap-2">
             {product?.datasheetFile && (
               <Link

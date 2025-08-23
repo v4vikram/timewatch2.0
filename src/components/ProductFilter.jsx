@@ -19,7 +19,7 @@ const ProductFilter = ({
   setIsSubCatClick,
 }) => {
   return (
-    <div className="w-full max-w-sm bg-white rounded-xl border border-primary/20 p-4 shadow-sm space-y-2">
+    <div className="w-full max-w-sm  lg:rounded-md border border-primary/20 p-4 shadow-sm space-y-2 h-full overflow-y-scroll xl:overflow-y-auto">
       <Accordion type="multiple" className="w-full">
         {productCategories.map((category, idx) => (
           <AccordionItem

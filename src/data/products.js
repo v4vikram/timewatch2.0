@@ -11637,3 +11637,68 @@ export const products = [
     ]
   }
 ]
+
+export const productCategories = [
+  {
+    categoryName: "Time Attendance and Access Control",
+    subCategories: [
+      "Iris Series",
+      "Attendance Series",
+      "Network/Elevator Controller",
+      "Card/FingerPrint/Face Series",
+      "AI Based Speed Face Series",
+      "Face & Palm Access control devices",
+    ],
+  },
+  {
+    categoryName: "Entrance Control",
+    subCategories: [
+      "Turnstile/Tripod",
+      "Swing Gate/Swing Barrier",
+      "Full Height Turnstile",
+      "Flap Barrier",
+      "P-Type/P-Gate",
+    ],
+  },
+  {
+    categoryName: "Parking and Traffic Control",
+    subCategories: [
+      "Boom Barrier",
+      "UVSS System",
+      "Bollard",
+      "Spike Barrier",
+      "ANPR Camera",
+      "Long Range Reader",
+    ],
+  },
+  {
+    categoryName: "Inspection Control",
+    subCategories: [
+      "Door Frame Metal Detector",
+      "X-Ray Baggage Scanner",
+      "Hand Held Metal Detector",
+      "Narcotics & Chemical",
+      "Portable Non-Linear Junction Detector",
+    ],
+  },
+  {
+    categoryName: "Software and Applications",
+    subCategories: [
+      "Desktop Based Software",
+      "Web Based Software",
+      "Payroll Software",
+      "Visitor Software",
+      "Gym Software",
+      "Canteen Software",
+      "Parking Software",
+    ],
+  },
+  {
+    categoryName: "UL LISTED EM LOCKS",
+    subCategories: ["UL Listed EM Locks"],
+  },
+  {
+    categoryName: "ACCESSORIES",
+    subCategories: ["Accessories"],
+  },
+];
