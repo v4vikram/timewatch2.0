@@ -37,6 +37,10 @@ const HomePageForm = () => {
           // reset success state before new attempt
           setIsSuccess(false);
 
+          // console.log("values", values);
+
+          // return;
+
           const newCustomer = await axiosInstance.post(
             `/form/customer`,
             values
@@ -44,7 +48,7 @@ const HomePageForm = () => {
 
           if (newCustomer?.status === 201) {
             resetForm();
-            setIsSuccess(true); 
+            setIsSuccess(true);
           }
         } catch (error) {
           if (
@@ -92,20 +96,17 @@ const HomePageForm = () => {
                 country={"in"}
                 value={values.phone}
                 onChange={(rawValue, country) => {
-                  // rawValue is something like "918810433233"
-                  const dialCode = country.dialCode; // e.g., "91"
-
-                  // Remove the dial code from the raw value
+                  const dialCode = country.dialCode; // e.g. "91"
                   const numberWithoutCode = rawValue.slice(dialCode.length);
-
-                  // Build formatted phone with + and space
                   const formatted = `+${dialCode} ${numberWithoutCode.trim()}`;
-
                   setFieldValue("phone", formatted);
                 }}
                 enableSearch
                 searchPlaceholder="Search country..."
                 inputClass="!w-full !pl-12 !overflow-hidden !py-6 !rounded-xl !bg-transparent !border !border-gray-300 focus:!ring-2 focus:!ring-[#d63438] focus:!border-transparent !outline-none !transition-all"
+                disableCountryCode={false} // keep country code visible
+                disableDropdown={false} // allow changing if you want
+                countryCodeEditable={false} // ✅ prevents removing +91
               />
 
               <ErrorMessage

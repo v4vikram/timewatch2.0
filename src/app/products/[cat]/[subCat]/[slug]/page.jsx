@@ -22,7 +22,7 @@ export default async function ProductDetailsPage({ params }) {
     return notFound(); // shows Next.js 404 page
   }
 
-  if (!product) {
+  if (!product || product?.status == "draft") {
     return notFound(); // handle case where product is null or undefined
   }
 

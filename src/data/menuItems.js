@@ -239,3 +239,97 @@ export const menuItems = [
     type: "link",
   },
 ];
+
+export const solutions = [
+  {
+    category: "Workforce & HR Solutions",
+    categoryUrl:"workforce-hr-solutions",
+    subCategories: [
+      {
+        subCategory: "Cloud Attendance & Payroll Software",
+         subCategoryUrl: "cloud-attendance-payroll-software"
+      },
+      {
+        subCategory: "geo-fencing-mobile-punch",
+         subCategoryUrl: "geo-fencing-mobile-punch"
+      },
+      {
+        subCategory: "Field Staff Tracking Solution",
+        subCategoryUrl: "field-staff-tracking-solution"
+      },
+    ],
+  },
+  {
+    category: "Facility & Membership Management",
+    categoryUrl:"facility-membership-management",
+    subCategories: [
+      {
+        subCategory: "Canteen Management System",
+         subCategoryUrl: "canteen-management-system"
+      },
+      {
+        subCategory: "Gym Management Solution",
+         subCategoryUrl: "gym-management-solution"
+      }
+    ],
+  },
+  {
+    category: "Inspection Detection Solutions",
+    categoryUrl:"inspection-detection-solutions",
+    subCategories: [
+      {
+        subCategory: "Hand Held Metal Detector TW-HH100",
+         subCategoryUrl: "hand-held-metal-detector-tw-hh100"
+      },
+      {
+        subCategory: "Walk Through Metal Detector TWND-800",
+         subCategoryUrl: "walk-through-metal-detector-twnd-800"
+      }
+    ],
+  },
+  {
+    category: "Security Screening Solutions",
+    categoryUrl:"security-screening-solutions",
+    subCategories: [
+      {
+        subCategory: "Access Control System Terminals",
+         subCategoryUrl: "access-control-system-terminals"
+      },
+      {
+        subCategory: "Advanced X-Ray Baggage Screening",
+         subCategoryUrl: "advanced-x-ray-baggage-screening"
+      },
+      {
+        subCategory: "DFMD (Door Frame Metal Detectors)",
+         subCategoryUrl: "dfmd-door-frame-metal-detectors"
+      },
+      {
+        subCategory: "Explosive & Narcotics Detector",
+         subCategoryUrl: "explosive-narcotics-detector"
+      },
+      {
+        subCategory: "TimeScan Cargo & Vehicle Inspection System",
+         subCategoryUrl: "timescan-cargo-vehicle-inspection-system"
+      },
+      {
+        subCategory: "Under Vehicle Surveillance System (UVSS) – TW3300",
+         subCategoryUrl: "under-vehicle-surveillance-system-uvss-tw3300"
+      },
+     
+    ],
+  },
+    {
+    category: "Visitor & Access Management",
+    categoryUrl:"visitor-access-management",
+    subCategories: [
+      {
+        subCategory: "Crowd Management Solutions  Turnstile Gates & Flap Barriers",
+         subCategoryUrl: "crowd-management-solutions-turnstile-gates-flap-barriers"
+      },
+      {
+        subCategory: "What Is a Visitor Management System",
+         subCategoryUrl: "what-is-a-visitor-management-system"
+      },
+    ],
+  },
+];

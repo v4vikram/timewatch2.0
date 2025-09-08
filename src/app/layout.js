@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={rajdhani.className}>
+    <html lang="en" className={`${rajdhani.className} font-medium` }>
       <body
         className={``}
       >
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
         <div>
           <Footer/>
         </div>
-        <SupportButtons/>
+        {/* <SupportButtons/> */}
       </body>
     </html>
   );

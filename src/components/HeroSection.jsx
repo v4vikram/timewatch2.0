@@ -7,6 +7,7 @@ import {
   ArrowRight,
   Play,
   Award,
+  SquareArrowOutUpRight,
 } from "lucide-react";
 import Counter from "./Counter";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -22,101 +23,125 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { useFormStore } from "@/store/useFormStore";
+import EmailSuccessPopup from "./forms/EmailSuccessPopup";
+import Link from "next/link";
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string().required("Name is required"),
   phone: Yup.string()
     .required("Phone number is required")
     .matches(/^[0-9]{10,15}$/, "Enter a valid phone number"),
-  email: Yup.string().email("Enter a valid email").required("Email is required"),
+  email: Yup.string()
+    .email("Enter a valid email")
+    .required("Email is required"),
   location: Yup.string().notRequired(),
   message: Yup.string().notRequired(),
 });
 
-function ContactFormDialog({children}) {
+function ContactFormDialog({ children }) {
+  const { isProcessing, createCustomer } = useFormStore();
+  const [dialogOpen, setDialogOpen] = useState(false); // control Dialog
+  const [success, setSuccess] = useState(false);
+
   return (
-    <Dialog>
-      <DialogTrigger asChild>
-        {children}
-      </DialogTrigger>
+    <>
+      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+        <DialogTrigger asChild>{children}</DialogTrigger>
 
-      <DialogContent className="max-w-md">
-        <DialogHeader>
-          <DialogTitle>Download Catalogue</DialogTitle>
-          <DialogDescription>
-            Please fill in your details below
-          </DialogDescription>
-        </DialogHeader>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle>Download Catalogue</DialogTitle>
+            <DialogDescription>
+              Please fill in your details below
+            </DialogDescription>
+          </DialogHeader>
 
-        <Formik
-          initialValues={{
-            name: "",
-            phone: "",
-            email: "",
-            location: "",
-            message: "",
-          }}
-          validationSchema={ContactSchema}
-          onSubmit={(values, { resetForm }) => {
-            console.log("Submitted:", values);
-            resetForm();
-          }}
-        >
-          <Form className="space-y-4 mt-4">
-            {/* Name */}
-            <div>
-              <Field name="name" as={Input} placeholder="Name *" />
-              <ErrorMessage
-                name="name"
-                component="div"
-                className="text-sm text-red-500 mt-1"
-              />
-            </div>
+          <Formik
+            initialValues={{
+              name: "",
+              phone: "",
+              email: "",
+              location: "",
+              message: "",
+            }}
+            validationSchema={ContactSchema}
+            onSubmit={async (values, { resetForm }) => {
+              await createCustomer(values);
+              setSuccess(false)
+              // ✅ close dialog immediately
+              setDialogOpen(false);
 
-            {/* Phone */}
-            <div>
-              <Field name="phone" as={Input} placeholder="Phone *" />
-              <ErrorMessage
-                name="phone"
-                component="div"
-                className="text-sm text-red-500 mt-1"
-              />
-            </div>
+              // ✅ after 1.5s, show success popup
+              setTimeout(() => {
+                setSuccess(true);
+              }, 500);
 
-            {/* Email */}
-            <div>
-              <Field name="email" as={Input} placeholder="Email" />
-              <ErrorMessage
-                name="email"
-                component="div"
-                className="text-sm text-red-500 mt-1"
-              />
-            </div>
+              resetForm();
+            }}
+          >
+            <Form className="space-y-4 mt-4">
+              {/* Name */}
+              <div>
+                <Field name="name" as={Input} placeholder="Name *" />
+                <ErrorMessage
+                  name="name"
+                  component="div"
+                  className="text-sm text-red-500 mt-1"
+                />
+              </div>
 
-            {/* Location */}
-            <div>
-              <Field name="location" as={Input} placeholder="Location" />
-            </div>
+              {/* Phone */}
+              <div>
+                <Field name="phone" as={Input} placeholder="Phone *" />
+                <ErrorMessage
+                  name="phone"
+                  component="div"
+                  className="text-sm text-red-500 mt-1"
+                />
+              </div>
 
-            {/* Message */}
-            <div>
-              <Field
-                name="message"
-                as={Textarea}
-                placeholder="Message"
-                rows={3}
-              />
-            </div>
+              {/* Email */}
+              <div>
+                <Field name="email" as={Input} placeholder="Email" />
+                <ErrorMessage
+                  name="email"
+                  component="div"
+                  className="text-sm text-red-500 mt-1"
+                />
+              </div>
 
-            <div className="flex justify-end">
-              <Button type="submit">Submit</Button>
-            </div>
-          </Form>
-        </Formik>
-      </DialogContent>
-    </Dialog>
+              {/* Location */}
+              <div>
+                <Field name="location" as={Input} placeholder="Location" />
+              </div>
+
+              {/* Message */}
+              <div>
+                <Field
+                  name="message"
+                  as={Textarea}
+                  placeholder="Message"
+                  rows={3}
+                />
+              </div>
+
+              <div className="flex justify-end">
+                <Button type="submit">
+                  {isProcessing ? "Submit..." : "Submit"}
+                </Button>
+              </div>
+            </Form>
+          </Formik>
+        </DialogContent>
+      </Dialog>
+
+      {/* ✅ Success popup after 1.5s */}
+      {success && <EmailSuccessPopup onClose={() => setSuccess(false)} heading={"Form Submitted Successfully"} download={"https://drive.google.com/uc?export=download&id=1eMVypZUZCh26EXle3M0Uj3VDbLzJNNgG"}/>}
+    </>
   );
 }
+
 
 const HeroSection = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -165,10 +190,10 @@ const HeroSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+            {/* <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium">
               <Award className="w-4 h-4" />
               <span>Industry Leading Solution</span>
-            </div>
+            </div> */}
 
             <h1 className="text-4xl md:text-6xl font-bold text-primary leading-tight">
               Perfect Presence,
@@ -189,10 +214,11 @@ const HeroSection = () => {
                 </button>
               </ContactFormDialog>
 
-              <button className="border-2 border-sectext-secondary text-secondary px-8 py-4 rounded-xl font-semibold hover:bg-sectext-secondary hover:text-white transition-all flex items-center justify-center space-x-2">
-                <Play className="w-5 h-5" />
-                <span>Watch Demo</span>
-              </button>
+              <Link href={'/contact'} className="border-2 border-sectext-secondary text-secondary px-8 py-4 rounded-xl font-semibold hover:bg-sectext-secondary hover:text-primary transition-all flex items-center justify-center space-x-2">
+                {/* <Play className="w-5 h-5" /> */}
+                <span>Contact Us</span>
+                <ArrowRight className="w-5 h-5"/>
+              </Link>
             </div>
 
             <div className="flex items-center space-x-8 pt-4 justify-center md:justify-start">

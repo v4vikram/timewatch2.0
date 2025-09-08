@@ -3,6 +3,7 @@ import axiosInstance from "@/lib/axiosInstance";
 
 export const useProductStore = create((set, get) => ({
   products: [],
+  featuredproducts: [],
   categories: [],
   subCategories: [],
   trashedProducts: [],
@@ -50,6 +51,24 @@ export const useProductStore = create((set, get) => ({
 
       set({
         products: res.data?.products || [],
+        loading: false,
+        fetched: true, // ✅ important: mark as fetched here!
+      });
+    } catch (err) {
+      set({ error: err.message, loading: false });
+    }
+  },
+  fetchFeaturedProducts: async () => {
+    if (get().fetched) return; // ← skip if already fetched
+
+    set({ loading: true, error: null });
+
+    try {
+      const res = await axiosInstance.get("/product/featured-products");
+
+
+      set({
+        featuredproducts: res.data?.products || [],
         loading: false,
         fetched: true, // ✅ important: mark as fetched here!
       });

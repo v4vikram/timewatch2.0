@@ -13,13 +13,13 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { products } from "@/data/products";
-import { menuItems } from "@/data/menuItems";
+import { solutions } from "@/data/menuItems";
 import { ChevronRight } from "lucide-react";
 
 import axiosInstance from "@/lib/axiosInstance";
 import seoFriendlySlug from "@/lib/seoFriendlySlug";
 import { useProductStore } from "@/store/useProductStore";
+import SolutionsDropdown from "./SolutionsDropdown";
 
 export function HeaderNavigationMenu() {
   const { products, getFormatedProduct } = useProductStore();
@@ -34,6 +34,8 @@ export function HeaderNavigationMenu() {
       setActiveTab(products[0].categoryName);
     }
   }, [products]);
+
+  console.log("products", products)
 
   return (
     <NavigationMenu viewport={false}>
@@ -64,7 +66,7 @@ export function HeaderNavigationMenu() {
               {/* list */}
               <div className="bg-gray-50 rounded-sm">
                 <TabsList className="flex flex-col space-y-2 border-r pr-2 shadow-none justify-start bg-transparent border-none">
-                  {products?.map((pro, index) => (
+                  {products?.sort((a, b)=> b.categoryName.length - a.categoryName.length).map((pro, index) => (
                     <TabsTrigger
                       key={index}
                       value={pro.categoryName}
@@ -89,7 +91,7 @@ export function HeaderNavigationMenu() {
                 <TabsContent
                   key={productIndex}
                   value={pro.categoryName}
-                  className="w-full"
+                  className="w-full overflow-y-scroll max-h-[400px] !mr-0"
                 >
                   <ul className="space-y-4 flex flex-wrap gap-x-20">
                     {pro?.subCategories
@@ -97,13 +99,11 @@ export function HeaderNavigationMenu() {
                       ?.sort((a, b) => b.products.length - a.products.length)
                       .map((subCat, catIndex) => (
                         <li key={catIndex} className="w-1/6">
-                          <span className="text-black font-semibold block mb-1">
+                          <span className="text-black font-bold block mb-1">
                             {subCat.subCategoryName}
                           </span>
 
-                          {subCat?.products
-                            ?.slice(0, 10)
-                            .map((product, subCatIndex) => (
+                          {subCat?.products.map((product, subCatIndex) => (
                               <Link
                                 key={subCatIndex}
                                 href={`/products/${seoFriendlySlug(
@@ -132,12 +132,18 @@ export function HeaderNavigationMenu() {
             <Link href={"/download"}>Download</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
+        <NavigationMenuList>
+
+          {/* Custom dropdown */}
+            <SolutionsDropdown />
+        </NavigationMenuList>
+
         <NavigationMenuItem>
           <NavigationMenuLink
             asChild
             className="hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[17px] font-medium !text-secondary flex items-center gap-1"
           >
-            <Link href={"/solutions"}>Solutions</Link>
+            <Link href={"/about"}>About</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>

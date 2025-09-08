@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Download, FileDown, FileText } from "lucide-react";
+import { Download, FileDown, FileText, MessageCircleMore, Phone } from "lucide-react";
 import Image from "next/image";
 import {
   Table,
@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/table";
 import Link from "next/link";
 import FaqDropdown from "./FaqDropdown";
+import { Button } from "./ui/button";
 
 const ProductDetails = ({ product }) => {
   // console.log("Product Details:", product);
@@ -31,7 +32,7 @@ const ProductDetails = ({ product }) => {
         <div className="md:w-[550px]">
           <div className="w-full h-[300px] md:w-[550px] md:h-[500px] relative bg-gray-50 rounded-lg">
             <Image
-              src={`${product.productImage || "/images/demo-product.png"}`}
+              src={`${product.productImage || "/images/placeholder.jpeg"}`}
               fill
               sizes="400px"
               alt={product.productName || "Product title"}
@@ -44,6 +45,7 @@ const ProductDetails = ({ product }) => {
         <div className="space-y-4 flex-1">
           <h1 className="text-3xl font-bold">{product.productName}</h1>
           <p className="text-gray-600">{product.description}</p>
+          {console.log()}
 
           {/* Features */}
           {product.features > 0 && (
@@ -116,6 +118,18 @@ const ProductDetails = ({ product }) => {
             )}
           </div>
 
+          <div className="flex gap-4 mt-10">
+            <Button asChild className={'text-[15px] md:text-[17px]'}>
+              <Link href={"#"}><Phone/> Enquire Now</Link>
+            </Button>
+            <Button asChild variant={'secondary'} className={'hidden md:flex'}>
+              <Link href={"#"}><MessageCircleMore/>Enquire on Whatsapp</Link>
+            </Button>
+            <Button asChild variant={'secondary'} className={'flex md:hidden text-[15px]'}>
+              <Link href={"#"}><MessageCircleMore/>Whatsapp Now</Link>
+            </Button>
+          </div>
+
           {/* Brochure Download */}
           {product.brochure && (
             <a
@@ -134,7 +148,7 @@ const ProductDetails = ({ product }) => {
       {/* Tabs Section */}
       <div className="mt-10 ">
         <h2 className="text-3xl font-bold mb-4">Product Specifications</h2>
-        <Table className={''}>
+        <Table className={""}>
           <TableCaption>Product Specifications</TableCaption>
           <TableHeader>
             <TableRow>
@@ -154,10 +168,15 @@ const ProductDetails = ({ product }) => {
           </TableBody>
         </Table>
       </div>
-      
-      {product.productFaq && (
+      {console.log(
+        "product.productFaq.length",
+        product.productFaq,
+        product.productFaq.length > 0
+      )}
+
+      {product.productFaq.length > 0 && (
         <div className="bg-gray-50 p-3 rounded-sm mt-10">
-         <h2 className="text-2xl font-bold mb-0">FAQ</h2>
+          <h2 className="text-2xl font-bold mb-0">FAQ</h2>
           <FaqDropdown productFaq={product.productFaq} />
         </div>
       )}

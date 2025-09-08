@@ -116,6 +116,44 @@ export default function CatLayout({ children }) {
     };
   }, [phoneFilter, setPhoneFilter]);
 
+  // searchBar
+
+  useEffect(() => {
+    async function searching(params) {
+      try {
+        if (searchQuery.length > 0) {
+
+          const searchRes = await axiosInstance.get(`/product/search?title=${searchQuery}`);
+          console.log("searchRes", searchRes)
+          setLoading(true);
+          if (searchRes?.status) {
+            setLoading(false);
+             setFilterProd(searchRes?.data?.products)
+          }
+         
+        }
+        else {
+          const res = await axiosInstance.get(`/product`);
+          let prod = res.data?.products.filter((p) => p.status === "published")
+          setFilterProd(prod || []);
+        }
+      }
+      catch (error) {
+        console.error("Error fetching products:", error.message);
+        setFilterProd([]);
+      }
+      finally {
+        setTimeout(() => {
+          setLoading(false);
+        }, 500);
+      }
+
+
+
+    }
+    searching();
+  }, [searchQuery])
+
   if (slug) {
     return <div className="">{children}</div>;
   }
@@ -124,14 +162,23 @@ export default function CatLayout({ children }) {
     <div className="pt-10 bg-gray-50/50">
       <div className="container">
         {/* Search bar */}
-        {/* <div className="flex justify-end">
+        <div className="flex justify-end gap-x-2 mb-3">
           <Input
             placeholder="Search products..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="max-w-[260px]"
+            className="w-full md:max-w-[260px] h-[38px]"
           />
-        </div> */}
+          <div className="flex justify-end xl:hidden mb-4">
+            <button
+              onClick={() => setPhoneFilter(!phoneFilter)}
+              className="p-2 rounded-sm border shadow-sm hover:bg-gray-100 active:scale-95 transition"
+              aria-label="Toggle Filter"
+            >
+              <Funnel className="w-5 h-5 text-secondary" />
+            </button>
+          </div>
+        </div>
         <div className="xl:flex gap-8">
           {/* Left Sidebar */}
           <div
@@ -147,15 +194,7 @@ export default function CatLayout({ children }) {
               setSubCat={setSubCategory}
             />
           </div>
-          <div className="flex justify-end xl:hidden mb-4">
-            <button
-              onClick={() => setPhoneFilter(!phoneFilter)}
-              className="p-2 rounded-sm border shadow-sm hover:bg-gray-100 active:scale-95 transition"
-              aria-label="Toggle Filter"
-            >
-              <Funnel className="w-5 h-5 text-secondary" />
-            </button>
-          </div>
+
 
           <div className="flex-1 space-y-4">
             {loading ? (

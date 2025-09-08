@@ -40,7 +40,7 @@ export function SearchBar() {
       try {
         const res = await axiosInstance.get(`/product/search?q=${encodeURIComponent(query)}`
         );
-        console.log("(res?.data?.products", res?.data?.products)
+        // console.log("(res?.data?.products", res?.data?.products)
         setResults(res?.data?.products || []);
       } catch (error) {
         console.error("Search error:", error);
@@ -88,6 +88,7 @@ export function SearchBar() {
                 className="cursor-pointer"
               >
                 <ChevronRightIcon className="mr-2 h-4 w-4" />
+                {console.log(p.productName)}
                 {p.productName}
               </CommandItem>
             ))}

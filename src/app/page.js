@@ -46,7 +46,7 @@ export const metadata = {
 // ISR: Regenerate every 1 hour (3600 seconds)
 async function getFeaturedProducts() {
   try {
-    const res = await axiosInstance.get(`/product`);
+    const res = await axiosInstance.get(`/product/featured-products`);
     return res.data?.products || [];
   } catch (error) {
     if (error.code === "ECONNREFUSED") {
@@ -72,15 +72,11 @@ export default async function HomePage() {
 
   return (
     <main>
-      {/* <section>
+      <section>
         <BannerSwiper />
-      </section> */}
+      </section>
       <div className="relative overflow-hidden">
-        {/* <div className="absolute">
-          <div className="w-screen h-[700px] relative">
-            <Image src={'/images/home-hero-bg.jpg'} fill alt="banner" title="banner" className="opacity-20 z-0 w-full h-full object-cover" />
-          </div>
-        </div> */}
+       
 
 
         <HeroSection />

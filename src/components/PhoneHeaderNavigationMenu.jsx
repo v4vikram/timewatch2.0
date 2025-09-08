@@ -1,6 +1,16 @@
 "use client";
 import { useState } from "react";
-import { Menu, X, Home, User, Settings, Mail, Info, List, LaptopMinimal } from "lucide-react";
+import {
+  Menu,
+  X,
+  Home,
+  User,
+  Settings,
+  Mail,
+  Info,
+  List,
+  LaptopMinimal,
+} from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
@@ -9,15 +19,17 @@ const PhoneHeaderNavigationMenu = ({ isMenuOpen }) => {
     { icon: Home, label: "Home", href: "/" },
     { icon: List, label: "Product", href: "/products" },
     { icon: LaptopMinimal, label: "Download", href: "/download" },
+    { icon: Info, label: "Solutions", href: "/solutions" },
+    { icon: Info, label: "About", href: "/about" },
     { icon: Mail, label: "Contact", href: "/contact" },
-    // { icon: Info, label: "About", href: "#about" },
   ];
 
-
-  return (  
+  return (
     <nav className="pt-4 pb-2 h-full flex flex-col justify-between">
       <div className="space-y-2.">
-        <h1 className="px-4 text-secondary font-bold text-3xl"><span className="text-primary">Time</span>Watch</h1>
+        <h1 className="px-4 text-secondary font-bold text-3xl">
+          <span className="text-primary">Time</span>Watch
+        </h1>
         {menuItems.map((item, index) => (
           <Link
             key={item.label}
@@ -40,8 +52,10 @@ const PhoneHeaderNavigationMenu = ({ isMenuOpen }) => {
         <Button asChild className="w-full">
           <Link href={"/partner"}>Become a Partner</Link>
         </Button>
-        <Button className="w-full text-white" variant={'secondary'} asChild>
-          <Link href={"/download"} className="">Download</Link>
+        <Button className="w-full text-white" variant={"secondary"} asChild>
+          <Link href={"/download"} className="">
+            Download
+          </Link>
         </Button>
       </div>
     </nav>

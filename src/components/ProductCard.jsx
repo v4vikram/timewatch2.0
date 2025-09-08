@@ -54,7 +54,7 @@ export default function ProductCard({
             alt={name}
             fill
             sizes="400"
-            className="object-contain w-full h-full transition-transform duration-500 group-hover:scale-105 py-0"
+            className="object-contain w-full h-full transition-transform duration-500 group-hover:scale-105 py-10"
           />
         ) : (
           <Image
@@ -81,7 +81,7 @@ export default function ProductCard({
           <Button
             size="icon"
             variant="secondary"
-            className="h-8 w-8 rounded-full bg-primary cursor-pointer"
+            className="!h-10 !w-10 rounded-full bg-primary cursor-pointer"
             asChild
           >
             <Link
@@ -89,7 +89,7 @@ export default function ProductCard({
                 subCategoryName
               )}/${seoFriendlySlug(name)}`}
             >
-              <Eye className="h-4 w-4 text-white" />
+              <Eye className="h-5 w-5 text-white" />
             </Link>
           </Button>
         </div>

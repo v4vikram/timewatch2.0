@@ -51,7 +51,7 @@ const PartnerPage = () => {
     landline: "",
     address: "",
     pinCode: "",
-    country: "India",
+    country: "",
     state: "",
     companyName: "",
     staffSize: "",
@@ -72,6 +72,8 @@ const PartnerPage = () => {
     values,
     { setSubmitting, resetForm, setErrors }
   ) => {
+
+     setIsSuccess(false);
     try {
       const formData = new FormData();
 
@@ -81,21 +83,20 @@ const PartnerPage = () => {
       });
 
       // Debug check
-      for (let [key, val] of formData.entries()) {
-        console.log(key, val);
-      }
+      // for (let [key, val] of formData.entries()) {
+      //   console.log(key, val);
+      // }
 
       const newPartner = await axiosInstance.post(`/form/partner`, formData);
 
+      console.log("newPartner", newPartner);
+
       if (newPartner?.status === 201) {
-        // resetForm();
+        resetForm();
         setIsSuccess(true);
       }
 
-      console.log("newPartner", newPartner);
-      // setSubmitStatus("success");
-
-      // resetForm();
+      
     } catch (error) {
       if (error.response && error.response.data && error.response.data.errors) {
         // Map backend validation errors into Formik
@@ -176,7 +177,7 @@ const PartnerPage = () => {
               {/* ================= FORM START ================= */}
               <Formik
                 initialValues={initialValues}
-                // validationSchema={validationSchema}
+                validationSchema={validationSchema}
                 onSubmit={handlePartnerSubmit}
               >
                 {({ isSubmitting, setFieldValue }) => (
@@ -303,6 +304,7 @@ const PartnerPage = () => {
                             as="select"
                             className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-[#d63438]"
                           >
+                            <option value="">Select</option>
                             <option value="India">India</option>
                             <option value="USA">USA</option>
                             <option value="UK">UK</option>
