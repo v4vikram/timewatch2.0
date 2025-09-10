@@ -43,13 +43,13 @@ export function HeaderNavigationMenu() {
         <NavigationMenuItem>
           <NavigationMenuLink
             asChild
-            className="hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[17px] font-medium !text-secondary flex items-center gap-1"
+            className="hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[18px] font-semibold !text-black flex items-center gap-1"
           >
             <Link href={"/"}>Home</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="hover:!bg-transparent hover:!text-primary focus:!text-primary text-[17px] font-medium !text-secondary flex items-center gap-1">
+          <NavigationMenuTrigger className="hover:!bg-transparent hover:!text-primary focus:!text-primary text-[18px] font-semibold !text-black flex items-center gap-1">
             {/* {Icon && <Icon size={18} />} */}
             <Link href={"/products"}>Products</Link>
           </NavigationMenuTrigger>
@@ -127,7 +127,7 @@ export function HeaderNavigationMenu() {
         <NavigationMenuItem>
           <NavigationMenuLink
             asChild
-            className="hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[17px] font-medium !text-secondary flex items-center gap-1"
+            className="hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[18px] font-semibold !text-black flex items-center gap-1"
           >
             <Link href={"/download"}>Download</Link>
           </NavigationMenuLink>
@@ -141,7 +141,7 @@ export function HeaderNavigationMenu() {
         <NavigationMenuItem>
           <NavigationMenuLink
             asChild
-            className="hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[17px] font-medium !text-secondary flex items-center gap-1"
+            className="hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[18px] font-semibold !text-black flex items-center gap-1"
           >
             <Link href={"/about"}>About</Link>
           </NavigationMenuLink>
@@ -149,7 +149,7 @@ export function HeaderNavigationMenu() {
         <NavigationMenuItem>
           <NavigationMenuLink
             asChild
-            className="hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[17px] font-medium !text-secondary flex items-center gap-1"
+            className="hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[18px] font-semibold !text-black flex items-center gap-1"
           >
             <Link href={"/contact"}>Contact</Link>
           </NavigationMenuLink>

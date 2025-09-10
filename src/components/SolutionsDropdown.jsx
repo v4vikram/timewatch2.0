@@ -18,7 +18,7 @@ import { solutions } from "@/data/menuItems";
 export default function SolutionsDropdown() {
   return (
   <NavigationMenuItem>
-  <NavigationMenuTrigger className="flex items-center gap-1 hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[17px] font-medium !text-secondary">
+  <NavigationMenuTrigger className="flex items-center gap-1 hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[18px] font-semibold !text-black">
   <Link href={'/solutions'}>Solutions</Link>
     {/* <ChevronDown className="w-4 h-4" /> */}
   </NavigationMenuTrigger>
@@ -30,8 +30,8 @@ export default function SolutionsDropdown() {
         <div key={i} className="mb-4">
           <h4 className="font-bold text-[16px] mb-2">{category.category}</h4>
           {category.subCategories.map((sub, j) => (
-            <div key={j} className="mb-2">
-              <Link href={`/solutions/${category?.categoryUrl}/${sub?.subCategoryUrl}`} className="text-[16px]">
+            <div key={j} className="mb-3">
+              <Link href={`/solutions/${category?.categoryUrl}/${sub?.subCategoryUrl}`} className="text-[16px] leading-[18px] block">
                 {sub.subCategory}
               </Link>
             </div>
