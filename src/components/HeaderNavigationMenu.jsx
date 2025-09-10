@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import {
   NavigationMenu,
@@ -10,13 +11,10 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { solutions } from "@/data/menuItems";
 import { ChevronRight } from "lucide-react";
 
-import axiosInstance from "@/lib/axiosInstance";
 import seoFriendlySlug from "@/lib/seoFriendlySlug";
 import { useProductStore } from "@/store/useProductStore";
 import SolutionsDropdown from "./SolutionsDropdown";
@@ -24,6 +22,8 @@ import SolutionsDropdown from "./SolutionsDropdown";
 export function HeaderNavigationMenu() {
   const { products, getFormatedProduct } = useProductStore();
   const [activeTab, setActiveTab] = useState(products[0]?.categoryName);
+
+  const pathname = usePathname();
 
   useEffect(() => {
     getFormatedProduct();
@@ -35,58 +35,71 @@ export function HeaderNavigationMenu() {
     }
   }, [products]);
 
-  console.log("products", products)
+  const getLinkClass = (href, isStartsWith = false) => {
+    const isActive = isStartsWith
+      ? pathname.startsWith(href)
+      : pathname === href;
+    return `hover:!bg-transparent !bg-transparent 
+      ${isActive ? "text-primary" : "!text-black"} 
+      data-[active=true]:!text-primary 
+      hover:!text-primary focus:!text-primary 
+      text-[18px] font-semibold flex items-center gap-1`;
+  };
 
   return (
     <NavigationMenu viewport={false}>
       <NavigationMenuList className="gap-4">
+        {/* Home */}
         <NavigationMenuItem>
-          <NavigationMenuLink
-            asChild
-            className="hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[18px] font-semibold !text-black flex items-center gap-1"
-          >
-            <Link href={"/"}>Home</Link>
+          <NavigationMenuLink asChild className={getLinkClass("/")}>
+            <Link href="/">Home</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
+
+        {/* Products */}
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="hover:!bg-transparent hover:!text-primary focus:!text-primary text-[18px] font-semibold !text-black flex items-center gap-1">
-            {/* {Icon && <Icon size={18} />} */}
-            <Link href={"/products"}>Products</Link>
+          <NavigationMenuTrigger className={getLinkClass("/products", true)}>
+            <Link href="/products">Products</Link>
           </NavigationMenuTrigger>
           <NavigationMenuContent
-            className={
-              "container border border-gray-100 bg-gray-50 !shadow-none left-[50%] translate-x-[-42.7%] 2xl:translate-x-[-44%] !w-[98vw]"
-            }
+          // forceMount
+            className="!w-[96vw] 2xl:!w-[80vw] !-translate-x-[33%] 2xl:!translate-x-[-36%]  z-50 border border-gray-100 bg-gray-50 !shadow-none 
+           
+            "
           >
             <Tabs
               value={activeTab}
               onValueChange={setActiveTab}
               className="flex flex-row w-full min-h-[260px] overflow-hidden space-x-4"
             >
-              {/* list */}
+              {/* Left Category List */}
               <div className="bg-gray-50 rounded-sm">
                 <TabsList className="flex flex-col space-y-2 border-r pr-2 shadow-none justify-start bg-transparent border-none">
-                  {products?.sort((a, b)=> b.categoryName.length - a.categoryName.length).map((pro, index) => (
-                    <TabsTrigger
-                      key={index}
-                      value={pro.categoryName}
-                      onMouseEnter={() => setActiveTab(pro.categoryName)} // hover instead of click
-                      className="gap-2 text-left mr-auto !shadow-none bg-transparent 
-              data-[state=active]:bg-primary/80 data-[state=active]:text-white 
-              min-w-[300px] cursor-pointer border border-l-2 py-3 flex items-center justify-between"
-                    >
-                      {pro.categoryName}{" "}
-                      {activeTab === pro.categoryName && (
-                        <span>
-                          <ChevronRight />
-                        </span>
-                      )}
-                    </TabsTrigger>
-                  ))}
+                  {products
+                    ?.sort(
+                      (a, b) => b.categoryName.length - a.categoryName.length
+                    )
+                    .map((pro, index) => (
+                      <TabsTrigger
+                        key={index}
+                        value={pro.categoryName}
+                        onMouseEnter={() => setActiveTab(pro.categoryName)}
+                        className="gap-2 text-left mr-auto !shadow-none bg-transparent 
+                          data-[state=active]:bg-primary/80 data-[state=active]:text-white 
+                          min-w-[300px] cursor-pointer border border-l-2 py-3 flex items-center justify-between"
+                      >
+                        {pro.categoryName}
+                        {activeTab === pro.categoryName && (
+                          <span>
+                            <ChevronRight />
+                          </span>
+                        )}
+                      </TabsTrigger>
+                    ))}
                 </TabsList>
               </div>
 
-              {/* content */}
+              {/* Right Subcategories + Products */}
               {products?.map((pro, productIndex) => (
                 <TabsContent
                   key={productIndex}
@@ -104,18 +117,18 @@ export function HeaderNavigationMenu() {
                           </span>
 
                           {subCat?.products.map((product, subCatIndex) => (
-                              <Link
-                                key={subCatIndex}
-                                href={`/products/${seoFriendlySlug(
-                                  pro.categoryName
-                                )}/${seoFriendlySlug(
-                                  subCat.subCategoryName
-                                )}/${seoFriendlySlug(product.productName)}`}
-                                className="block text-[16px] hover:text-primary mb-1"
-                              >
-                                {product.productName}
-                              </Link>
-                            ))}
+                            <Link
+                              key={subCatIndex}
+                              href={`/products/${seoFriendlySlug(
+                                pro.categoryName
+                              )}/${seoFriendlySlug(
+                                subCat.subCategoryName
+                              )}/${seoFriendlySlug(product.productName)}`}
+                              className="block text-[16px] hover:text-primary mb-1"
+                            >
+                              {product.productName}
+                            </Link>
+                          ))}
                         </li>
                       ))}
                   </ul>
@@ -124,52 +137,33 @@ export function HeaderNavigationMenu() {
             </Tabs>
           </NavigationMenuContent>
         </NavigationMenuItem>
+
+        {/* Download */}
         <NavigationMenuItem>
-          <NavigationMenuLink
-            asChild
-            className="hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[18px] font-semibold !text-black flex items-center gap-1"
-          >
-            <Link href={"/download"}>Download</Link>
+          <NavigationMenuLink asChild className={getLinkClass("/download")}>
+            <Link href="/download">Download</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
-        <NavigationMenuList>
 
-          {/* Custom dropdown */}
-            <SolutionsDropdown />
+        {/* Solutions (custom dropdown) */}
+        <NavigationMenuList>
+          <SolutionsDropdown getLinkClass={getLinkClass}/>
         </NavigationMenuList>
 
+        {/* About */}
         <NavigationMenuItem>
-          <NavigationMenuLink
-            asChild
-            className="hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[18px] font-semibold !text-black flex items-center gap-1"
-          >
-            <Link href={"/about"}>About</Link>
+          <NavigationMenuLink asChild className={getLinkClass("/about")}>
+            <Link href="/about">About</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
+
+        {/* Contact */}
         <NavigationMenuItem>
-          <NavigationMenuLink
-            asChild
-            className="hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[18px] font-semibold !text-black flex items-center gap-1"
-          >
-            <Link href={"/contact"}>Contact</Link>
+          <NavigationMenuLink asChild className={getLinkClass("/contact")}>
+            <Link href="/contact">Contact</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
-  );
-}
-
-function ListItem({ title, children, href, ...props }) {
-  return (
-    <li {...props}>
-      <NavigationMenuLink asChild>
-        <Link href={href}>
-          <div className="text-sm leading-none font-medium">{title}</div>
-          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
-            {children}
-          </p>
-        </Link>
-      </NavigationMenuLink>
-    </li>
   );
 }

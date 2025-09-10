@@ -28,7 +28,7 @@ const ContactPage = () => {
     {
       icon: Mail,
       title: "Email",
-      details: ["sales@timewatchindia.com", "support@timewatchindia.com"],
+      details: ["sales@timewatchindia.com", "helpdesk@timewatchindia.com"],
       subtitle: "We'll respond within 24 hours",
     },
     {

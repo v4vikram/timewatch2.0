@@ -15,11 +15,11 @@ import {
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { solutions } from "@/data/menuItems";
 
-export default function SolutionsDropdown() {
+export default function SolutionsDropdown({getLinkClass}) {
   return (
   <NavigationMenuItem>
   <NavigationMenuTrigger className="flex items-center gap-1 hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[18px] font-semibold !text-black">
-  <Link href={'/solutions'}>Solutions</Link>
+  <Link href={'/solutions'} className={getLinkClass('/solutions')}>Solutions</Link>
     {/* <ChevronDown className="w-4 h-4" /> */}
   </NavigationMenuTrigger>
 
