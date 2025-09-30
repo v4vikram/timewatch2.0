@@ -1,25 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
+    images: {
     domains: [
-      'localhost', // remove http and port
-      'storage.googleapis.com'
+      'http://localhost:3001',
+      'storage.googleapis.com',
+      'https://timewatch2-0-311005204045.europe-west1.run.app'
     ],
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: '3001',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'storage.googleapis.com',
-        pathname: '/**',
+        protocol: 'http', 
+        hostname: '*',
       },
     ],
   },
-
 };
 
 export default nextConfig;
