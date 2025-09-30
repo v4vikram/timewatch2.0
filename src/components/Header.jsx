@@ -20,7 +20,7 @@ const Header = () => {
     setIsMenuOpen(false);
   }, [params]);
   return (
-    <header className="sticky top-0 z-50 w-full bg-white hidden. lg:block">
+    <header className="sticky top-0 z-50 w-full bg-white hidden. lg:block font-medium">
       <div className="container mx-auto flex items-center justify-between px-3">
         {/* logo */}
         <Link href={"/"}>

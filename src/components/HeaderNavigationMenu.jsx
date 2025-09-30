@@ -63,7 +63,7 @@ export function HeaderNavigationMenu() {
           </NavigationMenuTrigger>
           <NavigationMenuContent
           // forceMount
-            className="!w-[96vw] 2xl:!w-[80vw] !-translate-x-[33%] 2xl:!translate-x-[-36%]  z-50 border border-gray-100 bg-gray-50 !shadow-none 
+            className="!w-[96vw] 2xl:!w-[80vw] !-translate-x-[33%] 2xl:!translate-x-[-36%]  z-50 !top-[45px] border border-gray-100 bg-gray-50 !shadow-none 
            
             "
           >

@@ -134,7 +134,7 @@ p {
 }
 /* home page swiper banner */
 span.swiper-pagination-bullet {
-  @apply w-[15px] h-[15px] bg-gray-900;
+  @apply w-[15px] h-[15px] bg-transparent border-2 border-white !opacity-100;
 }
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   @apply  border-2 border-white bg-primary;

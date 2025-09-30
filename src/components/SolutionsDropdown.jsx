@@ -30,7 +30,7 @@ export default function SolutionsDropdown({getLinkClass}) {
         <div key={i} className="mb-4">
           <h4 className="font-bold text-[16px] mb-2">{category.category}</h4>
           {category.subCategories.map((sub, j) => (
-            <div key={j} className="mb-3">
+            <div key={j} className="mb-4 hover:text-primary">
               <Link href={`/solutions/${category?.categoryUrl}/${sub?.subCategoryUrl}`} className="text-[16px] leading-[18px] block">
                 {sub.subCategory}
               </Link>

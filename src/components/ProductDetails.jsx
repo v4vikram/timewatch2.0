@@ -2,7 +2,13 @@
 
 import React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Download, FileDown, FileText, MessageCircleMore, Phone } from "lucide-react";
+import {
+  Download,
+  FileDown,
+  FileText,
+  MessageCircleMore,
+  Phone,
+} from "lucide-react";
 import Image from "next/image";
 import {
   Table,
@@ -119,14 +125,31 @@ const ProductDetails = ({ product }) => {
           </div>
 
           <div className="flex gap-4 mt-10">
-            <Button asChild className={'text-[15px] md:text-[17px]'}>
-              <Link href={"#"}><Phone/> Enquire Now</Link>
+            <Button asChild className={"text-[15px] md:text-[17px]"}>
+              <Link href={"#"}>
+                <Phone /> Enquire Now
+              </Link>
             </Button>
-            <Button asChild variant={'secondary'} className={'hidden md:flex'}>
-              <Link href={"#"}><MessageCircleMore/>Enquire on Whatsapp</Link>
+            <Button asChild variant={"secondary"} className={"hidden md:flex"}>
+              <Link
+                href="https://wa.me/919599953923?text=Hello%F0%9F%91%8B%F0%9F%8F%BB%20TimeWatch%2C%0AI%27m%20Interested%20in%20your%20product%20or%20services%0APlease%20Assist%20me%21%20%20"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Chat on WhatsApp"
+              >
+                <MessageCircleMore />
+                Enquire on Whatsapp
+              </Link>
             </Button>
-            <Button asChild variant={'secondary'} className={'flex md:hidden text-[15px]'}>
-              <Link href={"#"}><MessageCircleMore/>Whatsapp Now</Link>
+            <Button
+              asChild
+              variant={"secondary"}
+              className={"flex md:hidden text-[15px]"}
+            >
+              <Link href={"#"}>
+                <MessageCircleMore />
+                Whatsapp Now
+              </Link>
             </Button>
           </div>
 

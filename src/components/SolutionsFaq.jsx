@@ -29,7 +29,7 @@ const SolutionsFaq = ({faqs}) => {
               className="bg-white rounded-lg shadow-sm border border-gray-200"
             >
               <button
-                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
                 onClick={() => toggleFaq(index)}
               >
                 <span className="font-medium text-gray-900">

@@ -38,7 +38,7 @@ export function SearchBar() {
         return;
       }
       try {
-        const res = await axiosInstance.get(`/product/search?q=${encodeURIComponent(query)}`
+        const res = await axiosInstance.get(`/product/search?title=${encodeURIComponent(query)}`
         );
         // console.log("(res?.data?.products", res?.data?.products)
         setResults(res?.data?.products || []);

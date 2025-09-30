@@ -44,6 +44,7 @@ const quickLinks = [
   { label: "Careers", href: "/careers" },
   { label: "Download", href: "/download" },
   { label: "Contact", href: "/contact" },
+  { label: "E Waste", href: "/e-waste" },
 ];
 const footerLinks = [
   // { label: "About Us", href: "/about" },
@@ -61,7 +62,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <Link href={"#"}>
+            <Link href={"/"}>
               <Image
                 src={"/timewatch-logo.svg"}
                 width={230}

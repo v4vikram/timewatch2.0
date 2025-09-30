@@ -12,7 +12,9 @@ const validationSchema = Yup.object({
   name: Yup.string().required("Name is required"),
   phone: Yup.string()
     .required("Phone is required")
-    .matches(/^\+?[0-9\s]{1,15}$/, "Phone must be up to 15 digits"),
+    .matches(/^\+?[0-9\s]+$/, "Phone can only contain digits and +") // optional regex for allowed chars
+    .min(10, "Phone must be at least 7 digits")
+    .max(15, "Phone must be at most 15 digits"),
   email: Yup.string().email("Invalid email").required("Email is required"),
   location: Yup.string(),
   message: Yup.string(),
@@ -20,49 +22,49 @@ const validationSchema = Yup.object({
 
 const HomePageForm = () => {
   const [isSuccess, setIsSuccess] = useState(false);
+  const [dial, setDial] = useState("");
   const initialValues = {
     name: "",
-    phone: "",
+    phone: ``,
     email: "",
     location: "",
     message: "",
   };
 
+  const handleSubmit = async (values, { resetForm, setErrors }) => {
+    try {
+      // reset success state before new attempt
+      setIsSuccess(false);
+
+      console.log("values", values);
+
+      // return;
+
+      const newCustomer = await axiosInstance.post(`/form/customer`, values);
+
+      console.log("values", values.phone.split(" ")[0])
+
+      // setDial(values.phone.split(" ")[0]);
+      if (newCustomer?.status === 201) {
+        // resetForm();
+        resetForm({ values: { dial } })
+        setIsSuccess(true);
+      }
+    } catch (error) {
+      if (error.response && error.response.data && error.response.data.errors) {
+        // Map backend validation errors into Formik
+        setErrors(error.response.data.errors);
+      } else {
+        console.error("Unexpected error", error);
+      }
+    }
+  };
+
   return (
     <Formik
       initialValues={initialValues}
-      // validationSchema={validationSchema}
-      onSubmit={async (values, { resetForm, setErrors }) => {
-        try {
-          // reset success state before new attempt
-          setIsSuccess(false);
-
-          // console.log("values", values);
-
-          // return;
-
-          const newCustomer = await axiosInstance.post(
-            `/form/customer`,
-            values
-          );
-
-          if (newCustomer?.status === 201) {
-            resetForm();
-            setIsSuccess(true);
-          }
-        } catch (error) {
-          if (
-            error.response &&
-            error.response.data &&
-            error.response.data.errors
-          ) {
-            // Map backend validation errors into Formik
-            setErrors(error.response.data.errors);
-          } else {
-            console.error("Unexpected error", error);
-          }
-        }
-      }}
+      validationSchema={validationSchema}
+      onSubmit={handleSubmit}
     >
       {({ setFieldValue, values }) => (
         <Form className="space-y-6">
@@ -96,15 +98,16 @@ const HomePageForm = () => {
                 country={"in"}
                 value={values.phone}
                 onChange={(rawValue, country) => {
-                  const dialCode = country.dialCode; // e.g. "91"
+                  const dialCode = country.dialCode;
                   const numberWithoutCode = rawValue.slice(dialCode.length);
                   const formatted = `+${dialCode} ${numberWithoutCode.trim()}`;
+                  // setDial(dialCode);
                   setFieldValue("phone", formatted);
                 }}
                 enableSearch
                 searchPlaceholder="Search country..."
                 inputClass="!w-full !pl-12 !overflow-hidden !py-6 !rounded-xl !bg-transparent !border !border-gray-300 focus:!ring-2 focus:!ring-[#d63438] focus:!border-transparent !outline-none !transition-all"
-                disableCountryCode={false} // keep country code visible
+                disableCountryCode={true} // keep country code visible
                 disableDropdown={false} // allow changing if you want
                 countryCodeEditable={false} // ✅ prevents removing +91
               />

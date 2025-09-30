@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DearFlip 3D Flipbook CDN Example</title>
+
+  <!-- jQuery (required for DearFlip) -->
+
+
+  <!-- DearFlip CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dearflip@2.0.0/dist/dearflip.min.css">
+</head>
+<body>
+
+<h2 style="text-align:center;">DearFlip 3D Flipbook CDN Demo</h2>
+
+<div class="book-container" style="width:800px; max-width:95%; height:500px; margin:auto;">
+  <!-- DearFlip flipbook -->
+  <div class="_df_book" id="flipbook_example">
+    <!-- Example images as pages -->
+    <img src="https://via.placeholder.com/400x500?text=Page+1" alt="Page 1">
+    <img src="https://via.placeholder.com/400x500?text=Page+2" alt="Page 2">
+    <img src="https://via.placeholder.com/400x500?text=Page+3" alt="Page 3">
+    <img src="https://via.placeholder.com/400x500?text=Page+4" alt="Page 4">
+  </div>
+</div>
+
+<!-- DearFlip JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dearflip@2.0.0/dist/dflip.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    // Initialize DearFlip
+    $("#flipbook_example").dFlip({
+      size: "stretch",   // fit container
+      is3d: true,        // enable 3D curved pages
+      viewertype: "flipbook",
+      duration: 1500     // slow & smooth flip
+    });
+  });
+</script>
+
+</body>
+</html>
