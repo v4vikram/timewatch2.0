@@ -79,7 +79,7 @@ export default function MyFlipBook() {
         maxShadowOpacity={0.5}
         // drawShadow={true}
         // flippingTime={800}
-        startZIndex={1}
+        // startZIndex={1}
         autoSize={true}
         usePortrait={true}
       >
