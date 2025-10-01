@@ -8,25 +8,24 @@ export default function MyFlipBook() {
   const isFlipping = useRef(false);
 
   const totalImages = 60;
-  const firstLoadCount = 10; // first N images to load immediately
-
   const imagePaths = Array.from(
     { length: totalImages },
     (_, i) => `/images/flipbook/artboard-${i + 1}.jpg`
   );
 
-  const [dimensions, setDimensions] = useState({ width: 550, height: 800 });
-  const [loadedImages, setLoadedImages] = useState(
-    imagePaths.slice(0, firstLoadCount).map(() => false)
-  );
-
   // Responsive dimensions
+  const [dimensions, setDimensions] = useState({ width: 550, height: 800 });
+
+  // Track if images are loaded
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  // Update dimensions on resize
   useEffect(() => {
     const updateDimensions = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth < 500) {
         const mobileWidth = Math.min(screenWidth * 0.95, 470);
-        const mobileHeight = mobileWidth * (420 / 300);
+        const mobileHeight = mobileWidth * (420 / 300); // maintain aspect ratio
         setDimensions({ width: mobileWidth, height: mobileHeight });
       } else {
         const desktopWidth = Math.min(screenWidth * 0.8, 550);
@@ -40,53 +39,40 @@ export default function MyFlipBook() {
     return () => window.removeEventListener("resize", updateDimensions);
   }, []);
 
-  // Preload first N images immediately
+  // Preload images
   useEffect(() => {
-    imagePaths.slice(0, firstLoadCount).forEach((src, index) => {
+    const firstBatch = imagePaths.slice(0, 10); // first 10 images
+    const remainingBatch = imagePaths.slice(10); // remaining images
+
+    let loadedCount = 0;
+
+    // Helper to mark when first 10 images are loaded
+    const checkFirstBatchLoaded = () => {
+      loadedCount++;
+      if (loadedCount === firstBatch.length) {
+        setImagesLoaded(true); // show flipbook after first 10
+        // Start preloading remaining images in background
+        remainingBatch.forEach((src) => {
+          const img = new window.Image();
+          img.src = src;
+        });
+      }
+    };
+
+    firstBatch.forEach((src) => {
       const img = new window.Image();
       img.src = src;
-      img.onload = () => {
-        setLoadedImages((prev) => {
-          const newLoaded = [...prev];
-          newLoaded[index] = true;
-          return newLoaded;
-        });
-      };
+      img.onload = checkFirstBatchLoaded;
     });
   }, []);
 
-  // Preload remaining images in background progressively
-  const preloadNextImages = (currentIndex) => {
-    const nextImages = imagePaths.slice(currentIndex + 1, totalImages);
-    nextImages.forEach((src, i) => {
-      const img = new window.Image();
-      img.src = src;
-    });
-  };
-
-  // Smooth wheel handling
+  // Smooth wheel/touch handling
   useEffect(() => {
     const handleWheel = (e) => {
       if (!bookRef.current || isFlipping.current) return;
       const flip = bookRef.current.pageFlip();
       const totalPages = flip.getPageCount();
       const currentPage = flip.getCurrentPageIndex();
-
-      // Preload next images when user flips near end of loaded ones
-      if (currentPage + 3 > loadedImages.length && loadedImages.length < totalImages) {
-        // load next batch of 5 images
-        const nextBatchCount = Math.min(5, totalImages - loadedImages.length);
-        imagePaths
-          .slice(loadedImages.length, loadedImages.length + nextBatchCount)
-          .forEach((src) => {
-            const img = new window.Image();
-            img.src = src;
-          });
-        setLoadedImages((prev) => [
-          ...prev,
-          ...Array(nextBatchCount).fill(false),
-        ]);
-      }
 
       if (e.deltaY > 0 && currentPage < totalPages - 1) {
         isFlipping.current = true;
@@ -101,9 +87,9 @@ export default function MyFlipBook() {
 
     window.addEventListener("wheel", handleWheel, { passive: true });
     return () => window.removeEventListener("wheel", handleWheel);
-  }, [loadedImages]);
+  }, []);
 
-  if (loadedImages.length < firstLoadCount || !loadedImages.slice(0, firstLoadCount).every(Boolean)) {
+  if (!imagesLoaded) {
     return (
       <div className="flex justify-center items-center h-screen bg-gray-200">
         <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 border-b-4 border-gray-300"></div>
@@ -119,13 +105,12 @@ export default function MyFlipBook() {
         ref={bookRef}
         drawShadow={false}
         mobileScrollSupport={true}
-        flippingTime={400}
+        flippingTime={400} // faster for mobile
         showCover={false}
         maxShadowOpacity={0.5}
         autoSize={true}
         usePortrait={true}
-        swipeDistance={30}
-        onFlip={(e) => preloadNextImages(e.data)} // preload next images
+        swipeDistance={30} // easier swipe on mobile
       >
         {imagePaths.map((src, i) => (
           <NextImage
@@ -135,10 +120,89 @@ export default function MyFlipBook() {
             width={dimensions.width}
             height={dimensions.height}
             style={{ objectFit: "cover" }}
-            priority={i < firstLoadCount} // only first images priority
+            priority
           />
+        ))}
+
+        {/* Optional colored numbered divs */}
+        {Array.from({ length: 60 }, (_, i) => (
+          <div
+            key={i}
+            className={`flex items-center justify-center h-12 text-white font-bold bg-[${getColor(
+              i
+            )}]`}
+          >
+            {i + 1}
+          </div>
         ))}
       </HTMLFlipBook>
     </div>
   );
+}
+
+// Helper function for colored divs (example gradient colors)
+function getColor(index) {
+  const colors = [
+    "red-500",
+    "green-500",
+    "blue-500",
+    "yellow-500",
+    "purple-500",
+    "pink-500",
+    "indigo-500",
+    "orange-500",
+    "teal-500",
+    "red-400",
+    "green-400",
+    "blue-400",
+    "yellow-400",
+    "purple-400",
+    "pink-400",
+    "indigo-400",
+    "orange-400",
+    "teal-400",
+    "red-300",
+    "green-300",
+    "blue-300",
+    "yellow-300",
+    "purple-300",
+    "pink-300",
+    "indigo-300",
+    "orange-300",
+    "teal-300",
+    "red-200",
+    "green-200",
+    "blue-200",
+    "yellow-200",
+    "purple-200",
+    "pink-200",
+    "indigo-200",
+    "orange-200",
+    "teal-200",
+    "red-600",
+    "green-600",
+    "blue-600",
+    "yellow-600",
+    "purple-600",
+    "pink-600",
+    "indigo-600",
+    "orange-600",
+    "teal-600",
+    "red-700",
+    "green-700",
+    "blue-700",
+    "yellow-700",
+    "purple-700",
+    "pink-700",
+    "indigo-700",
+    "orange-700",
+    "teal-700",
+    "red-800",
+    "green-800",
+    "blue-800",
+    "yellow-800",
+    "purple-800",
+    "pink-800",
+  ];
+  return colors[index % colors.length];
 }
