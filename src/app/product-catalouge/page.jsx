@@ -7,9 +7,9 @@ import HTMLFlipBook from "react-pageflip";
 export default function MyFlipBook() {
   const bookRef = useRef(null);
   const isFlipping = useRef(false);
-  const audio = useRef(new Audio("/videos/page-flip-sound.mp3"));
+  const audio = useRef(null); // don't create immediately
 
-  const [audioEnabled, setAudioEnabled] = useState(false); // toggle with button
+  const [audioEnabled, setAudioEnabled] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
   const totalImages = 60;
@@ -19,6 +19,13 @@ export default function MyFlipBook() {
   );
 
   const [dimensions, setDimensions] = useState({ width: 550, height: 800 });
+
+  // ✅ Create audio only in the browser
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      audio.current = new Audio("/videos/page-flip-sound.mp3");
+    }
+  }, []);
 
   // Responsive dimensions
   useEffect(() => {
@@ -75,12 +82,12 @@ export default function MyFlipBook() {
       if (e.deltaY > 0 && currentPage < totalPages - 1) {
         isFlipping.current = true;
         flip.flipNext();
-        if (audioEnabled) audio.current.play().catch(() => {});
+        if (audioEnabled && audio.current) audio.current.play().catch(() => {});
         setTimeout(() => (isFlipping.current = false), 700);
       } else if (e.deltaY < 0 && currentPage > 0) {
         isFlipping.current = true;
         flip.flipPrev();
-        if (audioEnabled) audio.current.play().catch(() => {});
+        if (audioEnabled && audio.current) audio.current.play().catch(() => {});
         setTimeout(() => (isFlipping.current = false), 700);
       }
     };
@@ -109,7 +116,6 @@ export default function MyFlipBook() {
         {audioEnabled ? "🔊 On" : "🔇 Off"}
       </button>
 
-
       <HTMLFlipBook
         width={dimensions.width}
         height={dimensions.height}
@@ -123,7 +129,7 @@ export default function MyFlipBook() {
         usePortrait={true}
         swipeDistance={30}
         onFlip={() => {
-          if (audioEnabled) audio.current.play().catch(() => {});
+          if (audioEnabled && audio.current) audio.current.play().catch(() => {});
         }}
       >
         {imagePaths.map((src, i) => (
@@ -137,18 +143,18 @@ export default function MyFlipBook() {
             priority
           />
         ))}
-
       </HTMLFlipBook>
-          <div className="mt-4 max-w-[750px]">
+
+      <div className="mt-4 max-w-[750px]">
         <a
-        href="/images/product-catalogue.pdf"
-        download="product-catalogue.pdf"
-        className="p-3 rounded-full border border-gray-600 bg-white text-gray-800 hover:bg-gray-100 flex items-center mb-4"
-      >
-        <FileText className="text-primary"/> <strong className="mb-0">Download Catalogue</strong>
-      </a>
-    </div>
+          href="/images/product-catalogue.pdf"
+          download="product-catalogue.pdf"
+          className="p-3 rounded-full border border-gray-600 bg-white text-gray-800 hover:bg-gray-100 flex items-center mb-4"
+        >
+          <FileText className="text-primary" />{" "}
+          <strong className="mb-0">Download Catalogue</strong>
+        </a>
+      </div>
     </div>
   );
 }
-
