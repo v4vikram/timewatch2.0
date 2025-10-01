@@ -104,7 +104,7 @@ const schemaFaq = {
           <div className="absolute inset-0 left-0 top-0 w-full h-full">
             <div className="relative z-10 w-full h-[400px] md:h-[550px]">
               <Image
-                src="/images/solutions-banner.jpg"
+                src="/images/solutions/baggage-scanner.png"
                 alt="Consulting Hero"
                 fill
                 sizes="100"
@@ -137,7 +137,7 @@ const schemaFaq = {
             <section className="">
               <div className="relative z-10 w-full h-[300px] md:h-[450px] rounded-lg overflow-hidden">
                 <Image
-                  src="/images/solutions-banner.jpg"
+                  src="/images/solutions/sub/baggage-scanner.jpg"
                   alt="Consulting Hero"
                   fill
                   sizes="100"

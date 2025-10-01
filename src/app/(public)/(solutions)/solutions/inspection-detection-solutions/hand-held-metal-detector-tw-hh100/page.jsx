@@ -135,8 +135,9 @@ const schemaFaq = {
             <section className="">
               <div className="relative z-10 w-full h-[300px] md:h-[450px] rounded-lg overflow-hidden">
                 <Image
-                  src="/images/solutions-banner.jpg"
-                  alt="Consulting Hero"
+                  src="/images/solutions/sub/hhmd.jpg"
+                  alt="Hand Held Metal Detector – TW-HH100 | TimeWatch India"
+                  title="Hand Held Metal Detector – TW-HH100 | TimeWatch India"
                   fill
                   sizes="100"
                   className="object-cover w-full h-full"

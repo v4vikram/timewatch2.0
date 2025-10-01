@@ -1,4 +1,5 @@
 "use client";
+import { FileText } from "lucide-react";
 import NextImage from "next/image";
 import React, { useRef, useEffect, useState } from "react";
 import HTMLFlipBook from "react-pageflip";
@@ -6,6 +7,10 @@ import HTMLFlipBook from "react-pageflip";
 export default function MyFlipBook() {
   const bookRef = useRef(null);
   const isFlipping = useRef(false);
+  const audio = useRef(new Audio("/videos/page-flip-sound.mp3"));
+
+  const [audioEnabled, setAudioEnabled] = useState(false); // toggle with button
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   const totalImages = 60;
   const imagePaths = Array.from(
@@ -13,19 +18,15 @@ export default function MyFlipBook() {
     (_, i) => `/images/flipbook/artboard-${i + 1}.jpg`
   );
 
-  // Responsive dimensions
   const [dimensions, setDimensions] = useState({ width: 550, height: 800 });
 
-  // Track if images are loaded
-  const [imagesLoaded, setImagesLoaded] = useState(false);
-
-  // Update dimensions on resize
+  // Responsive dimensions
   useEffect(() => {
     const updateDimensions = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth < 500) {
         const mobileWidth = Math.min(screenWidth * 0.95, 470);
-        const mobileHeight = mobileWidth * (420 / 300); // maintain aspect ratio
+        const mobileHeight = mobileWidth * (420 / 300);
         setDimensions({ width: mobileWidth, height: mobileHeight });
       } else {
         const desktopWidth = Math.min(screenWidth * 0.8, 550);
@@ -33,7 +34,6 @@ export default function MyFlipBook() {
         setDimensions({ width: desktopWidth, height: desktopHeight });
       }
     };
-
     window.addEventListener("resize", updateDimensions);
     updateDimensions();
     return () => window.removeEventListener("resize", updateDimensions);
@@ -41,17 +41,14 @@ export default function MyFlipBook() {
 
   // Preload images
   useEffect(() => {
-    const firstBatch = imagePaths.slice(0, 5); // first 5 images
-    const remainingBatch = imagePaths.slice(5); // remaining images
-
+    const firstBatch = imagePaths.slice(0, 5);
+    const remainingBatch = imagePaths.slice(5);
     let loadedCount = 0;
 
-    // Helper to mark when first 10 images are loaded
     const checkFirstBatchLoaded = () => {
       loadedCount++;
       if (loadedCount === firstBatch.length) {
-        setImagesLoaded(true); // show flipbook after first 10
-        // Start preloading remaining images in background
+        setImagesLoaded(true);
         remainingBatch.forEach((src) => {
           const img = new window.Image();
           img.src = src;
@@ -66,10 +63,11 @@ export default function MyFlipBook() {
     });
   }, []);
 
-  // Smooth wheel/touch handling
+  // Scroll / wheel handler
   useEffect(() => {
     const handleWheel = (e) => {
       if (!bookRef.current || isFlipping.current) return;
+
       const flip = bookRef.current.pageFlip();
       const totalPages = flip.getPageCount();
       const currentPage = flip.getCurrentPageIndex();
@@ -77,17 +75,19 @@ export default function MyFlipBook() {
       if (e.deltaY > 0 && currentPage < totalPages - 1) {
         isFlipping.current = true;
         flip.flipNext();
-        setTimeout(() => (isFlipping.current = false), 300);
+        if (audioEnabled) audio.current.play().catch(() => {});
+        setTimeout(() => (isFlipping.current = false), 700);
       } else if (e.deltaY < 0 && currentPage > 0) {
         isFlipping.current = true;
         flip.flipPrev();
-        setTimeout(() => (isFlipping.current = false), 300);
+        if (audioEnabled) audio.current.play().catch(() => {});
+        setTimeout(() => (isFlipping.current = false), 700);
       }
     };
 
     window.addEventListener("wheel", handleWheel, { passive: true });
     return () => window.removeEventListener("wheel", handleWheel);
-  }, []);
+  }, [audioEnabled]);
 
   if (!imagesLoaded) {
     return (
@@ -98,19 +98,33 @@ export default function MyFlipBook() {
   }
 
   return (
-    <div className="flex justify-center items-center bg-[#e0e0e0] h-screen overflow-hidden">
+    <div className="flex flex-col justify-center items-center bg-[#e0e0e0] h-screen overflow-hidden relative">
+      {/* Speaker toggle button */}
+      <button
+        className={`absolute top-4 right-4 p-3 rounded-full border border-gray-600 bg-white text-gray-800 ${
+          audioEnabled ? "bg-green-500 text-white" : ""
+        }`}
+        onClick={() => setAudioEnabled((prev) => !prev)}
+      >
+        {audioEnabled ? "🔊 On" : "🔇 Off"}
+      </button>
+
+
       <HTMLFlipBook
         width={dimensions.width}
         height={dimensions.height}
         ref={bookRef}
         drawShadow={false}
         mobileScrollSupport={true}
-        flippingTime={400} // faster for mobile
+        flippingTime={500}
         showCover={false}
         maxShadowOpacity={0.5}
         autoSize={true}
         usePortrait={true}
-        swipeDistance={30} // easier swipe on mobile
+        swipeDistance={30}
+        onFlip={() => {
+          if (audioEnabled) audio.current.play().catch(() => {});
+        }}
       >
         {imagePaths.map((src, i) => (
           <NextImage
@@ -124,85 +138,17 @@ export default function MyFlipBook() {
           />
         ))}
 
-        {/* Optional colored numbered divs */}
-        {Array.from({ length: 60 }, (_, i) => (
-          <div
-            key={i}
-            className={`flex items-center justify-center h-12 text-white font-bold bg-[${getColor(
-              i
-            )}]`}
-          >
-            {i + 1}
-          </div>
-        ))}
       </HTMLFlipBook>
+          <div className="mt-4 max-w-[750px]">
+        <a
+        href="/images/product-catalogue.pdf"
+        download="product-catalogue.pdf"
+        className="p-3 rounded-full border border-gray-600 bg-white text-gray-800 hover:bg-gray-100 flex items-center mb-4"
+      >
+        <FileText className="text-primary"/> <strong className="mb-0">Download Catalogue</strong>
+      </a>
+    </div>
     </div>
   );
 }
 
-// Helper function for colored divs (example gradient colors)
-function getColor(index) {
-  const colors = [
-    "red-500",
-    "green-500",
-    "blue-500",
-    "yellow-500",
-    "purple-500",
-    "pink-500",
-    "indigo-500",
-    "orange-500",
-    "teal-500",
-    "red-400",
-    "green-400",
-    "blue-400",
-    "yellow-400",
-    "purple-400",
-    "pink-400",
-    "indigo-400",
-    "orange-400",
-    "teal-400",
-    "red-300",
-    "green-300",
-    "blue-300",
-    "yellow-300",
-    "purple-300",
-    "pink-300",
-    "indigo-300",
-    "orange-300",
-    "teal-300",
-    "red-200",
-    "green-200",
-    "blue-200",
-    "yellow-200",
-    "purple-200",
-    "pink-200",
-    "indigo-200",
-    "orange-200",
-    "teal-200",
-    "red-600",
-    "green-600",
-    "blue-600",
-    "yellow-600",
-    "purple-600",
-    "pink-600",
-    "indigo-600",
-    "orange-600",
-    "teal-600",
-    "red-700",
-    "green-700",
-    "blue-700",
-    "yellow-700",
-    "purple-700",
-    "pink-700",
-    "indigo-700",
-    "orange-700",
-    "teal-700",
-    "red-800",
-    "green-800",
-    "blue-800",
-    "yellow-800",
-    "purple-800",
-    "pink-800",
-  ];
-  return colors[index % colors.length];
-}

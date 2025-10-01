@@ -136,8 +136,8 @@ export default function CloudAttendancePayrollSoftware() {
             <section className="">
               <div className="relative z-10 w-full h-[300px] md:h-[450px] rounded-lg overflow-hidden">
                 <Image
-                  src="/images/solutions-banner.jpg"
-                  alt="Consulting Hero"
+                  src="/images/solutions/sub/update-software.jpg"
+                  alt=" Attendance & Payroll Management Software for Indian Businesses"
                   fill
                   sizes="100"
                   className="object-cover w-full h-full"

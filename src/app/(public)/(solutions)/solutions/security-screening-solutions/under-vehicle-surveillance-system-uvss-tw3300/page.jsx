@@ -139,7 +139,7 @@ const schemaFaq = {
             <section className="">
               <div className="relative z-10 w-full h-[300px] md:h-[450px] rounded-lg overflow-hidden">
                 <Image
-                  src="/images/solutions-banner.jpg"
+                  src="/images/solutions/sub/uvss.jpg"
                   alt="Consulting Hero"
                   fill
                   sizes="100"
