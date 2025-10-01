@@ -83,7 +83,7 @@ export default function MyFlipBook() {
         autoSize={true}
         usePortrait={true}
       >
-       <Image src="/images/flipbook/artboard-1.jpg" key={1} alt="Image 1" width={dimensions.width} height={dimensions.height} style={{objectFit:"cover"}}></Image>
+       {/* <Image src="/images/flipbook/artboard-1.jpg" key={1} alt="Image 1" width={dimensions.width} height={dimensions.height} style={{objectFit:"cover"}}></Image>
        <Image src="/images/flipbook/artboard-2.jpg" key={2} alt="Image 2" width={dimensions.width} height={dimensions.height} style={{objectFit:"cover"}}></Image>
        <Image src="/images/flipbook/artboard-3.jpg" key={3} alt="Image 3" width={dimensions.width} height={dimensions.height} style={{objectFit:"cover"}}></Image>
        <Image src="/images/flipbook/artboard-4.jpg" key={4} alt="Image 4" width={dimensions.width} height={dimensions.height} style={{objectFit:"cover"}}></Image>
@@ -142,19 +142,70 @@ export default function MyFlipBook() {
        <Image src="/images/flipbook/artboard-57.jpg" key={57} alt="Image 57" width={dimensions.width} height={dimensions.height} style={{objectFit:"cover"}}></Image>
        <Image src="/images/flipbook/artboard-58.jpg" key={58} alt="Image 58" width={dimensions.width} height={dimensions.height} style={{objectFit:"cover"}}></Image>
        <Image src="/images/flipbook/artboard-59.jpg" key={59} alt="Image 59" width={dimensions.width} height={dimensions.height} style={{objectFit:"cover"}}></Image>
-       <Image src="/images/flipbook/artboard-60.jpg" key={60} alt="Image 60" width={dimensions.width} height={dimensions.height} style={{objectFit:"cover"}}></Image>
+       <Image src="/images/flipbook/artboard-60.jpg" key={60} alt="Image 60" width={dimensions.width} height={dimensions.height} style={{objectFit:"cover"}}></Image> */}
 
 
-        {/* {imagePaths.map((src, index) => (
-          <Image
-          src={"/images/flipbook/Artboard 1@2x-100.jpg"}
-            key={index}
-            alt={`Image ${index + 1}`}
-            width={dimensions.width}
-            height={dimensions.height}
-            style={{ objectFit: "cover" }}
-          />
-        ))} */}
+    <div class="bg-red-500 text-white font-bold flex items-center justify-center h-12">1</div>
+<div class="bg-green-500 text-white font-bold flex items-center justify-center h-12">2</div>
+<div class="bg-blue-500 text-white font-bold flex items-center justify-center h-12">3</div>
+<div class="bg-yellow-500 text-white font-bold flex items-center justify-center h-12">4</div>
+<div class="bg-purple-500 text-white font-bold flex items-center justify-center h-12">5</div>
+<div class="bg-pink-500 text-white font-bold flex items-center justify-center h-12">6</div>
+<div class="bg-indigo-500 text-white font-bold flex items-center justify-center h-12">7</div>
+<div class="bg-orange-500 text-white font-bold flex items-center justify-center h-12">8</div>
+<div class="bg-teal-500 text-white font-bold flex items-center justify-center h-12">9</div>
+<div class="bg-red-400 text-white font-bold flex items-center justify-center h-12">10</div>
+<div class="bg-green-400 text-white font-bold flex items-center justify-center h-12">11</div>
+<div class="bg-blue-400 text-white font-bold flex items-center justify-center h-12">12</div>
+<div class="bg-yellow-400 text-white font-bold flex items-center justify-center h-12">13</div>
+<div class="bg-purple-400 text-white font-bold flex items-center justify-center h-12">14</div>
+<div class="bg-pink-400 text-white font-bold flex items-center justify-center h-12">15</div>
+<div class="bg-indigo-400 text-white font-bold flex items-center justify-center h-12">16</div>
+<div class="bg-orange-400 text-white font-bold flex items-center justify-center h-12">17</div>
+<div class="bg-teal-400 text-white font-bold flex items-center justify-center h-12">18</div>
+<div class="bg-red-300 text-white font-bold flex items-center justify-center h-12">19</div>
+<div class="bg-green-300 text-white font-bold flex items-center justify-center h-12">20</div>
+<div class="bg-blue-300 text-white font-bold flex items-center justify-center h-12">21</div>
+<div class="bg-yellow-300 text-white font-bold flex items-center justify-center h-12">22</div>
+<div class="bg-purple-300 text-white font-bold flex items-center justify-center h-12">23</div>
+<div class="bg-pink-300 text-white font-bold flex items-center justify-center h-12">24</div>
+<div class="bg-indigo-300 text-white font-bold flex items-center justify-center h-12">25</div>
+<div class="bg-orange-300 text-white font-bold flex items-center justify-center h-12">26</div>
+<div class="bg-teal-300 text-white font-bold flex items-center justify-center h-12">27</div>
+<div class="bg-red-200 text-white font-bold flex items-center justify-center h-12">28</div>
+<div class="bg-green-200 text-white font-bold flex items-center justify-center h-12">29</div>
+<div class="bg-blue-200 text-white font-bold flex items-center justify-center h-12">30</div>
+<div class="bg-yellow-200 text-white font-bold flex items-center justify-center h-12">31</div>
+<div class="bg-purple-200 text-white font-bold flex items-center justify-center h-12">32</div>
+<div class="bg-pink-200 text-white font-bold flex items-center justify-center h-12">33</div>
+<div class="bg-indigo-200 text-white font-bold flex items-center justify-center h-12">34</div>
+<div class="bg-orange-200 text-white font-bold flex items-center justify-center h-12">35</div>
+<div class="bg-teal-200 text-white font-bold flex items-center justify-center h-12">36</div>
+<div class="bg-red-600 text-white font-bold flex items-center justify-center h-12">37</div>
+<div class="bg-green-600 text-white font-bold flex items-center justify-center h-12">38</div>
+<div class="bg-blue-600 text-white font-bold flex items-center justify-center h-12">39</div>
+<div class="bg-yellow-600 text-white font-bold flex items-center justify-center h-12">40</div>
+<div class="bg-purple-600 text-white font-bold flex items-center justify-center h-12">41</div>
+<div class="bg-pink-600 text-white font-bold flex items-center justify-center h-12">42</div>
+<div class="bg-indigo-600 text-white font-bold flex items-center justify-center h-12">43</div>
+<div class="bg-orange-600 text-white font-bold flex items-center justify-center h-12">44</div>
+<div class="bg-teal-600 text-white font-bold flex items-center justify-center h-12">45</div>
+<div class="bg-red-700 text-white font-bold flex items-center justify-center h-12">46</div>
+<div class="bg-green-700 text-white font-bold flex items-center justify-center h-12">47</div>
+<div class="bg-blue-700 text-white font-bold flex items-center justify-center h-12">48</div>
+<div class="bg-yellow-700 text-white font-bold flex items-center justify-center h-12">49</div>
+<div class="bg-purple-700 text-white font-bold flex items-center justify-center h-12">50</div>
+<div class="bg-pink-700 text-white font-bold flex items-center justify-center h-12">51</div>
+<div class="bg-indigo-700 text-white font-bold flex items-center justify-center h-12">52</div>
+<div class="bg-orange-700 text-white font-bold flex items-center justify-center h-12">53</div>
+<div class="bg-teal-700 text-white font-bold flex items-center justify-center h-12">54</div>
+<div class="bg-red-800 text-white font-bold flex items-center justify-center h-12">55</div>
+<div class="bg-green-800 text-white font-bold flex items-center justify-center h-12">56</div>
+<div class="bg-blue-800 text-white font-bold flex items-center justify-center h-12">57</div>
+<div class="bg-yellow-800 text-white font-bold flex items-center justify-center h-12">58</div>
+<div class="bg-purple-800 text-white font-bold flex items-center justify-center h-12">59</div>
+<div class="bg-pink-800 text-white font-bold flex items-center justify-center h-12">60</div>
+
       </HTMLFlipBook>
     </div>
   );
