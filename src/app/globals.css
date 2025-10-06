@@ -185,16 +185,22 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     @apply text-xl text-white mb-8 hidden md:block;
   }
   h2 {
-    @apply text-3xl lg:text-[28px] font-bold text-gray-900 mt-6 mb-2;
+    @apply text-3xl lg:text-[28px] font-bold text-gray-900 mt-7 mb-3;
   }
   h3 {
-    @apply text-[18px] mt-4 font-bold text-gray-800;
+    @apply text-[18px] mt-4 mb-3 font-bold text-gray-900;
   }
   ul {
     @apply list-disc pl-5 md:pl-10 space-y-2;
   }
+  li{
+    @apply mb-3;
+  }
+  strong{
+     @apply text-gray-700;
+  }
   ol {
-    @apply list-decimal pl-10 space-y-2;
+    @apply list-decimal pl-10 space-y-2 mt-3;
   }
   p {
     @apply text-secondary;

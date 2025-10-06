@@ -16,6 +16,7 @@ const page = () => {
         categoryUrl: cat.categoryUrl,
         subCategory: subCat.subCategory,
         subCategoryUrl: subCat.subCategoryUrl,
+        subCategoryImage: subCat.subCategoryImage
       };
     })
   );
@@ -38,7 +39,7 @@ const page = () => {
         </p>
       </div>
 
-      <div className="container grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
+      <div className="container grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mb-10 lg:mb-20">
         {sols.map((sol, index) => {
           return (
             <Card
@@ -48,23 +49,23 @@ const page = () => {
               {/* Product Image */}
               <div className="relative h-56 overflow-hidden bg-gray-100">
                 {/* {console.log("Image URL:",  image)} */}
-                {/* {image !== undefined ? (
+                {sol?.subCategoryImage !== undefined ? (
                 <Image
-                  src={image}
-                  alt={name}
+                  src={sol?.subCategoryImage}
+                  alt={sol?.subCategory}
                   fill
                   sizes="400"
-                  className="object-contain w-full h-full transition-transform duration-500 group-hover:scale-105 py-10"
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
                 />
               ) : (
                 <Image
                   src={`/images/placeholder.jpeg`}
-                  alt={name}
+                  alt={sol?.subCategoryImage || 'image title'}
                   fill
                   sizes="400"
                   className="object-contain w-full h-full transition-transform duration-500 group-hover:scale-105 py-0"
                 />
-              )} */}
+              )}
               </div>
 
               <CardContent className="pt-0">

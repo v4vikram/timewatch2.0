@@ -145,7 +145,7 @@ const schemaFaq = {
               <h2 className="!mt-2">
                 Transform Employee Dining with Smarter Canteen Management
               </h2>
-              <h2>Access Control Systems & Terminals | TimeWatch India</h2>
+              {/* <h2>Access Control Systems & Terminals | TimeWatch India</h2> */}
               <h3>(1) Smarter Access Control for Secure Workplaces</h3>
               <p className="mb-4">
                 Managing who enters your premises is no longer about just

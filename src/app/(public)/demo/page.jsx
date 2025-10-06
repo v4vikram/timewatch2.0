@@ -25,6 +25,7 @@ import {
   HeartHandshake,
   ChevronDown,
 } from "lucide-react";
+import Link from "next/link";
 
 const TimeWatchLanding = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -767,10 +768,10 @@ const TimeWatchLanding = () => {
               <span>Start Free Trial</span>
               <ArrowRight className="w-5 h-5" />
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-[#d63438] transition-all flex items-center justify-center space-x-2">
+            <Link href={'/contact'} target="_blank" className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-[#d63438] transition-all flex items-center justify-center space-x-2">
               <Phone className="w-5 h-5" />
-              <span>Book Demo</span>
-            </button>
+              {/* <span>Book Demo</span> */}
+            </Link>
           </div>
         </div>
       </section>

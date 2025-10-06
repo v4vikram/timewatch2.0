@@ -243,93 +243,120 @@ export const menuItems = [
 export const solutions = [
   {
     category: "Workforce & HR Solutions",
-    categoryUrl:"workforce-hr-solutions",
+    categoryUrl: "workforce-hr-solutions",
     subCategories: [
       {
         subCategory: "Cloud Attendance & Payroll Software",
-         subCategoryUrl: "cloud-attendance-payroll-software"
+        subCategoryUrl: "cloud-attendance-payroll-software",
+        subCategoryImage: "/images/solutions/sub/update-software.jpg"
       },
       {
         subCategory: "geo-fencing-mobile-punch",
-         subCategoryUrl: "geo-fencing-mobile-punch"
+        subCategoryUrl: "geo-fencing-mobile-punch",
+        subCategoryImage: "/images/solutions/sub/for-geo-fencing.jpg"
+
+
       },
       {
         subCategory: "Field Staff Tracking Solution",
-        subCategoryUrl: "field-staff-tracking-solution"
+        subCategoryUrl: "field-staff-tracking-solution",
+        subCategoryImage: "/images/solutions/sub/live-tracking.jpg"
+
       },
+    ],
+  },
+   {
+    category: "Security Screening Solutions",
+    categoryUrl: "security-screening-solutions",
+    subCategories: [
+      {
+        subCategory: "Access Control System Terminals",
+        subCategoryUrl: "access-control-system-terminals",
+        subCategoryImage: "/images/solutions/access-control.png"
+      }
+
     ],
   },
   {
     category: "Facility & Membership Management",
-    categoryUrl:"facility-membership-management",
+    categoryUrl: "facility-membership-management",
     subCategories: [
       {
         subCategory: "Canteen Management System",
-         subCategoryUrl: "canteen-management-system"
+        subCategoryUrl: "canteen-management-system",
+        subCategoryImage: "/images/solutions/sub/canteen-management.jpg"
+
       },
       {
         subCategory: "Gym Management Solution",
-         subCategoryUrl: "gym-management-solution"
+        subCategoryUrl: "gym-management-solution",
+        subCategoryImage: "/images/solutions/Gym-Management-Solution.png"
+
       }
-    ],
-  },
-  {
-    category: "Inspection Detection Solutions",
-    categoryUrl:"inspection-detection-solutions",
-    subCategories: [
-      {
-        subCategory: "Hand Held Metal Detector TW-HH100",
-         subCategoryUrl: "hand-held-metal-detector-tw-hh100"
-      },
-      {
-        subCategory: "Walk Through Metal Detector TWND-800",
-         subCategoryUrl: "walk-through-metal-detector-twnd-800"
-      }
-    ],
-  },
-  {
-    category: "Security Screening Solutions",
-    categoryUrl:"security-screening-solutions",
-    subCategories: [
-      {
-        subCategory: "Access Control System Terminals",
-         subCategoryUrl: "access-control-system-terminals"
-      },
-      {
-        subCategory: "Advanced X-Ray Baggage Screening",
-         subCategoryUrl: "advanced-x-ray-baggage-screening"
-      },
-      {
-        subCategory: "DFMD (Door Frame Metal Detectors)",
-         subCategoryUrl: "dfmd-door-frame-metal-detectors"
-      },
-      {
-        subCategory: "Explosive & Narcotics Detector",
-         subCategoryUrl: "explosive-narcotics-detector"
-      },
-      {
-        subCategory: "TimeScan Cargo & Vehicle Inspection System",
-         subCategoryUrl: "timescan-cargo-vehicle-inspection-system"
-      },
-      {
-        subCategory: "Under Vehicle Surveillance System (UVSS) – TW3300",
-         subCategoryUrl: "under-vehicle-surveillance-system-uvss-tw3300"
-      },
-     
     ],
   },
     {
     category: "Visitor & Access Management",
-    categoryUrl:"visitor-access-management",
+    categoryUrl: "visitor-access-management",
     subCategories: [
       {
         subCategory: "Crowd Management Solutions  Turnstile Gates & Flap Barriers",
-         subCategoryUrl: "crowd-management-solutions-turnstile-gates-flap-barriers"
+        subCategoryUrl: "crowd-management-solutions-turnstile-gates-flap-barriers",
+        subCategoryImage: "/images/solutions/crowd.png"
       },
       {
         subCategory: "What Is a Visitor Management System",
-         subCategoryUrl: "what-is-a-visitor-management-system"
+        subCategoryUrl: "what-is-a-visitor-management-system",
+         subCategoryImage: "/images/solutions/visitor-management-system.png"
       },
     ],
   },
+  {
+    category: "Inspection Detection Solutions",
+    categoryUrl: "inspection-detection-solutions",
+    subCategories: [
+      {
+        subCategory: "Hand Held Metal Detector TW-HH100",
+        subCategoryUrl: "hand-held-metal-detector-tw-hh100",
+        subCategoryImage: "/images/solutions/Hand-Held-Metal-Detector.png"
+
+      },
+      {
+        subCategory: "Walk Through Metal Detector TWND-800",
+        subCategoryUrl: "walk-through-metal-detector-twnd-800",
+         subCategoryImage: "/images/solutions/Walk-Through-Metal-Detector-TWND.png"
+      },
+      
+      {
+        subCategory: "Advanced X-Ray Baggage Screening",
+        subCategoryUrl: "advanced-x-ray-baggage-screening",
+        subCategoryImage: "/images/solutions/baggage-scanner.png"
+      },
+      {
+        subCategory: "DFMD (Door Frame Metal Detectors)",
+        subCategoryUrl: "dfmd-door-frame-metal-detectors",
+        subCategoryImage: "/images/solutions/dfmd.png"
+      },
+      {
+        subCategory: "Explosive & Narcotics Detector",
+        subCategoryUrl: "explosive-narcotics-detector",
+        subCategoryImage: "/images/solutions/sub/narcotics-breaf.jpg"
+       
+      },
+      {
+        subCategory: "TimeScan Cargo & Vehicle Inspection System",
+        subCategoryUrl: "timescan-cargo-vehicle-inspection-system",
+        subCategoryImage: "/images/solutions/sub/cargo-canner.jpg"
+      
+      },
+      {
+        subCategory: "Under Vehicle Surveillance System (UVSS) – TW3300",
+        subCategoryUrl: "under-vehicle-surveillance-system-uvss-tw3300",
+          subCategoryImage: "/images/solutions/sub/uvss.jpg"
+         
+      },
+    ],
+  },
+ 
+
 ];

@@ -42,7 +42,7 @@ const FeaturesProduct = ({ publishedProducts }) => {
             <span className="text-primary font-semibold">Best Products</span>
             <span className="h-0.5 w-10 bg-primary"></span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-secondary mb-2"
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-2"
           //  variants={childVariant}
            >
             Featured Products

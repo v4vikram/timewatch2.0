@@ -36,6 +36,7 @@ import FeaturedProducts from "@/components/products/FeaturedProducts";
 import FeaturesProduct from "@/components/home/FeaturesProduct";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 export const dynamic = "auto"; // optional; ISR will still work
 
@@ -429,10 +430,10 @@ export default async function HomePage() {
                 <span>Start Free Trial</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-[#d63438] transition-all flex items-center justify-center space-x-2">
+              <Link href={'/contact'} className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-[#d63438] transition-all flex items-center justify-center space-x-2">
                 <Phone className="w-5 h-5" />
                 <span>Book Demo</span>
-              </button>
+              </Link>
             </div>
           </div>
         </section>

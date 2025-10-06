@@ -121,9 +121,9 @@ const schemaFaq = {
             </h1>
             <p className="text-xl text-white mb-8 hidden md:block">
               The{" "}
-              <strong>
+              {/* <strong> */}
                 TimeWatch TW3300 Under Vehicle Surveillance System (UVSS)
-              </strong>{" "}
+              {/* </strong>{" "} */}
               is designed for high-security premises that require reliable and
               rapid under-vehicle inspection. Unlike traditional handheld
               mirrors, TW3300 delivers high-resolution color images of a
