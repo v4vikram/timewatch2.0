@@ -14,6 +14,7 @@ export default function MyFlipBook() {
   const [audioEnabled, setAudioEnabled] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [dimensions, setDimensions] = useState({ width: 550, height: 800 });
+  const [width, setWidth] = useState(window.innerWidth)
 
   const totalImages = 60;
   const imagePaths = Array.from(
@@ -105,6 +106,13 @@ export default function MyFlipBook() {
     else setCss("0px");
   }, [page]);
 
+  useEffect(()=>{
+    window.addEventListener("resize", function(){
+      setWidth(window.innerWidth)
+    })
+  },[width])
+  console.log("width", width)
+
   if (!imagesLoaded) {
     return (
       <div className="flex justify-center items-center h-screen bg-gray-200">
@@ -127,8 +135,8 @@ export default function MyFlipBook() {
 
       {/* Flipbook wrapper */}
       <div
-        className="!flex !justify-center !items-center !w-full relative transition-all ease-in duration-400"
-        style={{ left: css }}
+        className={`!flex !justify-center !items-center !w-full relative transition-all ease-in duration-400`}
+        style={{ left: width>768 ? css : "" }}
       >
         <HTMLFlipBook
           width={dimensions.width}
