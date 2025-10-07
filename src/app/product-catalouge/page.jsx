@@ -1,4 +1,5 @@
 "use client";
+
 import { FileText } from "lucide-react";
 import NextImage from "next/image";
 import React, { useRef, useEffect, useState } from "react";
@@ -7,10 +8,12 @@ import HTMLFlipBook from "react-pageflip";
 export default function MyFlipBook() {
   const bookRef = useRef(null);
   const isFlipping = useRef(false);
-  const audio = useRef(null); // don't create immediately
-
+  const audio = useRef(null);
+  const [page, setPage] = useState(0);
+  const [css, setCss] = useState("-272.5px");
   const [audioEnabled, setAudioEnabled] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [dimensions, setDimensions] = useState({ width: 550, height: 800 });
 
   const totalImages = 60;
   const imagePaths = Array.from(
@@ -18,9 +21,7 @@ export default function MyFlipBook() {
     (_, i) => `/images/flipbook/artboard-${i + 1}.jpg`
   );
 
-  const [dimensions, setDimensions] = useState({ width: 550, height: 800 });
-
-  // ✅ Create audio only in the browser
+  // Create audio only in browser
   useEffect(() => {
     if (typeof window !== "undefined") {
       audio.current = new Audio("/videos/page-flip-sound.mp3");
@@ -96,6 +97,14 @@ export default function MyFlipBook() {
     return () => window.removeEventListener("wheel", handleWheel);
   }, [audioEnabled]);
 
+  // ✅ Keep CSS position based on page number
+  useEffect(() => {
+    console.log(page, totalImages)
+    if (page <= 0) setCss("-272.5px");
+    else if (page+1 == totalImages) setCss("272.5px");
+    else setCss("0px");
+  }, [page]);
+
   if (!imagesLoaded) {
     return (
       <div className="flex justify-center items-center h-screen bg-gray-200">
@@ -116,42 +125,52 @@ export default function MyFlipBook() {
         {audioEnabled ? "🔊 On" : "🔇 Off"}
       </button>
 
-      <HTMLFlipBook
-        width={dimensions.width}
-        height={dimensions.height}
-        ref={bookRef}
-        drawShadow={false}
-        mobileScrollSupport={true}
-        flippingTime={500}
-        showCover={false}
-        maxShadowOpacity={0.5}
-        autoSize={true}
-        usePortrait={true}
-        swipeDistance={30}
-        onFlip={() => {
-          if (audioEnabled && audio.current) audio.current.play().catch(() => {});
-        }}
+      {/* Flipbook wrapper */}
+      <div
+        className="!flex !justify-center !items-center !w-full relative transition-all ease-in duration-400"
+        style={{ left: css }}
       >
-        {imagePaths.map((src, i) => (
-          <NextImage
-            key={i}
-            src={src}
-            alt={`Page ${i + 1}`}
-            width={dimensions.width}
-            height={dimensions.height}
-            style={{ objectFit: "cover" }}
-            priority
-          />
-        ))}
-      </HTMLFlipBook>
+        <HTMLFlipBook
+          width={dimensions.width}
+          height={dimensions.height}
+          ref={bookRef}
+          drawShadow={false}
+          mobileScrollSupport={true}
+          flippingTime={500}
+          showCover={true}
+          maxShadowOpacity={0.5}
+          autoSize={true}
+          usePortrait={true}
+          swipeDistance={30}
+          style={{ margin: "0 auto", display: "block" }}
+          onFlip={(e) => {
+            setPage(e.data); // ✅ now this updates correctly after flip
+            if (audioEnabled && audio.current)
+              audio.current.play().catch(() => {});
+          }}
+        >
+          {imagePaths.map((src, i) => (
+            <NextImage
+              key={i}
+              src={src}
+              alt={`Page ${i + 1}`}
+              width={dimensions.width}
+              height={dimensions.height}
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          ))}
+        </HTMLFlipBook>
+      </div>
 
+      {/* Download Catalogue */}
       <div className="mt-4 max-w-[750px]">
         <a
           href="/images/product-catalogue.pdf"
           download="product-catalogue.pdf"
           className="p-3 rounded-full border border-gray-600 bg-white text-gray-800 hover:bg-gray-100 flex items-center mb-4"
         >
-          <FileText className="text-primary" />{" "}
+          <FileText className="text-primary" />
           <strong className="mb-0">Download Catalogue</strong>
         </a>
       </div>
