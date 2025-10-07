@@ -14,7 +14,7 @@ export default function MyFlipBook() {
   const [audioEnabled, setAudioEnabled] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [dimensions, setDimensions] = useState({ width: 550, height: 800 });
-  const [width, setWidth] = useState(window.innerWidth)
+  const [width, setWidth] = useState()
 
   const totalImages = 60;
   const imagePaths = Array.from(
@@ -107,6 +107,7 @@ export default function MyFlipBook() {
   }, [page]);
 
   useEffect(()=>{
+    setWidth(window.innerWidth)
     window.addEventListener("resize", function(){
       setWidth(window.innerWidth)
     })
