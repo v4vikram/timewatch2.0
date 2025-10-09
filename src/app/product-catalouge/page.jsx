@@ -139,14 +139,27 @@ export default function MyFlipBook() {
   return (
     <div className="flex flex-col justify-center items-center bg-[#e0e0e0] h-screen overflow-hidden relative">
       {/* Speaker toggle button */}
-      <button
-        className={`absolute top-4 right-4 p-3 rounded-full border border-gray-600 bg-white text-gray-800 ${
-          audioEnabled ? "bg-green-500 text-white" : ""
-        }`}
-        onClick={() => setAudioEnabled((prev) => !prev)}
-      >
-        {audioEnabled ? "🔊 On" : "🔇 Off"}
-      </button>
+      <div className="absolute top-4 right-4 flex items-center gap-4">
+        {/* Download Catalogue */}
+        <div className="mt-4 max-w-[750px]">
+          <a
+            href="/images/product-catalogue.pdf"
+            download="product-catalogue.pdf"
+            className="p-3 rounded-full border border-gray-600 bg-white text-gray-800 hover:bg-gray-100 flex items-center mb-4"
+          >
+            <FileText className="text-primary mr-2" />
+            <strong>Download Catalogue</strong>
+          </a>
+        </div>
+        <button
+          className={` p-3 rounded-full border border-gray-600 bg-white text-gray-800 ${
+            audioEnabled ? "bg-green-500 text-white" : ""
+          }`}
+          onClick={() => setAudioEnabled((prev) => !prev)}
+        >
+          {audioEnabled ? "🔊 On" : "🔇 Off"}
+        </button>
+      </div>
 
       {/* Flipbook wrapper */}
       <div
@@ -185,33 +198,21 @@ export default function MyFlipBook() {
           ))}
         </HTMLFlipBook>
       </div>
-      <div className="flex md:hidden items-center justify-center gap-3">
-        {/* Prev / Next buttons */}
+      {/* Prev / Next buttons */}
+      <div className="flex gap-4 mt-4 justify-between">
         <button
           onClick={handlePrev}
-          className="p-3 bg-white border border-gray-400 rounded-full shadow hover:bg-gray-100"
+          className="p-3 bg-white border border-gray-400 rounded-full shadow hover:bg-gray-100 cursor-pointer"
         >
           <ChevronLeft size={24} />
         </button>
 
         <button
           onClick={handleNext}
-          className="p-3 bg-white border border-gray-400 rounded-full shadow hover:bg-gray-100"
+          className="p-3 bg-white border border-gray-400 rounded-full shadow hover:bg-gray-100 cursor-pointer"
         >
           <ChevronRight size={24} />
         </button>
-      </div>
-
-      {/* Download Catalogue */}
-      <div className="mt-4 max-w-[750px]">
-        <a
-          href="/images/product-catalogue.pdf"
-          download="product-catalogue.pdf"
-          className="p-3 rounded-full border border-gray-600 bg-white text-gray-800 hover:bg-gray-100 flex items-center mb-4"
-        >
-          <FileText className="text-primary mr-2" />
-          <strong>Download Catalogue</strong>
-        </a>
       </div>
     </div>
   );
