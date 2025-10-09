@@ -118,15 +118,12 @@ export default function GeoFencingMobilePunch() {
 
         <div className="relative z-20 container flex justify-center h-full flex-col xl:pr-[400px] text-white banner">
           <h1>
-            Field Staff Tracking & Verified Attendance Solution | TimeWatch
+           Geo-Fencing & Mobile Punch Attendance Solution | TimeWatch
+
           </h1>
           <p>
-            Live tracking empowers managers to monitor the exact location of
-            field staff in real time, creating greater transparency and
-            oversight for distributed teams. This feature is especially valuable
-            for businesses with employees working outside the office—such as
-            sales representatives, service technicians, delivery personnel, or
-            property inspectors.
+            Geo-fencing is an advanced technology that utilizes GPS to establish virtual boundaries around designated areas such as offices, worksites, or restricted zones. This ensures that employees can only punch in for attendance when they are physically present within these specified locations. If an employee attempts to mark attendance outside the defined zone, they will receive a notification, preventing unauthorized or false check-ins.
+
           </p>
         </div>
       </section>

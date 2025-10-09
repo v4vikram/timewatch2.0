@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${rajdhani.className}` }>
       <body
-        className={``}
+        className={`${rajdhani.className}` }
       >
        {/* <Header/> */}
          <div className=''>{children}</div>

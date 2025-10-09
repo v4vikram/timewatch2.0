@@ -5,9 +5,9 @@ import Head from "next/head";
 
 export const metadata = {
   title:
-    "Walk-Through Metal Detector TWND-800 | Multi-Zone Entry Screening India",
+    "Walk-Through Metal Detector | Multi-Zone Entry Screening India",
   description:
-    "Ensure secure entry at airports, metro stations, stadiums & offices with TimeWatch TWND-800 Walk-Through Metal Detector. 8-zone detection, audio-visual alerts & high throughput.",
+    "Ensure secure entry at airports, metro stations, stadiums & offices with TimeWatch Walk-Through Metal Detector. 8-zone detection, audio-visual alerts & high throughput.",
 };
 
 export default function WalkThroughMetalDetectorTWND800() {
@@ -47,42 +47,42 @@ export default function WalkThroughMetalDetectorTWND800() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "How many zones does the TWND-800 Walk-Through Metal Detector support?",
+        name: "How many zones does the Walk-Through Metal Detector support?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "The TWND-800 features an 8-zone detection system, allowing security staff to identify the exact location of metallic objects on the body for quicker screening.",
+          text: "The features an 8-zone detection system, allowing security staff to identify the exact location of metallic objects on the body for quicker screening.",
         },
       },
       {
         "@type": "Question",
-        name: "Is the TWND-800 suitable for airports and metro stations?",
+        name: "Is the suitable for airports and metro stations?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, the TWND-800 is widely used in high-traffic areas such as airports, metro and railway stations, stadiums, and government buildings, offering reliable and fast screening.",
+          text: "Yes, the is widely used in high-traffic areas such as airports, metro and railway stations, stadiums, and government buildings, offering reliable and fast screening.",
         },
       },
       {
         "@type": "Question",
-        name: "Does the TWND-800 offer adjustable sensitivity?",
+        name: "Does the offer adjustable sensitivity?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, the TWND-800 comes with adjustable sensitivity levels, enabling operators to detect small metallic objects while avoiding false alarms from harmless items.",
+          text: "Yes, the comes with adjustable sensitivity levels, enabling operators to detect small metallic objects while avoiding false alarms from harmless items.",
         },
       },
       {
         "@type": "Question",
-        name: "What types of alerts does the TWND-800 provide?",
+        name: "What types of alerts does the provide?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "The TWND-800 provides both audio and visual LED indicators, making it easier for security teams to quickly identify suspicious items.",
+          text: "The provides both audio and visual LED indicators, making it easier for security teams to quickly identify suspicious items.",
         },
       },
       {
         "@type": "Question",
-        name: "Where can the TWND-800 be installed?",
+        name: "Where can the be installed?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "The TWND-800 can be installed at airports, metro stations, stadiums, corporate offices, schools, shopping malls, and government institutions for advanced entry screening.",
+          text: "The can be installed at airports, metro stations, stadiums, corporate offices, schools, shopping malls, and government institutions for advanced entry screening.",
         },
       },
     ],
@@ -117,12 +117,12 @@ export default function WalkThroughMetalDetectorTWND800() {
 
           <div className="relative z-20 container flex justify-center h-full flex-col xl:pr-[400px] text-white banner">
             <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Walk-Through Metal Detector – TWND-800
+              Walk-Through Metal Detector
             </h1>
             <p className="text-xl text-white mb-8 hidden md:block">
               Security is non-negotiable in today’s world, especially in
               high-traffic locations like airports, metro stations, stadiums,
-              government offices, schools, and malls. The TWND-800 Walk-Through
+              government offices, schools, and malls. The Walk-Through
               Metal Detector from TimeWatch is designed to provide fast,
               reliable, and precise entry screening that enhances safety while
               ensuring smooth flow of people.
@@ -136,16 +136,16 @@ export default function WalkThroughMetalDetectorTWND800() {
             <section className="">
               <div className="relative z-10 w-full h-[300px] md:h-[450px] rounded-lg overflow-hidden">
                 <Image
-                  src="/images/solutions/Walk-Through-Metal-Detector-TWND.png"
-                  alt="Walk-Through-Metal-Detector-TWND"
-                  title="Walk-Through-Metal-Detector-TWND"
+                  src="/images/solutions/sub/DFMD.jpg"
+                  alt="DFMD"
+                  title="DFMD"
                   fill
                   sizes="100"
                   className="object-cover w-full h-full"
                 />
               </div>
 
-              <h2 className="!mt-2">Walk-Through Metal Detector – TWND-800</h2>
+              <h2 className="!mt-2">Walk-Through Metal Detector</h2>
               <h3>
                 (1) Advanced Multi-Zone Security Screening for High-Traffic
                 Areas
@@ -158,16 +158,16 @@ export default function WalkThroughMetalDetectorTWND800() {
                   metro stations, stadiums, government offices, schools, and
                   malls
                 </strong>
-                . The TWND-800 Walk-Through Metal Detector from TimeWatch is
+                . The Walk-Through Metal Detector from TimeWatch is
                 designed to provide fast, reliable, and precise entry screening
                 that enhances safety while ensuring smooth flow of people.
               </p>
 
-              <h3>(2) Key Features of TWND-800 Walk-Through Metal Detector</h3>
+              <h3>(2) Key Features of Walk-Through Metal Detector</h3>
 
               <ul>
                 <li>
-                  <strong>8-Zone Detection System</strong> – The TWND-800 is
+                  <strong>8-Zone Detection System</strong> – The is
                   equipped with 8 detection zones, allowing security personnel
                   to pinpoint the exact location of metallic objects on the body
                   (head, torso, arms, or legs). This ensures quicker inspections
@@ -187,7 +187,7 @@ export default function WalkThroughMetalDetectorTWND800() {
                 </li>
                 <li>
                   <strong>High Throughput Screening</strong> – Built to handle
-                  heavy traffic, the TWND-800 ensures that thousands of people
+                  heavy traffic, the ensures that thousands of people
                   can be screened efficiently each day without compromising on
                   accuracy.
                 </li>
@@ -199,7 +199,7 @@ export default function WalkThroughMetalDetectorTWND800() {
                 </li>
               </ul>
 
-              <h3>(3) Applications of TWND-800 in India & Beyond</h3>
+              <h3>(3) Applications of in India & Beyond</h3>
               <ul>
                 <li>
                   <strong>Metro & Railway Stations</strong> – Handle peak-hour
@@ -229,7 +229,7 @@ export default function WalkThroughMetalDetectorTWND800() {
                   shopping experiences.
                 </li>
               </ul>
-              <h3>(4) Benefits of Choosing TimeWatch TWND-800</h3>
+              <h3>(4) Benefits of Choosing TimeWatch</h3>
               <ul>
                 <li>Precise detection with 8-zone identification</li>
                 <li>Smooth people movement with high throughput design</li>
@@ -246,7 +246,7 @@ export default function WalkThroughMetalDetectorTWND800() {
                 TimeWatch has been a leader in{" "}
                 <strong>access control and security solutions</strong> across
                 India, UAE, and the Middle East. With years of expertise, our
-                products like the TWND-800 are built to handle the toughest
+                products like the are built to handle the toughest
                 security challenges while providing{" "}
                 <strong>seamless user experience</strong>.
               </p>

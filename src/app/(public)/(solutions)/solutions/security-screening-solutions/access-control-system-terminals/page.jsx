@@ -134,7 +134,7 @@ const schemaFaq = {
             <section className="">
               <div className="relative z-10 w-full h-[300px] md:h-[450px] rounded-lg overflow-hidden">
                 <Image
-                  src="/images/solutions-banner.jpg"
+                  src="/images/solutions/sub/access-control.jpg"
                   alt="Consulting Hero"
                   fill
                   sizes="100"
@@ -142,11 +142,7 @@ const schemaFaq = {
                 />
               </div>
 
-              <h2 className="!mt-2">
-                Transform Employee Dining with Smarter Canteen Management
-              </h2>
-              {/* <h2>Access Control Systems & Terminals | TimeWatch India</h2> */}
-              <h3>(1) Smarter Access Control for Secure Workplaces</h3>
+              <h2>Smarter Access Control for Secure Workplaces</h2>
               <p className="mb-4">
                 Managing who enters your premises is no longer about just
                 locking doors. In today’s fast-moving world, organizations need

@@ -24,7 +24,7 @@ const FeaturesProduct = ({ publishedProducts }) => {
   };
 
   return (
-    <section className="pt-0 lg:py-16 bg-white">
+    <section className="pt-16 lg:py-16 bg-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div

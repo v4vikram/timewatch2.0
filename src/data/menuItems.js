@@ -322,8 +322,8 @@ export const solutions = [
 
       },
       {
-        subCategory: "Walk Through Metal Detector TWND-800",
-        subCategoryUrl: "walk-through-metal-detector-twnd-800",
+        subCategory: "Walk Through Metal Detector",
+        subCategoryUrl: "walk-through-metal-detector",
          subCategoryImage: "/images/solutions/Walk-Through-Metal-Detector-TWND.png"
       },
       
@@ -332,11 +332,11 @@ export const solutions = [
         subCategoryUrl: "advanced-x-ray-baggage-screening",
         subCategoryImage: "/images/solutions/baggage-scanner.png"
       },
-      {
-        subCategory: "DFMD (Door Frame Metal Detectors)",
-        subCategoryUrl: "dfmd-door-frame-metal-detectors",
-        subCategoryImage: "/images/solutions/dfmd.png"
-      },
+      // {
+      //   subCategory: "DFMD (Door Frame Metal Detectors)",
+      //   subCategoryUrl: "dfmd-door-frame-metal-detectors",
+      //   subCategoryImage: "/images/solutions/dfmd.png"
+      // },
       {
         subCategory: "Explosive & Narcotics Detector",
         subCategoryUrl: "explosive-narcotics-detector",

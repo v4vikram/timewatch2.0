@@ -134,15 +134,15 @@ p {
 }
 /* home page swiper banner */
 span.swiper-pagination-bullet {
-  @apply w-[15px] h-[15px] bg-transparent border-2 border-white !opacity-100;
+  @apply w-[15px] h-[15px] bg-transparent border-2 border-gray-500 !opacity-100;
 }
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  @apply  border-2 border-white bg-primary;
+  @apply  border-2 border-gray-500 bg-primary;
 }
 
 
 .swiper-pagination-horizontal {
-  @apply absolute right-8 !top-1/2 -translate-y-1/2 flex flex-col items-end justify-center gap-[0.5rem];
+  @apply absolute !bottom-[5vh] !left-1/2 -translate-x-1/2 gap-[0.5rem];
 
 }
 

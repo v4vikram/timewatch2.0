@@ -1,6 +1,6 @@
 "use client";
 
-import { FileText } from "lucide-react";
+import { FileText, ChevronLeft, ChevronRight } from "lucide-react";
 import NextImage from "next/image";
 import React, { useRef, useEffect, useState } from "react";
 import HTMLFlipBook from "react-pageflip";
@@ -14,7 +14,7 @@ export default function MyFlipBook() {
   const [audioEnabled, setAudioEnabled] = useState(false);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const [dimensions, setDimensions] = useState({ width: 550, height: 800 });
-  const [width, setWidth] = useState()
+  const [width, setWidth] = useState();
 
   const totalImages = 60;
   const imagePaths = Array.from(
@@ -82,15 +82,9 @@ export default function MyFlipBook() {
       const currentPage = flip.getCurrentPageIndex();
 
       if (e.deltaY > 0 && currentPage < totalPages - 1) {
-        isFlipping.current = true;
-        flip.flipNext();
-        if (audioEnabled && audio.current) audio.current.play().catch(() => {});
-        setTimeout(() => (isFlipping.current = false), 700);
+        handleNext();
       } else if (e.deltaY < 0 && currentPage > 0) {
-        isFlipping.current = true;
-        flip.flipPrev();
-        if (audioEnabled && audio.current) audio.current.play().catch(() => {});
-        setTimeout(() => (isFlipping.current = false), 700);
+        handlePrev();
       }
     };
 
@@ -98,26 +92,46 @@ export default function MyFlipBook() {
     return () => window.removeEventListener("wheel", handleWheel);
   }, [audioEnabled]);
 
+  const handleNext = () => {
+    if (!bookRef.current || isFlipping.current) return;
+    const flip = bookRef.current.pageFlip();
+    if (flip.getCurrentPageIndex() < flip.getPageCount() - 1) {
+      isFlipping.current = true;
+      flip.flipNext();
+      if (audioEnabled && audio.current) audio.current.play().catch(() => {});
+      setTimeout(() => (isFlipping.current = false), 700);
+    }
+  };
+
+  const handlePrev = () => {
+    if (!bookRef.current || isFlipping.current) return;
+    const flip = bookRef.current.pageFlip();
+    if (flip.getCurrentPageIndex() > 0) {
+      isFlipping.current = true;
+      flip.flipPrev();
+      if (audioEnabled && audio.current) audio.current.play().catch(() => {});
+      setTimeout(() => (isFlipping.current = false), 700);
+    }
+  };
+
   // ✅ Keep CSS position based on page number
   useEffect(() => {
-    console.log(page, totalImages)
     if (page <= 0) setCss("-272.5px");
-    else if (page+1 == totalImages) setCss("272.5px");
+    else if (page + 1 == totalImages) setCss("272.5px");
     else setCss("0px");
   }, [page]);
 
-  useEffect(()=>{
-    setWidth(window.innerWidth)
-    window.addEventListener("resize", function(){
-      setWidth(window.innerWidth)
-    })
-  },[width])
-  console.log("width", width)
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", function () {
+      setWidth(window.innerWidth);
+    });
+  }, [width]);
 
   if (!imagesLoaded) {
     return (
       <div className="flex justify-center items-center h-screen bg-gray-200">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 border-b-4 border-gray-300"> </div>
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500 border-b-4 border-gray-300"></div>
       </div>
     );
   }
@@ -137,7 +151,7 @@ export default function MyFlipBook() {
       {/* Flipbook wrapper */}
       <div
         className={`!flex !justify-center !items-center !w-full relative transition-all ease-in duration-400`}
-        style={{ left: width>768 ? css : "" }}
+        style={{ left: width > 768 ? css : "" }}
       >
         <HTMLFlipBook
           width={dimensions.width}
@@ -153,7 +167,7 @@ export default function MyFlipBook() {
           swipeDistance={30}
           style={{ margin: "0 auto", display: "block" }}
           onFlip={(e) => {
-            setPage(e.data); // ✅ now this updates correctly after flip
+            setPage(e.data);
             if (audioEnabled && audio.current)
               audio.current.play().catch(() => {});
           }}
@@ -171,6 +185,22 @@ export default function MyFlipBook() {
           ))}
         </HTMLFlipBook>
       </div>
+      <div className="flex md:hidden items-center justify-center gap-3">
+        {/* Prev / Next buttons */}
+        <button
+          onClick={handlePrev}
+          className="p-3 bg-white border border-gray-400 rounded-full shadow hover:bg-gray-100"
+        >
+          <ChevronLeft size={24} />
+        </button>
+
+        <button
+          onClick={handleNext}
+          className="p-3 bg-white border border-gray-400 rounded-full shadow hover:bg-gray-100"
+        >
+          <ChevronRight size={24} />
+        </button>
+      </div>
 
       {/* Download Catalogue */}
       <div className="mt-4 max-w-[750px]">
@@ -179,8 +209,8 @@ export default function MyFlipBook() {
           download="product-catalogue.pdf"
           className="p-3 rounded-full border border-gray-600 bg-white text-gray-800 hover:bg-gray-100 flex items-center mb-4"
         >
-          <FileText className="text-primary" />
-          <strong className="mb-0">Download Catalogue</strong>
+          <FileText className="text-primary mr-2" />
+          <strong>Download Catalogue</strong>
         </a>
       </div>
     </div>

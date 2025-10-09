@@ -76,7 +76,7 @@ export default async function HomePage() {
         <section>
           <BannerSwiper />
         </section>
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden hidden">
           <HeroSection />
         </div>
         {/* <FeaturedProducts/> */}
