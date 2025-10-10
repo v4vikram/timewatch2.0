@@ -10,6 +10,9 @@ import {
   Info,
   List,
   LaptopMinimal,
+  Lightbulb,
+  Phone,
+  User2,
 } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
@@ -19,9 +22,10 @@ const PhoneHeaderNavigationMenu = ({ isMenuOpen }) => {
     { icon: Home, label: "Home", href: "/" },
     { icon: List, label: "Product", href: "/products" },
     { icon: LaptopMinimal, label: "Download", href: "/download" },
-    { icon: Info, label: "Solutions", href: "/solutions" },
+    { icon: Lightbulb, label: "Solutions", href: "/solutions" },
     { icon: Info, label: "About", href: "/about" },
-    { icon: Mail, label: "Contact", href: "/contact" },
+    { icon: User2, label: "CEO's Desk", href: "/ceo-desk" },
+    { icon: Phone, label: "Contact", href: "/contact" },
   ];
 
   return (

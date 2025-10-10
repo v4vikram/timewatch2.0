@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -134,10 +136,10 @@ p {
 }
 /* home page swiper banner */
 span.swiper-pagination-bullet {
-  @apply w-[15px] h-[15px] bg-transparent border-2 border-gray-500 !opacity-100;
+  @apply w-[15px] h-[15px] bg-transparent border-2 border-gray-500 !opacity-100 rounded-[50px] transition-all drop-shadow-blue-500 ease-in;
 }
 span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  @apply  border-2 border-gray-500 bg-primary;
+  @apply  border-2 border-gray-500 bg-primary w-[30px] h-[15px];
 }
 
 
@@ -175,8 +177,14 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   @apply !rounded-tl-[12px] !rounded-bl-[12px];
 }
 
+
+
 /* solutions pages */
 .solutions-pages {
+  
+  p,li, strong{
+    font-family: sans-serif;
+  }
   @apply mb-16;
   .banner h1 {
     @apply text-4xl lg:text-5xl font-bold text-white mb-6;
@@ -185,17 +193,17 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
     @apply text-xl text-white mb-8 hidden md:block;
   }
   h2 {
-    @apply text-3xl lg:text-[28px] font-bold text-gray-900 mt-7 mb-3;
+    @apply text-3xl lg:text-[28px] font-bold text-gray-900 mt-7 mb-1;
   }
   h3 {
-    @apply text-[18px] mt-4 mb-3 font-bold text-gray-900;
+    @apply text-[18px] mt-8 mb-0 font-bold text-gray-900;
   }
   ul {
-    @apply list-disc pl-5 md:pl-10 space-y-2;
+    @apply list-disc pl-0 md:pl-5 space-y-2;
   }
-  li{
+  /* li{
     @apply mb-3;
-  }
+  } */
   strong{
      @apply text-gray-700;
   }

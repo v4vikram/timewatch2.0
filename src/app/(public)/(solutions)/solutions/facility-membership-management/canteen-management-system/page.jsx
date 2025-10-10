@@ -172,7 +172,7 @@ export default function CanteenManagementSystem() {
               </p>
 
               <h2>Key Features & Real-World Use Cases</h2>
-              <h3>(1) Touchless & Secure Meal Access</h3>
+              <h3 className="!mt-0">(1) Touchless & Secure Meal Access</h3>
               <p>
                 Employees can use{" "}
                 <strong>face recognition, fingerprint, or RFID cards</strong>

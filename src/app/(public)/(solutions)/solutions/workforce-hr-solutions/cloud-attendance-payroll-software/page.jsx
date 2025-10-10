@@ -116,7 +116,8 @@ export default function CloudAttendancePayrollSoftware() {
 
           <div className="relative z-20 container flex justify-center h-full flex-col xl:pr-[400px] text-white banner">
             <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Attendance & Payroll Management<br/> Software for Indian Businesses
+              Attendance & Payroll Management
+              <br /> Software for Indian Businesses
             </h1>
             <p className="text-xl text-white mb-8 hidden md:block pr-[15rem]">
               TimeWatch India is your trusted technology partner for
@@ -147,50 +148,43 @@ export default function CloudAttendancePayrollSoftware() {
               <h2 className="!mt-2">
                 A Complete Solution for Attendance & Payroll
               </h2>
-              <h3>
-                (1) Smarter Shift & Roster Management
-              </h3>
-
-              <p className="text-secondary mb-4">
-                Managing different shifts can be complex, especially for
-                industries like manufacturing, healthcare, hospitality, and 24/7
-                operations. Our system simplifies this process with automated
-                shift detection, instantly recognizing an employee’s clock-in
-                time and mapping them to the correct schedule. For situations
-                requiring manual adjustments, HR professionals can assign shifts
-                directly in the system. It even supports revolving rosters,
-                ensuring smooth operations for teams working on rotating,
-                staggered, or night shifts.
-              </p>
-              <h3>
-                (2) Intelligent Leave Management
-              </h3>
-              <p>
-                Our platform allows you to define and manage multiple leave
-                types — from sick and earned leaves to maternity and paternity —
-                all aligned with your company’s HR policy. Leave records sync
-                automatically with attendance logs, eliminating data mismatches.
-                Employees and managers can view leave balances, track requests,
-                and manage approvals through a clean, intuitive dashboard,
-                creating a transparent and conflict-free HR environment.
-              </p>
-              <h3>
-                (3) Mobile Attendance with GPS and Photo Verification
-              </h3>
-              <p>
-                For businesses with field agents, construction crews, or remote
-                workers, attendance tracking no longer requires physical
-                presence at the office. Through the TimeWatch mobile app,
-                employees can clock in and out from anywhere. The system
-                captures GPS location in real-time and records a photo for
-                verification, ensuring only authorized entries are registered.
-                This is ideal for sales teams, traveling technicians, and
-                distributed teams working on-site.
-              </p>
-              <h3>
-                (4) Handling Exceptional Attendance Cases
-              </h3>
-              <p>
+              <ul>
+                <li className="!mb-1 font-semibold !mt-4">Smarter Shift & Roster Management</li>
+                <p className="text-secondary mb-4">
+                  Managing different shifts can be complex, especially for
+                  industries like manufacturing, healthcare, hospitality, and
+                  24/7 operations. Our system simplifies this process with
+                  automated shift detection, instantly recognizing an employee’s
+                  clock-in time and mapping them to the correct schedule. For
+                  situations requiring manual adjustments, HR professionals can
+                  assign shifts directly in the system. It even supports
+                  revolving rosters, ensuring smooth operations for teams
+                  working on rotating, staggered, or night shifts.
+                </p>
+                <li className="!mb-1 font-semibold !mt-4">Intelligent Leave Management</li>
+                <p>
+                  Our platform allows you to define and manage multiple leave
+                  types — from sick and earned leaves to maternity and paternity
+                  — all aligned with your company’s HR policy. Leave records
+                  sync automatically with attendance logs, eliminating data
+                  mismatches. Employees and managers can view leave balances,
+                  track requests, and manage approvals through a clean,
+                  intuitive dashboard, creating a transparent and conflict-free
+                  HR environment.
+                </p>
+                <li className="!mb-1 font-semibold !mt-4">Mobile Attendance with GPS and Photo Verification</li>
+                <p>
+                  For businesses with field agents, construction crews, or
+                  remote workers, attendance tracking no longer requires
+                  physical presence at the office. Through the TimeWatch mobile
+                  app, employees can clock in and out from anywhere. The system
+                  captures GPS location in real-time and records a photo for
+                  verification, ensuring only authorized entries are registered.
+                  This is ideal for sales teams, traveling technicians, and
+                  distributed teams working on-site.
+                </p>
+                <li className="!mb-1 font-semibold !mt-4">Handling Exceptional Attendance Cases</li>
+                  <p>
                 Real-world operations often face missed punches or technical
                 disruptions. TimeWatch addresses this with an admin-supervised
                 manual punch feature, allowing HR or supervisors to record
@@ -198,10 +192,8 @@ export default function CloudAttendancePayrollSoftware() {
                 full audit trail for accountability, and rules can be set for
                 strict approval workflows.
               </p>
-              <h3>
-                (5) Real-Time Reporting & Insights
-              </h3>
-              <p>
+              <li className="!mb-1 font-semibold !mt-4">Real-Time Reporting & Insights</li>
+                <p>
                 With TimeWatch, managers no longer have to wait for end-of-month
                 reconciliations. Detailed attendance reports are generated
                 instantly and can be filtered by location, department, shift, or
@@ -209,26 +201,34 @@ export default function CloudAttendancePayrollSoftware() {
                 with a single click, and our cloud hosting ensures reports are
                 accessible 24/7, keeping organizations audit-ready at all times.
               </p>
-              <h3>
-                (6) Secure Role-Based Access Control
-              </h3>
-              <p>
+              <li className="!mb-1 font-semibold !mt-4">
+                Secure Role-Based Access Control
+              </li>
+
+               <p>
                 Different roles require different levels of access. TimeWatch
                 provides a multi-level permission system for HR staff,
                 department managers, team leaders, and employees, ensuring
                 confidentiality of sensitive salary and personal data while
                 allowing smooth collaboration.
               </p>
-              <h3>
-                (7) Seamless Biometric Device Integration
-              </h3>
-              <p>
+              <li className="!mb-1 font-semibold !mt-4">Seamless Biometric Device Integration</li>
+                       <p>
                 Whether your organization uses face recognition, RFID cards,
                 fingerprint scanners, or palm readers, our platform integrates
                 effortlessly with TimeWatch biometric devices. Data syncs
                 instantly with the cloud, removing any risk of loss or
                 duplication, even in environments with fluctuating connectivity.
               </p>
+              </ul>
+
+
+            
+            
+            
+             
+             
+     
 
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mt-5 mb-2">
                 Payroll Management That’s Accurate and Compliant

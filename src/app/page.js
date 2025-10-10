@@ -426,11 +426,11 @@ export default async function HomePage() {
               their operations
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-[#d63438] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all flex items-center justify-center space-x-2">
-                <span>Start Free Trial</span>
+              <Link href="/product-catalouge" className="bg-white text-[#d63438] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all flex items-center justify-center space-x-2">
+                <span>Get Catalouge</span>
                 <ArrowRight className="w-5 h-5" />
-              </button>
-              <Link href={'/contact'} className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-[#d63438] transition-all flex items-center justify-center space-x-2">
+              </Link>
+              <Link href={'/contact/#contactPageSection'} className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-[#d63438] transition-all flex items-center justify-center space-x-2">
                 <Phone className="w-5 h-5" />
                 <span>Book Demo</span>
               </Link>

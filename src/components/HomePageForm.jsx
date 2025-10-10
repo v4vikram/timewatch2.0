@@ -4,7 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import PhoneInput from "react-phone-input-2";
 import * as Yup from "yup";
 import { ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axiosInstance from "@/lib/axiosInstance";
 import EmailSuccessPopup from "./forms/EmailSuccessPopup";
 
@@ -16,19 +16,22 @@ const validationSchema = Yup.object({
     .min(10, "Phone must be at least 7 digits")
     .max(15, "Phone must be at most 15 digits"),
   email: Yup.string().email("Invalid email").required("Email is required"),
+  type: Yup.string().required("Type is required"),
   location: Yup.string(),
   message: Yup.string(),
 });
 
 const HomePageForm = () => {
   const [isSuccess, setIsSuccess] = useState(false);
-  const [dial, setDial] = useState("");
+  const [dial, setDial] = useState("91");
+
   const initialValues = {
     name: "",
-    phone: ``,
+    phone: `+${dial} `, // starts with +91 initially
     email: "",
     location: "",
     message: "",
+    type: "",
   };
 
   const handleSubmit = async (values, { resetForm, setErrors }) => {
@@ -36,19 +39,17 @@ const HomePageForm = () => {
       // reset success state before new attempt
       setIsSuccess(false);
 
-      console.log("values", values);
-
-      // return;
-
       const newCustomer = await axiosInstance.post(`/form/customer`, values);
 
-      console.log("values", values.phone.split(" ")[0])
-
-      // setDial(values.phone.split(" ")[0]);
       if (newCustomer?.status === 201) {
-        // resetForm();
-        resetForm({ values: { dial } })
+        resetForm({
+          values: {
+            ...initialValues,
+            phone: `+${dial} `,
+          },
+        });
         setIsSuccess(true);
+        console.log(values);
       }
     } catch (error) {
       if (error.response && error.response.data && error.response.data.errors) {
@@ -96,18 +97,18 @@ const HomePageForm = () => {
               </label>
               <PhoneInput
                 country={"in"}
-                value={values.phone}
+                value={values.phone || "test"}
                 onChange={(rawValue, country) => {
                   const dialCode = country.dialCode;
                   const numberWithoutCode = rawValue.slice(dialCode.length);
                   const formatted = `+${dialCode} ${numberWithoutCode.trim()}`;
-                  // setDial(dialCode);
+                  setDial(dialCode);
                   setFieldValue("phone", formatted);
                 }}
                 enableSearch
                 searchPlaceholder="Search country..."
                 inputClass="!w-full !pl-12 !overflow-hidden !py-6 !rounded-xl !bg-transparent !border !border-gray-300 focus:!ring-2 focus:!ring-[#d63438] focus:!border-transparent !outline-none !transition-all"
-                disableCountryCode={true} // keep country code visible
+                disableCountryCode={false} // keep country code visible
                 disableDropdown={false} // allow changing if you want
                 countryCodeEditable={false} // ✅ prevents removing +91
               />
@@ -137,7 +138,29 @@ const HomePageForm = () => {
               className="text-red-500 text-sm mt-1"
             />
           </div>
+          {/* type */}
+          <div>
+            <label className="block text-sm font-medium text-[#6d6f72] mb-2">
+              Enquiry Type
+            </label>
 
+            <select
+              name="type"
+              value={values.type}
+              onChange={(e) => setFieldValue("type", e.target.value)}
+              className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#d63438] focus:border-transparent outline-none transition-all"
+            >
+              <option value="">-- Select --</option>
+              <option value="sales">Sales</option>
+              <option value="support">Support</option>
+            </select>
+
+            <ErrorMessage
+              name="type"
+              component="div"
+              className="text-red-500 text-sm mt-1"
+            />
+          </div>
           {/* Location */}
           <div>
             <label className="block text-sm font-medium text-[#6d6f72] mb-2">

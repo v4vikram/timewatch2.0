@@ -10,6 +10,7 @@ import {
   Globe,
 } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+import HomePageForm from "@/components/HomePageForm";
 
 export const metadata = {
   title: "Contact Us | TimeWatch Infocom",
@@ -115,7 +116,7 @@ const ContactPage = () => {
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-16">
+      <section className="py-16" id="contactPageSection">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -150,7 +151,8 @@ const ContactPage = () => {
                   </div>
                 )} */}
 
-                <ContactForm />
+                {/* <ContactForm /> */}
+                <HomePageForm/>
               </div>
             </div>
 

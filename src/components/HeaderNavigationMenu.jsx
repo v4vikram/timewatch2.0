@@ -163,6 +163,13 @@ export function HeaderNavigationMenu() {
             <Link href="/contact">Contact</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
+
+        {/* ceo desk */}
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild className={getLinkClass("/contact")}>
+            <Link href="/ceo-desk">CEO's Desk</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );

@@ -257,10 +257,10 @@ export default function GymManagementSolution() {
               <h3>
                 (5) Why Choose TimeWatch Gym Management Software Over Others?
               </h3>
-              <strong>
+              {/* <strong>
                 Many gym management tools exist, but most fall short in critical
                 areas. Here’s why TimeWatch stands out:
-              </strong>
+              </strong> */}
               <ul>
                 <li>
                   <strong>• Biometric Integration </strong>- Not just

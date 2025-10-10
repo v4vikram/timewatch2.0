@@ -167,12 +167,12 @@ export default function GeoFencingMobilePunch() {
           </ul>
 
           <h3>(2) Mobile Punch Solution Explained</h3>
-          <p>
+          {/* <p>
             <strong>
               A mobile punch solution lets employees mark attendance directly
               from their smartphones. With geo-fencing enabled:
             </strong>
-          </p>
+          </p> */}
           <ul>
             <li>
               Employees can only punch in/out when physically inside the
@@ -257,11 +257,11 @@ export default function GeoFencingMobilePunch() {
             </li>
           </ul>
 
-          <h2>
+          <h2 className="!mt-10">
             TimeWatch’s geofencing mobile punch solution dramatically improves
             attendance accuracy
           </h2>
-          <ul>
+          <ul className="!space-y-4 mt-3">
             <li>
               <strong>Location-Verified Attendance:</strong> Employees can only
               punch in or out from within defined geo-fenced boundaries,
@@ -307,7 +307,7 @@ export default function GeoFencingMobilePunch() {
             Customizing geofence boundaries has a strong positive impact on both
             employee accountability and punctuality:
           </h2>
-          <ul>
+          <ul className="!space-y-4">
             <li>
               <strong>Accountability Boost:</strong> When geofence zones are
               tailored to specific work sites, offices, or project areas,
@@ -351,7 +351,7 @@ export default function GeoFencingMobilePunch() {
           </ul>
 
           <h2>Geofencing technology has several long-term effects on workforce engagement and efficiency:</h2>
-          <ul>
+          <ul className="!space-y-4 !mt-2">
             <li>
               <strong>Enhanced Engagement:</strong> Knowing their attendance and
               work presence are tracked transparently via geofencing can

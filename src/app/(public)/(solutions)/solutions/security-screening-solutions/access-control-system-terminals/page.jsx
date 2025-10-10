@@ -162,12 +162,12 @@ const schemaFaq = {
               </p>
 
               <h2>Why Choose TimeWatch Access Control Systems?</h2>
-              <p>
+              {/* <p>
                 <strong>
                   Our solutions go beyond just granting entry — they create a
                   complete security ecosystem:
                 </strong>
-              </p>
+              </p> */}
               <ol>
                 <li>
                   <strong>Multi-Authentication Options</strong>
