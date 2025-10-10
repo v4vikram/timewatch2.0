@@ -35,7 +35,7 @@ export default function MyFlipBook() {
       const screenWidth = window.innerWidth;
       if (screenWidth < 1281) {
         const mobileWidth = Math.min(screenWidth * 0.95, 400);
-        const mobileHeight = mobileWidth * (420 / 300);
+        const mobileHeight = mobileWidth * (260 / 200);
         setDimensions({ width: mobileWidth, height: mobileHeight });
       } else {
         const desktopWidth = Math.min(screenWidth * 0.8, 550);
