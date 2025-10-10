@@ -125,8 +125,8 @@ export default function MyFlipBook() {
   // ✅ Keep CSS position based on page number
   useEffect(() => {
     if (width > 1281) {
-      if (page <= 0) setCss("-272.5px");
-      else if (page + 1 == totalImages) setCss("272.5px");
+      if (page <= 0) setCss("-240.5px");
+      else if (page + 1 == totalImages) setCss("240.5px");
       else setCss("0px");
     } else {
       if (page <= 0) setCss("-204.5px");
