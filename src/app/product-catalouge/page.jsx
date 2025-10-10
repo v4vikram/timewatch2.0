@@ -33,14 +33,22 @@ export default function MyFlipBook() {
   useEffect(() => {
     const updateDimensions = () => {
       const screenWidth = window.innerWidth;
-      if (screenWidth < 1281) {
-        const mobileWidth = Math.min(screenWidth * 0.95, 400);
-        const mobileHeight = mobileWidth * (260 / 200);
-        setDimensions({ width: mobileWidth, height: mobileHeight });
-      } else {
+      if (screenWidth > 1023) {
         const desktopWidth = Math.min(screenWidth * 0.8, 550);
-        const desktopHeight = desktopWidth * (750 / 550);
+        const desktopHeight = desktopWidth * (650 / 500);
         setDimensions({ width: desktopWidth, height: desktopHeight });
+
+      } 
+      // else if (screenWidth < 500 && screenWidth < 1024) {
+      //   const mobileWidth = Math.min(screenWidth * 0.95, 470);
+      //   const mobileHeight = mobileWidth * (420 / 300);
+      //   setDimensions({ width: mobileWidth, height: mobileHeight });
+
+      // }
+       else {
+        const mobileWidth = Math.min(screenWidth * 0.95, 470);
+        const mobileHeight = mobileWidth * (420 / 300);
+        setDimensions({ width: mobileWidth, height: mobileHeight });
       }
     };
     window.addEventListener("resize", updateDimensions);
@@ -116,17 +124,15 @@ export default function MyFlipBook() {
 
   // ✅ Keep CSS position based on page number
   useEffect(() => {
-    if(width > 1281){
+    if (width > 1281) {
       if (page <= 0) setCss("-272.5px");
-    else if (page + 1 == totalImages) setCss("272.5px");
-    else setCss("0px");
-    }
-    else{
+      else if (page + 1 == totalImages) setCss("272.5px");
+      else setCss("0px");
+    } else {
       if (page <= 0) setCss("-204.5px");
-    else if (page + 1 == totalImages) setCss("204.5px");
-    else setCss("0px");
+      else if (page + 1 == totalImages) setCss("204.5px");
+      else setCss("0px");
     }
-    
   }, [page, width]);
 
   useEffect(() => {
