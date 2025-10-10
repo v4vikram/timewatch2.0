@@ -26,7 +26,7 @@ export default function BannerSwiper() {
       >
         <SwiperSlide>
           <div className="bg-gray-200 overflow-hidden pt-14 md:pt-0">
-            <div className="container h-[60vh] lg:h-[80vh] flex flex-col lg:flex-row items-center">
+            <div className="container h-[60vh] md:h-[100vh] 2xl:h-[80vh] flex flex-col lg:flex-row items-center">
               <div className="flex-1 flex flex-col justify-center ">
                 <div className="max-w-[600px]">
                   <h1 class="text-3xl md:text-6xl font-bold text-primary">
@@ -71,7 +71,7 @@ export default function BannerSwiper() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="bg-gray-200 overflow-hidden pt-14 md:pt-0">
-            <div className="container h-[60vh] lg:h-[80vh] flex flex-col lg:flex-row items-center">
+            <div className="container h-[60vh] md:h-[100vh] 2xl:h-[80vh] flex flex-col lg:flex-row items-center">
               <div className="flex-1 flex flex-col justify-center ">
                 <div className="max-w-[600px]">
                   <h1 class="text-3xl md:text-6xl font-bold text-primary">

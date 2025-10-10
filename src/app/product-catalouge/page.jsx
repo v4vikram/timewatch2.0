@@ -33,8 +33,8 @@ export default function MyFlipBook() {
   useEffect(() => {
     const updateDimensions = () => {
       const screenWidth = window.innerWidth;
-      if (screenWidth < 500) {
-        const mobileWidth = Math.min(screenWidth * 0.95, 470);
+      if (screenWidth < 1281) {
+        const mobileWidth = Math.min(screenWidth * 0.95, 400);
         const mobileHeight = mobileWidth * (420 / 300);
         setDimensions({ width: mobileWidth, height: mobileHeight });
       } else {
@@ -116,10 +116,18 @@ export default function MyFlipBook() {
 
   // ✅ Keep CSS position based on page number
   useEffect(() => {
-    if (page <= 0) setCss("-272.5px");
+    if(width > 1281){
+      if (page <= 0) setCss("-272.5px");
     else if (page + 1 == totalImages) setCss("272.5px");
     else setCss("0px");
-  }, [page]);
+    }
+    else{
+      if (page <= 0) setCss("-204.5px");
+    else if (page + 1 == totalImages) setCss("204.5px");
+    else setCss("0px");
+    }
+    
+  }, [page, width]);
 
   useEffect(() => {
     setWidth(window.innerWidth);
