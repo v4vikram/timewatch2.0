@@ -101,12 +101,12 @@ const CEODesk = () => {
             <div className="bg-gradient-to-br from-red-100 to-gray-100 rounded-3xl p-3 md:p-8">
               <div className="bg-white rounded-2xl shadow-2xl p-6 text-center">
                 <div className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] mx-auto flex justify-center rounded-full overflow-hidden border-4 border-gray-800">
-                  <Image
+                  {/* <Image
                     fill
                     src="/images/ceo.png"
                     alt="CEO Mr. Virendra Kumar"
                     className="w-full h-full object-center"
-                  />
+                  /> */}
                 </div>
                 <h3 className="text-2xl font-bold text-gray-700 mb-2">
                   Mr. Virendra Kumar
