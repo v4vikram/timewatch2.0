@@ -350,27 +350,27 @@ export default async function HomePage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  name: "Sarah Johnson",
-                  position: "HR Director",
-                  company: "TechCorp Inc.",
+                  name: "Suhel Khan",
+                  position: "",
+                  company: "",
                   content:
-                    "TimeWatch transformed our attendance management. The biometric system eliminated time theft completely, saving us thousands monthly.",
+                    "I had an excellent experience with the technical support provided by Lalit Kumar. He was extremely knowledgeable, patient, and efficient in resolving my issue. His prompt response and clear communication made the entire process smooth and hassle-free. I truly appreciate his dedication and professionalism. Great support – thank you, Lalit!",
                   rating: 5,
                 },
                 {
-                  name: "Michael Chen",
-                  position: "Operations Manager",
-                  company: "Manufacturing Plus",
+                  name: "Ravi Gupta",
+                  position: "",
+                  company: "",
                   content:
-                    "The integration with our existing HR system was seamless. Real-time reporting helps us make better workforce decisions.",
+                    "I've been using TimeWatch Bio-Manager (eVe software) and it's been consistently user-friendly and reliable. The support team is quick, professional, and always helpful. Special thanks to Dhiraj Tiwari for their excellent assistance – knowledgeable, patient, and efficient. Highly recommend TimeWatch for its great service and cooperative team!",
                   rating: 5,
                 },
                 {
-                  name: "Emily Rodriguez",
-                  position: "IT Administrator",
-                  company: "Global Solutions",
+                  name: "RAVI KUMAR",
+                  position: "",
+                  company: "",
                   content:
-                    "Easy to deploy across multiple locations. The cloud-based dashboard gives us complete visibility into our workforce.",
+                    "I had a great experience with Mr. Amit from the Timewatch team for his outstanding support during the software installation process. He provided guidance at every step and ensured everything went smoothly.Thank you once again for the excellent service!",
                   rating: 5,
                 },
               ].map((testimonial, index) => (

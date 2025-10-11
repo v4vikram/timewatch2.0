@@ -54,7 +54,7 @@ export default function ProductCard({
             alt={name}
             fill
             sizes="400"
-            className="object-contain w-full h-full transition-transform duration-500 group-hover:scale-105 py-10"
+            className="object-contain w-full h-full transition-transform duration-500 group-hover:scale-105 py-5"
           />
         ) : (
           <Image
@@ -107,7 +107,7 @@ export default function ProductCard({
         </div>
 
         {/* Rating */}
-        <div className="mb-3 flex items-center">
+        {/* <div className="mb-3 flex items-center">
           <div className="flex">
             {[...Array(5)].map((_, i) => (
               <Star
@@ -123,7 +123,7 @@ export default function ProductCard({
           <span className="ml-2 text-xs text-muted-foreground">
             {rating} ({reviewCount} reviews)
           </span>
-        </div>
+        </div> */}
 
         {/* Price */}
         {/* <div className="mb-4 flex items-center gap-2">

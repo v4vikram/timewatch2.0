@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
         <div>
           {/* <Footer/> */}
         </div>
-        {/* <SupportButtons/> */}
+        <SupportButtons/>
       </body>
     </html>
   );

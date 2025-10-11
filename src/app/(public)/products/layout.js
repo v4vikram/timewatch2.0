@@ -191,7 +191,7 @@ export default function CatLayout({ children }) {
                 <FilterContent filterProducts={filterProd} />
               </div>
             ) : (
-              <p className="text-center text-gray-500">No products found.</p>
+               <ProductSkeleton />
             )}
           </div>
         </div>

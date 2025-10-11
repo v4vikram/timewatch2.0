@@ -58,7 +58,7 @@ export default function MyFlipBook() {
 
   // Preload images
   useEffect(() => {
-    const firstBatch = imagePaths.slice(0, 3);
+    const firstBatch = imagePaths.slice(0, 15);
     const remainingBatch = imagePaths.slice(5);
     let loadedCount = 0;
 

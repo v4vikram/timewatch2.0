@@ -4,6 +4,10 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 import Image from "next/image";
+/* styles/globals.css */
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default function BannerSwiper() {
   return (
@@ -54,7 +58,7 @@ export default function BannerSwiper() {
                 </div>
               </div>
               <div className="flex-1 mt-5 md:mt-0">
-                <div className="relative w-[280px] h-[130px] md:h-[500px] md:w-[750px]">
+                <div className="relative w-[280px] h-[130px] md:h-[500px] md:w-[600px] 2xl:w-[750px]">
                   <Image
                     src="/images/sliders/home/trueface-products.png"
                     alt="time-attendance-and-access-controll"
@@ -97,7 +101,7 @@ export default function BannerSwiper() {
                 </div>
               </div>
               <div className="flex-1 mt-5 md:mt-0">
-                <div className="relative w-[280px] h-[130px] md:h-[500px] md:w-[750px]">
+                <div className="relative w-[280px] h-[130px] md:h-[500px] md:w-[600px] 2xl:w-[750px]">
                   <Image
                     src="/images/sliders/home/trueface-products.png"
                     alt="time-attendance-and-access-controll"
