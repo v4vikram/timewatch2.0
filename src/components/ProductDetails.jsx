@@ -51,10 +51,22 @@ const ProductDetails = ({ product }) => {
         <div className="space-y-4 flex-1">
           <h1 className="text-3xl font-bold">{product.productName}</h1>
           <p className="text-gray-600">{product.description}</p>
-          {console.log()}
+          {console.log("product.features", product.features)}
+
+          <div className="hidden">
+            {product.keyFeatures && product.keyFeatures.length > 0 ? (
+              <ul className="list-disc pl-5 space-y-1">
+                {product.keyFeatures.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
+            ) : (
+              <p>No key features available.</p>
+            )}
+          </div>
 
           {/* Features */}
-          {product.features > 0 && (
+          {product.features.length > 0 && (
             <div className="mt-2">
               <h2 className="text-2xl font-bold mb-3">Features</h2>
               <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2">
