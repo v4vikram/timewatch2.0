@@ -150,20 +150,17 @@ export default function ConsultingLandingPage() {
                 />
               </div>
 
-              <h2>Live Tracking</h2>
-              <h3>(1) How It Works:</h3>
+              <h2 className="!mt-2">Live Tracking</h2>
+  
 
-              <p className="text-secondary mb-4">
-                Once an employee logs into the mobile app and grants location
+              <ul>
+                <li><strong>How It Works:</strong>Once an employee logs into the mobile app and grants location
                 permission, their device begins sharing location data with the
                 management dashboard automatically. This happens at set
                 intervals, like every 10 or 25 minutes, ensuring managers
                 receive timely updates on each staff member’s whereabouts
-                throughout the workday.
-              </p>
-              <h3>(2) Real-Life Example:</h3>
-              <p>
-                Imagine a logistics company with several delivery drivers
+                throughout the workday.</li>
+                <li><strong>Real-Life Example:</strong>Imagine a logistics company with several delivery drivers
                 responsible for different routes across the city. With live
                 tracking enabled, dispatch managers can view each driver's
                 location on a map at any given moment. If a high-priority
@@ -171,9 +168,11 @@ export default function ConsultingLandingPage() {
                 driver is nearby and can assign the task efficiently. This
                 reduces delays, improves service response, and optimizes
                 delivery routes—ultimately benefiting both company performance
-                and customer satisfaction.
-              </p>
-              <h3>(3) Key Features and Benefits:</h3>
+                and customer satisfaction.</li>
+              </ul>
+             
+              
+              <h2>Key Features and Benefits:</h2>
               <ul>
                 <li>
                   Automatic Location Sharing: No manual check-ins required;

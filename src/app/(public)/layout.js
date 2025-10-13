@@ -19,17 +19,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${rajdhani.className}` }>
-      <body
-        className={``}
-      >
-       <Header/>
+   <>
+         <Header/>
          <div className=''>{children}</div>
         <div>
           <Footer/>
         </div>
         <SupportButtons/>
-      </body>
-    </html>
+   </>
   );
 }

@@ -34,11 +34,7 @@ const blurToClearVariant = {
 const Ewaste = () => {
   // Mock component to handle animation props if Framer Motion isn't imported
   // In a real Next/React environment with Framer Motion, you'd use motion.div
-  const AnimatedDiv = ({ children, className, ...props }) => (
-    <div className={className} {...props}>
-      {children}
-    </div>
-  );
+
 
   return (
     <div className="">
@@ -57,7 +53,7 @@ const Ewaste = () => {
       {/* Introduction */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedDiv
+          <div
             className="space-y-6"
             initial="hidden"
             // whileInView="visible"
@@ -76,7 +72,7 @@ const Ewaste = () => {
             <p className="text-lg font-semibold text-gray-700">
               Under the guidelines of the Ministry of Environment, Forest and Climate Change, Government of India, E-Waste (Management) Rules, 2016 and <span className={PRIMARY_COLOR_CLASS}>TIMEWATCH INFOCOM PRIVATE LIMITED</span> stands committed to implement E-Waste Rules.
             </p>
-          </AnimatedDiv>
+          </div>
         </div>
       </section>
 
@@ -137,7 +133,7 @@ const Ewaste = () => {
       {/* Benefits of Recycling */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedDiv
+          <div
             initial="hidden"
             // whileInView="visible"
             variants={blurToClearVariant}
@@ -184,14 +180,14 @@ const Ewaste = () => {
                 </span>
               </li>
             </ul>
-          </AnimatedDiv>
+          </div>
         </div>
       </section>
 
       {/* Do's and Don'ts */}
       <section className={`py-16 ${LIGHT_BG_CLASS}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedDiv
+          <div
             initial="hidden"
             // whileInView="visible"
             variants={blurToClearVariant}
@@ -246,14 +242,14 @@ const Ewaste = () => {
                 </ul>
               </div>
             </div>
-          </AnimatedDiv>
+          </div>
         </div>
       </section>
 
       {/* Collection Mechanism & Schemes */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <AnimatedDiv
+          <div
             initial="hidden"
             // whileInView="visible"
             variants={blurToClearVariant}
@@ -300,7 +296,7 @@ const Ewaste = () => {
                 </p>
               </div>
             </div>
-          </AnimatedDiv>
+          </div>
         </div>
       </section>
 

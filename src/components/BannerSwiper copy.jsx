@@ -29,13 +29,13 @@ export default function BannerSwiper() {
         <div className="bg-gray-50 overflow-hidden">
           <div className="container h-[80vh] flex items-center">
             <div className="flex-1 flex flex-col justify-center ">
-              <h1 class="text-4xl md:text-6xl font-bold text-primary leading-tight">
+              <h1 className="text-4xl md:text-6xl font-bold text-primary leading-tight">
                 TrueFace Series Device
                 <br />
-                <span class="text-secondary"> with 2 Year Waranty</span>
+                <span className="text-secondary"> with 2 Year Waranty</span>
               </h1>
               <hr className="w-1/3 rounded-2xl h-2 bg-primary border-0" />
-              <p class="text-xl text-gray-600 leading-relaxed max-w-[500px] mt-5">
+              <p className="text-xl text-gray-600 leading-relaxed max-w-[500px] mt-5">
                 Revolutionary biometric time attendance system with advanced HRM
                 integration. Transform your workforce management with
                 cutting-edge technology.

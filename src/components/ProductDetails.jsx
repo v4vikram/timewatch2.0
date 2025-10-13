@@ -126,7 +126,7 @@ const ProductDetails = ({ product }) => {
 
           <div className="flex gap-4 mt-10">
             <Button asChild className={"text-[15px] md:text-[17px]"}>
-              <Link href={"#"}>
+              <Link href={"tel:+91-9599953923"}>
                 <Phone /> Enquire Now
               </Link>
             </Button>

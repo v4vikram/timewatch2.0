@@ -147,53 +147,20 @@ const schemaFaq = {
               </div>
 
               <h2 className="!mt-2">Key Features & Benefits</h2>
-              <h3>(1) High-Definition X-Ray Imaging with AI Overlays</h3>
+             <ul class="list-disc pl-6 space-y-2">
+  <li><strong>High-Definition X-Ray Imaging with AI Overlays:</strong> Utilizing advanced algorithms, the system enhances images using multiple filters—such as edge, density, and color enhancements—for clear visibility. Dangerous items are automatically flagged with AI overlay boxes that track movement across the image.</li>
 
-              <p className="mb-4">
-                Utilizing advanced algorithms, the system enhances images using
-                multiple filters—such as edge, density, and color
-                enhancements—for clear visibility. Dangerous items are
-                automatically flagged with AI overlay boxes that track movement
-                across the image.
-              </p>
+  <li><strong>Enhanced Threat Detection with Smart Alarm System:</strong> The scanner identifies hazardous items like knives, lighters, liquids, and electronics, and triggers alarms via voice, light, and belt stoppage. Each threat is logged and categorized for later review.</li>
 
-              <h3>(2) Enhanced Threat Detection with Smart Alarm System</h3>
+  <li><strong>Dual Camera Monitoring & Robust Storage:</strong> Equipped with entrance and exit cameras plus optional PoE/IP cameras for live surveillance and playback. Enables recording patient-package insights and stores up to millions of images, supported by RAID-based backup.</li>
 
-              <p className="mb-4">
-                The scanner identifies hazardous items like knives, lighters,
-                liquids, and electronics, and triggers alarms via voice, light,
-                and belt stoppage. Each threat is logged and categorized for
-                later review.
-              </p>
+  <li><strong>Flexible Display Modes & Image Manipulation:</strong> Operates in security or surveillance modes. Supports image enhancements such as inversion, pseudo-color, organic stripping, and high-energy contrast—all to improve object visibility and accuracy.</li>
 
-              <h3>(3) Dual Camera Monitoring & Robust Storage</h3>
-              <p className="mb-4">
-                Equipped with entrance and exit cameras plus optional PoE/IP
-                cameras for live surveillance and playback. Enables recording
-                patient-package insights and stores up to millions of images,
-                supported by RAID-based backup.
-              </p>
+  <li><strong>User-Friendly Interface & Reliable Diagnostics:</strong> Operates on embedded Linux with intuitive GUIs and web access. Includes self-diagnostics, error logs, user management, and seamless remote updates.</li>
 
-              <h3>(4) Flexible Display Modes & Image Manipulation</h3>
-              <p className="mb-4">
-                Operates in security or surveillance modes. Supports image
-                enhancements such as inversion, pseudo-color, organic stripping,
-                and high-energy contrast—all to improve object visibility and
-                accuracy.
-              </p>
-              <h3>(5) User-Friendly Interface & Reliable Diagnostics</h3>
-              <p className="mb-4">
-                Operates on embedded Linux with intuitive GUIs and web access.
-                Includes self-diagnostics, error logs, user management, and
-                seamless remote updates.
-              </p>
-              <h3>(6) Comprehensive Scene Applications</h3>
+  <li><strong>Comprehensive Scene Applications:</strong> Ideal for high-security or high-volume environments including airports, metro stations, government buildings, large event venues, and logistics hubs.</li>
+</ul>
 
-              <p className="mb-4">
-                Ideal for high-security or high-volume environments including
-                airports, metro stations, government buildings, large event
-                venues, and logistics hubs.
-              </p>
 
               <h2>Application Scenarios</h2>
               <ul>

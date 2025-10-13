@@ -30,9 +30,9 @@ const FeaturesProduct = ({ publishedProducts }) => {
         <div
           className="text-center mb-12"
           // variants={parentVariant}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          // initial="hidden"
+          // whileInView="visible"
+          // viewport={{ once: true }}
         >
           <div
             className="flex items-center justify-center space-x-4 mb-2"
@@ -58,10 +58,10 @@ const FeaturesProduct = ({ publishedProducts }) => {
         {/* Products Grid */}
         <div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.6 }}
+          // initial={{ opacity: 0, y: 50 }}
+          // whileInView={{ opacity: 1, y: 0 }}
+          // viewport={{ once: true }}
+          // transition={{ duration: 1, delay: 0.6 }}
         >
           {publishedProducts?.length > 0 ? (
             publishedProducts

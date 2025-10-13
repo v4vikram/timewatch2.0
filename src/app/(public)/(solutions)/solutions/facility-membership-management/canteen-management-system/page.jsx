@@ -172,53 +172,25 @@ export default function CanteenManagementSystem() {
               </p>
 
               <h2>Key Features & Real-World Use Cases</h2>
-              <h3 className="!mt-0">(1) Touchless & Secure Meal Access</h3>
-              <p>
-                Employees can use{" "}
-                <strong>face recognition, fingerprint, or RFID cards</strong>
-                to collect meals without coupons. Example: In an{" "}
-                <strong>IT park in Gurugram</strong>, only authorized employees
-                can access the cafeteria, reducing misuse and saving costs.
-              </p>
-              <h3>(2) Menu Scheduling & Multi-Shift Support</h3>
-              <p>
-                Supports <strong>255 menu items</strong> and up to{" "}
-                <strong>9 meal slots per day</strong> (breakfast, lunch, dinner,
-                snacks). Example: <strong>A factory in Chennai</strong> running
-                24x7 can easily manage different menus for day and night shifts.
-              </p>
-              <h3>(3) Cashless Transactions with Auto Recharge</h3>
-              <p>
-                Employees pay via UPI, prepaid wallet, or RFID card, with
-                instant auto-recharge. Example: In a Delhi corporate office,
-                staff recharge online and skip queues, making lunch breaks
-                faster.
-              </p>
-              <h3>(4) Real-Time Tracking & Reports</h3>
-              <p>
-                Every transaction is recorded with user, time, and item details.
-                Example: In a <strong>hospital in Hyderabad</strong>, HR tracks
-                staff consumption separately from visitor meals to ensure
-                transparency.
-              </p>
-              <h3>(5) Smart Food Planning & Waste Reduction</h3>
-              <p>
-                By syncing with attendance data, the system predicts the number
-                of meals required daily. Example: A{" "}
-                <strong>Gujarat factory</strong> reduced food wastage by 20%
-                using attendance-linked forecasting.
-              </p>
-              <h3>(6) Integration with Payroll & HRMS</h3>
-              <p>
-                Meal allowances or deductions can be auto-calculated and synced
-                with payroll. Example: In a <strong>Bangalore SME</strong>,
-                contractor meals are deducted directly from invoices, saving
-                admin effort.
-              </p>
-              <h3>(7) Where Can It Be Used?</h3>
+             <ul class="list-disc pl-6 space-y-2">
+  <li><strong>Touchless & Secure Meal Access:</strong> Employees can use face recognition, fingerprint, or RFID cards to collect meals without coupons. <em>Example:</em> In an IT park in Gurugram, only authorized employees can access the cafeteria, reducing misuse and saving costs.</li>
+
+  <li><strong>Menu Scheduling & Multi-Shift Support:</strong> Supports 255 menu items and up to 9 meal slots per day (breakfast, lunch, dinner, snacks). <em>Example:</em> A factory in Chennai running 24x7 can easily manage different menus for day and night shifts.</li>
+
+  <li><strong>Cashless Transactions with Auto Recharge:</strong> Employees pay via UPI, prepaid wallet, or RFID card, with instant auto-recharge. <em>Example:</em> In a Delhi corporate office, staff recharge online and skip queues, making lunch breaks faster.</li>
+
+  <li><strong>Real-Time Tracking & Reports:</strong> Every transaction is recorded with user, time, and item details. <em>Example:</em> In a hospital in Hyderabad, HR tracks staff consumption separately from visitor meals to ensure transparency.</li>
+
+  <li><strong>Smart Food Planning & Waste Reduction:</strong> By syncing with attendance data, the system predicts the number of meals required daily. <em>Example:</em> A Gujarat factory reduced food wastage by 20% using attendance-linked forecasting.</li>
+
+  <li><strong>Integration with Payroll & HRMS:</strong> Meal allowances or deductions can be auto-calculated and synced with payroll. <em>Example:</em> In a Bangalore SME, contractor meals are deducted directly from invoices, saving admin effort.</li>
+</ul>
+
+
+              <h3>Where Can It Be Used?</h3>
               <ul>
                 <li>
-                  <strong>Corporate Offices & IT Parks</strong> – Quick,
+                  <strong className="text-xl">Corporate Offices & IT Parks</strong> – Quick,
                   cashless meals without queues.
                 </li>
                 <li>
@@ -243,22 +215,27 @@ export default function CanteenManagementSystem() {
                 </li>
               </ul>
 
-                <h3>(8) Key Benefits</h3>
+              <h3>Key Benefits</h3>
               <ul>
                 <li>
-                  <strong>Faster Dining</strong> – Cuts waiting time by up to 40%
+                  <strong className="text-xl">Faster Dining</strong> – Cuts waiting time by up to
+                  40%
                 </li>
                 <li>
-                 <strong>Zero Misuse</strong> – Only authorized employees can redeem meals
+                  <strong>Zero Misuse</strong> – Only authorized employees can
+                  redeem meals
                 </li>
                 <li>
-                 <strong>Accurate Reports</strong> – Prevents disputes with canteen contractors
+                  <strong>Accurate Reports</strong> – Prevents disputes with
+                  canteen contractors
                 </li>
                 <li>
-                  <strong>Cost Savings</strong> – Reduces wastage & manual errors
+                  <strong>Cost Savings</strong> – Reduces wastage & manual
+                  errors
                 </li>
                 <li>
-                 <strong>Better Employee Satisfaction</strong> – Dining becomes smoother, fairer, and more enjoyable
+                  <strong>Better Employee Satisfaction</strong> – Dining becomes
+                  smoother, fairer, and more enjoyable
                 </li>
               </ul>
             </section>

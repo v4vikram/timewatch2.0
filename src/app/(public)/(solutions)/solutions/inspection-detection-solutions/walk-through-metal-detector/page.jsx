@@ -156,7 +156,7 @@ const schemaFaq = {
                 a smooth flow of people.
               </p>
 
-              <h3>Key Features of the Walk-Through Metal Detector</h3>
+              <h2>Key Features of the Walk-Through Metal Detector</h2>
 
               <ul>
                 <li>

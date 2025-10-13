@@ -166,7 +166,7 @@ export function HeaderNavigationMenu() {
 
         {/* ceo desk */}
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={getLinkClass("/contact")}>
+          <NavigationMenuLink asChild className={getLinkClass("/ceo-desk")}>
             <Link href="/ceo-desk">CEO's Desk</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>

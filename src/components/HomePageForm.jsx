@@ -191,7 +191,7 @@ const HomePageForm = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-[#d63438] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#b82c30] transition-all flex items-center justify-center space-x-2"
+            className="cursor-pointer w-full bg-[#d63438] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#b82c30] transition-all flex items-center justify-center space-x-2"
           >
             <span>Send Message</span>
             <ArrowRight className="w-5 h-5" />

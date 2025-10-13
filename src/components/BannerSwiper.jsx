@@ -33,12 +33,12 @@ export default function BannerSwiper() {
             <div className="container h-[60vh] md:h-[100vh] 2xl:h-[calc(100vh-80px)] flex flex-col lg:flex-row items-center">
               <div className="flex-1 flex flex-col justify-center ">
                 <div className="max-w-[600px]">
-                  <h1 class="text-3xl md:text-6xl font-bold text-primary">
+                  <h1 className="text-3xl md:text-6xl font-bold text-primary">
                   AI Based X-Ray
-                    <span class="text-secondary"> Baggage Scanner</span>
+                    <span className="text-secondary"> Baggage Scanner</span>
                   </h1>
                   <hr className="w-1/3 rounded-2xl h-1.5 mt-2 md:h-2 bg-primary border-0" />
-                  <p class="text-md md:text-lg text-gray-600 leading-relaxed mt-5">
+                  <p className="text-md md:text-lg text-gray-600 leading-relaxed mt-5">
                     We provide customized model solutions for our AI X-Ray baggage scanner, including software customization and barcode integration to meet your specific needs.
                   </p>
                 </div>
@@ -76,12 +76,12 @@ export default function BannerSwiper() {
             <div className="container h-[60vh] md:h-[100vh] 2xl:h-[calc(100vh-80px)] flex flex-col lg:flex-row items-center">
               <div className="flex-1 flex flex-col justify-center ">
                 <div className="max-w-[600px]">
-                  <h1 class="text-3xl md:text-6xl font-bold text-primary">
+                  <h1 className="text-3xl md:text-6xl font-bold text-primary">
                     TrueFace Series Device
-                    <span class="text-secondary"> with 2 Year Waranty</span>
+                    <span className="text-secondary"> with 2 Year Waranty</span>
                   </h1>
                   <hr className="w-1/3 rounded-2xl h-1.5 mt-2 md:h-2 bg-primary border-0" />
-                  <p class="text-md md:text-lg text-gray-600 leading-relaxed mt-5">
+                  <p className="text-md md:text-lg text-gray-600 leading-relaxed mt-5">
                     Revolutionary biometric time attendance system with advanced
                     HRM integration. Transform your workforce management with
                     cutting-edge technology.
@@ -101,7 +101,7 @@ export default function BannerSwiper() {
                 </div>
               </div>
               <div className="flex-1 mt-5 md:mt-0">
-                <div className="relative w-[280px] h-[130px] md:h-[500px] md:w-[600px] 2xl:w-[750px]">
+                <div className="relative w-[280px] h-[190px] md:h-[500px] md:w-[600px] 2xl:w-[750px]">
                   <Image
                     src="/images/sliders/home/trueface-products.png"
                     alt="time-attendance-and-access-controll"
@@ -121,30 +121,41 @@ export default function BannerSwiper() {
             <div className="container h-[60vh] md:h-[100vh] 2xl:h-[calc(100vh-80px)] flex flex-col lg:flex-row items-center">
               <div className="flex-1 flex flex-col justify-center ">
                 <div className="max-w-[600px]">
-                  <h1 class="text-3xl md:text-6xl font-bold text-primary">
+                  <h1 className="text-3xl md:text-6xl font-bold text-primary">
                     Simple way to<br/>
-                    <span class="text-secondary"> TRACK YOUR EMPLOYEE</span>
+                    <span className="text-secondary"> TRACK YOUR EMPLOYEE</span>
                   </h1>
                   <hr className="w-1/3 rounded-2xl h-1.5 mt-2 md:h-2 bg-primary border-0" />
-                  <p class="text-md md:text-lg text-gray-600 leading-relaxed mt-5">
+                  <p className="text-md md:text-lg text-gray-600 leading-relaxed mt-5">
                     Track employees in real time with geo-fencing, ensuring accurate attendance, productivity, and secure work monitoring.
                   </p>
                 </div>
 
-                {/* <div className="relative max-w-[400px] h-[100px] items-start mt-9 hidden md:block">
+                <div className="relative max-w-[400px] h-[100px] items-start mt-4 hidden md:flex gap-x-4">
                   <Image
-                    fill
-                    src="/images/sliders/home/Features-icon.png"
-                    alt="time-attendance-and-access-controll"
-                    className="object-contain mr-auto brightness-0 contrast-200"
-                    quality={100}
+                    src="/images/sliders/home/app-store.png"
+                    alt="app-store"
+                    className="object-contain border border-black p-2"
+                    width={75}
+                    height={75}
+                    quality={75}
                     priority
-                    sizes="100vw"
+                    sizes="75vw"
                   />
-                </div> */}
+                  <Image
+                    src="/images/sliders/home/play-store.png"
+                    alt="play-store"
+                    className="object-contain border border-black p-2"
+                    width={75}
+                    height={75}
+                    quality={75}
+                    priority
+                    sizes="75vw"
+                  />
+                </div>
               </div>
               <div className="flex-1 mt-5 md:mt-0">
-                <div className="relative w-[300px] h-[220px] md:h-[500px] md:w-[600px] 2xl:w-[750px]">
+                <div className="relative w-[300px] h-[200px] md:h-[500px] md:w-[600px] 2xl:w-[750px]">
                   <Image
                     src="/images/sliders/home/mobile-applications.png"
                     alt="mobile-applications"

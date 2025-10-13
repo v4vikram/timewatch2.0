@@ -75,10 +75,10 @@ const downloadPage = () => {
           <div className="mt-8 flex justify-center">
             <div className="bg-white rounded-full px-6 py-3 shadow-lg">
               <div className="flex items-center space-x-4 text-sm text-gray-600">
-                <div className="flex items-center">
+                {/* <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                   Free Trial Available
-                </div>
+                </div> */}
                 <div className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                   24/7 Support

@@ -146,42 +146,19 @@ const schemaFaq = {
               </div>
 
               <h2 className="!mt-2">Key Benefits of TW-NE200</h2>
-              <h3>(1) Dual-Mode Detection</h3>
+           <ul class="list-disc pl-6 space-y-2">
+  <li><strong>Dual-Mode Detection:</strong> The TW-NE200 combines two modes in one device—explosives and narcotics detection—ensuring complete coverage.</li>
 
-              <p className="mb-4">
-                The TW-NE200 combines two modes in one device—explosives and
-                narcotics detection—ensuring complete coverage.
-              </p>
+  <li><strong>Rapid Results:</strong> Provides test results in three seconds or less, improving security screening efficiency.</li>
 
-              <h3>(2) Rapid Results</h3>
+  <li><strong>High Accuracy and Low False Alarms:</strong> With an accuracy rate above 99% and a false alarm rate of less than 1%, it delivers dependable results.</li>
 
-              <p className="mb-4">
-                Provides test results in three seconds or less, improving
-                security screening efficiency.
-              </p>
+  <li><strong>Safe and Simple Sampling:</strong> Operators can collect trace particles using wipe samples without directly handling suspicious materials.</li>
 
-              <h3>(3) High Accuracy and Low False Alarms</h3>
-              <p className="mb-4">
-                With an accuracy rate above 99% and a false alarm rate of less
-                than 1%, it delivers dependable results.
-              </p>
+  <li><strong>Portable and Easy to Operate:</strong> Compact dimensions and lightweight build allow for quick deployment in the field.</li>
 
-              <h3>(4) Safe and Simple Sampling</h3>
-              <p className="mb-4">
-                Operators can collect trace particles using wipe samples without
-                directly handling suspicious materials.
-              </p>
-              <h3>(5) Portable and Easy to Operate</h3>
-              <p className="mb-4">
-                Compact dimensions and lightweight build allow for quick
-                deployment in the field.
-              </p>
-              <h3>(6) Smart Functions</h3>
-
-              <p className="mb-4">
-                Features include automatic calibration and cleaning, remote
-                monitoring, fault diagnosis, and large-capacity data storage.
-              </p>
+  <li><strong>Smart Functions:</strong> Features include automatic calibration and cleaning, remote monitoring, fault diagnosis, and large-capacity data storage.</li>
+</ul>
 
               <h2>Technical Specifications</h2>
               <ul>

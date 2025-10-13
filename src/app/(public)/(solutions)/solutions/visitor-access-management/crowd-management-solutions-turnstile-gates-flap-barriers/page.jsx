@@ -161,94 +161,93 @@ export default function CrowdManagementSolutionsTurnstileGatesFlapBarriers() {
                 facilities.
               </p>
               <h2>Key Features</h2>
-              <h3>(1) Turnstile Gates for Controlled Entry</h3>
-              <p>
-                Turnstile gates allow only one person per entry, preventing
-                tailgating and unauthorized access. They integrate with
-                biometric systems, RFID, or QR codes for secure and verified
-                access.
-              </p>
-              <h3>(2) Flap Barriers for High-Traffic Zones</h3>
-              <p>
-                Flap barriers are designed for metro stations, airports,
-                schools, and stadiums, where thousands of commuters move daily.
-                They ensure fast and seamless access while preventing misuse.
-              </p>
-              <h3>(3) Biometric & RFID Integration</h3>
-              <p>
-                Integrated with face recognition, fingerprint scanners, RFID
-                cards, or mobile QR passes, these systems ensure that only
-                verified users can enter.
-              </p>
-              <h3>(4) Heavy-Duty & Durable Design</h3>
-              <p>
-                Made with stainless steel and advanced motors, our gates and
-                barriers can withstand continuous use in crowded Indian
-                environments.
-              </p>
-              <h3>(5) Centralized Monitoring & Reporting</h3>
-              <p>
-                Facility managers can monitor entry data in real-time and manage
-                multiple entry points through a single dashboard.
-              </p>
+              <ul>
+                <li>
+                  <strong>Turnstile Gates for Controlled Entry: </strong>{" "}
+                  Turnstile gates allow only one person per entry, preventing
+                  tailgating and unauthorized access. They integrate with
+                  biometric systems, RFID, or QR codes for secure and verified
+                  access.
+                </li>
+                <li>
+                  <strong>Flap Barriers for High-Traffic Zones: </strong> Flap
+                  barriers are designed for metro stations, airports, schools,
+                  and stadiums, where thousands of commuters move daily. They
+                  ensure fast and seamless access while preventing misuse.
+                </li>
+                <li>
+                  <strong>Biometric & RFID Integration: </strong> Integrated
+                  with face recognition, fingerprint scanners, RFID cards, or
+                  mobile QR passes, these systems ensure that only verified
+                  users can enter.
+                </li>
+                <li>
+                  <strong>Heavy-Duty & Durable Design: </strong> Made with
+                  stainless steel and advanced motors, our gates and barriers
+                  can withstand continuous use in crowded Indian environments.
+                </li>
+                <li>
+                  <strong>Centralized Monitoring & Reporting: </strong> Facility
+                  managers can monitor entry data in real-time and manage
+                  multiple entry points through a single dashboard.
+                </li>
+              </ul>
 
               <h2>Where Our Crowd Management Solutions Are Used</h2>
-              <h3>(1) Metro & Railway Stations</h3>
 
-              <p>
-                Indian metros and railway stations see lakhs of passengers
-                daily. Flap barriers and turnstiles help regulate passenger
-                entry during peak hours, prevent overcrowding, and reduce ticket
-                fraud by integrating with RFID or QR-based ticketing systems.
-                They ensure safe, efficient, and reliable movement for daily
-                commuters.
-              </p>
-
-              <h3>(2) Airports</h3>
-
-              <p>
-                Airports handle continuous passenger flow across multiple
-                checkpoints. Turnstile gates streamline security, immigration,
-                and boarding processes, ensuring only authorized passengers
-                enter restricted zones. With biometric or QR scanning, airports
-                can reduce congestion, enhance operational efficiency, and
-                improve overall passenger safety.
-              </p>
-
-              <h3>(3) Schools, Colleges & Universities</h3>
-
-              <p>
-                Educational institutions require secure access for students,
-                staff, and visitors. Flap barriers prevent unauthorized entry,
-                while biometric or ID card integration keeps accurate records.
-                This reduces trespassing risks, ensures student safety, and
-                aligns with modern institutional security standards.
-              </p>
-              <h3>(4) Stadiums & Sports Arenas</h3>
-              <p>
-                From IPL cricket matches to football tournaments, stadiums in
-                India attract tens of thousands of fans. Flap barriers and
-                turnstiles help control entry gates, validate tickets, and
-                prevent unauthorized access. They ensure smooth crowd movement,
-                safe entry and exit, and minimize chaos during large sporting or
-                entertainment events.
-              </p>
-              <h3>(5) Corporate Offices & IT Parks</h3>
-              <p>
-                Large workplaces with thousands of employees and visitors daily
-                require automated access management. Turnstile gates allow
-                seamless entry through RFID, biometric, or QR, while preventing
-                tailgating. This improves security, reduces manual checks, and
-                maintains detailed logs for audits and compliance.
-              </p>
-              <h3>(6) Shopping Malls & Events</h3>
-              <p>
-                Shopping malls, exhibitions, and cultural events in India face
-                heavy visitor rush during weekends and festive sales. Flap
-                barriers regulate visitor flow, reduce security risks, and
-                prevent overcrowding. This ensures a safe, enjoyable experience
-                for customers and event attendees.
-              </p>
+              <ul>
+                <li>
+                  <strong>Metro & Railway Stations:</strong> Indian metros and
+                  railway stations see lakhs of passengers daily. Flap barriers
+                  and turnstiles help regulate passenger entry during peak
+                  hours, prevent overcrowding, and reduce ticket fraud by
+                  integrating with RFID or QR-based ticketing systems. They
+                  ensure safe, efficient, and reliable movement for daily
+                  commuters.
+                </li>
+                <li>
+                  <strong>Airports:</strong>
+                  Airports handle continuous passenger flow across multiple
+                  checkpoints. Turnstile gates streamline security, immigration,
+                  and boarding processes, ensuring only authorized passengers
+                  enter restricted zones. With biometric or QR scanning,
+                  airports can reduce congestion, enhance operational
+                  efficiency, and improve overall passenger safety.
+                </li>
+                <li>
+                  <strong>Schools, Colleges & Universities:</strong>Educational
+                  institutions require secure access for students, staff, and
+                  visitors. Flap barriers prevent unauthorized entry, while
+                  biometric or ID card integration keeps accurate records. This
+                  reduces trespassing risks, ensures student safety, and aligns
+                  with modern institutional security standards.
+                </li>
+                <li>
+                  <strong>Stadiums & Sports Arenas :</strong> From IPL cricket
+                  matches to football tournaments, stadiums in India attract
+                  tens of thousands of fans. Flap barriers and turnstiles help
+                  control entry gates, validate tickets, and prevent
+                  unauthorized access. They ensure smooth crowd movement, safe
+                  entry and exit, and minimize chaos during large sporting or
+                  entertainment events.
+                </li>
+                <li>
+                  <strong>Corporate Offices & IT Parks :</strong> Large
+                  workplaces with thousands of employees and visitors daily
+                  require automated access management. Turnstile gates allow
+                  seamless entry through RFID, biometric, or QR, while
+                  preventing tailgating. This improves security, reduces manual
+                  checks, and maintains detailed logs for audits and compliance.
+                </li>
+                <li>
+                  <strong>Shopping Malls & Events:</strong> Shopping malls,
+                  exhibitions, and cultural events in India face heavy visitor
+                  rush during weekends and festive sales. Flap barriers regulate
+                  visitor flow, reduce security risks, and prevent overcrowding.
+                  This ensures a safe, enjoyable experience for customers and
+                  event attendees.
+                </li>
+              </ul>
             </section>
 
             {/* FAQ Section */}

@@ -238,6 +238,11 @@ export const menuItems = [
     href: "/contact",
     type: "link",
   },
+  {
+    label: "CEO's DESK",
+    href: "/ceo-desk",
+    type: "link",
+  },
 ];
 
 export const solutions = [

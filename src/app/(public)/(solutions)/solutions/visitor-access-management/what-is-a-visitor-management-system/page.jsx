@@ -10,64 +10,63 @@ export const metadata = {
 };
 
 export default function WhatVisitorManagementSystem() {
- const faqs = [
-  {
-    question: "What is the purpose of a Visitor Management System?",
-    answer:
-      "A Visitor Management System (VMS) streamlines check-ins, enhances workplace security, and ensures accurate visitor tracking with digital tools.",
-  },
-  {
-    question: "Can small businesses also use VMS?",
-    answer:
-      "Yes, small offices and startups in India and the Middle East increasingly use VMS to simplify reception workflows and improve security.",
-  },
-  {
-    question: "How secure is a cloud-based Visitor Management System?",
-    answer:
-      "Cloud-based VMS solutions use encryption, authentication, and secure audit logs to ensure visitor data is safe and compliant.",
-  },
-  {
-    question: "Can VMS be customized for different industries?",
-    answer:
-      "Yes, industries like IT, healthcare, manufacturing, and education can customize forms, workflows, and security rules to fit their needs.",
-  },
-  {
-    question: "How long does it take to implement a VMS?",
-    answer:
-      "Cloud-based systems can be set up within hours, while on-premise solutions may take a few days depending on integrations.",
-  },
-  {
-    question: "What is the purpose of a visitor management system?",
-    answer:
-      "It streamlines visitor check-in, enhances security, and ensures professional and compliant visitor handling.",
-  },
-  {
-    question: "Is Visitor Management System (VMS) only for large businesses?",
-    answer:
-      "Not, small offices are increasingly using VMS systems to simplify front desk workflows.",
-  },
-  {
-    question: "How secure is a cloud-based visitor management system?",
-    answer:
-      "Cloud-based systems typically employ strong encryption, user authentication, and audit logs for secure and compliant usage.",
-  },
-  {
-    question: "Can VMS be customized for my industry?",
-    answer:
-      "Yes, most platforms let you configure workflows, capture fields, branding, and reporting to meet your specific needs.",
-  },
-  {
-    question: "Does a VMS require special hardware?",
-    answer:
-      "Usually, basic setups include tablets or kiosks, printers, ID scanners, and optionally, connectivity with access systems.",
-  },
-  {
-    question: "How long does it take to implement a VMS?",
-    answer:
-      "Cloud solutions can be ready in a few hours; on-prem setups typically take a few days, depending on integrations.",
-  },
-];
-
+  const faqs = [
+    {
+      question: "What is the purpose of a Visitor Management System?",
+      answer:
+        "A Visitor Management System (VMS) streamlines check-ins, enhances workplace security, and ensures accurate visitor tracking with digital tools.",
+    },
+    {
+      question: "Can small businesses also use VMS?",
+      answer:
+        "Yes, small offices and startups in India and the Middle East increasingly use VMS to simplify reception workflows and improve security.",
+    },
+    {
+      question: "How secure is a cloud-based Visitor Management System?",
+      answer:
+        "Cloud-based VMS solutions use encryption, authentication, and secure audit logs to ensure visitor data is safe and compliant.",
+    },
+    {
+      question: "Can VMS be customized for different industries?",
+      answer:
+        "Yes, industries like IT, healthcare, manufacturing, and education can customize forms, workflows, and security rules to fit their needs.",
+    },
+    {
+      question: "How long does it take to implement a VMS?",
+      answer:
+        "Cloud-based systems can be set up within hours, while on-premise solutions may take a few days depending on integrations.",
+    },
+    {
+      question: "What is the purpose of a visitor management system?",
+      answer:
+        "It streamlines visitor check-in, enhances security, and ensures professional and compliant visitor handling.",
+    },
+    {
+      question: "Is Visitor Management System (VMS) only for large businesses?",
+      answer:
+        "Not, small offices are increasingly using VMS systems to simplify front desk workflows.",
+    },
+    {
+      question: "How secure is a cloud-based visitor management system?",
+      answer:
+        "Cloud-based systems typically employ strong encryption, user authentication, and audit logs for secure and compliant usage.",
+    },
+    {
+      question: "Can VMS be customized for my industry?",
+      answer:
+        "Yes, most platforms let you configure workflows, capture fields, branding, and reporting to meet your specific needs.",
+    },
+    {
+      question: "Does a VMS require special hardware?",
+      answer:
+        "Usually, basic setups include tablets or kiosks, printers, ID scanners, and optionally, connectivity with access systems.",
+    },
+    {
+      question: "How long does it take to implement a VMS?",
+      answer:
+        "Cloud solutions can be ready in a few hours; on-prem setups typically take a few days, depending on integrations.",
+    },
+  ];
 
   // 🔒 Hidden SEO Schema FAQ (not shown on page)
   const schemaFaq = {
@@ -183,7 +182,7 @@ export default function WhatVisitorManagementSystem() {
                 reliability and compliance.
               </p>
 
-              <h3>(1) Core Components of a Modern VMS </h3>
+              <h2>Core Components of a Modern VMS </h2>
               <ul>
                 <li>
                   <strong>Pre-registration portals for visitors</strong>
@@ -208,33 +207,36 @@ export default function WhatVisitorManagementSystem() {
               </ul>
 
               <h2>Key Features of a Visitor Management System</h2>
-              <h3>(1) Pre-registration Capabilities </h3>
-              <p>
-                Visitors fill in their details online beforehand, reducing lobby
-                congestion and improving the arrival experience.
-              </p>
-              <h3>(2) Digital Check-in and Check-out</h3>
-              <p>
-                Utilize QR codes, NFC, or touchscreens to simplify visitor entry
-                and exit, ideal for today’s contactless expectations.
-              </p>
-              <h3>(3) Photo Capture and ID Scanning </h3>
-              <p>
-                Instant identity verification helps prevent unauthorized access
-                and ensures accurate records.
-              </p>
-              <h3>(4) Real-time Notifications</h3>
-              <p>
-                Hosts receive immediate alerts (via app, email, or internal
-                system) when visitors check in or out, keeping them informed and
-                efficient.
-              </p>
+              <ul>
+                <li>
+                  <strong>Pre-registration Capabilities:</strong> Visitors fill
+                  in their details online beforehand, reducing lobby congestion
+                  and improving the arrival experience.
+                </li>
+                <li>
+                  <strong>Digital Check-in and Check-out:</strong> Utilize QR
+                  codes, NFC, or touchscreens to simplify visitor entry and
+                  exit, ideal for today’s contactless expectations.
+                </li>
+                <li>
+                  <strong>Photo Capture and ID Scanning</strong>
+                  Instant identity verification helps prevent unauthorized
+                  access and ensures accurate records.
+                </li>
+                <li>
+                  <strong>Real-time Notifications</strong>
+                  Hosts receive immediate alerts (via app, email, or internal
+                  system) when visitors check in or out, keeping them informed
+                  and efficient.
+                </li>
+              </ul>
 
-              <h3>(5) Email and SMS Notifications</h3>
+              <h2>Email and SMS Notifications</h2>
 
               <p>
                 <strong>Automated alerts enhance communication:</strong>
               </p>
+
               <ul>
                 <li>
                   <strong>Hosts get notified instantly</strong> on visitor
@@ -254,14 +256,11 @@ export default function WhatVisitorManagementSystem() {
                 business identity and workflow.
               </p>
 
-              <h3>
-                (6) These messages can be branded and customized to align with
-                your business identity and workflow.
-              </h3>
+              <h2>
+                These messages can be branded and customized to align with your
+                business identity and workflow.
+              </h2>
 
-              <p>
-                <strong>Dashboards provide:</strong>
-              </p>
               <ul>
                 <li>
                   <strong>Trend analysis</strong> by date, type, or host
@@ -282,7 +281,7 @@ export default function WhatVisitorManagementSystem() {
                 security planning.
               </p>
 
-              <h3>(7) Integration with Access Control Systems </h3>
+              {/* <h3>(7) Integration with Access Control Systems </h3> */}
 
               <p>
                 Connect seamlessly with electronic locks, turnstiles, elevators,
@@ -290,56 +289,61 @@ export default function WhatVisitorManagementSystem() {
               </p>
 
               <h2>Why Your Business Needs a VMS</h2>
-              <h3>(1) Enhancing On site Security </h3>
-              <p>
-                Track visitors with timestamped logs and verified IDs to ensure
-                only authorized individuals enter your premises.
-              </p>
 
-              <h3>(2) Improving First Impressions </h3>
-              <p>
-                A modern check-in process and notifications reflect
-                professionalism and respect for visitor time.
-              </p>
-              <h3>(3) Streamlining Compliance and Recordkeeping</h3>
-              <p>
-                Automated data capture and secure storage keep you audit-ready
-                and in alignment with regulations like GDPR and HIPAA.
-              </p>
-              <h3>(4) Reducing Administrative Burden</h3>
-              <p>
-                Automate the check-in process and communication
-                workflows—freeing staff for higher-value tasks.
-              </p>
+              <ul>
+                <li>
+                  <strong>Enhancing On site Security:</strong>
+                  <p>
+                    Track visitors with timestamped logs and verified IDs to
+                    ensure only authorized individuals enter your premises.
+                  </p>
+                </li>
+                <li>
+                  <strong>Improving First Impressions:</strong> A modern
+                  check-in process and notifications reflect professionalism and
+                  respect for visitor time.
+                </li>
+                <li>
+                  <strong>Streamlining Compliance and Recordkeeping:</strong>
+                  Automated data capture and secure storage keep you audit-ready
+                  and in alignment with regulations like GDPR and HIPAA.
+                </li>
+                <li>
+                  <strong>Reducing Administrative Burden:</strong>Automate the
+                  check-in process and communication workflows—freeing staff for
+                  higher-value tasks.
+                </li>
+               
+              </ul>
 
               <h2>Industries That Benefit the Most </h2>
-              <h3>(1) Corporate Offices </h3>
-              <p>
-                Boost meeting efficiency, maintain visitor logs, and support
+
+              <ul>
+                 <li>
+                  <strong>Corporate Offices :</strong>
+                   Boost meeting efficiency, maintain visitor logs, and support
                 executive calendars with visitor pre-registration and badge
                 printing.
-              </p>
-              <h3>(2) Healthcare Facilities </h3>
-              <p>
-                Ensure patient safety, control access to sensitive zones, and
+                </li>
+                 <li>
+                  <strong>Healthcare Facilities:</strong>
+                    Ensure patient safety, control access to sensitive zones, and
                 keep infection control records with precise visitor data.
-              </p>
-              <h3>(3) Educational Institutions </h3>
-              <p>
-                Monitor campus visitors, especially around classrooms and
+                </li>
+                 <li>
+                  <strong> Educational Institutions:</strong>
+                  Monitor campus visitors, especially around classrooms and
                 dormitories, to ensure student safety.
-              </p>
-              <h3>(4) Manufacturing and Warehouses </h3>
-              <p>
-                Protect restricted or hazardous areas with visitor screening,
+                </li>
+                 <li>
+                  <strong>Manufacturing and Warehouses:</strong>
+                    Protect restricted or hazardous areas with visitor screening,
                 verification, and limited access policies.
-              </p>
-              <h3>
-                (5) How can a Visitor Management System be customized to fit the
-                unique needs of different industries in India?
-              </h3>
-              <p>
-                Indian industries have diverse needs, and a robust VMS can be
+                </li>
+                 <li>
+                  <strong>How can a Visitor Management System be customized to fit the
+                unique needs of different industries in India :</strong>
+                 Indian industries have diverse needs, and a robust VMS can be
                 tailored accordingly. For example, IT companies in Bengaluru may
                 prioritize confidentiality agreements and visitor badges, while
                 hospitals in Delhi might need health screening forms and
@@ -348,12 +352,16 @@ export default function WhatVisitorManagementSystem() {
                 allow customization of check-in workflows, form fields, security
                 protocols, and branding to match industry and compliance
                 requirements.
-              </p>
-              <h3>
-                (6) What are the potential challenges or drawbacks of
+                </li>
+                 <li>
+                  <strong></strong>
+                </li>
+              </ul>
+              <h2>
+                What are the potential challenges or drawbacks of
                 transitioning from a traditional paper log to a digital Visitor
                 Management System in India?
-              </h3>
+              </h2>
               <p>
                 Switching to a digital system can bring some short-term
                 challenges, such as initial investment, training staff, and
@@ -364,16 +372,17 @@ export default function WhatVisitorManagementSystem() {
                 compliance, and a more professional front-desk experience,
                 usually make the transition well worth it.
               </p>
+
               <h2>The Future Scope of Visitor Management </h2>
-              <h3>(1) AI and Facial Recognition </h3>
-              <p>
-                Advanced systems recognize returning visitors, streamline
-                access, and increase security with minimal friction.
-              </p>
-              <h3>(2) Mobile First Solutions </h3>
-              <p>Smartphone-based workflows eliminate the need for kiosks; visitors can check in and receive directions via their own devices.</p>
-              <h3>(3) Smart Building Integration </h3>
-              <p>Connect with HVAC, lighting, elevators, and parking systems to automate visitor flows and enhance building efficiency.</p>
+              <ul>
+                <li><strong>AI and Facial Recognition:</strong> Advanced systems recognize returning visitors, streamline
+                access, and increase security with minimal friction.</li>
+                <li><strong>Mobile First Solutions:</strong> Smartphone-based workflows eliminate the need for kiosks;
+                visitors can check in and receive directions via their own
+                devices.</li>
+                <li><strong>Smart Building Integration:</strong>Connect with HVAC, lighting, elevators, and parking systems to
+                automate visitor flows and enhance building efficiency.</li>
+              </ul>
             </section>
 
             {/* FAQ Section */}

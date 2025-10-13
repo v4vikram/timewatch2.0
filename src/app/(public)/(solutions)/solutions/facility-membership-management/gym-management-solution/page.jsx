@@ -145,10 +145,6 @@ export default function GymManagementSolution() {
                 Gym Management Solution | TimeWatch India
               </h2>
 
-              <h3>
-                (1) Simplify Gym Operations with Smart Gym Management Software
-              </h3>
-
               <p className="mb-4">
                 Running a gym or fitness center involves more than just managing
                 memberships. You need to track member attendance, manage
@@ -168,7 +164,7 @@ export default function GymManagementSolution() {
                 efficiency, and improve member satisfaction.
               </p>
 
-              <h3>(2) Key Features of Our Gym Management Software</h3>
+              <h2>Key Features of Our Gym Management Software</h2>
               <ul>
                 <li>
                   <strong>Biometric Attendance Tracking</strong>- Ensure secure
@@ -205,7 +201,7 @@ export default function GymManagementSolution() {
                 </li>
               </ul>
 
-              <h3>(3) Benefits of Gym Management Software</h3>
+              <h2>Benefits of Gym Management Software</h2>
               <ul>
                 <li>
                   <strong>Save Time with Automation</strong>- Reduce manual
@@ -235,7 +231,7 @@ export default function GymManagementSolution() {
                   Saudi Arabia, TimeWatch software adapts to your business size.
                 </li>
               </ul>
-              <h3>(4) Use Cases</h3>
+              <h2>Use Cases</h2>
               <ul>
                 <li>
                   <strong>Local Gyms & Fitness Studios</strong>- Automate
@@ -254,19 +250,16 @@ export default function GymManagementSolution() {
                   participation and attendance in wellness initiatives.
                 </li>
               </ul>
-              <h3>
-                (5) Why Choose TimeWatch Gym Management Software Over Others?
-              </h3>
+              <h2>Why Choose TimeWatch Gym Management Software Over Others?</h2>
               {/* <strong>
                 Many gym management tools exist, but most fall short in critical
                 areas. Here’s why TimeWatch stands out:
               </strong> */}
               <ul>
                 <li>
-                  <strong>• Biometric Integration </strong>- Not just
-                  card-based. We offer face, fingerprint, and QR
-                  check-ins—perfect for gyms in India and touchless preferences
-                  in the Gulf.
+                  <strong>Biometric Integration </strong>- Not just card-based.
+                  We offer face, fingerprint, and QR check-ins—perfect for gyms
+                  in India and touchless preferences in the Gulf.
                 </li>
                 <li>
                   <strong>Yoga & Wellness Centers</strong>- Manage class

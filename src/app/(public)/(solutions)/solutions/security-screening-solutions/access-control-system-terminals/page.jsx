@@ -168,7 +168,7 @@ const schemaFaq = {
                   complete security ecosystem:
                 </strong>
               </p> */}
-              <ol>
+              <ol className="!pl-4">
                 <li>
                   <strong>Multi-Authentication Options</strong>
                   <br />

@@ -147,7 +147,7 @@ const schemaFaq = {
               <h2 className="!mt-2">
                 Hand Held Metal Detector – TW-HH100 | TimeWatch India
               </h2>
-              <h3>(1) Reliable & Portable Security Screening Device</h3>
+             
 
               <p className="mb-4">
                 The <strong>TW-HH100 Hand Held Metal Detector</strong> is a
@@ -169,7 +169,7 @@ const schemaFaq = {
                 <strong> India, the Middle East, and the Gulf regions</strong>.
               </p>
 
-              <h3>(2) Key Features of TW-HH100</h3>
+              <h2>Key Features of TW-HH100</h2>
 
               <ul>
                 <li>
@@ -200,7 +200,7 @@ const schemaFaq = {
               </ul>
 
             
-              <h3>(3) Real-World Applications</h3>
+              <h2>Real-World Applications</h2>
               <ul>
                 <li>
                   <strong>Metro & Railway Stations</strong> – In cities like
@@ -233,7 +233,7 @@ const schemaFaq = {
                   environments for visitors, staff, and students.
                 </li>
               </ul>
-              <h3>(4) Why Choose TimeWatch TW-HH100?</h3>
+              <h2>Why Choose TimeWatch TW-HH100?</h2>
               <ul>
                 <li>
                   <strong>Metro & Railway Stations</strong> – In cities like
