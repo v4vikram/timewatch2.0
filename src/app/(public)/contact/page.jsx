@@ -245,38 +245,63 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
-      <section className="py-6 px-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-          <h2 className="text-3xl font-bold text-[#6d6f72] mb-4">
-            Our Branches
-          </h2>
-          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
-            {addresses.map((addr) => (
-              <article
-                key={addr.id}
-                className="rounded-2xl border shadow-sm p-4 bg-white dark:bg-slate-800 dark:border-slate-700"
-              >
-                <address className="not-italic text-sm leading-relaxed text-slate-700 dark:text-slate-200">
-                  {addr.lines.map((line, i) => (
-                    <div key={i} className="mb-1 font-semibold text-lg">
-                      {line}
-                    </div>
-                  ))}
-                </address>
-                <header className="flex flex-col mb-3">
-                  {addr.name && ( <h3 className="text-lg font-semibold">Name: {addr.name}</h3>)}
-                 
-                {addr.contact && (<h3 className="text-lg font-semibold">Phone: {addr.contact}</h3>)}
-                  
-                 {
-                  addr.email && ( <h3 className="text-lg font-semibold">Email: {addr.email}</h3>)
-                 }
-                </header>
-              </article>
+    <section className="py-12 px-4 bg-gray-50">
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-3xl font-bold text-[#6d6f72] mb-8 text-center">
+      Our Branches
+    </h2>
+
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {addresses.map((addr) => (
+        <div
+          key={addr.id}
+          className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow p-6 flex flex-col"
+        >
+          {/* Branch Title */}
+          <div className="flex items-center mb-4">
+            <MapPin className="w-6 h-6 text-[#d63438] mr-2" />
+            <h3 className="text-xl font-semibold text-[#6d6f72]">
+              {addr.title}
+            </h3>
+          </div>
+
+          {/* Address Lines */}
+          <address className="not-italic text-gray-700 mb-4 space-y-1 pl-1">
+            {addr.lines.map((line, i) => (
+              <div key={i} className="flex items-start">
+                <MapPin className="w-4 h-4 text-[#6d6f72] mt-1 mr-2 flex-shrink-0" />
+                <span>{line}</span>
+              </div>
             ))}
+          </address>
+
+          {/* Contact Info */}
+          <div className="mt-auto space-y-2 text-gray-600">
+            {addr.name && (
+              <p className="flex items-center">
+                <Building className="w-4 h-4 text-[#d63438] mr-2" />
+                <span className="font-bold text-black">Contact Person:&nbsp;</span> {addr.name}
+              </p>
+            )}
+            {addr.contact && (
+              <p className="flex items-center">
+                <Phone className="w-4 h-4 text-[#d63438] mr-2" />
+                <span className="font-bold text-black">Phone:&nbsp;</span> {addr.contact}
+              </p>
+            )}
+            {addr.email && (
+              <p className="flex items-center">
+                <Mail className="w-4 h-4 text-[#d63438] mr-2" />
+                <span className="font-bold text-black">Email:&nbsp;</span> {addr.email}
+              </p>
+            )}
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* FAQ Section */}
       <section className="py-16 bg-white">

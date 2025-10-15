@@ -187,8 +187,8 @@ const ProductDetails = ({ product }) => {
           <TableCaption>Product Specifications</TableCaption>
           <TableHeader>
             <TableRow>
-              <TableHead>Specification</TableHead>
-              <TableHead>Details</TableHead>
+              <TableHead className={'text-2xl text-primary'}>Specification</TableHead>
+              <TableHead className={'text-2xl text-primary'}>Details</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
