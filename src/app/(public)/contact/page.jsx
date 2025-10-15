@@ -18,6 +18,50 @@ export const metadata = {
     "Get in touch with TimeWatch Infocom for product inquiries, support, or partnership opportunities. We're here to help with secure and smart tech solutions.",
 };
 
+// Address data array (you can move this to props or external JSON later)
+const addresses = [
+  {
+    id: 1,
+    title: "Bangalore Office",
+    name:"Mr. Lalith",
+    email:"lalith@timewatchindia.com",
+    contact:"+91 95999 74776",
+    
+    lines: [
+      "No.28, 5thAcross, Marenhalli JP Nagar, 2nd Phase, Banglore-560078",
+    ],
+  },
+  {
+    id: 2,
+    title: "Ahmedabad Office",
+    contact:"+91 96676 49888",
+    name:"Anshika Jain",
+    email:" Anshika@timewatchindia.com",
+    lines: [
+      "Office No. 102, Platinum Plaza, Nr Judges Bungalow Road, Bodakdev, Ahmedabad – 380054",
+    ],
+  },
+  {
+    id: 3,
+    title: "Mumbai Residence",
+    name:"Amit Patel",
+    contact:"+91 8448485471",
+    email:"Amit1@timewatchindia.com",
+    lines: [
+      "Suburban State: Maharashtra PIN Code: 400069",
+    ],
+  },
+  {
+    id: 4,
+    title: "Kolkata (Godrej Waterside)",
+    name:"Smriti Tiwari",
+    contact:"+91 8448485473",
+    lines: [
+      "North Twenty Four Parganas, State: West Bengal PIN Code: 700091",
+    ],
+  },
+];
+
 const ContactPage = () => {
   const contactInfo = [
     {
@@ -35,8 +79,8 @@ const ContactPage = () => {
     {
       icon: MapPin,
       title: "Address",
-      details: ["D-162, Okhla Phase - I New Delhi - 110020"],
-      subtitle: "Visit our office",
+      details: ["D-162, Okhla Industrial Area Phase I, New Delhi, 110020"],
+      subtitle: "Mian office / Visit Us",
     },
     // {
     //   icon: Clock,
@@ -100,16 +144,16 @@ const ContactPage = () => {
               <h3 className="text-lg font-semibold text-[#6d6f72] mb-2">
                 Email Us
               </h3>
-              <p className="text-gray-600">
-                sales@timewatchindia.com
-              </p>
+              <p className="text-gray-600">sales@timewatchindia.com</p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <MapPin className="w-12 h-12 text-[#d63438] mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-[#6d6f72] mb-2">
-                Visit Us
+                Mian Office / Visit Us
               </h3>
-              <p className="text-gray-600">D-162, Okhla Phase - I New Delhi - 110020</p>
+              <p className="text-gray-600">
+                D-162, Okhla Industrial Area Phase I, New Delhi, 110020
+              </p>
             </div>
           </div>
         </div>
@@ -152,7 +196,7 @@ const ContactPage = () => {
                 )} */}
 
                 {/* <ContactForm /> */}
-                <HomePageForm/>
+                <HomePageForm />
               </div>
             </div>
 
@@ -198,6 +242,38 @@ const ContactPage = () => {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-6 px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+          <h2 className="text-3xl font-bold text-[#6d6f72] mb-4">
+            Our Branches
+          </h2>
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
+            {addresses.map((addr) => (
+              <article
+                key={addr.id}
+                className="rounded-2xl border shadow-sm p-4 bg-white dark:bg-slate-800 dark:border-slate-700"
+              >
+                <address className="not-italic text-sm leading-relaxed text-slate-700 dark:text-slate-200">
+                  {addr.lines.map((line, i) => (
+                    <div key={i} className="mb-1 font-semibold text-lg">
+                      {line}
+                    </div>
+                  ))}
+                </address>
+                <header className="flex flex-col mb-3">
+                  {addr.name && ( <h3 className="text-lg font-semibold">Name: {addr.name}</h3>)}
+                 
+                {addr.contact && (<h3 className="text-lg font-semibold">Phone: {addr.contact}</h3>)}
+                  
+                 {
+                  addr.email && ( <h3 className="text-lg font-semibold">Email: {addr.email}</h3>)
+                 }
+                </header>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -278,7 +354,8 @@ const ContactPage = () => {
             </button>
             <button className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-[#d63438] transition-colors flex items-center justify-center">
               <Mail className="w-5 h-5 mr-2" />
-              <span className="hidden md:inline">Email: </span> sales@timewatchindia.com
+              <span className="hidden md:inline">Email: </span>{" "}
+              sales@timewatchindia.com
             </button>
           </div>
         </div>
