@@ -78,8 +78,7 @@ const Footer = () => {
               <span className="text-xl font-bold">TimeWatch</span>
             </div> */}
             <p className="text-gray-300 leading-relaxed">
-              Revolutionizing workforce management with cutting-edge biometric
-              solutions and seamless HRM integration.
+             Empowering businesses with smart security and biometric solutions for a safer world.
             </p>
           </div>
 

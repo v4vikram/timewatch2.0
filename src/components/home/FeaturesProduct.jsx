@@ -50,8 +50,7 @@ const FeaturesProduct = ({ publishedProducts }) => {
           <p className="text-gray-500 max-w-2xl mx-auto" 
           // variants={childVariant}
           >
-            Dcidunt eget semper nec quam. Sed hendrerit. acfelis Nunc egestas
-            augue atpellentesque laoreet
+          Enhance Your Security with Cutting-Edge Technology
           </p>
         </div>
 

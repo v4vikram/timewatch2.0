@@ -119,9 +119,7 @@ const HomePageForm = () => {
                 className="text-red-500 text-sm mt-1"
               />
             </div>
-          </div>
-
-          {/* Email */}
+            {/* Email */}
           <div>
             <label className="block text-sm font-medium text-[#6d6f72] mb-2">
               Email
@@ -161,6 +159,9 @@ const HomePageForm = () => {
               className="text-red-500 text-sm mt-1"
             />
           </div>
+          </div>
+
+          
           {/* Location */}
           <div>
             <label className="block text-sm font-medium text-[#6d6f72] mb-2">
@@ -181,7 +182,7 @@ const HomePageForm = () => {
             </label>
             <Field
               as="textarea"
-              rows="4"
+              rows="3"
               name="message"
               placeholder="Tell us about your requirements..."
               className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#d63438] focus:border-transparent outline-none transition-all resize-none"

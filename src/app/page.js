@@ -37,6 +37,7 @@ import FeaturesProduct from "@/components/home/FeaturesProduct";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { solutions } from "@/data/menuItems";
 
 export const dynamic = "auto"; // optional; ISR will still work
 
@@ -69,6 +70,12 @@ export default async function HomePage() {
     (item) => item?.status == "published"
   );
 
+  // Get first subcategory from each of the first 4 categories
+  const displayItems = solutions.slice(0, 4).map((solution) => ({
+    ...solution.subCategories[0],
+    category: solution.category,
+    categoryUrl: solution.categoryUrl,
+  }));
   return (
     <div>
       <Header />
@@ -84,7 +91,7 @@ export default async function HomePage() {
         <FeaturesProduct publishedProducts={publishedProducts} />
 
         {/* Benefits Section */}
-        <section id="benefits" className="py-20 bg-white">
+        {/* <section id="benefits" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
@@ -197,34 +204,152 @@ export default async function HomePage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        {/* get catalouge section */}
-        {/* <section>
-        <div className="container  mt-6 lg:mt-20">
-          <div className="grid lg:grid-cols-2">
-            <div>
-              <h2 className="h2 block lg:hidden text-secondary">Unlock the Best in Security <span className="text-primary.">– Get Our Catalogue Now</span></h2>
-              <div className="w-full lg:w-[600px] h-[200px] lg:h-[400px] relative mx-auto">
-                <Image
-                  src="/images/catalogue.webp"
-                  alt="timewatch catalogue"
-                  className="mx-auto mb-4"
-                  fill
-                  sizes="300"
-                />
+        <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center space-x-4 mb-2">
+                <span className="h-0.5 w-10 bg-primary"></span>
+                <span className="text-primary font-semibold">
+                  Best Solutions
+                </span>
+                <span className="h-0.5 w-10 bg-primary"></span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-2">
+                Our Solutions
+              </h2>
+              {/* <p className="text-gray-500 max-w-2xl mx-auto"
+
+              >
+                We are proud to partner with industry leaders to deliver reliable security solutions.
+
+              </p> */}
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-x-5 gap-y-5 lg:gap-y-0">
+              {/* Featured Solution */}
+              <div className="lg:row-span-2">
+                <div className="group relative h-full xl:h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10"></div>
+                  <img
+                    src="/images/solutions/home-baggage-scanner.png"
+                    alt="Access Control Systems"
+                    className="w-full h-[250px] md:h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
+                    <div className="mb-4">
+                      <span className="bg-[#d63438] text-white px-4 py-2 rounded-full font-medium text-sm">
+                        Security Solutions
+                      </span>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
+                      Advanced X-Ray Baggage Screening Systems
+                    </h3>
+                    <Link
+                      href="/solutions/security/access-control"
+                      className="flex items-center text-white group-hover:text-[#d63438] transition-colors"
+                    >
+                      <span className="font-medium">Learn More</span>
+                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Other Solutions */}
+              <div className="space-y-5">
+                {/* Card 1 */}
+                <Link
+                  href="/solutions/workforce-hr-solutions/cloud-attendance-payroll-software"
+                  className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col md:flex-row"
+                >
+                  <div className="md:w-2/5 relative overflow-hidden">
+                    <img
+                      src="/images/solution2.jpg"
+                      alt=" Attendance & Payroll Management Software"
+                      className="w-full h-[180px] lg:h-[140px] xl:h-[180px] object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="md:w-3/5 p-3 md:p-6 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl md:text-2xl lg:text-lg xl:text-2xl font-bold text-[#6d6f72] mb-3 line-clamp-3 group-hover:text-[#d63438] transition-colors">
+                        Attendance & Payroll Management Software
+                      </h3>
+                    </div>
+                    <div className="max-w-[200px]">
+                      <span className="text-[#d63438] font-medium text-sm md:text-xl lg:text-sm xl:text-lg">
+                        Software Solutions
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+
+                {/* Card 2 */}
+                <Link
+                  href="/solutions/visitor-access-management/crowd-management-solutions-turnstile-gates-flap-barriers"
+                  className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col md:flex-row"
+                >
+                  <div className="md:w-2/5 relative overflow-hidden">
+                    <img
+                      src="/images/solution3.jpg"
+                      alt="Crowd Management Solutions in India – Turnstile Gates"
+                      className="w-full h-[180px] lg:h-[140px] xl:h-[180px] object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="md:w-3/5 p-3 md:p-6 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl md:text-2xl lg:text-lg xl:text-2xl font-bold text-[#6d6f72] mb-3 line-clamp-3 group-hover:text-[#d63438] transition-colors">
+                        Crowd Management Solutions in India – Turnstile Gates
+                      </h3>
+                    </div>
+                    <div className="max-w-[200px]">
+                      <span className="text-[#d63438] font-medium text-sm md:text-xl lg:text-sm xl:text-lg">
+                        Security Solutions
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+                {/* Card 3 */}
+                <Link
+                  href="/solutions/security/visitor-management"
+                  className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col md:flex-row"
+                >
+                  <div className="md:w-2/5 relative overflow-hidden">
+                    <img
+                      src="/images/solution3.jpg"
+                      alt=" Visitor Management Systems"
+                      className="w-full h-[180px] lg:h-[140px] xl:h-[180px] object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="md:w-3/5 p-3 md:p-6 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-xl md:text-2xl lg:text-lg xl:text-2xl font-bold text-[#6d6f72] mb-3 line-clamp-3 group-hover:text-[#d63438] transition-colors">
+                        Visitor Management Systems
+                      </h3>
+                    </div>
+                    <div className="max-w-[200px]">
+                      <span className="text-[#d63438] font-medium text-sm md:text-xl lg:text-sm xl:text-lg">
+                        Security Solutions
+                      </span>
+                    </div>
+                  </div>
+                </Link>
               </div>
             </div>
-            <div>
-              <div className="flex flex-col items-center">
-                <h2 className="h2 hidden lg:block text-secondary">Unlock the Best in Security <span className="text-primary.">– Get Our Catalogue Now</span></h2>
-                <Counter />
-                <Button className={'mt-5'}>Get the Catalogue</Button>
-              </div>
+
+            {/* View All Button */}
+            <div className="text-center mt-12">
+              <Link
+                href={"/solutions"}
+                className="group bg-[#d63438] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#6d6f72] transition-all duration-300 flex items-center gap-2 mx-auto shadow-lg hover:shadow-xl w-fit"
+              >
+                View All Solutions
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+              </Link>
             </div>
           </div>
-        </div>
-      </section> */}
+        </section>
 
         {/* Features Section */}
         <section id="features" className="lg:py-20 bg-white">
@@ -303,6 +428,160 @@ export default async function HomePage() {
             </div>
           </div>
         </section>
+
+        <section class="">
+          <div class="text-center mb-12">
+            <div class="flex items-center justify-center space-x-4 mb-2">
+              <span class="h-0.5 w-10 bg-primary"></span>
+              <span class="text-primary font-semibold">Trusted Worldwide</span>
+              <span class="h-0.5 w-10 bg-primary"></span>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-2">
+              Our Clients
+            </h2>
+            <p class="text-xl text-secondary max-w-3xl mx-auto"> “Want to join our list of satisfied clients? Contact our team today!”
+Get Catalog & Get a Free Consultation</p>
+           
+          </div>
+          <div className="container mx-auto grid gap-6 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center">
+            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+              <img
+                src="/images/clients/corporate-client/1.jpg"
+                alt="Client 1 logo"
+                class="max-h-[150px] object-contain w-full"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+              <img
+                src="/images/clients/corporate-client/2.jpg"
+                alt="Client 2 logo"
+                class="max-h-[150px] object-contain w-full"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+              <img
+                src="/images/clients/corporate-client/3.jpg"
+                alt="Client 3 logo"
+                class="max-h-[150px] object-contain w-full"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+              <img
+                src="/images/clients/corporate-client/4.jpg"
+                alt="Client 4 logo"
+                class="max-h-[150px] object-contain w-full"
+                loading="lazy"
+              />
+            </div>
+            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+              <img
+                src="/images/clients/corporate-client/5.jpg"
+                alt="Client 4 logo"
+                class="max-h-[150px] object-contain w-full"
+                loading="lazy"
+              />
+            </div>
+            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+              <img
+                src="/images/clients/corporate-client/6.jpg"
+                alt="Client 4 logo"
+                class="max-h-[150px] object-contain w-full"
+                loading="lazy"
+              />
+            </div>
+            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+              <img
+                src="/images/clients/corporate-client/7.jpg"
+                alt="Client 4 logo"
+                class="max-h-[150px] object-contain w-full"
+                loading="lazy"
+              />
+            </div>
+            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+              <img
+                src="/images/clients/corporate-client/8.jpg"
+                alt="Client 4 logo"
+                class="max-h-[150px] object-contain w-full"
+                loading="lazy"
+              />
+            </div>
+            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+              <img
+                src="/images/clients/corporate-client/9.jpg"
+                alt="Client 4 logo"
+                class="max-h-[150px] object-contain w-full"
+                loading="lazy"
+              />
+            </div>
+            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+              <img
+                src="/images/clients/corporate-client/10.jpg"
+                alt="Client 4 logo"
+                class="max-h-[150px] object-contain w-full"
+                loading="lazy"
+              />
+            </div>
+            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+              <img
+                src="/images/clients/corporate-client/11.jpg"
+                alt="Client 4 logo"
+                class="max-h-[150px] object-contain w-full"
+                loading="lazy"
+              />
+            </div>
+            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+              <img
+                src="/images/clients/corporate-client/12.jpg"
+                alt="Client 4 logo"
+                class="max-h-[150px] object-contain w-full"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          {/* View All Button */}
+          <div className="text-center mt-12 mb-16">
+            <Link
+              href={"/solutions"}
+              className="group bg-[#d63438] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#6d6f72] transition-all duration-300 flex items-center gap-2 mx-auto shadow-lg hover:shadow-xl w-fit"
+            >
+              View All Clients
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+            </Link>
+          </div>
+        </section>
+
+        {/* get catalouge section */}
+        {/* <section>
+        <div className="container  mt-6 lg:mt-20">
+          <div className="grid lg:grid-cols-2">
+            <div>
+              <h2 className="h2 block lg:hidden text-secondary">Unlock the Best in Security <span className="text-primary.">– Get Our Catalogue Now</span></h2>
+              <div className="w-full lg:w-[600px] h-[200px] lg:h-[400px] relative mx-auto">
+                <Image
+                  src="/images/catalogue.webp"
+                  alt="timewatch catalogue"
+                  className="mx-auto mb-4"
+                  fill
+                  sizes="300"
+                />
+              </div>
+            </div>
+            <div>
+              <div className="flex flex-col items-center">
+                <h2 className="h2 hidden lg:block text-secondary">Unlock the Best in Security <span className="text-primary.">– Get Our Catalogue Now</span></h2>
+                <Counter />
+                <Button className={'mt-5'}>Get the Catalogue</Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
 
         {/* <section>
         <div className="container-xl">
@@ -426,11 +705,17 @@ export default async function HomePage() {
               their operations
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/product-catalouge" className="bg-white text-[#d63438] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all flex items-center justify-center space-x-2">
+              <Link
+                href="/product-catalouge"
+                className="bg-white text-[#d63438] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all flex items-center justify-center space-x-2"
+              >
                 <span>Get Catalouge</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link href={'/contact/#contactPageSection'} className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-[#d63438] transition-all flex items-center justify-center space-x-2">
+              <Link
+                href={"/contact/#contactPageSection"}
+                className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-[#d63438] transition-all flex items-center justify-center space-x-2"
+              >
                 <Phone className="w-5 h-5" />
                 <span>Book Demo</span>
               </Link>
@@ -446,12 +731,23 @@ export default async function HomePage() {
                 Get in Touch
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                {"Ready to revolutionize your workforce management? Let's talk!"}
+                {
+                  "Ready to revolutionize your workforce management? Let's talk!"
+                }
               </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12">
               <div className="space-y-8">
+                <h2 className="text-3xl md:text-5xl font-bold text-[#6d6f72] mb-4">
+                  <span className="text-primary">Let’s Secure</span> Your
+                  Premises
+                  <br /> with Smart Technology
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Connect with our security experts today — claim your free
+                  on-site consultation and see how we can protect your property!
+                </p>
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-[#d63438]/10 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-[#d63438]" />
@@ -480,7 +776,7 @@ export default async function HomePage() {
                     {/* <p className="text-sm text-gray-500">Available 24/7 for support</p> */}
                   </div>
                 </div>
-
+                {/* 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-[#d63438]/10 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-[#d63438]" />
@@ -495,9 +791,9 @@ export default async function HomePage() {
                     >
                       sales@timewatchindia.com
                     </a>
-                    {/* <p className="text-sm text-gray-500">We'll respond within 2 hours</p> */}
+                    
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-[#d63438]/10 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -523,6 +819,5 @@ export default async function HomePage() {
       </main>
       <Footer />
     </div>
-
   );
 }

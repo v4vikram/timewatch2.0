@@ -52,7 +52,7 @@ export default function SupportButtons() {
         {/* Call Button */}
         <a
           href="tel:+91-9599953923"
-          className="group flex items-center w-[48px] hover:w-[140px] h-12 bg-primary text-white rounded-lg shadow-lg transition-all duration-300 ease-in-out overflow-hidden"
+          className="group flex items-center w-[48px] hover:w-[140px] h-12 bg-primary text-white rounded-lg shadow-lg transition-all duration-300 ease-in-out overflow-hidden lg:hidden"
           title="Call Us"
         >
           <div className="w-12 h-12 flex items-center justify-center shrink-0">
