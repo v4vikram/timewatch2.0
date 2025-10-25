@@ -233,7 +233,7 @@ export default async function HomePage() {
                 <div className="group relative h-full xl:h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10"></div>
                   <img
-                    src="/images/solutions/home-baggage-scanner.png"
+                    src="/images/solutions/home-baggage-scanner.jpg"
                     alt="Access Control Systems"
                     className="w-full h-[250px] md:h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -266,7 +266,7 @@ export default async function HomePage() {
                 >
                   <div className="md:w-2/5 relative overflow-hidden">
                     <img
-                      src="/images/solution2.jpg"
+                      src="/images/solutions/mobile-application-home.jpg"
                       alt=" Attendance & Payroll Management Software"
                       className="w-full h-[180px] lg:h-[140px] xl:h-[180px] object-cover group-hover:scale-110 transition-transform duration-500"
                     />
@@ -292,7 +292,7 @@ export default async function HomePage() {
                 >
                   <div className="md:w-2/5 relative overflow-hidden">
                     <img
-                      src="/images/solution3.jpg"
+                      src="/images/solutions/entrance-system-home.jpg"
                       alt="Crowd Management Solutions in India – Turnstile Gates"
                       className="w-full h-[180px] lg:h-[140px] xl:h-[180px] object-cover group-hover:scale-110 transition-transform duration-500"
                     />
@@ -317,7 +317,7 @@ export default async function HomePage() {
                 >
                   <div className="md:w-2/5 relative overflow-hidden">
                     <img
-                      src="/images/solution3.jpg"
+                      src="/images/solutions/visitor-management-system.jpg"
                       alt=" Visitor Management Systems"
                       className="w-full h-[180px] lg:h-[140px] xl:h-[180px] object-cover group-hover:scale-110 transition-transform duration-500"
                     />
