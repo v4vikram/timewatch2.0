@@ -312,7 +312,7 @@ export default async function HomePage() {
                 </Link>
                 {/* Card 3 */}
                 <Link
-                  href="/solutions/security/visitor-management"
+                  href="/solutions/visitor-access-management/what-is-a-visitor-management-system"
                   className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col md:flex-row"
                 >
                   <div className="md:w-2/5 relative overflow-hidden">
@@ -547,7 +547,7 @@ Get Catalog & Get a Free Consultation</p>
           {/* View All Button */}
           <div className="text-center mt-12 mb-16">
             <Link
-              href={"/solutions"}
+              href={"/clients"}
               className="group bg-[#d63438] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#6d6f72] transition-all duration-300 flex items-center gap-2 mx-auto shadow-lg hover:shadow-xl w-fit"
             >
               View All Clients

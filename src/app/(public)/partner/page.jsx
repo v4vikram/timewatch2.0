@@ -21,23 +21,42 @@ const validationSchema = Yup.object({
   name: Yup.string()
     .min(3, "Name must be at least 3 characters")
     .required("Name is required"),
+
   email: Yup.string()
     .email("Invalid email address")
     .required("Email is required"),
+
   phone: Yup.string()
     .matches(/^[0-9]{10}$/, "Mobile number must be exactly 10 digits")
     .required("Phone number is required"),
+
   pinCode: Yup.string().required("Pincode is required"),
+
   country: Yup.string(),
   state: Yup.string(),
-  companyName: Yup.string().min(
-    3,
-    "Company name must be at least 3 characters"
-  ),
+
+  companyName: Yup.string()
+    .min(3, "Company name must be at least 3 characters"),
+
   staffSize: Yup.string(),
-  gstCertificate: Yup.mixed().required("GST Certificate is required"),
-  panCard: Yup.mixed().required("PAN Card is required"),
+
+  gstCertificate: Yup.mixed()
+    .required("GST Certificate is required")
+    .test(
+      "fileSize",
+      "GST Certificate must be less than 2 MB",
+      value => value && value.size <= 2 * 1024 * 1024
+    ),
+
+  panCard: Yup.mixed()
+    .required("PAN Card is required")
+    .test(
+      "fileSize",
+      "PAN Card must be less than 2 MB",
+      value => value && value.size <= 2 * 1024 * 1024
+    ),
 });
+
 
 const PartnerPage = () => {
   // const [submitStatus, setSubmitStatus] = useState(null);
@@ -91,7 +110,7 @@ const PartnerPage = () => {
 
       console.log("newPartner", newPartner);
 
-      if (newPartner?.status === 201) {
+      if (newPartner?.status === 200) {
         resetForm();
         setIsSuccess(true);
       }
