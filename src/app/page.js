@@ -330,7 +330,7 @@ export default async function HomePage() {
                     </div>
                     <div className="max-w-[200px]">
                       <span className="text-[#d63438] font-medium text-sm md:text-xl lg:text-sm xl:text-lg">
-                        Security Solutions
+                        Management
                       </span>
                     </div>
                   </div>
