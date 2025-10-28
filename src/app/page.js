@@ -247,7 +247,7 @@ export default async function HomePage() {
                       Advanced X-Ray Baggage Screening Systems
                     </h3>
                     <Link
-                      href="/solutions/security/access-control"
+                      href="/solutions/inspection-detection-solutions/advanced-x-ray-baggage-screening"
                       className="flex items-center text-white group-hover:text-[#d63438] transition-colors"
                     >
                       <span className="font-medium">Learn More</span>
