@@ -551,7 +551,7 @@ Get Catalog & Get a Free Consultation</p>
               className="group bg-[#d63438] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#6d6f72] transition-all duration-300 flex items-center gap-2 mx-auto shadow-lg hover:shadow-xl w-fit"
             >
               View All Clients
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform " />
             </Link>
           </div>
         </section>
