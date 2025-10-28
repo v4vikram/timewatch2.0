@@ -21,7 +21,7 @@ const validationSchema = Yup.object({
   message: Yup.string(),
 });
 
-const HomePageForm = () => {
+const HomePageForm = ({col}) => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [dial, setDial] = useState("91");
 
@@ -71,7 +71,7 @@ const HomePageForm = () => {
         <Form className="space-y-6">
           {isSuccess && <EmailSuccessPopup />}
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className={`grid md:${col ? 'grid-cols-1' : 'grid-cols-2'} gap-6`}>
             {/* Name */}
             <div>
               <label className="block text-sm font-medium text-[#6d6f72] mb-2">
@@ -165,7 +165,7 @@ const HomePageForm = () => {
           {/* Location */}
           <div>
             <label className="block text-sm font-medium text-[#6d6f72] mb-2">
-              Location
+              Location <span className="font-semibold">{`(Optional)`}</span>
             </label>
             <Field
               type="text"
@@ -178,7 +178,7 @@ const HomePageForm = () => {
           {/* Message */}
           <div>
             <label className="block text-sm font-medium text-[#6d6f72] mb-2">
-              Message
+              Message <span className="font-semibold">{`(Optional)`}</span>
             </label>
             <Field
               as="textarea"

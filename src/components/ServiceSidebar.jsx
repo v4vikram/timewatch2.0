@@ -12,6 +12,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import ContactForm from "./ContactForm"
+import HomePageForm from "./HomePageForm"
 
 export default function ServiceSidebar() {
   const pathname = usePathname()
@@ -58,7 +59,7 @@ export default function ServiceSidebar() {
 
       <div className="bg-white rounded-2xl shadow-md px-6 py-4">
         {/* <ServiceSidebarForm /> */}
-        <ContactForm/>
+        <HomePageForm col="1"/>
       </div>
     </div>
   )
