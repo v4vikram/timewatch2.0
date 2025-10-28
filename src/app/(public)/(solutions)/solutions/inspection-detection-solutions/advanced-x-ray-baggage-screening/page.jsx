@@ -104,8 +104,8 @@ const schemaFaq = {
           <div className="absolute inset-0 left-0 top-0 w-full h-full">
             <div className="relative z-10 w-full h-[400px] md:h-[550px]">
               <Image
-                src="/images/solutions/baggage-scanner.png"
-                alt="Consulting Hero"
+                src="/images/solutions/baggage-scanner2.png"
+                alt="baggage-scanner"
                 fill
                 sizes="100"
                 className="object-cover w-full h-full"
