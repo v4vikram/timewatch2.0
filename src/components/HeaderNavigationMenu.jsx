@@ -46,6 +46,16 @@ export function HeaderNavigationMenu() {
       text-[18px] font-semibold flex items-center gap-1`;
   };
 
+  const categoryOrder = [
+    "TIME ATTENDANCE AND ACCESS CONTROL",
+    "ENTRANCE CONTROL",
+    "SOFTWARE AND APPLICATIONS",
+    "PARKING AND TRAFFIC CONTROL",
+    "INSPECTION CONTROL",
+    "UL LISTED EM LOCKS",
+    "ACCESSORIES",
+  ];
+
   return (
     <NavigationMenu viewport={false}>
       <NavigationMenuList className="gap-4">
@@ -62,7 +72,7 @@ export function HeaderNavigationMenu() {
             <Link href="/products">Products</Link>
           </NavigationMenuTrigger>
           <NavigationMenuContent
-          // forceMount
+            // forceMount
             className="!w-[96vw] 2xl:!w-[80vw] !-translate-x-[33%] 2xl:!translate-x-[-36%]  z-50 !top-[45px] border border-gray-100 bg-gray-50 !shadow-none 
            
             "
@@ -76,17 +86,30 @@ export function HeaderNavigationMenu() {
               <div className="bg-gray-50 rounded-sm">
                 <TabsList className="flex flex-col space-y-2 border-r pr-2 shadow-none justify-start bg-transparent border-none">
                   {products
-                    ?.sort(
-                      (a, b) => b.categoryName.length - a.categoryName.length
-                    )
+                    ?.sort((a, b) => {
+                      const indexA = categoryOrder.indexOf(
+                        a.categoryName?.toUpperCase()
+                      );
+                      const indexB = categoryOrder.indexOf(
+                        b.categoryName?.toUpperCase()
+                      );
+
+                      // if category not found, send to bottom
+                      const orderA =
+                        indexA === -1 ? categoryOrder.length : indexA;
+                      const orderB =
+                        indexB === -1 ? categoryOrder.length : indexB;
+
+                      return orderA - orderB;
+                    })
                     .map((pro, index) => (
                       <TabsTrigger
                         key={index}
                         value={pro.categoryName}
                         onMouseEnter={() => setActiveTab(pro.categoryName)}
                         className="gap-2 text-left mr-auto !shadow-none bg-transparent 
-                          data-[state=active]:bg-primary/80 data-[state=active]:text-white 
-                          min-w-[300px] cursor-pointer border border-l-2 py-3 flex items-center justify-between"
+          data-[state=active]:bg-primary/80 data-[state=active]:text-white 
+          min-w-[300px] cursor-pointer border border-l-2 py-3 flex items-center justify-between"
                       >
                         {pro.categoryName}
                         {activeTab === pro.categoryName && (
@@ -147,7 +170,7 @@ export function HeaderNavigationMenu() {
 
         {/* Solutions (custom dropdown) */}
         <NavigationMenuList>
-          <SolutionsDropdown getLinkClass={getLinkClass}/>
+          <SolutionsDropdown getLinkClass={getLinkClass} />
         </NavigationMenuList>
 
         {/* About */}
