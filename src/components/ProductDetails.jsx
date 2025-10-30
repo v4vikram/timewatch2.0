@@ -25,13 +25,10 @@ import FaqDropdown from "./FaqDropdown";
 import { Button } from "./ui/button";
 
 const ProductDetails = ({ product }) => {
-  // console.log("Product Details:", product);
   if (!product) return null;
 
-  // console.log("Rendering Product Details for:", product);
-
   return (
-    <div className="w-full 2xl:w-[1300px] mx-auto px-4 py-10">
+    <div className="container mx-auto px-4 py-10">
       {/* Top Section */}
       <div className="lg:flex gap-20">
         {/* Main Image */}
@@ -64,9 +61,7 @@ const ProductDetails = ({ product }) => {
               <p>No key features available.</p>
             )}
           </div>
-            {
-              console.log("product.features.length", product.features.length)
-            }
+          {console.log("product.features.length", product.features.length)}
           {/* Features */}
           {product.features.length > 0 && (
             <div className="mt-2">
@@ -189,8 +184,10 @@ const ProductDetails = ({ product }) => {
           <TableCaption>Product Specifications</TableCaption>
           <TableHeader>
             <TableRow>
-              <TableHead className={'text-2xl text-primary'}>Specification</TableHead>
-              <TableHead className={'text-2xl text-primary'}>Details</TableHead>
+              <TableHead className={"text-2xl text-primary"}>
+                Specification
+              </TableHead>
+              <TableHead className={"text-2xl text-primary"}>Details</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
