@@ -43,7 +43,7 @@ const quickLinks = [
   { label: "About Us", href: "/about" },
   { label: "Careers", href: "/careers" },
   { label: "Download", href: "/download" },
-  { label: "Contact", href: "/contact" },
+  // { label: "Contact", href: "/contact" },
   { label: "E Waste", href: "/e-waste" },
 ];
 const footerLinks = [
@@ -68,7 +68,7 @@ const Footer = () => {
                 width={230}
                 height={90}
                 alt="timewatch logo"
-                className="w-[230px] h-[90px] brightness-80"
+                className="w-[230px] h-[50px] brightness-80"
               />
             </Link>
             {/* <div className="flex items-center space-x-3">

@@ -38,7 +38,8 @@ export default function CatLayout({ children }) {
   const sidebarRef = useRef(null);
 
   const { cat, subCat, slug } = useParams();
-  console.log("{ cat, subCat, slug }", { cat, subCat, slug });
+  // console.log("{ cat, subCat, slug }", { cat, subCat, slug });
+  console.log("filterProd", filterProd);
 
   // ✅ Fetch products (all OR filtered by cat/subCat) — backend handles logic
   useEffect(() => {
@@ -54,6 +55,7 @@ export default function CatLayout({ children }) {
         }
 
         const res = await axiosInstance.get(url);
+        // console.log("res.data", )
         const prod = Array.isArray(res.data)
           ? res.data
           : res.data?.products || [];
