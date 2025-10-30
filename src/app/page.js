@@ -645,7 +645,7 @@ Get Catalog & Get a Free Consultation</p>
                   rating: 5,
                 },
                 {
-                  name: "RAVI KUMAR",
+                  name: "Aditya",
                   position: "",
                   company: "",
                   content:

@@ -15,6 +15,7 @@ export const useProductStore = create((set, get) => ({
 
   getProducts: async () => {
     const res = await axiosInstance.get('/product');
+    // console.log("res?.data?.products")
     set({ products: res?.data?.products })
   },
   createProduct: async (formData) => {
