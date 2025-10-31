@@ -139,7 +139,7 @@ export default function CatLayout({ children }) {
       <div className="container">
         {/* Search bar */}
         <div className="flex justify-end gap-x-2 mb-3 relative">
-          <div className="relative w-full h-[38px]">
+          <div className="relative w-full  md:max-w-[260px] h-[38px]">
             <Input
               placeholder="Search products..."
               value={searchQuery}
