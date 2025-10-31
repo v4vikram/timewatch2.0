@@ -329,13 +329,13 @@ export const solutions = [
       {
         subCategory: "Walk Through Metal Detector",
         subCategoryUrl: "walk-through-metal-detector",
-         subCategoryImage: "/images/solutions/Walk-Through-Metal-Detector-TWND.png"
+         subCategoryImage: "/images/solutions/Walk-Through-Metal-Detector.png"
       },
       
       {
         subCategory: "Advanced X-Ray Baggage Screening",
         subCategoryUrl: "advanced-x-ray-baggage-screening",
-        subCategoryImage: "/images/solutions/baggage-scanner.png"
+        subCategoryImage: "/images/solutions/baggage-scanner2.png"
       },
       // {
       //   subCategory: "DFMD (Door Frame Metal Detectors)",
