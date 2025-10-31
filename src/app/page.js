@@ -64,7 +64,7 @@ async function getFeaturedProducts() {
 
 export default async function HomePage() {
   const products = await getFeaturedProducts();
-  console.log(products);
+  // console.log(products);
 
   let publishedProducts = products.filter(
     (item) => item?.status == "published"
