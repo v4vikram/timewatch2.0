@@ -114,9 +114,9 @@ export default function CatLayout({ children }) {
           setFilterProd(searchRes?.data?.products || []);
         } else {
           // fallback → all products
-          // const res = await axiosInstance.get(`/product`);
-          // const prod = res.data?.products || [];
-          // setFilterProd(prod.filter((p) => p.status === "published"));
+          const res = await axiosInstance.get(`/product`);
+          const prod = res.data?.products || [];
+          setFilterProd(prod.filter((p) => p.status === "published"));
         }
       } catch (error) {
         console.error("Error fetching products:", error.message);

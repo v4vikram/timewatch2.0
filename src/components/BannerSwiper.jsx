@@ -28,6 +28,70 @@ export default function BannerSwiper() {
         // loop={false}
         className="w-full"
       >
+          <SwiperSlide>
+          <div className="bg-gray-50 overflow-hidden pt-14 md:pt-0">
+            <div className="container h-[60vh] md:h-[100vh] 2xl:h-[calc(100vh-80px)] flex flex-col lg:flex-row items-center">
+              <div className="flex-1 flex flex-col justify-center ">
+                <div className="max-w-[600px]">
+                  <h1 className="text-3xl md:text-6xl font-bold text-primary">
+                    App Download Now<br/>
+                    <span className="text-secondary"> Client Connect</span>
+                  </h1>
+                  <hr className="w-1/3 rounded-2xl h-1.5 mt-2 md:h-2 bg-primary border-0" />
+                  <p className="text-md md:text-lg text-gray-600 leading-relaxed mt-5">
+                   Client Connect lets customers instantly log complaints, track progress anytime, and enjoy faster, transparent support.
+                  </p>
+                  <Image
+                    src="/images/sliders/home/client-search-bar.png"
+                    alt="client-search-bar"
+                    className="object-containp-2 mt-2"
+                    width={180}
+                    height={75}
+                    quality={75}
+                    priority
+                    sizes="75vw"
+                  />
+                </div>
+
+                <div className="relative max-w-[400px] h-[100px] items-start mt-4 hidden md:flex gap-x-4">
+                  <Image
+                    src="/images/sliders/home/app-store.png"
+                    alt="app-store"
+                    className="object-contain border border-black p-2"
+                    width={75}
+                    height={75}
+                    quality={75}
+                    priority
+                    sizes="75vw"
+                  />
+                  <Image
+                    src="/images/sliders/home/play-store.png"
+                    alt="play-store"
+                    className="object-contain border border-black p-2"
+                    width={75}
+                    height={75}
+                    quality={75}
+                    priority
+                    sizes="75vw"
+                  />
+                </div>
+              </div>
+              <div className="flex-1 mt-5 md:mt-0">
+                <div className="relative w-[300px] h-[200px] md:h-[500px] md:w-[600px] 2xl:w-[1000px]">
+                  <Image
+                    src="/images/sliders/home/client-phone.png"
+                    alt="Instantly log complaints and effortlessly track their progress anytime"
+                    fill
+                    className="object-contain w-full h-full"
+                    quality={100}
+                    priority
+                    sizes="100vw"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
         <SwiperSlide>
           <div className="bg-gray-50 overflow-hidden pt-14 md:pt-0">
             <div className="container h-[60vh] md:h-[100vh] 2xl:h-[calc(100vh-80px)] flex flex-col lg:flex-row items-center">
