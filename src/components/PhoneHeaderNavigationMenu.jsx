@@ -21,7 +21,7 @@ const PhoneHeaderNavigationMenu = ({ isMenuOpen }) => {
   const menuItems = [
     { icon: Home, label: "Home", href: "/" },
     { icon: List, label: "Product", href: "/products" },
-    { icon: LaptopMinimal, label: "Download", href: "/download" },
+    { icon: LaptopMinimal, label: "Downloads", href: "/download" },
     { icon: Lightbulb, label: "Solutions", href: "/solutions" },
     { icon: Info, label: "About", href: "/about" },
     { icon: User2, label: "CEO's Desk", href: "/ceo-desk" },
