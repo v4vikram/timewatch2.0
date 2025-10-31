@@ -164,7 +164,7 @@ export function HeaderNavigationMenu() {
         {/* Download */}
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={getLinkClass("/download")}>
-            <Link href="/download">Download</Link>
+            <Link href="/download">Downloads</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
 

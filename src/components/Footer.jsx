@@ -71,23 +71,31 @@ const Footer = () => {
                 className="w-[230px] h-[50px] brightness-80"
               />
             </Link>
+
             {/* <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-br from-[#d63438] to-[#b82c30] rounded-lg flex items-center justify-center">
                 <Clock className="w-6 h-6 text-white" />
               </div>
               <span className="text-xl font-bold">TimeWatch</span>
             </div> */}
-            <p className="text-gray-300 leading-relaxed">
-             Empowering businesses with smart security and biometric solutions for a safer world.
+            <p className="text-gray-300 leading-relaxed mb-2">
+              Empowering businesses with smart security and biometric solutions
+              for a safer world.
             </p>
+            <Image
+              src={"/images/catalogue-qr.png"}
+              width={100}
+              height={90}
+              alt="timewatch logo"
+              className="object-contain block mb-0"
+            />
+            <small className="mt-0">Get Catalouge</small>
           </div>
-
-       
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-gray-300">
-                  {quickLinks.map(({ label, href }) => (
+              {quickLinks.map(({ label, href }) => (
                 <li key={label}>
                   <Link
                     href={href}
@@ -115,33 +123,42 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-             <div>
+          <div>
             <h3 className="text-lg font-semibold mb-4">CONTACT DETAILS</h3>
             <ul className="space-y-2 text-gray-300">
               <li className="flex flex-col leading-[20px]">
-                <span className="text-white pr-2 font-semibold">
-                  Email:
-                </span>
-                <a href="mailto:sales@timewatchindia.com" className="hover:text-white transition-colors">
-                    sales@timewatchindia.com
+                <span className="text-white pr-2 font-semibold">Email:</span>
+                <a
+                  href="mailto:sales@timewatchindia.com"
+                  className="hover:text-white transition-colors"
+                >
+                  sales@timewatchindia.com
                 </a>
               </li>
               <li className="flex flex-col leading-[20px]">
                 <span className="text-white pr-2 font-semibold">Phone:</span>
-                <a href="tel:+91-95999 53923" className="hover:text-white transition-colors">
-                   +91-95999 53923
+                <a
+                  href="tel:+91-95999 53923"
+                  className="hover:text-white transition-colors"
+                >
+                  +91-95999 53923
                 </a>
               </li>
               <li className="flex flex-col leading-[20px]">
-                <span className="text-white pr-2 font-semibold">Sales & Technical:</span>
-                <a href="tel:011-4191-6615" className="hover:text-white transition-colors">
+                <span className="text-white pr-2 font-semibold">
+                  Sales & Technical:
+                </span>
+                <a
+                  href="tel:011-4191-6615"
+                  className="hover:text-white transition-colors"
+                >
                   011-4191-6615
                 </a>
               </li>
               <li className="flex flex-col leading-[20px]">
                 <span className="text-white pr-2 font-semibold">Address:</span>
                 <a href="#" className="hover:text-white transition-colors">
-                 D-162, Okhla Phase - I New Delhi - 110020
+                  D-162, Okhla Phase - I New Delhi - 110020
                 </a>
               </li>
             </ul>
