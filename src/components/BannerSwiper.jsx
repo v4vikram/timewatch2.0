@@ -193,11 +193,11 @@ export default function BannerSwiper() {
                   <h1 className="text-3xl md:text-6xl font-bold text-primary">
                     Simple way to
                     <br />
-                    <span className="text-secondary"> TRACK YOUR EMPLOYEE</span>
+                    <span className="text-secondary">Monitor YOUR EMPLOYEE</span>
                   </h1>
                   <hr className="w-1/3 rounded-2xl h-1.5 mt-2 md:h-2 bg-primary border-0" />
                   <p className="text-md md:text-lg text-gray-600 leading-relaxed mt-5">
-                    Track employees in real time with geo-fencing, ensuring
+                    Monitor employees in real time with geo-fencing, ensuring
                     accurate attendance, productivity, and secure work
                     monitoring.
                   </p>
