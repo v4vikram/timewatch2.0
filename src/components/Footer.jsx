@@ -82,13 +82,16 @@ const Footer = () => {
               Empowering businesses with smart security and biometric solutions
               for a safer world.
             </p>
-            <Image
-              src={"/images/catalogue-qr.png"}
-              width={100}
-              height={90}
-              alt="timewatch logo"
-              className="object-contain block mb-0"
-            />
+            <Link href={"/product-catalouge"}>
+              <Image
+                src={"/images/catalogue-qr.png"}
+                width={100}
+                height={90}
+                alt="timewatch logo"
+                className="object-contain block mb-0"
+              />
+            </Link>
+
             <small className="mt-0">Get Catalouge</small>
           </div>
 
