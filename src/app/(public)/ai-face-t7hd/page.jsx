@@ -23,6 +23,7 @@ import {
   Building2,
   Factory,
 } from "lucide-react";
+import Image from "next/image";
 
 const AIFaceT7HDLanding = () => {
   const faqSchema = {
@@ -134,9 +135,9 @@ const AIFaceT7HDLanding = () => {
           </div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="lg:grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center bg-white rounded-full px-4 py-2 shadow-md mb-6">
+                <div className=" items-center bg-white rounded-full px-4 py-2 shadow-md mb-6 hidden md:inline-flex">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
                   <span className="text-sm font-semibold text-gray-700">
                     India's First Portable Device with Back Camera
@@ -176,20 +177,31 @@ const AIFaceT7HDLanding = () => {
                 </div>
 
                 <div className="flex flex-wrap gap-4">
-                  <button className="bg-primary hover:bg-[#b82c30] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group">
+                  <a href="#" className="bg-primary hover:bg-[#b82c30] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group">
                     Book a Demo
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                  <button className="bg-white hover:bg-gray-50 text-[#6d6f72] font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-200">
+                  </a>
+                  <a href="#" className="bg-red-300  text-[#6d6f72] font-semibold px-8 py-4 rounded-lg border-2 border-gray-200">
                     Request a Quote
-                  </button>
+                  </a>
                 </div>
               </div>
 
-              <div className="relative">
+
+              <div className="relative hidden. md:block. mt-10 md:mt-0">
                 <div className="relative z-10 bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl p-8">
                   <div className="aspect-square bg-gradient-to-br from-primary/20 to-[#6d6f72]/20 rounded-2xl flex items-center justify-center">
-                    <Smartphone className="w-48 h-48 text-primary" />
+                    {/* <Smartphone className="w-48 h-48 text-primary" /> */}
+                    {/* <video src="/videos/360.mp4"></video> */}
+                    <div className="relative w-[300px] h-[250px]  md:w-[450px] md:h-[450px]">
+                      <Image
+                        src="/images/AI-Face-T7HD-front.png"
+                        alt="AI-Face-T7HD"
+                        title="AI-Face-T7HD"
+                        fill
+                        className="w-full h-full object-contain py-4 md:py-0"
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="absolute -bottom-6 -right-6 w-full h-full bg-gradient-to-br from-primary/30 to-[#6d6f72]/30 rounded-3xl -z-0"></div>
@@ -256,24 +268,24 @@ const AIFaceT7HDLanding = () => {
         {/* Core Innovation - Back Camera */}
         <section className="py-20 bg-gradient-to-br from-primary/5 to-[#6d6f72]/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="lg:grid lg:grid-cols-2 gap-12 items-center">
               <div className="order-2 lg:order-1">
                 <div className="bg-gradient-to-br from-primary/20 to-[#6d6f72]/20 rounded-3xl p-8">
-                  <div className="bg-white rounded-2xl shadow-2xl p-8 text-center">
-                    <Camera className="w-32 h-32 text-primary mx-auto mb-6" />
-                    <div className="bg-green-50 border-2 border-green-500 rounded-lg p-4">
-                      <p className="text-green-700 font-semibold text-lg">
-                        ✓ Attendance Captured
-                      </p>
-                      <p className="text-green-600 text-xl font-bold mt-2">
-                        Welcome Ajay
-                      </p>
+                  <div className="bg-white. rounded-2xl shadow-2xl p-8 text-center flex justify-center">
+                    <div className="relative w-[300px] h-[250px]  md:w-[450px] md:h-[450px] flex justify-center">
+                      <Image
+                        src="/images/AI-Face-T7HD-back.png"
+                        alt="AI-Face-T7HD"
+                        title="AI-Face-T7HD"
+                        fill
+                        className="w-full h-full object-contain"
+                      />
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="order-1 lg:order-2">
+              <div className="order-1 lg:order-2 mt-5 lg:mt-0">
                 <div className="inline-block bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
                   CORE INNOVATION
                 </div>
@@ -520,8 +532,7 @@ const AIFaceT7HDLanding = () => {
                 {
                   icon: Building2,
                   title: "Remote Sites",
-                  description:
-                    "Perfect for any location with 4G connectivity",
+                  description: "Perfect for any location with 4G connectivity",
                   color: "from-[#6d6f72] to-[#5a5c5f]",
                 },
               ].map((useCase, index) => (
@@ -648,8 +659,6 @@ const AIFaceT7HDLanding = () => {
             </div>
           </div>
         </section>
-
-    
       </div>
     </>
   );
