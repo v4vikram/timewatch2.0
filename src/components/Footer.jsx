@@ -53,7 +53,7 @@ const footerLinks = [
   { label: "Terms & Conditions", href: "/terms-conditions" },
   { label: "Contact", href: "/contact" },
   { label: "Disclaimer", href: "/disclaimer" },
-  // { label: "Download", href: "/download" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 const Footer = () => {
