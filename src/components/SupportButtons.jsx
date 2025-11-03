@@ -33,7 +33,7 @@ export default function SupportButtons() {
         <div className="fixed right-4 bottom-[66px] md:right-[11px] md:bottom-20 z-10 flex flex-col gap-2 w-[160px] items-end">
           {/* WhatsApp Button */}
           <a
-            href="https://wa.me/919599953923?text=Hello%20TimeWatch%2C%20I'm%20interested%20in%20your%20product%20or%20services.%20Please%20assist%20me!"
+            href="https://wa.me/919599953921?text=Hello%20TimeWatch%2C%20I'm%20interested%20in%20your%20product%20or%20services.%20Please%20assist%20me!"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center bg-transparent hover:bg-[#25D366] text-white rounded-full shadow-lg w-[45px] h-[45px] lg:w-[55px] lg:h-[55px] hover:w-36 transition-all duration-300 overflow-hidden"
@@ -53,7 +53,7 @@ export default function SupportButtons() {
           </a>
           {/* Call Button (visible only on mobile) */}
           <a
-            href="tel:+919599953923"
+            href="tel:+919599953921"
             className="group flex items-center bg-primary text-white rounded-full shadow-lg w-[45px] h-[45px] lg:w-[55px] lg:h-[55px] lg:w-[55px] lg:h-[55px] hover:w-36 transition-all duration-300 overflow-hidden md:hidden"
             title="Call Us"
           >

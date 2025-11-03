@@ -285,10 +285,10 @@ const FAQPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+919599953923"
+              href="tel:+919599953921"
               className="px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-[#b82c30] transition-colors shadow-lg"
             >
-              Call +91 95999 53923
+              Call +91 9599953921
             </a>
             <a
               href="mailto:sales@timewatchindia.com"

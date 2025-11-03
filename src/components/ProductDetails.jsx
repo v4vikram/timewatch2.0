@@ -135,13 +135,13 @@ const ProductDetails = ({ product }) => {
 
           <div className="flex gap-4 mt-10">
             <Button asChild className={"text-[15px] md:text-[17px]"}>
-              <Link href={"tel:+91-9599953923"}>
+              <Link href={"tel:+91-9599953921"}>
                 <Phone /> Enquire Now
               </Link>
             </Button>
             <Button asChild variant={"secondary"} className={"hidden md:flex"}>
               <Link
-                href="https://wa.me/919599953923?text=Hello%F0%9F%91%8B%F0%9F%8F%BB%20TimeWatch%2C%0AI%27m%20Interested%20in%20your%20product%20or%20services%0APlease%20Assist%20me%21%20%20"
+                href="https://wa.me/919599953921?text=Hello%F0%9F%91%8B%F0%9F%8F%BB%20TimeWatch%2C%0AI%27m%20Interested%20in%20your%20product%20or%20services%0APlease%20Assist%20me%21%20%20"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="Chat on WhatsApp"

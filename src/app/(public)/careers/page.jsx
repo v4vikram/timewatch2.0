@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import {
@@ -14,6 +14,8 @@ import {
   Shield,
   Upload,
 } from "lucide-react";
+import axiosInstance from "@/lib/axiosInstance";
+import EmailSuccessPopup from "@/components/forms/EmailSuccessPopup";
 
 const validationSchema = Yup.object({
   roleApplyingFor: Yup.string().required(
@@ -36,14 +38,52 @@ const validationSchema = Yup.object({
 });
 
 const CareerPage = () => {
-  const handleSubmit = (values, { setSubmitting, resetForm }) => {
-    console.log("Form submitted:", values);
-    // Handle form submission here
-    setTimeout(() => {
-      alert("Application submitted successfully!");
-      resetForm();
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleSubmit = async (
+    values,
+    { setSubmitting, resetForm, setErrors }
+  ) => {
+    try {
+      console.log("Submitting career form:", values);
+      setIsSuccess(false);
+
+      // Create FormData
+      const formData = new FormData();
+
+      // Append all non-file fields
+      formData.append("roleApplyingFor", values.roleApplyingFor || "");
+      formData.append("fullName", values.fullName || "");
+      formData.append("contactNumber", values.contactNumber || "");
+      formData.append("emailAddress", values.emailAddress || "");
+      formData.append("location", values.location || "");
+      formData.append("coverLetter", values.coverLetter || "");
+
+      // Append file (only if selected)
+      if (values.resume && values.resume instanceof File) {
+        formData.append("resume", values.resume);
+      }
+
+      // Submit to backend
+      const response = await axiosInstance.post(`/form/career`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+
+      if (response.status === 201) {
+        setIsSuccess(true);
+        resetForm();
+        console.log("Career form submitted successfully!");
+      }
+    } catch (error) {
+      console.error("Career form submission error:", error);
+      if (error.response?.data?.errors) {
+        setErrors(error.response.data.errors);
+      }
+    } finally {
       setSubmitting(false);
-    }, 1000);
+    }
   };
 
   const benefits = [
@@ -114,6 +154,7 @@ const CareerPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {isSuccess && <EmailSuccessPopup />}
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/10 to-sectext-secondary/10 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -124,15 +165,15 @@ const CareerPage = () => {
             Empower Your Career Path with TimeWatch - Building the Future of
             Smart Security Solutions
           </p>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">Take the first step towards your exciting career with TimeWatch</p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Take the first step towards your exciting career with TimeWatch
+          </p>
         </div>
       </section>
 
       {/* Why Join Us */}
       <section className="py-16 bg-white">
-        <div className="text-center mb-12">
-         
-        </div>
+        <div className="text-center mb-12"></div>
         <div className="container flex flex-col xl:flex-row gap-5">
           {/* <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
@@ -162,17 +203,18 @@ const CareerPage = () => {
             ))}
           </div>
           <div className="bg-gradient-to-br from-primary/5 to-sectext-secondary/5 rounded-3xl p-8 flex-1">
-           <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
-            Apply Now
-          </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
+              Apply Now
+            </h2>
             <Formik
               initialValues={{
-                roleApplyingFor: "",
-                fullName: "",
-                contactNumber: "",
-                emailAddress: "",
-                location: "",
-                coverLetter: "",
+                roleApplyingFor: "test",
+                fullName: "test",
+                contactNumber: "1234567911",
+                emailAddress: "test@gmail.com",
+                location: "test",
+                coverLetter:
+                  "Continuous learning opportunities, certifications, and skill development programs",
                 resume: null,
               }}
               validationSchema={validationSchema}
@@ -388,12 +430,12 @@ const CareerPage = () => {
             >
               careers@timewatchindia.com
             </a>
-            <a
+            {/* <a
               href="tel:+919599953923"
               className="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300"
             >
               +91 95999 53923
-            </a>
+            </a> */}
           </div>
         </div>
       </section>

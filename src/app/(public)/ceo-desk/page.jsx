@@ -253,11 +253,11 @@ const CEODesk = () => {
 
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="tel:+919599953923"
+              href="tel:+919599953921"
               className="flex items-center space-x-2 bg-gradient-to-r from-primary to-[#b82c30] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all"
             >
               <Phone className="w-5 h-5" />
-              <span>+91 95999 53923</span>
+              <span>+91 9599953921</span>
             </a>
             <a
               href="mailto:sales@timewatchindia.com"
