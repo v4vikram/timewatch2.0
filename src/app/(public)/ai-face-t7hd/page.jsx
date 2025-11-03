@@ -177,23 +177,28 @@ const AIFaceT7HDLanding = () => {
                 </div>
 
                 <div className="flex flex-wrap gap-4">
-                  <a href="#" className="bg-primary hover:bg-[#b82c30] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group">
-                    Book a Demo
+                  <a
+                    href="tel:919599953921"
+                    className="bg-primary hover:bg-[#b82c30] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
+                  >
+                    Enquiry Now
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
-                  <a href="#" className="bg-red-300  text-[#6d6f72] font-semibold px-8 py-4 rounded-lg border-2 border-gray-200">
+                  <a
+                   href="https://wa.me/919599953921?text=Hello%20TimeWatch%2C%20I'm%20interested%20in%20your%20product%20or%20services.%20Please%20assist%20me!"
+                    className="bg-red-300  text-[#6d6f72] font-semibold px-8 py-4 rounded-lg border-2 border-gray-200"
+                  >
                     Request a Quote
                   </a>
                 </div>
               </div>
-
 
               <div className="relative hidden. md:block. mt-10 md:mt-0">
                 <div className="relative z-10 bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl p-8">
                   <div className="aspect-square bg-gradient-to-br from-primary/20 to-[#6d6f72]/20 rounded-2xl flex items-center justify-center">
                     {/* <Smartphone className="w-48 h-48 text-primary" /> */}
                     {/* <video src="/videos/360.mp4"></video> */}
-                    <div className="relative w-[300px] h-[250px]  md:w-[450px] md:h-[450px]">
+                    <div className="relative w-[300px] h-[250px]  md:w-[600px] md:h-[450px]">
                       <Image
                         src="/images/AI-Face-T7HD-front.png"
                         alt="AI-Face-T7HD"
