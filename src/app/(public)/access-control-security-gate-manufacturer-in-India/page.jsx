@@ -234,12 +234,12 @@ const TWLDTS2715Page = () => {
                 </div>
               </div>
               <div className="">
-                <h2 className="text-4xl md:text-3xl lg:text-4xl font-bold text-[#6d6f72] mb-6 leading-tight">
+                <h2 className="text-4xl md:text-3xl lg:text-4xl font-bold text-[#6d6f72] mb-3 leading-tight">
                   TWLD-TS2700 – Heavy-Duty Tripod Turnstile for Reliable Access
                   Contro
                 </h2>
 
-                <p className="text-md text-gray-700 mb-8 leading-relaxed">
+                <p className="text-md text-gray-700 mb-4 leading-relaxed">
                   The TimeWatch TWLD-TS2700 is a heavy-duty, semi-automatic
                   tripod turnstile engineered for high-traffic zones such as
                   offices, campuses, stadiums, and metro stations. Constructed
@@ -281,6 +281,23 @@ const TWLDTS2715Page = () => {
                     Maintenance-free operation
                   </li>
                 </ul>
+
+                <div class="flex flex-wrap gap-4 mt-5">
+                  <a
+                    class="bg-primary hover:bg-[#b82c30] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
+                    href="https://storage.googleapis.com/timewatch-dashbord-bucket/uploads/docs/datasheet/twld-ts2700-datasheet-ver-2-0-bfctqz.pdf"
+                     target="_blank"
+                  >
+                    Get a Catalouge
+                  </a>
+
+                  <a
+                    class="bg-secondary  text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
+                    href="#contact"
+                  >
+                    Enquiry Now
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -288,8 +305,7 @@ const TWLDTS2715Page = () => {
             <div className="lg:grid lg:grid-cols-2 gap-12 items-center">
               <div className="">
                 <h2 className="text-4xl md:text-3xl lg:text-4xl font-bold text-[#6d6f72] mb-6 leading-tight">
-                  TWLD-TS2700 – Heavy-Duty Tripod Turnstile for Reliable Access
-                  Contro
+                  TWLD-TS2715 – Tripod Turnstile with Integrated Belt Barrier
                 </h2>
 
                 <p className="text-md text-gray-700 mb-8 leading-relaxed">
@@ -329,6 +345,22 @@ const TWLDTS2715Page = () => {
                     RFID, biometric & QR system compatibility
                   </li>
                 </ul>
+                <div class="flex flex-wrap gap-4 mt-5">
+                  <a
+                    class="bg-primary hover:bg-[#b82c30] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
+                    href="https://storage.googleapis.com/timewatch-dashbord-bucket/uploads/docs/datasheet/twld-ts2715-datasheet-ver-2-0-eohhb1.pdf"
+                    target="_blank"
+                  >
+                    Get a Catalouge
+                  </a>
+
+                  <a
+                    class="bg-secondary  text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
+                    href="#contact"
+                  >
+                    Enquiry Now
+                  </a>
+                </div>
               </div>
               <div className="">
                 <div className="relative z-10 bg-gray-100 rounded-3xl p-8">
@@ -405,7 +437,7 @@ const TWLDTS2715Page = () => {
           </div>
         </section>
       </div>
-       <Script
+      <Script
         id="tripod-turnstile-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

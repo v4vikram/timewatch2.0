@@ -28,7 +28,7 @@ export default function BannerSwiper() {
         // loop={false}
         className="w-full"
       >
-         <SwiperSlide>
+         {/* <SwiperSlide>
           <div className="bg-gray-50 overflow-hidden pt-14 md:pt-0">
             <div className="container h-[60vh] md:h-[100vh] 2xl:h-[calc(100vh-80px)] flex flex-col lg:flex-row items-center">
               <div className="flex-1 flex flex-col justify-center ">
@@ -94,7 +94,7 @@ export default function BannerSwiper() {
               </div>
             </div>
           </div>
-        </SwiperSlide> 
+        </SwiperSlide>  */}
         <SwiperSlide>
           <div className="bg-gray-50 overflow-hidden pt-14 md:pt-0">
             <div className="container h-[60vh] md:h-[100vh] 2xl:h-[calc(100vh-80px)] flex flex-col lg:flex-row items-center">
