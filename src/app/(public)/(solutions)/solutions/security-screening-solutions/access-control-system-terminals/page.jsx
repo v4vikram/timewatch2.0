@@ -8,85 +8,88 @@ export const metadata = {
     "Access Control Systems & Biometric Terminals in India & UAE | TimeWatch",
   description:
     "Secure workplaces with TimeWatch Access Control Systems. Biometric face, fingerprint & RFID terminals integrated with HRMS. Trusted in India, Dubai & GCC.",
+  alternates: {
+    canonical:
+      "https://www.timewatchindia.com/solutions/security-screening-solutions/access-control-system-terminals",
+  },
 };
 
 export default function AccessControlSystemTerminals() {
-const faqs = [
-  {
-    question: "What is an access control system?",
-    answer:
-      "An access control system is a security solution that manages and monitors who can enter or exit a facility or specific zone using biometric or RFID authentication.",
-  },
-  {
-    question: "Can access control integrate with attendance and payroll?",
-    answer:
-      "Yes, all TimeWatch devices integrate with HRMS and payroll systems, ensuring attendance data flows directly into salary processing.",
-  },
-  {
-    question: "Do these devices work in India and UAE?",
-    answer:
-      "Yes, our devices are designed for Indian workplaces (Delhi, Mumbai, Bengaluru, Hyderabad, etc.) and are widely deployed in UAE, Qatar, Oman, and Saudi Arabia.",
-  },
-  {
-    question: "What happens if there is a power cut?",
-    answer:
-      "Most terminals come with built-in battery backup to ensure uninterrupted access control during outages.",
-  },
-  {
-    question: "Can I manage multiple locations with one system?",
-    answer:
-      "Yes, our cloud-based system allows you to control and monitor access across multiple branches from a single dashboard.",
-  },
-];
+  const faqs = [
+    {
+      question: "What is an access control system?",
+      answer:
+        "An access control system is a security solution that manages and monitors who can enter or exit a facility or specific zone using biometric or RFID authentication.",
+    },
+    {
+      question: "Can access control integrate with attendance and payroll?",
+      answer:
+        "Yes, all TimeWatch devices integrate with HRMS and payroll systems, ensuring attendance data flows directly into salary processing.",
+    },
+    {
+      question: "Do these devices work in India and UAE?",
+      answer:
+        "Yes, our devices are designed for Indian workplaces (Delhi, Mumbai, Bengaluru, Hyderabad, etc.) and are widely deployed in UAE, Qatar, Oman, and Saudi Arabia.",
+    },
+    {
+      question: "What happens if there is a power cut?",
+      answer:
+        "Most terminals come with built-in battery backup to ensure uninterrupted access control during outages.",
+    },
+    {
+      question: "Can I manage multiple locations with one system?",
+      answer:
+        "Yes, our cloud-based system allows you to control and monitor access across multiple branches from a single dashboard.",
+    },
+  ];
 
-
-// 🔒 Hidden SEO Schema FAQ (not shown on page)
-const schemaFaq = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is an access control system?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "An access control system is a security solution that manages and monitors who can enter or exit a facility or specific zone using biometric or RFID authentication.",
+  // 🔒 Hidden SEO Schema FAQ (not shown on page)
+  const schemaFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is an access control system?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "An access control system is a security solution that manages and monitors who can enter or exit a facility or specific zone using biometric or RFID authentication.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Can access control integrate with attendance and payroll?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, all TimeWatch devices integrate with HRMS and payroll systems, ensuring attendance data flows directly into salary processing.",
+      {
+        "@type": "Question",
+        name: "Can access control integrate with attendance and payroll?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, all TimeWatch devices integrate with HRMS and payroll systems, ensuring attendance data flows directly into salary processing.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Do these devices work in India and UAE?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, our devices are designed for Indian workplaces including Delhi, Mumbai, Bengaluru, and Hyderabad, and are widely deployed in UAE, Qatar, Oman, and Saudi Arabia.",
+      {
+        "@type": "Question",
+        name: "Do these devices work in India and UAE?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, our devices are designed for Indian workplaces including Delhi, Mumbai, Bengaluru, and Hyderabad, and are widely deployed in UAE, Qatar, Oman, and Saudi Arabia.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "What happens if there is a power cut?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most terminals come with built-in battery backup to ensure uninterrupted access control during outages.",
+      {
+        "@type": "Question",
+        name: "What happens if there is a power cut?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Most terminals come with built-in battery backup to ensure uninterrupted access control during outages.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Can I manage multiple locations with one system?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, our cloud-based system allows you to control and monitor access across multiple branches from a single dashboard.",
+      {
+        "@type": "Question",
+        name: "Can I manage multiple locations with one system?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, our cloud-based system allows you to control and monitor access across multiple branches from a single dashboard.",
+        },
       },
-    },
-  ],
-};
+    ],
+  };
 
   return (
     <div className="solutions-pages">
@@ -238,14 +241,23 @@ const schemaFaq = {
                 </li>
               </ul>
               <h2>Explore Our Access Terminals</h2>
-              <p><strong>We offer a wide range of biometric and card-based terminals to suit every requirement:</strong></p>
+              <p>
+                <strong>
+                  We offer a wide range of biometric and card-based terminals to
+                  suit every requirement:
+                </strong>
+              </p>
               <ul>
                 <li>BIO-1SE Face Recognition Terminal</li>
                 <li>ATF-305SE Multi-Modal Biometric Device</li>
                 <li>TrueFace Series (2000, 6000, 50)</li>
                 <li>AI-Face4G Handheld Device</li>
               </ul>
-              <p>Each terminal is built with Indian workplaces in mind, while also catering to UAE and GCC businesses that demand fast, reliable, and compliant access systems.</p>
+              <p>
+                Each terminal is built with Indian workplaces in mind, while
+                also catering to UAE and GCC businesses that demand fast,
+                reliable, and compliant access systems.
+              </p>
             </section>
 
             {/* FAQ Section */}

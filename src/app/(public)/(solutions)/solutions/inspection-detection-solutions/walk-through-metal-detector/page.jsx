@@ -7,6 +7,10 @@ export const metadata = {
   title: "Walk-Through Metal Detector | Multi-Zone Entry Screening India",
   description:
     "Ensure secure entry at airports, metro stations, stadiums & offices with TimeWatch Walk-Through Metal Detector. 8-zone detection, audio-visual alerts & high throughput.",
+      alternates: {
+    canonical:
+      "https://www.timewatchindia.com/solutions/inspection-detection-solutions/walk-through-metal-detector",
+  },
 };
 
 export default function HandHeldMetalDetectorTWHH100() {

@@ -61,7 +61,7 @@ const ProductDetails = ({ product }) => {
               <p>No key features available.</p>
             )}
           </div>
-          {console.log("product.features.length", product.features.length)}
+          {/* {console.log("product.features.length", product.features.length)} */}
           {/* Features */}
           {product.features.length > 0 && (
             <div className="mt-2">

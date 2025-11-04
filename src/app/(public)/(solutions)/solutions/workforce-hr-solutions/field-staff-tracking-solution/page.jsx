@@ -7,6 +7,10 @@ export const metadata = {
   title: "Field Staff Tracking & Verified Attendance | Mobile GPS Attendance",
   description:
     "Track your field staff in real time with TimeWatch. GPS-based live tracking, task verification with photos, and automated reports for payroll & compliance.",
+  alternates: {
+    canonical:
+      "https://www.timewatchindia.com/solutions/workforce-hr-solutions/field-staff-tracking-solution",
+  },
 };
 
 export default function ConsultingLandingPage() {
@@ -151,27 +155,29 @@ export default function ConsultingLandingPage() {
               </div>
 
               <h2 className="!mt-2">Live Tracking</h2>
-  
 
               <ul>
-                <li><strong>How It Works:</strong>Once an employee logs into the mobile app and grants location
-                permission, their device begins sharing location data with the
-                management dashboard automatically. This happens at set
-                intervals, like every 10 or 25 minutes, ensuring managers
-                receive timely updates on each staff member’s whereabouts
-                throughout the workday.</li>
-                <li><strong>Real-Life Example:</strong>Imagine a logistics company with several delivery drivers
-                responsible for different routes across the city. With live
-                tracking enabled, dispatch managers can view each driver's
-                location on a map at any given moment. If a high-priority
-                delivery request comes in, the manager immediately knows which
-                driver is nearby and can assign the task efficiently. This
-                reduces delays, improves service response, and optimizes
-                delivery routes—ultimately benefiting both company performance
-                and customer satisfaction.</li>
+                <li>
+                  <strong>How It Works:</strong>Once an employee logs into the
+                  mobile app and grants location permission, their device begins
+                  sharing location data with the management dashboard
+                  automatically. This happens at set intervals, like every 10 or
+                  25 minutes, ensuring managers receive timely updates on each
+                  staff member’s whereabouts throughout the workday.
+                </li>
+                <li>
+                  <strong>Real-Life Example:</strong>Imagine a logistics company
+                  with several delivery drivers responsible for different routes
+                  across the city. With live tracking enabled, dispatch managers
+                  can view each driver's location on a map at any given moment.
+                  If a high-priority delivery request comes in, the manager
+                  immediately knows which driver is nearby and can assign the
+                  task efficiently. This reduces delays, improves service
+                  response, and optimizes delivery routes—ultimately benefiting
+                  both company performance and customer satisfaction.
+                </li>
               </ul>
-             
-              
+
               <h2>Key Features and Benefits:</h2>
               <ul>
                 <li>

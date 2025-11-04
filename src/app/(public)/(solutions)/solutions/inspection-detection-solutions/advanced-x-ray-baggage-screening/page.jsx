@@ -7,86 +7,89 @@ export const metadata = {
   title: "X-Ray Baggage Scanner India & UAE | Enhance Security & Efficiency",
   description:
     "Secure high-traffic facilities with TimeWatch’s advanced X-Ray baggage scanners. Deploy AI-enhanced screening at airports, metro stations, stadiums, and more across India and the Gulf.",
+  alternates: {
+    canonical:
+      "https://www.timewatchindia.com/solutions/inspection-detection-solutions/advanced-x-ray-baggage-screening",
+  },
 };
 
 export default function HandHeldMetalDetectorTWHH100() {
-const faqs = [
-  {
-    question: "Can the scanner detect liquids and metallic threats accurately?",
-    answer:
-      "Yes, it automatically flags items like lighters, bottles, knives, and more using AI-enhanced image analysis and alerts.",
-  },
-  {
-    question: "Are the images and logs retrievable?",
-    answer:
-      "Absolutely. Recorded imagery and video logs can be searched by item type or time, and exported for audit or review.",
-  },
-  {
-    question: "Is the scanner suitable for mobile or remote deployment?",
-    answer:
-      "Yes, its software supports remote management, live video feeds, and flexible replay features, making it ideal for both fixed and temporary checkpoints.",
-  },
-  {
-    question: "Is it compliant with international safety norms?",
-    answer:
-      "Yes, it features low X-ray leakage rates (≤0.9 μSv/h), energy-efficient modes, and follows global safety standards.",
-  },
-  {
-    question: "Can it integrate with existing surveillance systems?",
-    answer:
-      "Yes, it supports PoE cameras, on-screen alerts, and seamless interface with security platforms.",
-  },
-];
+  const faqs = [
+    {
+      question:
+        "Can the scanner detect liquids and metallic threats accurately?",
+      answer:
+        "Yes, it automatically flags items like lighters, bottles, knives, and more using AI-enhanced image analysis and alerts.",
+    },
+    {
+      question: "Are the images and logs retrievable?",
+      answer:
+        "Absolutely. Recorded imagery and video logs can be searched by item type or time, and exported for audit or review.",
+    },
+    {
+      question: "Is the scanner suitable for mobile or remote deployment?",
+      answer:
+        "Yes, its software supports remote management, live video feeds, and flexible replay features, making it ideal for both fixed and temporary checkpoints.",
+    },
+    {
+      question: "Is it compliant with international safety norms?",
+      answer:
+        "Yes, it features low X-ray leakage rates (≤0.9 μSv/h), energy-efficient modes, and follows global safety standards.",
+    },
+    {
+      question: "Can it integrate with existing surveillance systems?",
+      answer:
+        "Yes, it supports PoE cameras, on-screen alerts, and seamless interface with security platforms.",
+    },
+  ];
 
-
-// 🔒 Hidden SEO Schema FAQ (not shown on page)
-const schemaFaq = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Can the scanner detect liquids and metallic threats accurately?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, it automatically flags items like lighters, bottles, knives, and more using AI-enhanced image analysis and alerts.",
+  // 🔒 Hidden SEO Schema FAQ (not shown on page)
+  const schemaFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Can the scanner detect liquids and metallic threats accurately?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, it automatically flags items like lighters, bottles, knives, and more using AI-enhanced image analysis and alerts.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Are the images and logs retrievable?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, recorded imagery and video logs can be searched by item type or time, and exported for audit or review.",
+      {
+        "@type": "Question",
+        name: "Are the images and logs retrievable?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, recorded imagery and video logs can be searched by item type or time, and exported for audit or review.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Is the scanner suitable for mobile or remote deployment?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, its software supports remote management, live video feeds, and replay features, making it ideal for both fixed and temporary checkpoints.",
+      {
+        "@type": "Question",
+        name: "Is the scanner suitable for mobile or remote deployment?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, its software supports remote management, live video feeds, and replay features, making it ideal for both fixed and temporary checkpoints.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Is it compliant with international safety norms?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, it features low X-ray leakage rates, energy-efficient modes, and follows global safety standards.",
+      {
+        "@type": "Question",
+        name: "Is it compliant with international safety norms?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, it features low X-ray leakage rates, energy-efficient modes, and follows global safety standards.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Can it integrate with existing surveillance systems?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, it supports PoE cameras and seamless interface with existing security platforms.",
+      {
+        "@type": "Question",
+        name: "Can it integrate with existing surveillance systems?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, it supports PoE cameras and seamless interface with existing security platforms.",
+        },
       },
-    },
-  ],
-};
-
+    ],
+  };
 
   return (
     <div className="solutions-pages">
@@ -147,20 +150,60 @@ const schemaFaq = {
               </div>
 
               <h2 className="!mt-2">Key Features & Benefits</h2>
-             <ul class="list-disc pl-6 space-y-2">
-  <li><strong>High-Definition X-Ray Imaging with AI Overlays:</strong> Utilizing advanced algorithms, the system enhances images using multiple filters—such as edge, density, and color enhancements—for clear visibility. Dangerous items are automatically flagged with AI overlay boxes that track movement across the image.</li>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>
+                  <strong>
+                    High-Definition X-Ray Imaging with AI Overlays:
+                  </strong>{" "}
+                  Utilizing advanced algorithms, the system enhances images
+                  using multiple filters—such as edge, density, and color
+                  enhancements—for clear visibility. Dangerous items are
+                  automatically flagged with AI overlay boxes that track
+                  movement across the image.
+                </li>
 
-  <li><strong>Enhanced Threat Detection with Smart Alarm System:</strong> The scanner identifies hazardous items like knives, lighters, liquids, and electronics, and triggers alarms via voice, light, and belt stoppage. Each threat is logged and categorized for later review.</li>
+                <li>
+                  <strong>
+                    Enhanced Threat Detection with Smart Alarm System:
+                  </strong>{" "}
+                  The scanner identifies hazardous items like knives, lighters,
+                  liquids, and electronics, and triggers alarms via voice,
+                  light, and belt stoppage. Each threat is logged and
+                  categorized for later review.
+                </li>
 
-  <li><strong>Dual Camera Monitoring & Robust Storage:</strong> Equipped with entrance and exit cameras plus optional PoE/IP cameras for live surveillance and playback. Enables recording patient-package insights and stores up to millions of images, supported by RAID-based backup.</li>
+                <li>
+                  <strong>Dual Camera Monitoring & Robust Storage:</strong>{" "}
+                  Equipped with entrance and exit cameras plus optional PoE/IP
+                  cameras for live surveillance and playback. Enables recording
+                  patient-package insights and stores up to millions of images,
+                  supported by RAID-based backup.
+                </li>
 
-  <li><strong>Flexible Display Modes & Image Manipulation:</strong> Operates in security or surveillance modes. Supports image enhancements such as inversion, pseudo-color, organic stripping, and high-energy contrast—all to improve object visibility and accuracy.</li>
+                <li>
+                  <strong>Flexible Display Modes & Image Manipulation:</strong>{" "}
+                  Operates in security or surveillance modes. Supports image
+                  enhancements such as inversion, pseudo-color, organic
+                  stripping, and high-energy contrast—all to improve object
+                  visibility and accuracy.
+                </li>
 
-  <li><strong>User-Friendly Interface & Reliable Diagnostics:</strong> Operates on embedded Linux with intuitive GUIs and web access. Includes self-diagnostics, error logs, user management, and seamless remote updates.</li>
+                <li>
+                  <strong>
+                    User-Friendly Interface & Reliable Diagnostics:
+                  </strong>{" "}
+                  Operates on embedded Linux with intuitive GUIs and web access.
+                  Includes self-diagnostics, error logs, user management, and
+                  seamless remote updates.
+                </li>
 
-  <li><strong>Comprehensive Scene Applications:</strong> Ideal for high-security or high-volume environments including airports, metro stations, government buildings, large event venues, and logistics hubs.</li>
-</ul>
-
+                <li>
+                  <strong>Comprehensive Scene Applications:</strong> Ideal for
+                  high-security or high-volume environments including airports,
+                  metro stations, government buildings, large event venues, and
+                  logistics hubs.
+                </li>
+              </ul>
 
               <h2>Application Scenarios</h2>
               <ul>
@@ -185,33 +228,28 @@ const schemaFaq = {
                   container checks
                 </li>
                 <li>
-                 Exhibition Halls & Large Public Spaces, to strengthen security with minimal delay
-
+                  Exhibition Halls & Large Public Spaces, to strengthen security
+                  with minimal delay
                 </li>
               </ul>
 
               <h3>Benefits at a Glance</h3>
               <ul>
+                <li>Improved Security with AI-assisted threat detection</li>
                 <li>
-                  Improved Security with AI-assisted threat detection
-
+                  Fast Throughput, thanks to high-resolution scans and conveyor
+                  automation
                 </li>
                 <li>
-                 Fast Throughput, thanks to high-resolution scans and conveyor automation
-
+                  Operational Efficiency, reducing manual checks and human error
                 </li>
                 <li>
-                 Operational Efficiency, reducing manual checks and human error
-
+                  Comprehensive Oversight, with image logging and multi-camera
+                  recording
                 </li>
                 <li>
-                  Comprehensive Oversight, with image logging and multi-camera recording
-
-                </li>
-                <li>
-                 Scalability, adaptable from airports to large event venues across India and the Gulf
-
-
+                  Scalability, adaptable from airports to large event venues
+                  across India and the Gulf
                 </li>
               </ul>
             </section>

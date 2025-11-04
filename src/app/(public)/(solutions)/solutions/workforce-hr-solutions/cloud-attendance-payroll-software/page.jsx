@@ -7,6 +7,10 @@ export const metadata = {
   title: "Cloud-Based Attendance & Payroll Software in India | TimeWatch",
   description:
     "Simplify attendance & payroll with TimeWatch's free cloud software for up to 250 users. Auto shift, mobile app, field staff tracking & payslip automation.",
+  alternates: {
+    canonical:
+      "https://www.timewatchindia.com/solutions/workforce-hr-solutions/cloud-attendance-payroll-software",
+  },
 };
 
 export default function CloudAttendancePayrollSoftware() {
@@ -148,30 +152,86 @@ export default function CloudAttendancePayrollSoftware() {
               <h2 className="!mt-2">
                 A Complete Solution for Attendance & Payroll
               </h2>
-             <ul class="list-disc pl-6 space-y-2">
-  <li><strong>Smarter Shift & Roster Management:</strong> Managing different shifts can be complex, especially for industries like manufacturing, healthcare, hospitality, and 24/7 operations. Our system simplifies this process with automated shift detection, instantly recognizing an employee’s clock-in time and mapping them to the correct schedule. For situations requiring manual adjustments, HR professionals can assign shifts directly in the system. It even supports revolving rosters, ensuring smooth operations for teams working on rotating, staggered, or night shifts.</li>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>
+                  <strong>Smarter Shift & Roster Management:</strong> Managing
+                  different shifts can be complex, especially for industries
+                  like manufacturing, healthcare, hospitality, and 24/7
+                  operations. Our system simplifies this process with automated
+                  shift detection, instantly recognizing an employee’s clock-in
+                  time and mapping them to the correct schedule. For situations
+                  requiring manual adjustments, HR professionals can assign
+                  shifts directly in the system. It even supports revolving
+                  rosters, ensuring smooth operations for teams working on
+                  rotating, staggered, or night shifts.
+                </li>
 
-  <li><strong>Intelligent Leave Management:</strong> Our platform allows you to define and manage multiple leave types — from sick and earned leaves to maternity and paternity — all aligned with your company’s HR policy. Leave records sync automatically with attendance logs, eliminating data mismatches. Employees and managers can view leave balances, track requests, and manage approvals through a clean, intuitive dashboard, creating a transparent and conflict-free HR environment.</li>
+                <li>
+                  <strong>Intelligent Leave Management:</strong> Our platform
+                  allows you to define and manage multiple leave types — from
+                  sick and earned leaves to maternity and paternity — all
+                  aligned with your company’s HR policy. Leave records sync
+                  automatically with attendance logs, eliminating data
+                  mismatches. Employees and managers can view leave balances,
+                  track requests, and manage approvals through a clean,
+                  intuitive dashboard, creating a transparent and conflict-free
+                  HR environment.
+                </li>
 
-  <li><strong>Mobile Attendance with GPS and Photo Verification:</strong> For businesses with field agents, construction crews, or remote workers, attendance tracking no longer requires physical presence at the office. Through the TimeWatch mobile app, employees can clock in and out from anywhere. The system captures GPS location in real-time and records a photo for verification, ensuring only authorized entries are registered. This is ideal for sales teams, traveling technicians, and distributed teams working on-site.</li>
+                <li>
+                  <strong>
+                    Mobile Attendance with GPS and Photo Verification:
+                  </strong>{" "}
+                  For businesses with field agents, construction crews, or
+                  remote workers, attendance tracking no longer requires
+                  physical presence at the office. Through the TimeWatch mobile
+                  app, employees can clock in and out from anywhere. The system
+                  captures GPS location in real-time and records a photo for
+                  verification, ensuring only authorized entries are registered.
+                  This is ideal for sales teams, traveling technicians, and
+                  distributed teams working on-site.
+                </li>
 
-  <li><strong>Handling Exceptional Attendance Cases:</strong> Real-world operations often face missed punches or technical disruptions. TimeWatch addresses this with an admin-supervised manual punch feature, allowing HR or supervisors to record attendance in exceptional cases. These entries are stored with a full audit trail for accountability, and rules can be set for strict approval workflows.</li>
+                <li>
+                  <strong>Handling Exceptional Attendance Cases:</strong>{" "}
+                  Real-world operations often face missed punches or technical
+                  disruptions. TimeWatch addresses this with an admin-supervised
+                  manual punch feature, allowing HR or supervisors to record
+                  attendance in exceptional cases. These entries are stored with
+                  a full audit trail for accountability, and rules can be set
+                  for strict approval workflows.
+                </li>
 
-  <li><strong>Real-Time Reporting & Insights:</strong> With TimeWatch, managers no longer have to wait for end-of-month reconciliations. Detailed attendance reports are generated instantly and can be filtered by location, department, shift, or employee groups. Data can be exported in Excel or PDF format with a single click, and our cloud hosting ensures reports are accessible 24/7, keeping organizations audit-ready at all times.</li>
+                <li>
+                  <strong>Real-Time Reporting & Insights:</strong> With
+                  TimeWatch, managers no longer have to wait for end-of-month
+                  reconciliations. Detailed attendance reports are generated
+                  instantly and can be filtered by location, department, shift,
+                  or employee groups. Data can be exported in Excel or PDF
+                  format with a single click, and our cloud hosting ensures
+                  reports are accessible 24/7, keeping organizations audit-ready
+                  at all times.
+                </li>
 
-  <li><strong>Secure Role-Based Access Control:</strong> Different roles require different levels of access. TimeWatch provides a multi-level permission system for HR staff, department managers, team leaders, and employees, ensuring confidentiality of sensitive salary and personal data while allowing smooth collaboration.</li>
+                <li>
+                  <strong>Secure Role-Based Access Control:</strong> Different
+                  roles require different levels of access. TimeWatch provides a
+                  multi-level permission system for HR staff, department
+                  managers, team leaders, and employees, ensuring
+                  confidentiality of sensitive salary and personal data while
+                  allowing smooth collaboration.
+                </li>
 
-  <li><strong>Seamless Biometric Device Integration:</strong> Whether your organization uses face recognition, RFID cards, fingerprint scanners, or palm readers, our platform integrates effortlessly with TimeWatch biometric devices. Data syncs instantly with the cloud, removing any risk of loss or duplication, even in environments with fluctuating connectivity.</li>
-</ul>
-
-
-
-            
-            
-            
-             
-             
-     
+                <li>
+                  <strong>Seamless Biometric Device Integration:</strong>{" "}
+                  Whether your organization uses face recognition, RFID cards,
+                  fingerprint scanners, or palm readers, our platform integrates
+                  effortlessly with TimeWatch biometric devices. Data syncs
+                  instantly with the cloud, removing any risk of loss or
+                  duplication, even in environments with fluctuating
+                  connectivity.
+                </li>
+              </ul>
 
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mt-5 mb-2">
                 Payroll Management That’s Accurate and Compliant

@@ -6,86 +6,88 @@ import Head from "next/head";
 export const metadata = {
   title: "TimeScan Vehicle & Cargo Inspection System | TimeWatch India",
   description: "TimeScan Vehicle & Cargo Inspection System | TimeWatch India",
+  alternates: {
+    canonical:
+      "https://www.timewatchindia.com/solutions/security-screening-solutions/timescan-cargo-vehicle-inspection-system",
+  },
 };
 
 export default function ExplosiveNarcoticsDetector() {
-const faqs = [
-  {
-    question: "Is TimeScan safe for drivers and passengers?",
-    answer:
-      "Yes, the driver and passengers exit the vehicle during scanning, ensuring zero radiation exposure.",
-  },
-  {
-    question: "What type of vehicles can TimeScan inspect?",
-    answer:
-      "Cars, buses, vans, and cargo box vehicles can all be scanned effectively.",
-  },
-  {
-    question: "Can TimeScan detect drugs or explosives?",
-    answer:
-      "Yes, its dual-energy imaging technology helps identify organic, inorganic, and metallic substances, including explosives and narcotics.",
-  },
-  {
-    question: "Can the system integrate with license plate recognition?",
-    answer:
-      "Yes, TimeScan supports ALPR integration for automatic vehicle identification.",
-  },
-  {
-    question: "Is it suitable for temporary event sites?",
-    answer:
-      "Yes, its small footprint and mobile design make it easy to deploy at stadiums, fairs, and temporary checkpoints.",
-  },
-];
+  const faqs = [
+    {
+      question: "Is TimeScan safe for drivers and passengers?",
+      answer:
+        "Yes, the driver and passengers exit the vehicle during scanning, ensuring zero radiation exposure.",
+    },
+    {
+      question: "What type of vehicles can TimeScan inspect?",
+      answer:
+        "Cars, buses, vans, and cargo box vehicles can all be scanned effectively.",
+    },
+    {
+      question: "Can TimeScan detect drugs or explosives?",
+      answer:
+        "Yes, its dual-energy imaging technology helps identify organic, inorganic, and metallic substances, including explosives and narcotics.",
+    },
+    {
+      question: "Can the system integrate with license plate recognition?",
+      answer:
+        "Yes, TimeScan supports ALPR integration for automatic vehicle identification.",
+    },
+    {
+      question: "Is it suitable for temporary event sites?",
+      answer:
+        "Yes, its small footprint and mobile design make it easy to deploy at stadiums, fairs, and temporary checkpoints.",
+    },
+  ];
 
-
-// 🔒 Hidden SEO Schema FAQ (JS object)
-const schemaFaq = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is TimeScan safe for drivers and passengers?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, the driver and passengers exit the vehicle during scanning, ensuring zero radiation exposure.",
+  // 🔒 Hidden SEO Schema FAQ (JS object)
+  const schemaFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Is TimeScan safe for drivers and passengers?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, the driver and passengers exit the vehicle during scanning, ensuring zero radiation exposure.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "What type of vehicles can TimeScan inspect?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Cars, buses, vans, and cargo box vehicles can all be scanned effectively.",
+      {
+        "@type": "Question",
+        name: "What type of vehicles can TimeScan inspect?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Cars, buses, vans, and cargo box vehicles can all be scanned effectively.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Can TimeScan detect drugs or explosives?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, its dual-energy imaging technology helps identify organic, inorganic, and metallic substances, including explosives and narcotics.",
+      {
+        "@type": "Question",
+        name: "Can TimeScan detect drugs or explosives?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, its dual-energy imaging technology helps identify organic, inorganic, and metallic substances, including explosives and narcotics.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Can the system integrate with license plate recognition?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, TimeScan supports ALPR integration for automatic vehicle identification.",
+      {
+        "@type": "Question",
+        name: "Can the system integrate with license plate recognition?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, TimeScan supports ALPR integration for automatic vehicle identification.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Is it suitable for temporary event sites?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, its small footprint and mobile design make it easy to deploy at stadiums, fairs, and temporary checkpoints.",
+      {
+        "@type": "Question",
+        name: "Is it suitable for temporary event sites?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, its small footprint and mobile design make it easy to deploy at stadiums, fairs, and temporary checkpoints.",
+        },
       },
-    },
-  ],
-};
-
+    ],
+  };
 
   return (
     <div className="solutions-pages">

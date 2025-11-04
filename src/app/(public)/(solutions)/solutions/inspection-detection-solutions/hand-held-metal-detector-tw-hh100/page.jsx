@@ -7,85 +7,89 @@ export const metadata = {
   title: "Hand Held Metal Detector TW-HH100 | TimeWatch India",
   description:
     "Buy TimeWatch TW-HH100 Hand Held Metal Detector – portable, lightweight, and accurate device for airports, metros, stadiums & corporate offices across India & GCC.",
+  alternates: {
+    canonical:
+      "https://www.timewatchindia.com/solutions/inspection-detection-solutions/hand-held-metal-detector-tw-hh100",
+  },
 };
 
 export default function HandHeldMetalDetectorTWHH100() {
-const faqs = [
-  {
-    question: "What can the TW-HH100 detect?",
-    answer:
-      "It can detect metallic weapons, knives, wires, firearms, and other contraband items hidden on individuals or in bags.",
-  },
-  {
-    question: "Is it suitable for high-traffic environments like metros or stadiums?",
-    answer:
-      "Yes, the TW-HH100 is built for continuous use in high-crowd environments without compromising accuracy or speed.",
-  },
-  {
-    question: "Can it work in silent mode?",
-    answer:
-      "Yes, it has both sound and vibration alarms, allowing discreet detection in sensitive locations like embassies and courts.",
-  },
-  {
-    question: "How long does the battery last?",
-    answer:
-      "It provides up to 40 hours of operation on a single charge, ideal for long-hour security shifts.",
-  },
-  {
-    question: "Where is it commonly used?",
-    answer:
-      "Airports, metros, corporate offices, government facilities, schools, malls, stadiums, and event venues.",
-  },
-];
+  const faqs = [
+    {
+      question: "What can the TW-HH100 detect?",
+      answer:
+        "It can detect metallic weapons, knives, wires, firearms, and other contraband items hidden on individuals or in bags.",
+    },
+    {
+      question:
+        "Is it suitable for high-traffic environments like metros or stadiums?",
+      answer:
+        "Yes, the TW-HH100 is built for continuous use in high-crowd environments without compromising accuracy or speed.",
+    },
+    {
+      question: "Can it work in silent mode?",
+      answer:
+        "Yes, it has both sound and vibration alarms, allowing discreet detection in sensitive locations like embassies and courts.",
+    },
+    {
+      question: "How long does the battery last?",
+      answer:
+        "It provides up to 40 hours of operation on a single charge, ideal for long-hour security shifts.",
+    },
+    {
+      question: "Where is it commonly used?",
+      answer:
+        "Airports, metros, corporate offices, government facilities, schools, malls, stadiums, and event venues.",
+    },
+  ];
 
-
-// 🔒 Hidden SEO Schema FAQ (not shown on page)
-const schemaFaq = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What can the TW-HH100 detect?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The TW-HH100 Hand Held Metal Detector can detect metallic weapons, knives, wires, firearms, and other contraband items hidden on individuals or in bags.",
+  // 🔒 Hidden SEO Schema FAQ (not shown on page)
+  const schemaFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What can the TW-HH100 detect?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The TW-HH100 Hand Held Metal Detector can detect metallic weapons, knives, wires, firearms, and other contraband items hidden on individuals or in bags.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Is the TW-HH100 suitable for high-traffic environments like metros or stadiums?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, the TW-HH100 is built for continuous use in high-crowd environments such as metro stations, airports, and stadiums without compromising accuracy or speed.",
+      {
+        "@type": "Question",
+        name: "Is the TW-HH100 suitable for high-traffic environments like metros or stadiums?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, the TW-HH100 is built for continuous use in high-crowd environments such as metro stations, airports, and stadiums without compromising accuracy or speed.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Can the TW-HH100 work in silent mode?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, the TW-HH100 offers both sound and vibration alarms, allowing discreet detection in sensitive locations such as embassies, courts, and government offices.",
+      {
+        "@type": "Question",
+        name: "Can the TW-HH100 work in silent mode?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, the TW-HH100 offers both sound and vibration alarms, allowing discreet detection in sensitive locations such as embassies, courts, and government offices.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "How long does the TW-HH100 battery last?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The TW-HH100 provides up to 40 hours of continuous operation on a single charge, making it ideal for long security shifts.",
+      {
+        "@type": "Question",
+        name: "How long does the TW-HH100 battery last?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The TW-HH100 provides up to 40 hours of continuous operation on a single charge, making it ideal for long security shifts.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Where is the TW-HH100 commonly used?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The TW-HH100 is widely used in airports, metro and railway stations, stadiums, schools, shopping malls, corporate offices, and event venues across India and the Gulf region.",
+      {
+        "@type": "Question",
+        name: "Where is the TW-HH100 commonly used?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The TW-HH100 is widely used in airports, metro and railway stations, stadiums, schools, shopping malls, corporate offices, and event venues across India and the Gulf region.",
+        },
       },
-    },
-  ],
-};
+    ],
+  };
 
   return (
     <div className="solutions-pages">
@@ -147,7 +151,6 @@ const schemaFaq = {
               <h2 className="!mt-2">
                 Hand Held Metal Detector – TW-HH100 | TimeWatch India
               </h2>
-             
 
               <p className="mb-4">
                 The <strong>TW-HH100 Hand Held Metal Detector</strong> is a
@@ -199,7 +202,6 @@ const schemaFaq = {
                 </li>
               </ul>
 
-            
               <h2>Real-World Applications</h2>
               <ul>
                 <li>
@@ -242,13 +244,19 @@ const schemaFaq = {
                   threats without causing delays.
                 </li>
                 <li>
-                Trusted by <strong>leading airports, metro authorities, and corporates</strong> across India & GCC.
+                  Trusted by{" "}
+                  <strong>
+                    leading airports, metro authorities, and corporates
+                  </strong>{" "}
+                  across India & GCC.
                 </li>
                 <li>
-                  Designed for both <strong>indoor and outdoor security operations</strong>.
+                  Designed for both{" "}
+                  <strong>indoor and outdoor security operations</strong>.
                 </li>
                 <li>
-                 Backed by <strong>TimeWatch’s service network</strong> for reliable after-sales support.
+                  Backed by <strong>TimeWatch’s service network</strong> for
+                  reliable after-sales support.
                 </li>
               </ul>
             </section>

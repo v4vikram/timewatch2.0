@@ -7,6 +7,10 @@ export const metadata = {
   title: "Crowd Management Solutions  Turnstile Gates & Flap Barriers",
   description:
     "Ensure safe & efficient crowd flow with TimeWatch’s Turnstile Gates & Flap Barriers. Perfect for metros, railways, airports, schools, stadiums & events.",
+  alternates: {
+    canonical:
+      "https://www.timewatchindia.com/solutions/visitor-access-management/crowd-management-solutions-turnstile-gates-flap-barriers",
+  },
 };
 
 export default function CrowdManagementSolutionsTurnstileGatesFlapBarriers() {

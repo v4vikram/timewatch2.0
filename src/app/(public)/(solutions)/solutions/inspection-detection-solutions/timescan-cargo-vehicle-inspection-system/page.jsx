@@ -7,86 +7,88 @@ export const metadata = {
   title: "TimeScan Vehicle & Cargo Inspection System | TimeWatch India",
   description:
     "nhance vehicle security with TimeScan cargo & car inspection system. Dual-energy X-ray scanning, high penetration, ALPR integration. Trusted across India & UAE.",
+  alternates: {
+    canonical:
+      "https://www.timewatchindia.com/solutions/inspection-detection-solutions/timescan-cargo-vehicle-inspection-system",
+  },
 };
 
 export default function WalkThroughMetalDetectorTWND800() {
- const faqs = [
-  {
-    question: "Is TimeScan safe for drivers and passengers?",
-    answer:
-      "Yes, the driver and passengers exit the vehicle during scanning, ensuring zero radiation exposure.",
-  },
-  {
-    question: "What type of vehicles can TimeScan inspect?",
-    answer:
-      "Cars, buses, vans, and cargo box vehicles can all be scanned effectively.",
-  },
-  {
-    question: "Can TimeScan detect drugs or explosives?",
-    answer:
-      "Yes, its dual-energy imaging technology helps identify organic, inorganic, and metallic substances, including explosives and narcotics.",
-  },
-  {
-    question: "Can the system integrate with license plate recognition?",
-    answer:
-      "Yes, TimeScan supports ALPR integration for automatic vehicle identification.",
-  },
-  {
-    question: "Is it suitable for temporary event sites?",
-    answer:
-      "Yes, its small footprint and mobile design make it easy to deploy at stadiums, fairs, and temporary checkpoints.",
-  },
-];
+  const faqs = [
+    {
+      question: "Is TimeScan safe for drivers and passengers?",
+      answer:
+        "Yes, the driver and passengers exit the vehicle during scanning, ensuring zero radiation exposure.",
+    },
+    {
+      question: "What type of vehicles can TimeScan inspect?",
+      answer:
+        "Cars, buses, vans, and cargo box vehicles can all be scanned effectively.",
+    },
+    {
+      question: "Can TimeScan detect drugs or explosives?",
+      answer:
+        "Yes, its dual-energy imaging technology helps identify organic, inorganic, and metallic substances, including explosives and narcotics.",
+    },
+    {
+      question: "Can the system integrate with license plate recognition?",
+      answer:
+        "Yes, TimeScan supports ALPR integration for automatic vehicle identification.",
+    },
+    {
+      question: "Is it suitable for temporary event sites?",
+      answer:
+        "Yes, its small footprint and mobile design make it easy to deploy at stadiums, fairs, and temporary checkpoints.",
+    },
+  ];
 
-
-// 🔒 Hidden SEO Schema FAQ (not shown on page)
-const schemaFaq = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Is TimeScan safe for drivers and passengers?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, the driver and passengers exit the vehicle during scanning, ensuring zero radiation exposure. TimeScan is fully compliant with international safety standards.",
+  // 🔒 Hidden SEO Schema FAQ (not shown on page)
+  const schemaFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Is TimeScan safe for drivers and passengers?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, the driver and passengers exit the vehicle during scanning, ensuring zero radiation exposure. TimeScan is fully compliant with international safety standards.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "What type of vehicles can TimeScan inspect?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "TimeScan can scan a wide range of vehicles, including cars, vans, buses, and cargo trucks, making it suitable for airports, customs, and high-security sites.",
+      {
+        "@type": "Question",
+        name: "What type of vehicles can TimeScan inspect?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "TimeScan can scan a wide range of vehicles, including cars, vans, buses, and cargo trucks, making it suitable for airports, customs, and high-security sites.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Can TimeScan detect drugs or explosives?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, TimeScan uses dual-energy X-ray imaging technology to differentiate organic, inorganic, and metallic substances, allowing it to detect contraband, drugs, and explosives.",
+      {
+        "@type": "Question",
+        name: "Can TimeScan detect drugs or explosives?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, TimeScan uses dual-energy X-ray imaging technology to differentiate organic, inorganic, and metallic substances, allowing it to detect contraband, drugs, and explosives.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Can the system integrate with license plate recognition?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, TimeScan supports Automatic License Plate Recognition (ALPR) integration to link vehicles with scanning records for enhanced security management.",
+      {
+        "@type": "Question",
+        name: "Can the system integrate with license plate recognition?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, TimeScan supports Automatic License Plate Recognition (ALPR) integration to link vehicles with scanning records for enhanced security management.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Is TimeScan suitable for temporary event sites?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, thanks to its compact design and mobile scanning system, TimeScan can be deployed at stadiums, exhibitions, and temporary event checkpoints without requiring heavy construction.",
+      {
+        "@type": "Question",
+        name: "Is TimeScan suitable for temporary event sites?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, thanks to its compact design and mobile scanning system, TimeScan can be deployed at stadiums, exhibitions, and temporary event checkpoints without requiring heavy construction.",
+        },
       },
-    },
-  ],
-};
-
+    ],
+  };
 
   return (
     <div className="solutions-pages">
@@ -259,12 +261,20 @@ const schemaFaq = {
 
               <h2>Why Choose TimeWatch TimeScan?</h2>
 
-             <ul>
-  <li>Trusted by organizations across Delhi, Mumbai, Bangalore, Chennai, Kolkata, Hyderabad, and Ahmedabad.</li>
-  <li>Deployed at critical sites in the UAE, Qatar, Saudi Arabia, and Africa.</li>
-  <li>24x7 support and nationwide presence for hassle-free operations.</li>
-</ul>
-
+              <ul>
+                <li>
+                  Trusted by organizations across Delhi, Mumbai, Bangalore,
+                  Chennai, Kolkata, Hyderabad, and Ahmedabad.
+                </li>
+                <li>
+                  Deployed at critical sites in the UAE, Qatar, Saudi Arabia,
+                  and Africa.
+                </li>
+                <li>
+                  24x7 support and nationwide presence for hassle-free
+                  operations.
+                </li>
+              </ul>
             </section>
 
             {/* FAQ Section */}

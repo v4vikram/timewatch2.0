@@ -15,6 +15,8 @@ import {
   Users
 } from 'lucide-react';
 
+
+
 const FAQPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState({});

@@ -7,6 +7,10 @@ export const metadata = {
   title: "Geo-Fencing & Mobile Punch Attendance | Location-Verified HRMS",
   description:
     "Enable secure mobile attendance with TimeWatch’s geo-fencing solution. Prevent buddy punching, ensure location-based clock-ins, and boost accountability.",
+  alternates: {
+    canonical:
+      "https://www.timewatchindia.com/solutions/workforce-hr-solutions/geo-fencing-mobile-punch",
+  },
 };
 
 export default function GeoFencingMobilePunch() {
@@ -117,13 +121,15 @@ export default function GeoFencingMobilePunch() {
         </div>
 
         <div className="relative z-20 container flex justify-center h-full flex-col xl:pr-[400px] text-white banner">
-          <h1>
-           Geo-Fencing & Mobile Punch Attendance Solution | TimeWatch
-
-          </h1>
+          <h1>Geo-Fencing & Mobile Punch Attendance Solution | TimeWatch</h1>
           <p>
-            Geo-fencing is an advanced technology that utilizes GPS to establish virtual boundaries around designated areas such as offices, worksites, or restricted zones. This ensures that employees can only punch in for attendance when they are physically present within these specified locations. If an employee attempts to mark attendance outside the defined zone, they will receive a notification, preventing unauthorized or false check-ins.
-
+            Geo-fencing is an advanced technology that utilizes GPS to establish
+            virtual boundaries around designated areas such as offices,
+            worksites, or restricted zones. This ensures that employees can only
+            punch in for attendance when they are physically present within
+            these specified locations. If an employee attempts to mark
+            attendance outside the defined zone, they will receive a
+            notification, preventing unauthorized or false check-ins.
           </p>
         </div>
       </section>
@@ -350,7 +356,10 @@ export default function GeoFencingMobilePunch() {
             </li>
           </ul>
 
-          <h2>Geofencing technology has several long-term effects on workforce engagement and efficiency:</h2>
+          <h2>
+            Geofencing technology has several long-term effects on workforce
+            engagement and efficiency:
+          </h2>
           <ul className="!space-y-4 !mt-2">
             <li>
               <strong>Enhanced Engagement:</strong> Knowing their attendance and

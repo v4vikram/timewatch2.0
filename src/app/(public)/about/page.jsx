@@ -23,6 +23,9 @@ export const metadata = {
     "About TimeWatch | Smart Access Control & Biometric Systems in India & GCC",
   description:
     "Discover TimeWatch | a leader in Time & Attendance, Access Control, and Security Automation. Serving businesses across India and the Gulf with AI-powered solutions.",
+     alternates: {
+    canonical: "https://www.timewatchindia.com/about",
+  },
 };
 const faqSchema = {
   "@context": "https://schema.org",

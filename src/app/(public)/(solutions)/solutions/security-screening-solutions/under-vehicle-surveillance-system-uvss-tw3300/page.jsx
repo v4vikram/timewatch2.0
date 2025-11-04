@@ -7,85 +7,89 @@ export const metadata = {
   title: "Under Vehicle Surveillance System (UVSS) in India | TimeWatch TW3300",
   description:
     "Secure your premises with TW3300 UVSS by TimeWatch. High-resolution under-vehicle scanning, ALPR integration, and real-time monitoring for airports, metro, government buildings, and events.",
+  alternates: {
+    canonical:
+      "https://www.timewatchindia.com/solutions/security-screening-solutions/under-vehicle-surveillance-system-uvss-tw3300",
+  },
 };
 
 export default function UnderVehicleSurveillanceSystemUvssTw3300() {
-const faqs = [
-  {
-    question: "What is an Under Vehicle Surveillance System (UVSS)?",
-    answer:
-      "A UVSS is a security solution that scans and captures images of a vehicle’s underside to detect threats, contraband, or illegal modifications.",
-  },
-  {
-    question: "Where can TW3300 UVSS be used?",
-    answer:
-      "It is ideal for government buildings, airports, metro stations, stadiums, corporate campuses, customs, and event venues.",
-  },
-  {
-    question: "How does TW3300 improve security compared to manual inspection?",
-    answer:
-      "TW3300 delivers high-resolution, real-time imaging that is faster, more accurate, and more reliable than traditional inspection mirrors.",
-  },
-  {
-    question: "Does TW3300 work in outdoor conditions?",
-    answer:
-      "Yes, the IP68-rated weatherproof design ensures it works in rain, dust, fog, and extreme Indian climates.",
-  },
-  {
-    question: "Can TW3300 be integrated with license plate recognition?",
-    answer:
-      "Yes, it supports optional ALPR integration for automated vehicle identification.",
-  },
-];
+  const faqs = [
+    {
+      question: "What is an Under Vehicle Surveillance System (UVSS)?",
+      answer:
+        "A UVSS is a security solution that scans and captures images of a vehicle’s underside to detect threats, contraband, or illegal modifications.",
+    },
+    {
+      question: "Where can TW3300 UVSS be used?",
+      answer:
+        "It is ideal for government buildings, airports, metro stations, stadiums, corporate campuses, customs, and event venues.",
+    },
+    {
+      question:
+        "How does TW3300 improve security compared to manual inspection?",
+      answer:
+        "TW3300 delivers high-resolution, real-time imaging that is faster, more accurate, and more reliable than traditional inspection mirrors.",
+    },
+    {
+      question: "Does TW3300 work in outdoor conditions?",
+      answer:
+        "Yes, the IP68-rated weatherproof design ensures it works in rain, dust, fog, and extreme Indian climates.",
+    },
+    {
+      question: "Can TW3300 be integrated with license plate recognition?",
+      answer:
+        "Yes, it supports optional ALPR integration for automated vehicle identification.",
+    },
+  ];
 
-
-// 🔒 Hidden SEO Schema FAQ (JS object)
-const schemaFaq = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is an Under Vehicle Surveillance System (UVSS)?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "An Under Vehicle Surveillance System (UVSS) is a security solution that scans and captures high-resolution images of a vehicle’s underside to detect threats, contraband, or illegal modifications. The TimeWatch TW3300 UVSS provides real-time imaging with advanced CCD technology for faster and more accurate inspections.",
+  // 🔒 Hidden SEO Schema FAQ (JS object)
+  const schemaFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is an Under Vehicle Surveillance System (UVSS)?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "An Under Vehicle Surveillance System (UVSS) is a security solution that scans and captures high-resolution images of a vehicle’s underside to detect threats, contraband, or illegal modifications. The TimeWatch TW3300 UVSS provides real-time imaging with advanced CCD technology for faster and more accurate inspections.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Where can TW3300 UVSS be used?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The TW3300 UVSS is ideal for government buildings, airports, metro and railway stations, stadiums, customs checkpoints, corporate campuses, and large event venues across India, the Middle East, and global markets.",
+      {
+        "@type": "Question",
+        name: "Where can TW3300 UVSS be used?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The TW3300 UVSS is ideal for government buildings, airports, metro and railway stations, stadiums, customs checkpoints, corporate campuses, and large event venues across India, the Middle East, and global markets.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "How does TW3300 improve security compared to manual inspection?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "TW3300 delivers high-resolution, real-time imaging that is faster, more accurate, and more reliable than manual inspection mirrors. It helps security personnel detect hidden threats, contraband, or modifications without slowing down vehicle entry.",
+      {
+        "@type": "Question",
+        name: "How does TW3300 improve security compared to manual inspection?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "TW3300 delivers high-resolution, real-time imaging that is faster, more accurate, and more reliable than manual inspection mirrors. It helps security personnel detect hidden threats, contraband, or modifications without slowing down vehicle entry.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Does TW3300 work in outdoor conditions?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. TW3300 is IP68-rated, weatherproof, and dustproof, making it suitable for harsh outdoor conditions including rain, fog, and extreme temperatures often seen across India and the Middle East.",
+      {
+        "@type": "Question",
+        name: "Does TW3300 work in outdoor conditions?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. TW3300 is IP68-rated, weatherproof, and dustproof, making it suitable for harsh outdoor conditions including rain, fog, and extreme temperatures often seen across India and the Middle East.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Can TW3300 be integrated with license plate recognition?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, the TW3300 supports optional ALPR (Automatic License Plate Recognition) integration, enabling seamless vehicle identity verification and storage of inspection records for audits or compliance.",
+      {
+        "@type": "Question",
+        name: "Can TW3300 be integrated with license plate recognition?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, the TW3300 supports optional ALPR (Automatic License Plate Recognition) integration, enabling seamless vehicle identity verification and storage of inspection records for audits or compliance.",
+        },
       },
-    },
-  ],
-};
+    ],
+  };
 
   return (
     <div className="solutions-pages">
@@ -120,9 +124,8 @@ const schemaFaq = {
               Under Vehicle Surveillance System – TW3300
             </h1>
             <p className="text-xl text-white mb-8 hidden md:block">
-              The{" "}
-              {/* <strong> */}
-                TimeWatch TW3300 Under Vehicle Surveillance System (UVSS)
+              The {/* <strong> */}
+              TimeWatch TW3300 Under Vehicle Surveillance System (UVSS)
               {/* </strong>{" "} */}
               is designed for high-security premises that require reliable and
               rapid under-vehicle inspection. Unlike traditional handheld

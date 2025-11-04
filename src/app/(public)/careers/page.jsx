@@ -37,6 +37,8 @@ const validationSchema = Yup.object({
   resume: Yup.mixed().required("Resume is required"),
 });
 
+
+
 const CareerPage = () => {
   const [isSuccess, setIsSuccess] = useState(false);
 

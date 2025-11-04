@@ -1,8 +1,5 @@
 import BannerSwiper from "@/components/BannerSwiper";
-import Counter from "@/components/Counter";
-import ProductCard from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
-import axiosInstance from "@/lib/axiosInstance";
 import Image from "next/image";
 import {
   Clock,
@@ -43,7 +40,10 @@ export const dynamic = "auto"; // optional; ISR will still work
 
 export const metadata = {
   title: "TimeWatch | Home",
-  description: "Explore the latest featured security products.",
+  description: "TimeWatch Infocom provides trusted baggage scanners, time attendance, and access control systems across India—delivering smart, secure tech solutions.",
+  alternates: {
+    canonical: "https://www.timewatchindia.com",
+  },
 };
 
 // ISR: Regenerate every 1 hour (3600 seconds)

@@ -22,8 +22,23 @@ import {
   Train,
   Building2,
   Factory,
+  Award,
 } from "lucide-react";
 import Image from "next/image";
+import WhyChooseUs from "@/components/landing/WhyChooseUs";
+import AccordionItem from "@/components/landing/AccordionItem";
+import HomePageForm from "@/components/HomePageForm";
+
+export const metadata = {
+  title: "TimeWatch | AI-Face-T7HD",
+  description:
+    "Experience the next generation of workforce attendance — portable, powerful, and built for any environment.",
+  alternates: {
+    canonical: "https://www.timewatchindia.com/ai-face-t7hd",
+  },
+};
+
+// Helper component for the FAQ accordion to replicate Bootstrap's collapse/accordion behavior
 
 const AIFaceT7HDLanding = () => {
   const faqSchema = {
@@ -114,6 +129,50 @@ const AIFaceT7HDLanding = () => {
     },
   };
 
+const faqs = [
+  {
+    question: "What is TimeWatch AI-Face-T7HD?",
+    answer:
+      "AI-Face-T7HD is a portable Android-based biometric attendance and access control device by TimeWatch, designed for outdoor or remote work locations.",
+  },
+  {
+    question: "How does the back camera work?",
+    answer:
+      "The 13MP rear camera is used to capture attendance in open or large areas, ensuring accurate identification even in outdoor environments.",
+  },
+  {
+    question: "What are the connectivity options available?",
+    answer:
+      "AI-Face-T7HD supports 4G SIM, Wi-Fi, and GPS connectivity for instant synchronization of attendance and location data.",
+  },
+  {
+    question: "What is the battery capacity?",
+    answer:
+      "The device is powered by a long-lasting 5050mAh battery, offering extended operation time for on-site and field deployments.",
+  },
+  {
+    question: "Is it suitable for outdoor use?",
+    answer:
+      "Yes. AI-Face-T7HD is IP68 rated, making it resistant to water, dust, and shocks — perfect for rugged outdoor environments.",
+  },
+  {
+    question: "What are the available verification modes?",
+    answer:
+      "The device supports multiple authentication methods including Face, NFC, Password, and QR Code verification.",
+  },
+  {
+    question: "Can I export or view attendance data?",
+    answer:
+      "Yes. Attendance data can be viewed and exported instantly through the device interface or cloud platform.",
+  },
+  {
+    question: "Which industries is AI-Face-T7HD ideal for?",
+    answer:
+      "It is ideal for construction sites, airports, metro projects, logistics operations, and security agencies requiring portable attendance tracking.",
+  },
+];
+
+
   return (
     <>
       {/* SEO Schema */}
@@ -185,7 +244,7 @@ const AIFaceT7HDLanding = () => {
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                   <a
-                   href="https://wa.me/919599953921?text=Hello%20TimeWatch%2C%20I'm%20interested%20in%20your%20product%20or%20services.%20Please%20assist%20me!"
+                    href="https://wa.me/919599953921?text=Hello%20TimeWatch%2C%20I'm%20interested%20in%20your%20product%20or%20services.%20Please%20assist%20me!"
                     className="bg-red-300  text-[#6d6f72] font-semibold px-8 py-4 rounded-lg border-2 border-gray-200"
                   >
                     Request a Quote
@@ -451,7 +510,7 @@ const AIFaceT7HDLanding = () => {
               ))}
             </div>
 
-            <div className="mt-12 grid md:grid-cols-3 gap-6">
+            {/* <div className="mt-12 grid md:grid-cols-3 gap-6">
               <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-6 text-center">
                 <CheckCircle className="w-10 h-10 text-primary mx-auto mb-3" />
                 <h4 className="font-semibold text-[#6d6f72] mb-2">
@@ -481,7 +540,7 @@ const AIFaceT7HDLanding = () => {
                   Export attendance reports with one click
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -565,101 +624,57 @@ const AIFaceT7HDLanding = () => {
         {/* Why Choose Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#6d6f72] mb-4">
-                Why Choose TimeWatch AI-Face-T7HD
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                The complete solution for modern workforce management
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { text: "Portable Android Device", icon: Smartphone },
-                { text: "IP68 Rugged Build", icon: Shield },
-                { text: "Dual Camera System", icon: Camera },
-                { text: "4G/Wi-Fi/GPS", icon: Wifi },
-                { text: "Long Battery Life", icon: Battery },
-                { text: "Multi-Authentication", icon: Fingerprint },
-                { text: "Real-Time Cloud Sync", icon: Globe },
-                { text: "Instant Recognition", icon: Zap },
-              ].map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex items-center bg-gradient-to-br from-primary/5 to-[#6d6f72]/5 rounded-xl p-4 hover:shadow-lg transition-all duration-300"
-                >
-                  <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                    <feature.icon className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="font-semibold text-[#6d6f72]">
-                    {feature.text}
-                  </span>
-                </div>
-              ))}
-            </div>
+            <WhyChooseUs />
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#6d6f72] mb-4">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-xl text-gray-600">
-                Everything you need to know about AI-Face-T7HD
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              {faqSchema.mainEntity.map((faq, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
-                >
-                  <h3 className="text-lg font-semibold text-[#6d6f72] mb-3">
-                    {faq.name}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {faq.acceptedAnswer.text}
-                  </p>
-                </div>
-              ))}
-            </div>
+        {/* FAQ SECTION */}
+        <section className="container mx-auto py-12 px-0 sm:px-6 lg:px-8">
+          <h2 className="text-center mb-8 text-3xl lg:text-4xl font-extrabold text-secondary">
+            Frequently Asked Questions
+          </h2>
+          <div className="" id="bio1seFAQ">
+            {faqs.map((item, index) => (
+              <AccordionItem
+                key={index}
+                item={item}
+                index={index}
+                isFirst={index === 0}
+              />
+            ))}
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-primary to-[#b82c30] text-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Towards a World of Trust, Safety & Security
-            </h2>
-            <p className="text-xl mb-10 opacity-90">
-              Experience the future of portable biometric attendance today
-            </p>
-
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <button className="bg-white text-primary hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center">
-                <Phone className="w-5 h-5 mr-2" />
-                Book a Demo
-              </button>
-              <button className="bg-[#6d6f72] hover:bg-[#5a5c5f] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center">
-                <Mail className="w-5 h-5 mr-2" />
-                Contact Sales
-              </button>
+        {/* CONTACT FORM SECTION */}
+        <section
+          className="container mx-auto py-12 px-0 sm:px-6 lg:px-8"
+          id="contact"
+        >
+          <h2 className="text-center mb-8 text-3xl lg:text-4xl font-extrabold text-secondary">
+            Contact Us
+          </h2>
+          <div className="flex flex-col md:flex-row justify-center  mx-auto rounded-xl overflow-hidden shadow-2xl">
+            {/* Contact Form */}
+            <div className="flex-1 p-4 md:p-8 bg-white">
+              <HomePageForm />
             </div>
 
-            <div className="flex flex-wrap justify-center gap-8 text-sm opacity-90">
-              <div className="flex items-center">
-                <Phone className="w-4 h-4 mr-2" />
-                <span>+91 95999 53923</span>
-              </div>
-              <div className="flex items-center">
-                <Mail className="w-4 h-4 mr-2" />
-                <span>sales@timewatchindia.com</span>
+            {/* Contact Info */}
+            <div className="flex-1 p-8 bg-[#d63438] text-white flex flex-col items-center justify-center space-y-6">
+              <h2 className="text-xl md:text-4xl font-bold mb-4">
+                Request a Demo Today
+              </h2>
+              <div className="space-y-3 text-center">
+                <p className="md:text-xl font-semibold">
+                  Call:&nbsp;
+                  <span> +91 95999 53923</span>
+                </p>
+                <p className="md:text-xl font-semibold">
+                  Email:&nbsp;
+                  <span> sales@timewatchindia.com</span>
+                </p>
               </div>
             </div>
           </div>

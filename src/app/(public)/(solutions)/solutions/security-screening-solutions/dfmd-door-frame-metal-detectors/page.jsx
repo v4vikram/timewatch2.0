@@ -8,86 +8,88 @@ export const metadata = {
     "Door Frame Metal Detector in India & UAE | Multi-Zone DFMD by TimeWatch",
   description:
     "Discover TimeWatch Door Frame Metal Detectors with 6, 12, and 24-zone detection. Perfect for airports, metros, stadiums, schools, malls, and corporate offices across India, the UAE, and the GCC.",
+  alternates: {
+    canonical:
+      "https://www.timewatchindia.com/solutions/security-screening-solutions/dfmd-door-frame-metal-detectors",
+  },
 };
 
 export default function DfmdDoorFrameMetalDetectors() {
-const faqs = [
-  {
-    question: "How many DFMD models does TimeWatch offer?",
-    answer:
-      "We provide 6-zone, 12-zone, and 24-zone DFMDs, allowing customers to select the right one based on security and footfall.",
-  },
-  {
-    question: "Are these detectors safe for everyone?",
-    answer:
-      "Yes. They are completely safe for pregnant women, people with pacemakers, and school children, with no harmful radiation.",
-  },
-  {
-    question: "Can sensitivity be adjusted for different places?",
-    answer:
-      "Yes, each zone can be adjusted from 0 to 100 sensitivity levels, which means you can fine-tune detection for different environments like schools, malls, or airports.",
-  },
-  {
-    question: "How long does installation take?",
-    answer:
-      "Most DFMDs can be set up in under 20 minutes, making them easy to deploy even for temporary events.",
-  },
-  {
-    question: "Do they provide entry data for reporting?",
-    answer:
-      "Yes, all models include traffic counters to track the number of people passing through and the number of alarms triggered.",
-  },
-];
+  const faqs = [
+    {
+      question: "How many DFMD models does TimeWatch offer?",
+      answer:
+        "We provide 6-zone, 12-zone, and 24-zone DFMDs, allowing customers to select the right one based on security and footfall.",
+    },
+    {
+      question: "Are these detectors safe for everyone?",
+      answer:
+        "Yes. They are completely safe for pregnant women, people with pacemakers, and school children, with no harmful radiation.",
+    },
+    {
+      question: "Can sensitivity be adjusted for different places?",
+      answer:
+        "Yes, each zone can be adjusted from 0 to 100 sensitivity levels, which means you can fine-tune detection for different environments like schools, malls, or airports.",
+    },
+    {
+      question: "How long does installation take?",
+      answer:
+        "Most DFMDs can be set up in under 20 minutes, making them easy to deploy even for temporary events.",
+    },
+    {
+      question: "Do they provide entry data for reporting?",
+      answer:
+        "Yes, all models include traffic counters to track the number of people passing through and the number of alarms triggered.",
+    },
+  ];
 
-
-// 🔒 Hidden SEO Schema FAQ (not shown on page)
-const schemaFaq = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How many DFMD models does TimeWatch offer?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "TimeWatch offers 6-zone, 12-zone, and 24-zone door frame metal detectors for different environments like schools, malls, airports, and stadiums.",
+  // 🔒 Hidden SEO Schema FAQ (not shown on page)
+  const schemaFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "How many DFMD models does TimeWatch offer?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "TimeWatch offers 6-zone, 12-zone, and 24-zone door frame metal detectors for different environments like schools, malls, airports, and stadiums.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Are these detectors safe for everyone?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, TimeWatch DFMDs are safe for pregnant women, pacemakers, and electronic devices. They use safe detection methods without harmful radiation.",
+      {
+        "@type": "Question",
+        name: "Are these detectors safe for everyone?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, TimeWatch DFMDs are safe for pregnant women, pacemakers, and electronic devices. They use safe detection methods without harmful radiation.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Can sensitivity be adjusted for different places?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, each detection zone can be adjusted from 0 to 100 sensitivity levels, allowing different settings for schools, airports, malls, and high-security areas.",
+      {
+        "@type": "Question",
+        name: "Can sensitivity be adjusted for different places?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, each detection zone can be adjusted from 0 to 100 sensitivity levels, allowing different settings for schools, airports, malls, and high-security areas.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "How long does installation take?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most TimeWatch DFMD models can be assembled and operational in less than 20 minutes.",
+      {
+        "@type": "Question",
+        name: "How long does installation take?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Most TimeWatch DFMD models can be assembled and operational in less than 20 minutes.",
+        },
       },
-    },
-    {
-      "@type": "Question",
-      name: "Do they provide entry data for reporting?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, all TimeWatch DFMDs come with traffic counters that track the number of people passing through and the number of alarms triggered.",
+      {
+        "@type": "Question",
+        name: "Do they provide entry data for reporting?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, all TimeWatch DFMDs come with traffic counters that track the number of people passing through and the number of alarms triggered.",
+        },
       },
-    },
-  ],
-};
-
+    ],
+  };
 
   return (
     <div className="solutions-pages">
@@ -222,37 +224,54 @@ const schemaFaq = {
               </p>
               <h3>(5) Safe for Everyone</h3>
               <p>
-               Our DFMDs are completely safe for pregnant women, people with pacemakers, and electronic devices, making them suitable for hospitals, schools, and universities.
+                Our DFMDs are completely safe for pregnant women, people with
+                pacemakers, and electronic devices, making them suitable for
+                hospitals, schools, and universities.
               </p>
               <h3>(6) Real-World Applications</h3>
               <ul>
-                <li>Airports & Metro Stations (Delhi, Bengaluru, Dubai, Doha): Manage thousands of passengers daily with accurate screening, reducing delays while improving safety.</li>
                 <li>
-                  Stadiums & Sports Arenas (Cricket, Football, Kabaddi): Prevent entry of prohibited items during high-footfall events while ensuring crowd safety.
+                  Airports & Metro Stations (Delhi, Bengaluru, Dubai, Doha):
+                  Manage thousands of passengers daily with accurate screening,
+                  reducing delays while improving safety.
                 </li>
                 <li>
-                  Schools, Colleges & Universities (India’s Tier-1 & Tier-2 cities): Create a safer learning environment by keeping unauthorized objects out.
+                  Stadiums & Sports Arenas (Cricket, Football, Kabaddi): Prevent
+                  entry of prohibited items during high-footfall events while
+                  ensuring crowd safety.
                 </li>
                 <li>
-                  Corporate Offices & IT Parks (Gurgaon, Pune, Hyderabad): Secure restricted zones like server rooms, R&D labs, or HR cabins.
+                  Schools, Colleges & Universities (India’s Tier-1 & Tier-2
+                  cities): Create a safer learning environment by keeping
+                  unauthorized objects out.
                 </li>
                 <li>
-                 Shopping Malls & Public Events: Manage festival rushes, sales, and cultural events without overcrowding or missed security threats.
+                  Corporate Offices & IT Parks (Gurgaon, Pune, Hyderabad):
+                  Secure restricted zones like server rooms, R&D labs, or HR
+                  cabins.
                 </li>
                 <li>
-                Government Buildings & Embassies: Enhance protection with multi-zone screening in highly sensitive facilities
+                  Shopping Malls & Public Events: Manage festival rushes, sales,
+                  and cultural events without overcrowding or missed security
+                  threats.
+                </li>
+                <li>
+                  Government Buildings & Embassies: Enhance protection with
+                  multi-zone screening in highly sensitive facilities
                 </li>
               </ul>
 
-               <h3>(7) Why Choose TimeWatch DFMDs?</h3>
-               <ul>
+              <h3>(7) Why Choose TimeWatch DFMDs?</h3>
+              <ul>
                 <li>Multi-zone models (6, 12, 24) for tailored needs</li>
                 <li>Adjustable sensitivity for accurate results</li>
                 <li>Quick installation and easy operation</li>
                 <li>Real-time counters for audits and planning</li>
-                <li>Trusted across India, UAE, Saudi Arabia, Oman, and Qatar</li>
+                <li>
+                  Trusted across India, UAE, Saudi Arabia, Oman, and Qatar
+                </li>
                 <li>Backed by TimeWatch’s after-sales support and training</li>
-               </ul>
+              </ul>
             </section>
 
             {/* FAQ Section */}

@@ -4,8 +4,48 @@ import ProductDetails from "@/components/ProductDetails";
 import axiosInstance from "@/lib/axiosInstance";
 import { notFound } from "next/navigation";
 
+const BASE_URL = "https://www.timewatchindia.com";
+
+// 🧠 Generate metadata dynamically
+export async function generateMetadata({ params }) {
+  const { cat, subCat, slug } = params;
+
+  try {
+    const res = await axiosInstance.get(`/product/slug/${slug}`);
+    const product = res?.data?.product;
+
+    console.log("product", product)
+
+    if (!product || product?.status === "draft") {
+      return {};
+    }
+
+    return {
+      title: `${product.productName} | TimeWatch`,
+      description:
+        product.description || product.shortDesc || product.productName,
+      alternates: {
+        canonical: `${BASE_URL}/market-place/${cat}/${subCat}/${slug}`,
+      },
+      openGraph: {
+        title: product.productName,
+        description: product.description || product.shortDesc,
+        url: `${BASE_URL}/market-place/${cat}/${subCat}/${slug}`,
+        images: product.productImage
+          ? [{ url: `${BASE_URL}/uploads/${product.productImage}` }]
+          : [],
+      },
+    };
+  } catch (error) {
+    console.error("Error generating metadata:", error.message);
+    return {};
+  }
+}
+
+// 🧩 Product details page
 export default async function ProductDetailsPage({ params }) {
-  const { slug } = await params;
+  // ❌ Don't use await
+  const { slug } = params;
 
   console.log("Fetching product details for slug:", slug);
 
@@ -13,17 +53,17 @@ export default async function ProductDetailsPage({ params }) {
 
   try {
     const res = await axiosInstance.get(`/product/slug/${slug}`, {
-     next: { revalidate: 1 }, // refresh every 10s
+      next: { revalidate: 1 },
     });
     product = res?.data?.product;
-    console.log("singl e product", product);
+    console.log("single product", product);
   } catch (err) {
     console.error("Product fetch error:", err?.response?.status || err.message);
-    return notFound(); // shows Next.js 404 page
+    return notFound();
   }
 
-  if (!product || product?.status == "draft") {
-    return notFound(); // handle case where product is null or undefined
+  if (!product || product?.status === "draft") {
+    return notFound();
   }
 
   return <ProductDetails product={product} />;

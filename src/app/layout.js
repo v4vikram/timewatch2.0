@@ -16,6 +16,9 @@ export const metadata = {
   title: "TimeWatch Infocom | Baggage Scanners, Time Attendance & Access Control Systems",
   description:
     "TimeWatch Infocom provides trusted baggage scanners, time attendance, and access control systems across India—delivering smart, secure tech solutions.",
+    alternates: {
+    canonical: "https://www.timewatchindia.com",
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -1,13 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-// Note: You must ensure these image imports are correctly configured/available in your project
-// import face from "/images/face.png";
-// import palm from "/images/palm.png";
-// import rfid from "/images/RFID-CARD.png";
-// import cloud from "/images/cloud.png";
 import axios from "axios";
 import {
   Building2,
@@ -25,6 +19,7 @@ import {
 import Head from "next/head";
 import ContactForm from "@/components/ContactForm";
 import Link from "next/link";
+import HomePageForm from "@/components/HomePageForm";
 
 // --- Data definitions (unchanged from original) ---
 
@@ -189,21 +184,12 @@ const features = [
   },
   {
     icon: Award,
-    title: "2-Year Warranty & Free Updates",
+    title: "1-Year Warranty & Free Updates",
     description: "Product warranty with ongoing software and AI improvements",
   },
 ];
 
-// --- Tailwind-ready classes and utility functions ---
 
-// Helper function for the gradient text based on original style
-const GradientText = ({ children, className = "" }) => (
-  <span
-    className={`bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-gray-800 ${className}`}
-  >
-    {children}
-  </span>
-);
 
 // Helper component for the FAQ accordion to replicate Bootstrap's collapse/accordion behavior
 const AccordionItem = ({ item, index, isFirst, parentId = "bio1seFAQ" }) => {
@@ -248,38 +234,14 @@ const AccordionItem = ({ item, index, isFirst, parentId = "bio1seFAQ" }) => {
   );
 };
 
-// --- Validation schema (unchanged from original) ---
-const ContactSchema = Yup.object().shape({
-  mobile: Yup.string()
-    .required("Phone number is required")
-    .matches(/^[0-9]{10,15}$/, "Enter a valid phone number"),
-  message: Yup.string().required("Message is required"),
-  name: Yup.string().required("Name is required"),
-  email: Yup.string()
-    .email("Enter a valid email")
-    .required("Email is required"),
-  location: Yup.string().required("Location is required"),
-});
+
 
 // --- Main Component ---
 const BIO1SEPage = () => {
   const [hoveredCard2, setHoveredCard2] = React.useState(null);
   const [hoveredFeature2, setHoveredFeature2] = React.useState(null);
 
-  const handleSubmit = async (values, { resetForm }) => {
-    // console.log("Form Submitted:", values);
-    try {
-      const res = await axios.post(
-        "https://api.mytimewatch.com/api/contact/contact",
-        values
-      );
-      console.log("res", res);
-      resetForm();
-      alert("Thank you! We'll get back to you shortly.");
-    } catch (error) {
-      console.error(error.message);
-    }
-  };
+
 
   return (
     <>
@@ -321,7 +283,7 @@ const BIO1SEPage = () => {
                 </Link>
 
                 <Link
-                  href="https://api.whatsapp.com/send/?phone=919266955776&text=Hi%2C+can+I+get+more+information+about+%20Bio-1SE%20and%20cloud%20software?%3F&type=phone_number&app_absent=0"
+                  href="https://api.whatsapp.com/send/?phone=919599953921&text=Hi%2C+can+I+get+more+information+about+%20Bio-1SE%20and%20cloud%20software?%3F&type=phone_number&app_absent=0"
                   className="border-2 border-sectext-secondary text-secondary px-8 py-4 rounded-xl font-semibold hover:bg-sectext-secondary hover:text-primary transition-all flex items-center justify-center space-x-2"
                 >
                   {/* <Play className="w-5 h-5" /> */}
@@ -576,7 +538,7 @@ const BIO1SEPage = () => {
           <div className="flex flex-col md:flex-row justify-center  mx-auto rounded-xl overflow-hidden shadow-2xl">
             {/* Contact Form */}
             <div className="flex-1 p-4 md:p-8 bg-white">
-              <ContactForm />
+              <HomePageForm />
             </div>
 
             {/* Contact Info */}
