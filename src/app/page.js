@@ -35,6 +35,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import { solutions } from "@/data/menuItems";
+import axiosInstance from "@/lib/axiosInstance";
 
 export const dynamic = "auto"; // optional; ISR will still work
 
