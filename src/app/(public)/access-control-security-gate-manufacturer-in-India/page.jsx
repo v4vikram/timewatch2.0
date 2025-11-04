@@ -178,7 +178,7 @@ const TWLDTS2715Page = () => {
                   with biometric systems.
                 </p>
 
-                <div className="flex flex-wrap gap-4 mb-10">
+                {/* <div className="flex flex-wrap gap-4 mb-10">
                   <div className="flex items-center bg-white rounded-lg px-4 py-2 shadow-sm">
                     <Shield className="w-5 h-5 text-primary mr-2" />
                     <span className="text-sm font-medium">IP68 Rugged</span>
@@ -199,7 +199,7 @@ const TWLDTS2715Page = () => {
                     <Wifi className="w-5 h-5 text-primary mr-2" />
                     <span className="text-sm font-medium">4G/Wi-Fi/GPS</span>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex flex-wrap gap-4">
                   <Link
