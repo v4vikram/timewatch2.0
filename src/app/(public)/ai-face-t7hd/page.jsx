@@ -28,6 +28,7 @@ import Image from "next/image";
 import WhyChooseUs from "@/components/landing/WhyChooseUs";
 import AccordionItem from "@/components/landing/AccordionItem";
 import HomePageForm from "@/components/HomePageForm";
+import Link from "next/link";
 
 export const metadata = {
   title: "TimeWatch | AI-Face-T7HD",
@@ -237,18 +238,20 @@ const faqs = [
 
                 <div className="flex flex-wrap gap-4">
                   <a
-                    href="tel:919599953921"
+                    href="https://storage.googleapis.com/timewatch-dashbord-bucket/uploads/docs/datasheet/ai-face-t7hd-datasheet-ver-2-0-yohwpj.pdf"
+                    target="_blank"
                     className="bg-primary hover:bg-[#b82c30] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
                   >
-                    Enquiry Now
+                    Get a Catalouge
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
-                  <a
-                    href="https://wa.me/919599953921?text=Hello%20TimeWatch%2C%20I'm%20interested%20in%20your%20product%20or%20services.%20Please%20assist%20me!"
+                  <Link
+                  href={"#contact"}
+                  
                     className="bg-red-300  text-[#6d6f72] font-semibold px-8 py-4 rounded-lg border-2 border-gray-200"
                   >
                     Request a Quote
-                  </a>
+                  </Link>
                 </div>
               </div>
 
