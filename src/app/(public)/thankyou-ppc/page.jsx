@@ -32,17 +32,22 @@ export default function ThankYouPage() {
           </p>
           <div className="md:flex gap-x-4 items-center justify-center">
             <Button asChild>
+              <Link href="/" className="mt-3">
+               Back to Home
+              </Link>
+            </Button>
+            {/* <Button asChild>
               <Link href="tel:+919266955776" className="mt-3">
                 Enquiry Now
               </Link>
-            </Button>
-            <Button asChild variant={"secondary"} className={'bg-[#25D366]'}>
+            </Button> */}
+            {/* <Button asChild variant={"secondary"} className={'bg-[#25D366]'}>
               
               <Link href="https://wa.link/h2xnzy" target="_blank" className="mt-3 flex items-center">
               <MessageCircleMore className="w-10 h-10"/>
                 Whatsapp Now
               </Link>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>

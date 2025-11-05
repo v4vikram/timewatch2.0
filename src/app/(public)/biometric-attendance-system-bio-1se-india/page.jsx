@@ -284,7 +284,8 @@ const BIO1SEPage = () => {
                 </Link>
 
                 <Link
-                  href="https://api.whatsapp.com/send/?phone=919599953921&text=Hi%2C+can+I+get+more+information+about+%20Bio-1SE%20and%20cloud%20software?%3F&type=phone_number&app_absent=0"
+                  href="https://wa.link/cex09u"
+                  target="_blank"
                   className="border-2 border-sectext-secondary text-secondary px-8 py-4 rounded-xl font-semibold hover:bg-sectext-secondary hover:text-primary transition-all flex items-center justify-center space-x-2"
                 >
                   {/* <Play className="w-5 h-5" /> */}

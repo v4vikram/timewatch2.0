@@ -426,7 +426,7 @@ const TWLDTS2715Page = () => {
               title="Why Choose TimeWatch?"
               subtitle="Your trusted partner for biometric solutions across India"
               features={featureList}
-              buttonText="Get BIO-1SE Today"
+              buttonText="Enquire Now"
             
               footerText="Join 5,000+ Indian businesses already using TimeWatch solutions"
             />
