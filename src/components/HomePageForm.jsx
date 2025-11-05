@@ -52,8 +52,9 @@ const HomePageForm = ({ col, isRedirect = false, enquiryPage }) => {
         });
         if (isRedirect) {
           router.push(`/thankyou-ppc`);
+        } else {
+          setIsSuccess(true);
         }
-        setIsSuccess(true);
       }
     } catch (error) {
       if (error.response && error.response.data && error.response.data.errors) {
