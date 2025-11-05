@@ -7,6 +7,7 @@ import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import axiosInstance from "@/lib/axiosInstance";
 import EmailSuccessPopup from "./forms/EmailSuccessPopup";
+import { useRouter } from "next/navigation";
 
 const validationSchema = Yup.object({
   name: Yup.string().required("Name is required"),
@@ -21,9 +22,10 @@ const validationSchema = Yup.object({
   message: Yup.string(),
 });
 
-const HomePageForm = ({col}) => {
+const HomePageForm = ({ col, isRedirect = false, enquiryPage }) => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [dial, setDial] = useState("91");
+  const router = useRouter();
 
   const initialValues = {
     name: "",
@@ -48,8 +50,10 @@ const HomePageForm = ({col}) => {
             phone: `+${dial} `,
           },
         });
+        if (isRedirect) {
+          router.push(`/thankyou-ppc`);
+        }
         setIsSuccess(true);
-        console.log(values);
       }
     } catch (error) {
       if (error.response && error.response.data && error.response.data.errors) {
@@ -71,7 +75,9 @@ const HomePageForm = ({col}) => {
         <Form className="space-y-6">
           {isSuccess && <EmailSuccessPopup />}
 
-          <div className={`grid md:${col ? 'grid-cols-1' : 'grid-cols-2'} gap-6`}>
+          <div
+            className={`grid md:${col ? "grid-cols-1" : "grid-cols-2"} gap-6`}
+          >
             {/* Name */}
             <div>
               <label className="block text-sm font-medium text-[#6d6f72] mb-2">
@@ -120,48 +126,47 @@ const HomePageForm = ({col}) => {
               />
             </div>
             {/* Email */}
-          <div>
-            <label className="block text-sm font-medium text-[#6d6f72] mb-2">
-              Email
-            </label>
-            <Field
-              type="email"
-              name="email"
-              placeholder="john@company.com"
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#d63438] focus:border-transparent outline-none transition-all"
-            />
-            <ErrorMessage
-              name="email"
-              component="div"
-              className="text-red-500 text-sm mt-1"
-            />
-          </div>
-          {/* type */}
-          <div>
-            <label className="block text-sm font-medium text-[#6d6f72] mb-2">
-              Enquiry Type
-            </label>
+            <div>
+              <label className="block text-sm font-medium text-[#6d6f72] mb-2">
+                Email
+              </label>
+              <Field
+                type="email"
+                name="email"
+                placeholder="john@company.com"
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#d63438] focus:border-transparent outline-none transition-all"
+              />
+              <ErrorMessage
+                name="email"
+                component="div"
+                className="text-red-500 text-sm mt-1"
+              />
+            </div>
+            {/* type */}
+            <div>
+              <label className="block text-sm font-medium text-[#6d6f72] mb-2">
+                Enquiry Type
+              </label>
 
-            <select
-              name="type"
-              value={values.type}
-              onChange={(e) => setFieldValue("type", e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#d63438] focus:border-transparent outline-none transition-all"
-            >
-              <option value="">-- Select --</option>
-              <option value="sales">Sales</option>
-              <option value="support">Support</option>
-            </select>
+              <select
+                name="type"
+                value={values.type}
+                onChange={(e) => setFieldValue("type", e.target.value)}
+                className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-[#d63438] focus:border-transparent outline-none transition-all"
+              >
+                <option value="">-- Select --</option>
+                <option value="sales">Sales</option>
+                <option value="support">Support</option>
+              </select>
 
-            <ErrorMessage
-              name="type"
-              component="div"
-              className="text-red-500 text-sm mt-1"
-            />
-          </div>
+              <ErrorMessage
+                name="type"
+                component="div"
+                className="text-red-500 text-sm mt-1"
+              />
+            </div>
           </div>
 
-          
           {/* Location */}
           <div>
             <label className="block text-sm font-medium text-[#6d6f72] mb-2">

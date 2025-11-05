@@ -28,7 +28,7 @@ export default function BannerSwiper() {
         // loop={false}
         className="w-full"
       >
-         {/* <SwiperSlide>
+        <SwiperSlide>
           <div className="bg-gray-50 overflow-hidden pt-14 md:pt-0">
             <div className="container h-[60vh] md:h-[100vh] 2xl:h-[calc(100vh-80px)] flex flex-col lg:flex-row items-center">
               <div className="flex-1 flex flex-col justify-center ">
@@ -57,30 +57,43 @@ export default function BannerSwiper() {
                 </div>
 
                 <div className="relative max-w-[400px] h-[100px] items-start mt-4 hidden md:flex gap-x-4">
-                  <Image
-                    src="/images/sliders/home/app-store.png"
-                    alt="app-store"
-                    className="object-contain border border-black p-2"
-                    width={75}
-                    height={75}
-                    quality={75}
-                    priority
-                    sizes="75vw"
-                  />
-                  <Image
-                    src="/images/sliders/home/play-store.png"
-                    alt="play-store"
-                    className="object-contain border border-black p-2"
-                    width={75}
-                    height={75}
-                    quality={75}
-                    priority
-                    sizes="75vw"
-                  />
+                  <a
+                    href="https://apps.apple.com/in/app/timewatch-client-connect/id6752843505"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/images/sliders/home/client-connect-app-store.png"
+                      alt="client-connect-app-store"
+                      title="Client Connect"
+                      className="object-contain border border-black p-2"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      priority
+                      sizes="75vw"
+                    />
+                  </a>
+
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.clientConnect.com"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/images/sliders/home/eve-play-store.png"
+                      alt="eve-play-store"
+                      title="Client Connect"
+                      className="object-contain border border-black p-2"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      priority
+                      sizes="75vw"
+                    />
+                  </a>
                 </div>
               </div>
               <div className="flex-1 mt-5 md:mt-0">
-                <div className="relative w-[300px] h-[200px] md:h-[500px] md:w-[600px] 2xl:w-[1000px]">
+                <div className="relative w-[300px] h-[200px] md:h-[500px] md:w-[800px] 2xl:w-[1000px]">
                   <Image
                     src="/images/sliders/home/client-phone.png"
                     alt="Instantly log complaints and effortlessly track their progress anytime"
@@ -94,7 +107,7 @@ export default function BannerSwiper() {
               </div>
             </div>
           </div>
-        </SwiperSlide>  */}
+        </SwiperSlide>
         <SwiperSlide>
           <div className="bg-gray-50 overflow-hidden pt-14 md:pt-0">
             <div className="container h-[60vh] md:h-[100vh] 2xl:h-[calc(100vh-80px)] flex flex-col lg:flex-row items-center">
@@ -193,7 +206,9 @@ export default function BannerSwiper() {
                   <h1 className="text-3xl md:text-6xl font-bold text-primary">
                     Simple way to
                     <br />
-                    <span className="text-secondary">Monitor YOUR EMPLOYEE</span>
+                    <span className="text-secondary">
+                      Monitor YOUR EMPLOYEE
+                    </span>
                   </h1>
                   <hr className="w-1/3 rounded-2xl h-1.5 mt-2 md:h-2 bg-primary border-0" />
                   <p className="text-md md:text-lg text-gray-600 leading-relaxed mt-5">
@@ -204,26 +219,34 @@ export default function BannerSwiper() {
                 </div>
 
                 <div className="relative max-w-[400px] h-[100px] items-start mt-4 hidden md:flex gap-x-4">
-                  <Image
-                    src="/images/sliders/home/app-store.png"
-                    alt="app-store"
-                    className="object-contain border border-black p-2"
-                    width={75}
-                    height={75}
-                    quality={75}
-                    priority
-                    sizes="75vw"
-                  />
-                  <Image
-                    src="/images/sliders/home/play-store.png"
-                    alt="play-store"
-                    className="object-contain border border-black p-2"
-                    width={75}
-                    height={75}
-                    quality={75}
-                    priority
-                    sizes="75vw"
-                  />
+                  <a
+                    href="https://apps.apple.com/in/app/timewatch-mobile-attendance/id6482852039"
+                    target="_blank"
+                  >
+                    <Image
+                      src="/images/sliders/home/app-store.png"
+                      alt="app-store"
+                      className="object-contain border border-black p-2"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      priority
+                      sizes="75vw"
+                    />
+                  </a>
+                  <a  href="https://play.google.com/store/apps/details?id=com.app.evetimewatch"
+                    target="_blank">
+                    <Image
+                      src="/images/sliders/home/play-store.png"
+                      alt="play-store"
+                      className="object-contain border border-black p-2"
+                      width={100}
+                      height={100}
+                      quality={100}
+                      priority
+                      sizes="75vw"
+                    />
+                  </a>
                 </div>
               </div>
               <div className="flex-1 mt-5 md:mt-0">

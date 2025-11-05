@@ -6,6 +6,7 @@ import {
   Battery,
   Wifi,
   CheckCircle,
+  Zap,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -150,6 +151,44 @@ const TWLDTS2715Page = () => {
     ],
   };
 
+  const featureList = [
+    {
+      title: "Precision-Engineered for Indian Infrastructure",
+      description:
+        "Built with high-grade stainless steel and tested for India’s diverse environments, from humid metros to industrial campuses, TimeWatch Tripod Turnstiles ensure durability, reliability, and consistent performance.",
+    },
+    {
+      title: "Trusted by 5,000+ Businesses Nationwide",
+      description:
+        "Deployed across corporate offices, stadiums, manufacturing units, and educational institutions, our tripod gates are proven to deliver smooth, safe pedestrian control in high-traffic areas.",
+    },
+    {
+      title: "Advanced Technology & Seamless Integration",
+      description:
+        "Each unit integrates effortlessly with RFID, face, fingerprint, and QR-based access systems. Our tripod turnstiles are powered by brushless DC motors with anti-tailgating sensors for silent, precise operation.",
+    },
+    {
+      title: "AI-Ready & Maintenance-Free Design",
+      description:
+        "Equipped for future-ready access solutions, TimeWatch tripod turnstiles require negligible maintenance and can integrate with AI-driven attendance systems like TimeWatch AI-Face-T7HD for complete access automation.",
+    },
+    {
+      title: "Pan-India Installation & Support",
+      description:
+        "With presence in metros and tier-2 cities, our technical network ensures timely installation, maintenance, and after-sales assistance for uninterrupted operation.",
+    },
+    {
+      title: "1-Year Warranty + Free Firmware & AI Updates",
+      description:
+        "Each turnstile is backed by a comprehensive warranty and lifetime access to firmware/AI enhancements keeping your access system future-ready.",
+    },
+    // {
+    //   title: "Sustainable & Energy Efficient",
+    //   description:
+    //     "Low power consumption (30–60W) and brushless motor design ensure long-term energy savings and eco-friendly operation in large facilities.",
+    // },
+  ];
+
   return (
     <>
       <div className="bg-white">
@@ -286,7 +325,7 @@ const TWLDTS2715Page = () => {
                   <a
                     class="bg-primary hover:bg-[#b82c30] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
                     href="https://storage.googleapis.com/timewatch-dashbord-bucket/uploads/docs/datasheet/twld-ts2700-datasheet-ver-2-0-bfctqz.pdf"
-                     target="_blank"
+                    target="_blank"
                   >
                     Get a Catalouge
                   </a>
@@ -383,7 +422,14 @@ const TWLDTS2715Page = () => {
 
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <WhyChooseUs />
+            <WhyChooseUs
+              title="Why Choose TimeWatch?"
+              subtitle="Your trusted partner for biometric solutions across India"
+              features={featureList}
+              buttonText="Get BIO-1SE Today"
+            
+              footerText="Join 5,000+ Indian businesses already using TimeWatch solutions"
+            />
           </div>
         </section>
 
