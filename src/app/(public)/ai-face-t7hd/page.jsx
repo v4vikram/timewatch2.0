@@ -216,7 +216,7 @@ const AIFaceT7HDPage = () => {
                   </Link>
                 </div>
                 {/* Rating */}
-                <div className="mt-8 flex items-center gap-6 justify-center">
+                {/* <div className="mt-8 flex items-center gap-6 justify-center">
                   <div className="flex items-center gap-2">
                     <div className="flex text-yellow-400">
                       {[...Array(5)].map((_, i) => (
@@ -227,7 +227,7 @@ const AIFaceT7HDPage = () => {
                       4.9/5 (156 reviews)
                     </span>
                   </div>
-                </div>
+                </div> */}
               </div>
               {/* <div className="bg-gradient-to-br from-primary/20 to-[#6d6f72]/20 rounded-3xl p-8">
                 <div className="bg-white rounded-2xl shadow-2xl p-4">
@@ -251,7 +251,7 @@ const AIFaceT7HDPage = () => {
               <div className="order-2 lg:order-1">
                 <div className="bg-gradient-to-br from-primary/20 to-[#6d6f72]/20 rounded-3xl p-8">
                   <div className="bg-white. rounded-2xl shadow-2xl p-8 text-center flex justify-center">
-                    <div className="relative w-[300px] h-[250px]  md:w-[450px] md:h-[450px] flex justify-center">
+                    <div className="relative w-[300px] h-[250px]  md:w-[550px] md:h-[550px] flex justify-center">
                       <Image
                         src="/images/AI-Face-T7HD-front.png"
                         alt="AI-Face-T7HD"

@@ -204,9 +204,10 @@ const TWLDTS2715Page = () => {
             <div className="lg:grid lg:grid-cols-1 gap-12 items-center">
               <div className="flex flex-col justify-center items-center text-center">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#6d6f72] mb-6 leading-tight">
-                  TWLD-TS2715 Tripod <br />{" "}
+                  Tripod Turnstiles by TimeWatch <br />{" "}
                   <span className="text-primary">
-                    Turnstile with Integrated Belt Barrier
+                    Smart, Secure, and Stylish Access Control Solutions
+
                   </span>
                 </h1>
 
@@ -344,7 +345,7 @@ const TWLDTS2715Page = () => {
             <div className="lg:grid lg:grid-cols-2 gap-12 items-center">
               <div className="">
                 <h2 className="text-4xl md:text-3xl lg:text-4xl font-bold text-[#6d6f72] mb-6 leading-tight">
-                  TWLD-TS2715 – Tripod Turnstile with Integrated Belt Barrier
+                  TWLD-TS2715 – Tripod Turnstile for Controlled Entry
                 </h2>
 
                 <p className="text-md text-gray-700 mb-8 leading-relaxed">

@@ -39,7 +39,7 @@ export default function CatLayout({ children }) {
 
   const { cat, subCat, slug } = useParams();
   // console.log("{ cat, subCat, slug }", { cat, subCat, slug });
-  console.log("filterProd", filterProd);
+  // console.log("filterProd", filterProd);
 
   // ✅ Fetch products (all OR filtered by cat/subCat) — backend handles logic
   useEffect(() => {
@@ -112,12 +112,13 @@ export default function CatLayout({ children }) {
             `/product/search?title=${searchQuery}`
           );
           setFilterProd(searchRes?.data?.products || []);
-        } else {
-          // fallback → all products
-          const res = await axiosInstance.get(`/product`);
-          const prod = res.data?.products || [];
-          setFilterProd(prod.filter((p) => p.status === "published"));
-        }
+        } 
+        // else {
+        //   // fallback → all products
+        //   const res = await axiosInstance.get(`/product`);
+        //   const prod = res.data?.products || [];
+        //   setFilterProd(prod.filter((p) => p.status === "published"));
+        // }
       } catch (error) {
         console.error("Error fetching products:", error.message);
         setFilterProd([]);
