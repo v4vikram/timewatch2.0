@@ -58,7 +58,7 @@ const EntranceControlPage = () => {
       title: "Full Height Turnstiles",
       description:
         "Maximum security turnstiles engineered for high-traffic restricted areas. SUS304 stainless steel construction with up to 2 million operational cycles. Perfect for industrial facilities, data centers, and high-security zones.",
-      image: "/images/landing/fht2300d.webp",
+      image: "/images/landing/fht2300d.png",
       features: [
         "IP54 protection rating",
         "Bi-directional access control",
@@ -93,7 +93,7 @@ const EntranceControlPage = () => {
       title: "Tripod Turnstiles",
       description:
         "Cost-effective space-efficient solution with robust stainless steel construction. Ideal for offices, stadiums, metro stations, and educational institutions requiring reliable entry control.",
-      image: "/images/landing/twld-ts2700.webp",
+      image: "/images/landing/twld-ts2700.png",
       features: [
         "SS304 stainless steel frame",
         "Anti-tailgating sensors",

@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import SupportButtons from '@/components/SupportButtons';
 import { Rajdhani } from "next/font/google";
 import Script from "next/script"; // ✅ Import Next.js Script component
+import GTM from '@/components/GTM';
 
 const rajdhani = Rajdhani({
   subsets: ["latin"],
@@ -27,19 +28,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={rajdhani.className}>
       <head>
         {/* ✅ Google Tag Manager Script */}
-        <Script
-          id="google-tag-manager"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-NNJTRPC');
-            `,
-          }}
-        />
+      <GTM/>
       </head>
 
       <body className={rajdhani.className}>

@@ -28,7 +28,53 @@ export default function BannerSwiper() {
         // loop={false}
         className="w-full"
       >
+       
         <SwiperSlide>
+          <div className="bg-gray-50 overflow-hidden pt-14 md:pt-0">
+            <div className="container h-[60vh] md:h-[100vh] 2xl:h-[calc(100vh-80px)] flex flex-col lg:flex-row items-center">
+              <div className="flex-1 flex flex-col justify-center ">
+                <div className="max-w-[600px]">
+                  <h1 className="text-3xl md:text-6xl font-bold text-primary">
+                    AI Based X-Ray
+                    <span className="text-secondary"> Baggage Scanner</span>
+                  </h1>
+                  <hr className="w-1/3 rounded-2xl h-1.5 mt-2 md:h-2 bg-primary border-0" />
+                  <p className="text-md md:text-lg text-gray-600 leading-relaxed mt-5">
+                    We provide customized model solutions for our AI X-Ray
+                    baggage scanner, including software customization and
+                    barcode integration to meet your specific needs.
+                  </p>
+                </div>
+
+                <div className="relative max-w-[500px] h-[100px] items-start mt-5 hidden md:block">
+                  <Image
+                    fill
+                    src="/images/sliders/home/baggage-features.png"
+                    alt="baggage-features"
+                    className="object-contain mr-auto"
+                    quality={100}
+                    priority
+                    sizes="100vw"
+                  />
+                </div>
+              </div>
+              <div className="flex-1 mt-5 md:mt-0">
+                <div className="relative w-[310px] h-[190px] md:h-[500px] md:w-[600px] 2xl:w-[750px]">
+                  <Image
+                    src="/images/sliders/home/baggage.png"
+                    alt="baggage scanner"
+                    fill
+                    className="object-contain w-full h-full"
+                    quality={100}
+                    priority
+                    sizes="100vw"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+         <SwiperSlide>
           <div className="bg-gray-50 overflow-hidden pt-14 md:pt-0">
             <div className="container h-[60vh] md:h-[100vh] 2xl:h-[calc(100vh-80px)] flex flex-col lg:flex-row items-center">
               <div className="flex-1 flex flex-col justify-center ">
@@ -97,51 +143,6 @@ export default function BannerSwiper() {
                   <Image
                     src="/images/sliders/home/client-phone.png"
                     alt="Instantly log complaints and effortlessly track their progress anytime"
-                    fill
-                    className="object-contain w-full h-full"
-                    quality={100}
-                    priority
-                    sizes="100vw"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="bg-gray-50 overflow-hidden pt-14 md:pt-0">
-            <div className="container h-[60vh] md:h-[100vh] 2xl:h-[calc(100vh-80px)] flex flex-col lg:flex-row items-center">
-              <div className="flex-1 flex flex-col justify-center ">
-                <div className="max-w-[600px]">
-                  <h1 className="text-3xl md:text-6xl font-bold text-primary">
-                    AI Based X-Ray
-                    <span className="text-secondary"> Baggage Scanner</span>
-                  </h1>
-                  <hr className="w-1/3 rounded-2xl h-1.5 mt-2 md:h-2 bg-primary border-0" />
-                  <p className="text-md md:text-lg text-gray-600 leading-relaxed mt-5">
-                    We provide customized model solutions for our AI X-Ray
-                    baggage scanner, including software customization and
-                    barcode integration to meet your specific needs.
-                  </p>
-                </div>
-
-                <div className="relative max-w-[500px] h-[100px] items-start mt-5 hidden md:block">
-                  <Image
-                    fill
-                    src="/images/sliders/home/baggage-features.png"
-                    alt="baggage-features"
-                    className="object-contain mr-auto"
-                    quality={100}
-                    priority
-                    sizes="100vw"
-                  />
-                </div>
-              </div>
-              <div className="flex-1 mt-5 md:mt-0">
-                <div className="relative w-[310px] h-[190px] md:h-[500px] md:w-[600px] 2xl:w-[750px]">
-                  <Image
-                    src="/images/sliders/home/baggage.png"
-                    alt="baggage scanner"
                     fill
                     className="object-contain w-full h-full"
                     quality={100}

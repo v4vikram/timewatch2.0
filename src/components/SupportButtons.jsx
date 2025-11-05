@@ -26,11 +26,29 @@ export default function SupportButtons() {
     });
   };
 
+  const pathname = usePathname();
+
+  // Add all routes or path fragments where GTM should NOT be included
+  const excludedPaths = [
+    "/access-control-security-gate-manufacturer-in-India",
+    "/ai-face-t7hd",
+    "/biometric-attendance-access-control-system",
+    "/biometric-attendance-system-bio-1se-india",
+    "entrance-control-systems-secure-intelligent-pedestrian",
+  ];
+
+  // Check if the current pathname includes any excluded path
+  const shouldExclude = excludedPaths.some((path) => pathname.includes(path));
+
   if (!path.includes("/product-catalouge")) {
     return (
       <>
         {/* Right Side Support Buttons */}
-        <div className="fixed right-4 bottom-[66px] md:right-[11px] md:bottom-20 z-10 flex flex-col gap-2 w-[160px] items-end">
+        <div
+          className={`fixed right-4 ${
+            shouldExclude ? "bottom-[20px]" : "bottom-[66px]"
+          }  md:right-[11px] md:bottom-20 z-10 flex flex-col gap-2 w-[160px] items-end`}
+        >
           {/* WhatsApp Button */}
           <a
             href="https://wa.me/919599953921?text=Hello%20TimeWatch%2C%20I'm%20interested%20in%20your%20product%20or%20services.%20Please%20assist%20me!"
