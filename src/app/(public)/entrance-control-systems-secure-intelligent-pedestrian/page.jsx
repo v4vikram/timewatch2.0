@@ -93,7 +93,7 @@ const EntranceControlPage = () => {
       title: "Tripod Turnstiles",
       description:
         "Cost-effective space-efficient solution with robust stainless steel construction. Ideal for offices, stadiums, metro stations, and educational institutions requiring reliable entry control.",
-      image: "/images/landing/twld-ts2700.png",
+      image: "/images/landing/twld-ts2700-2.png",
       features: [
         "SS304 stainless steel frame",
         "Anti-tailgating sensors",

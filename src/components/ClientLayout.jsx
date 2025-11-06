@@ -9,9 +9,10 @@ import LandingHeader from "./LandingHeader";
 
 export default function ClientLayout({ children }) {
   const pathname = usePathname();
+  console.log("pathname", pathname)
 
   // ✅ Example: hide Header/Footer on specific pages
-  const hideLayout = ["/biometric-attendance-system-bio-1se-india"].includes(pathname);
+  const hideLayout = ["/biometric-attendance-system-bio-1se-india", "/product-catalouge"].includes(pathname);
 
   useEffect(() => {
     // Example: scroll to top or analytics event
@@ -22,7 +23,7 @@ export default function ClientLayout({ children }) {
     <>
       {/* Conditionally render header/footer */}
       {!hideLayout && <Header />}
-      {hideLayout && <LandingHeader />}
+      {hideLayout && pathname !== "/product-catalouge" && <LandingHeader />}
 
       <div>{children}</div>
 
