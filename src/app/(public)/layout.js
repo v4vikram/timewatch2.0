@@ -20,10 +20,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
    <>
-         <Header/>
+         {/* <Header/> */}
          <div className=''>{children}</div>
         <div>
-          <Footer/>
+          {/* <Footer/> */}
         </div>
         <SupportButtons/>
    </>

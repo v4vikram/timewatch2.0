@@ -79,7 +79,7 @@ export default async function HomePage() {
   }));
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <main>
         <section>
           <BannerSwiper />
@@ -818,7 +818,7 @@ Get Catalog & Get a Free Consultation</p>
           </div>
         </section>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

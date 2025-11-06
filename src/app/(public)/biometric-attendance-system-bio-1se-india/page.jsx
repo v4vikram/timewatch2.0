@@ -21,6 +21,7 @@ import ContactForm from "@/components/ContactForm";
 import Link from "next/link";
 import HomePageForm from "@/components/HomePageForm";
 import WhyChooseUs from "@/components/landing/WhyChooseUs";
+import { Button } from "@/components/ui/button";
 
 // --- Data definitions (unchanged from original) ---
 
@@ -190,8 +191,6 @@ const features = [
   },
 ];
 
-
-
 // Helper component for the FAQ accordion to replicate Bootstrap's collapse/accordion behavior
 const AccordionItem = ({ item, index, isFirst, parentId = "bio1seFAQ" }) => {
   const [isOpen, setIsOpen] = React.useState(isFirst);
@@ -235,14 +234,10 @@ const AccordionItem = ({ item, index, isFirst, parentId = "bio1seFAQ" }) => {
   );
 };
 
-
-
 // --- Main Component ---
 const BIO1SEPage = () => {
   const [hoveredCard2, setHoveredCard2] = React.useState(null);
   const [hoveredFeature2, setHoveredFeature2] = React.useState(null);
-
-
 
   return (
     <>
@@ -385,6 +380,9 @@ const BIO1SEPage = () => {
                 </div>
               ))}
             </div>
+            <Button asChild className={'mx-auto mt-10 flex justify-center w-fit'}>
+              <Link href={"tel:+919266955776"}>Request a Call Back</Link>
+            </Button>
           </div>
         </section>
 
@@ -444,15 +442,16 @@ const BIO1SEPage = () => {
                 })}
               </div>
             </div>
-
-           
           </div>
+           <Button asChild className={'mx-auto mt-10 flex justify-center w-fit'}>
+              <Link href={"https://wa.link/cex09u"} target="_blank">Instant WhatsApp Enquiry</Link>
+            </Button>
         </section>
 
-      {/* Why Choose Section */}
+        {/* Why Choose Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <WhyChooseUs features={features}/>
+            <WhyChooseUs features={features} />
           </div>
         </section>
 
@@ -486,12 +485,14 @@ const BIO1SEPage = () => {
           <div className="flex flex-col md:flex-row justify-center  mx-auto rounded-xl overflow-hidden shadow-2xl">
             {/* Contact Form */}
             <div className="flex-1 p-4 md:p-8 bg-white">
-              <HomePageForm isRedirect={true} enquiryPage={"bio-1se"}/>
+              <HomePageForm isRedirect={true} enquiryPage={"bio-1se"} />
             </div>
 
             {/* Contact Info */}
             <div className="flex-1 p-8 bg-[#d63438] text-white flex flex-col items-center justify-center space-y-6">
-              <h2 className="text-xl md:text-4xl font-bold mb-4">Request a Demo Today</h2>
+              <h2 className="text-xl md:text-4xl font-bold mb-4">
+                Request a Demo Today
+              </h2>
               <div className="space-y-3 text-center">
                 <p className="md:text-xl font-semibold">
                   Call:&nbsp;
