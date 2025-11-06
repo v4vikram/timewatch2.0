@@ -40,10 +40,24 @@ import axiosInstance from "@/lib/axiosInstance";
 export const dynamic = "auto"; // optional; ISR will still work
 
 export const metadata = {
-  title: "TimeWatch | Home",
-  description: "TimeWatch Infocom provides trusted baggage scanners, time attendance, and access control systems across India—delivering smart, secure tech solutions.",
+  title:
+    "TimeWatch – Biometric Attendance, Baggage Scanners, DFMD, Parking & Security Automation Solutions",
+  description:
+    "TimeWatch offers advanced biometric attendance systems, baggage scanners, DFMDs, boom barriers, turnstiles, UVSS, ANPR cameras, and parking management solutions. Your trusted partner for smart access control and security automation across India and the UAE.",
+  keywords:
+    "biometric attendance system, access control system, baggage scanner, DFMD, boom barrier, parking management system, turnstile gate, full height turnstile, flap barrier, swing gate, visitor management system, UHF reader, UVSS, ANPR camera, automatic bollard, spike barrier, tyre killer, road blocker, security automation, AI face recognition, fingerprint attendance machine, palm vein recognition, cloud attendance software, vehicle access control, TimeWatch India",
   alternates: {
-    canonical: "https://www.timewatchindia.com",
+    canonical: "https://www.timewatchindia.com/",
+  },
+  openGraph: {
+    title:
+      "TimeWatch – Biometric Attendance, Baggage Scanners, DFMD, Parking & Security Automation Solutions",
+    description:
+      "Explore TimeWatch’s full range of biometric attendance, baggage scanners, DFMDs, boom barriers, turnstiles, UVSS, ANPR cameras, and parking management systems for advanced access control and security automation.",
+    type: "website",
+    url: "https://www.timewatchindia.com/",
+    siteName: "TimeWatch",
+    locale: "en_IN",
   },
 };
 
@@ -79,7 +93,7 @@ export default async function HomePage() {
   }));
   return (
     <div>
-      {/* <Header /> */}
+   
       <main>
         <section>
           <BannerSwiper />
@@ -818,7 +832,7 @@ Get Catalog & Get a Free Consultation</p>
           </div>
         </section>
       </main>
-      {/* <Footer /> */}
+     
     </div>
   );
 }
