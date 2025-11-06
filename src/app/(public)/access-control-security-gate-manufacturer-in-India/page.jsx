@@ -263,7 +263,7 @@ const TWLDTS2715Page = () => {
                   <div className="aspect-square bg-gradient-to-br from-primary/20 to-[#6d6f72]/20 rounded-2xl flex items-center justify-center">
                     <div className="relative w-[300px] h-[250px]  md:w-[600px] md:h-[450px]">
                       <Image
-                        src="/images/landing/twld-ts2700.webp"
+                        src="/images/landing/twld-ts2700.png"
                         alt="AI-Face-T7HD"
                         title="AI-Face-T7HD"
                         fill
