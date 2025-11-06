@@ -8,11 +8,11 @@ const GTM = () => {
 
   // Add all routes or path fragments where GTM should NOT be included
   const excludedPaths = [
-    "/access-control-security-gate-manufacturer-in-India",
-    "/ai-face-t7hd",
-    "/biometric-attendance-access-control-system",
-    "/biometric-attendance-system-bio-1se-india",
-    "entrance-control-systems-secure-intelligent-pedestrian",
+    // "/access-control-security-gate-manufacturer-in-India",
+    // "/ai-face-t7hd",
+    // "/biometric-attendance-access-control-system",
+    // "/biometric-attendance-system-bio-1se-india",
+    // "entrance-control-systems-secure-intelligent-pedestrian",
   ];
 
   // Check if the current pathname includes any excluded path
