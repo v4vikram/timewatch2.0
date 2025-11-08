@@ -418,7 +418,7 @@ const EntranceControlPage = () => {
                           Get Catalogue
                         </a>
                       )}
-                      <Button asChild variant={"secondary"}>
+                      <Button asChild variant={"secondary"} className={"!py-7"}>
                         <Link
                           className="flex items-center"
                           href={product.link}
@@ -428,7 +428,7 @@ const EntranceControlPage = () => {
                           <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </Link>
                       </Button>
-                      <Button asChild>
+                      <Button asChild className={"!py-7"}>
                         <Link
                           className="flex items-center"
                           href={"#contact"}

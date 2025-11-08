@@ -14,6 +14,7 @@ import AccordionItem from "@/components/landing/AccordionItem";
 import WhyChooseUs from "@/components/landing/WhyChooseUs";
 import HomePageForm from "@/components/HomePageForm";
 import Script from "next/script";
+import CatalogueDownload from "@/components/forms/CatalogueDownload";
 
 export const metadata = {
   title: "Tripod Turnstiles by TimeWatch – Secure Pedestrian Access Control",
@@ -323,13 +324,7 @@ const TWLDTS2715Page = () => {
                 </ul>
 
                 <div class="flex flex-wrap gap-4 mt-5">
-                  <a
-                    class="bg-primary hover:bg-[#b82c30] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
-                    href="https://storage.googleapis.com/timewatch-dashbord-bucket/uploads/docs/datasheet/twld-ts2700-datasheet-ver-2-0-bfctqz.pdf"
-                    target="_blank"
-                  >
-                    Get a Catalouge
-                  </a>
+                  <CatalogueDownload downloadLink={"https://storage.googleapis.com/timewatch-dashbord-bucket/uploads/docs/datasheet/twld-ts2700-datasheet-ver-2-0-bfctqz.pdf"} />
 
                   <a
                     class="bg-secondary  text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
@@ -386,13 +381,7 @@ const TWLDTS2715Page = () => {
                   </li>
                 </ul>
                 <div class="flex flex-wrap gap-4 mt-5">
-                  <a
-                    class="bg-primary hover:bg-[#b82c30] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
-                    href="https://storage.googleapis.com/timewatch-dashbord-bucket/uploads/docs/datasheet/twld-ts2715-datasheet-ver-2-0-eohhb1.pdf"
-                    target="_blank"
-                  >
-                    Get a Catalouge
-                  </a>
+                    <CatalogueDownload downloadLink={"https://storage.googleapis.com/timewatch-dashbord-bucket/uploads/docs/datasheet/twld-ts2715-datasheet-ver-2-0-eohhb1.pdf"} />
 
                   <a
                     class="bg-secondary  text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"

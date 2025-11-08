@@ -225,7 +225,7 @@ export const menuItems = [
   },
   {
     label: "Downloads",
-    href: "/download",
+    href: "/downloads",
     type: "link",
   },
   // {

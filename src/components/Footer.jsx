@@ -42,7 +42,7 @@ const socialLinks = [
 const quickLinks = [
   { label: "About Us", href: "/about" },
   { label: "Careers", href: "/careers" },
-  { label: "Download", href: "/download" },
+  { label: "Downloads", href: "/downloads" },
   // { label: "Contact", href: "/contact" },
   { label: "E Waste", href: "/e-waste" },
 ];

@@ -111,7 +111,7 @@ export function HeaderNavigationMenu() {
             asChild
             className="hover:!bg-transparent !bg-transparent data-[active=true]:!text-primary hover:!text-primary focus:!text-primary text-[17px] font-medium !text-secondary flex items-center gap-1"
           >
-            <Link href={"/download"}>Download</Link>
+            <Link href={"/downloads"}>Downloads</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>

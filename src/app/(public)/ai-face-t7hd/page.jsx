@@ -25,6 +25,7 @@ import WhyChooseUs from "@/components/landing/WhyChooseUs";
 
 import HomePageForm from "@/components/HomePageForm";
 import AccordionItem from "@/components/landing/AccordionItem";
+import CatalogueDownload from "@/components/forms/CatalogueDownload";
 
 export const metadata = {
   title:
@@ -170,7 +171,6 @@ const featureList = [
   },
 ];
 
-
 const AIFaceT7HDPage = () => {
   return (
     <>
@@ -206,14 +206,12 @@ const AIFaceT7HDPage = () => {
                   >
                     Request a Quote
                   </Link>
-                  <Link
-                    href="https://storage.googleapis.com/timewatch-dashbord-bucket/uploads/docs/datasheet/ai-face-t7hd-datasheet-ver-2-0-yohwpj.pdf"
-                    target="_blank"
-                    className="px-8 py-4 bg-white text-[#6d6f72] rounded-xl font-medium hover:bg-gray-50 transition-all duration-200 shadow-md border border-gray-200 flex items-center gap-2"
-                  >
-                    <Download className="w-5 h-5" />
-                    Download Catalog
-                  </Link>
+                  <CatalogueDownload
+                    downloadLink={
+                      "https://storage.googleapis.com/timewatch-dashbord-bucket/uploads/docs/datasheet/ai-face-t7hd-datasheet-ver-2-0-yohwpj.pdf"
+                    }
+                    buttonVariant={"secondary"}
+                  />
                 </div>
                 {/* Rating */}
                 {/* <div className="mt-8 flex items-center gap-6 justify-center">
@@ -330,8 +328,6 @@ const AIFaceT7HDPage = () => {
             </div>
           </div>
         </section>
-
-
 
         {/* Technical Specifications */}
         <section className="py-16 bg-gray-50">
@@ -500,7 +496,7 @@ const AIFaceT7HDPage = () => {
         {/* Why Choose Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <WhyChooseUs features={featureList}/>
+            <WhyChooseUs features={featureList} />
           </div>
         </section>
 
