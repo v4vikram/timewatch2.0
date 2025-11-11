@@ -55,6 +55,7 @@ export const metadata = {
 const EntranceControlPage = () => {
   const products = [
     {
+      id:"full-height-turnstiles",
       title: "Full Height Turnstiles",
       description:
         "Maximum security turnstiles engineered for high-traffic restricted areas. SUS304 stainless steel construction with up to 2 million operational cycles. Perfect for industrial facilities, data centers, and high-security zones.",
@@ -73,6 +74,7 @@ const EntranceControlPage = () => {
       catalogueUrl: "#",
     },
     {
+       id:"swing-gates",
       title: "Swing Gates / Swing Barriers",
       description:
         "Elegant swing gates with tempered glass wings for modern corporate entrances. Features precision brushless DC motors and infrared safety sensors for smooth, silent operation in lobbies and commercial spaces.",
@@ -90,6 +92,7 @@ const EntranceControlPage = () => {
       catalogueUrl: "#",
     },
     {
+        id:"tripod-turnstiles",
       title: "Tripod Turnstiles",
       description:
         "Cost-effective space-efficient solution with robust stainless steel construction. Ideal for offices, stadiums, metro stations, and educational institutions requiring reliable entry control.",
@@ -107,6 +110,7 @@ const EntranceControlPage = () => {
       catalogueUrl: "#",
     },
     {
+       id:"flap-barriers",
       title: "Flap Barriers",
       description:
         "High-speed automated barriers with 0.6s operation time. 304-grade stainless steel with acrylic flaps for fast throughput in subways, offices, and campus environments.",
@@ -124,6 +128,7 @@ const EntranceControlPage = () => {
       catalogueUrl: "#",
     },
     {
+        id:"p-type-p-gate",
       title: "P-Type / P-Gate",
       description:
         "Wide-lane swing gate designed for wheelchair and trolley-friendly access. Features tempered glass paddles and brushless DC motor for reliable, maintenance-free operation.",
@@ -353,7 +358,7 @@ const EntranceControlPage = () => {
 
             <div className="space-y-20">
               {products.map((product, index) => (
-                <div
+                <div id={`${product.id}`}
                   key={index}
                   className={`lg:grid lg:grid-cols-2 gap-12 items-center ${
                     index % 2 === 1 ? "lg:flex-row-reverse" : ""

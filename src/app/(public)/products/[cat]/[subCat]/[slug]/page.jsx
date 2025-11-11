@@ -32,8 +32,6 @@ export async function generateMetadata({ params }) {
         description: product.description || product.shortDesc,
         url: `${BASE_URL}/poducts/${cat}/${subCat}/${slug}`,
         images: product.productImage
-          ? [{ url: `${BASE_URL}/uploads/${product.productImage}` }]
-          : [],
       },
     };
   } catch (error) {
