@@ -14,7 +14,7 @@ export async function generateMetadata({ params }) {
     const res = await axiosInstance.get(`/product/slug/${slug}`);
     const product = res?.data?.product;
 
-    console.log("product", product)
+    console.log(":product", product)
 
     if (!product || product?.status === "draft") {
       return {};
@@ -25,12 +25,12 @@ export async function generateMetadata({ params }) {
       description:
         product.description || product.shortDesc || product.productName,
       alternates: {
-        canonical: `${BASE_URL}/market-place/${cat}/${subCat}/${slug}`,
+        canonical: `${BASE_URL}/poducts/${cat}/${subCat}/${slug}`,
       },
       openGraph: {
         title: product.productName,
         description: product.description || product.shortDesc,
-        url: `${BASE_URL}/market-place/${cat}/${subCat}/${slug}`,
+        url: `${BASE_URL}/poducts/${cat}/${subCat}/${slug}`,
         images: product.productImage
           ? [{ url: `${BASE_URL}/uploads/${product.productImage}` }]
           : [],
