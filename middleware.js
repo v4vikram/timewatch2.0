@@ -1,12 +1,14 @@
-// middleware.js (not recommended for full CORS)
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
-export function middleware(request) {
-  const response = NextResponse.next();
-  response.headers.set('Access-Control-Allow-Origin', 'http://localhost:3000');
-  return response;
+export function middleware(req) {
+  const host = req.headers.get("host") || "";
+  const url = req.nextUrl;
+
+  // Force www
+  if (host === "timewatchindia.com") {
+    url.host = "www.timewatchindia.com";
+    return NextResponse.redirect(url, 301);
+  }
+
+  return NextResponse.next();
 }
-
-export const config = {
-  matcher: '/api/:path*',
-};
