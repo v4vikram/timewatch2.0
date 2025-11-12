@@ -4,7 +4,7 @@ import SolutionsFaq from "@/components/SolutionsFaq";
 import Head from "next/head";
 
 export const metadata = {
-  title: "Cloud-Based Attendance & Payroll Software in India | TimeWatch",
+  title: "Cloud-Based Attendance & Payroll Software in India | TimeWatch Infocom",
   description:
     "Simplify attendance & payroll with TimeWatch's free cloud software for up to 250 users. Auto shift, mobile app, field staff tracking & payslip automation.",
   alternates: {

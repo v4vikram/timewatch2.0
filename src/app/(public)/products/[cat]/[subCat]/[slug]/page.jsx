@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
     }
 
     return {
-      title: `${product.productName} | TimeWatch`,
+      title: `${product.productName} | TimeWatch Infocom`,
       description:
         product.description || product.shortDesc || product.productName,
       alternates: {

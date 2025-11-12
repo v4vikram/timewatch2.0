@@ -5,7 +5,7 @@ import Head from "next/head";
 
 export const metadata = {
   title:
-    "TW-NE200 Explosive & Narcotics Detector | Portable Trace & Vapour Scanner",
+    "TW-NE200 Explosive & Narcotics Detector | Portable Trace & Vapour Scanner | TimeWatch Infocom",
   description:
     "The TW-NE200 portable detector identifies explosives and narcotics using ion mobility spectrometry. Fast, accurate, and lightweight, it delivers results within 3 seconds for airports, customs, and border security.",
          alternates: {

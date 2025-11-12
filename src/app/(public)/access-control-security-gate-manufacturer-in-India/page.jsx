@@ -17,7 +17,7 @@ import Script from "next/script";
 import CatalogueDownload from "@/components/forms/CatalogueDownload";
 
 export const metadata = {
-  title: "Tripod Turnstiles by TimeWatch – Secure Pedestrian Access Control",
+  title: "Tripod Turnstiles by TimeWatch – Secure Pedestrian Access Control | TimeWatch Infocom",
   description:
     "Explore TWLD-TS2700 & TWLD-TS2715 tripod turnstiles with stainless steel design, anti-tailgating sensors, and RFID/biometric integration.",
   openGraph: {

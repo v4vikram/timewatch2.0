@@ -4,7 +4,7 @@ import SolutionsFaq from "@/components/SolutionsFaq";
 import Head from "next/head";
 
 export const metadata = {
-  title: "Gym Management Software in India & Middle East | TimeWatch",
+  title: "Gym Management Software in India & Middle East | TimeWatch Infocom",
   description:
     "Manage memberships, billing, trainers & attendance with TimeWatch Gym Management Software. Scalable for gyms in India, UAE, and the Middle East.",
   alternates: {

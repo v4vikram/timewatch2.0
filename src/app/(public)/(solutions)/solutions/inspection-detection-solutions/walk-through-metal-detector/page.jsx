@@ -4,7 +4,7 @@ import SolutionsFaq from "@/components/SolutionsFaq";
 import Head from "next/head";
 
 export const metadata = {
-  title: "Walk-Through Metal Detector | Multi-Zone Entry Screening India",
+  title: "Walk-Through Metal Detector | Multi-Zone Entry Screening  | TimeWatch Infocom",
   description:
     "Ensure secure entry at airports, metro stations, stadiums & offices with TimeWatch Walk-Through Metal Detector. 8-zone detection, audio-visual alerts & high throughput.",
       alternates: {

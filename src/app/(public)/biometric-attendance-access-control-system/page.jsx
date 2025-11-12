@@ -19,9 +19,9 @@ import { Button } from "@/components/ui/button";
 
 export const metadata = {
   title:
-    "Biometric Attendance & Access Control Systems | Face, Fingerprint, Palm, Iris & AI Devices – TimeWatch India",
+    "Biometric Attendance & Access Control Systems | Face, Fingerprint, Palm, Iris & AI Devices | TimeWatch Infocom",
   description:
-    "Explore AI-powered Biometric Attendance & Access Control Systems by TimeWatch India. Our range includes face recognition, fingerprint, palm, and iris devices — all cloud-connected, Wi-Fi enabled, and built for offices, factories, schools, and government facilities.",
+    "Explore AI-powered Biometric Attendance & Access Control Systems by TimeWatch India. Our range includes face recognition, fingerprint, palm, and iris devices, all cloud-connected, Wi-Fi enabled, and built for offices, factories, schools, and government facilities.",
   keywords:
     "biometric attendance system, biometric access control, face recognition device, fingerprint attendance machine, palm recognition, iris access control, AI biometric system, Wi-Fi attendance machine, cloud-based attendance, TimeWatch India",
   openGraph: {

@@ -4,9 +4,9 @@ import SolutionsFaq from "@/components/SolutionsFaq";
 import Head from "next/head";
 
 export const metadata = {
-  title: "Hand Held Metal Detector TW-HH100 | TimeWatch India",
+  title: "Hand Held Metal Detector TW-HH100 | TimeWatch Infocom",
   description:
-    "Buy TimeWatch TW-HH100 Hand Held Metal Detector – portable, lightweight, and accurate device for airports, metros, stadiums & corporate offices across India & GCC.",
+    "Buy TimeWatch TW-HH100 Hand Held Metal Detector | portable, lightweight, and accurate device for airports, metros, stadiums & corporate offices across India & GCC.",
   alternates: {
     canonical:
       "https://www.timewatchindia.com/solutions/inspection-detection-solutions/hand-held-metal-detector-tw-hh100",

@@ -4,7 +4,7 @@ import SolutionsFaq from "@/components/SolutionsFaq";
 import Head from "next/head";
 
 export const metadata = {
-  title: "Field Staff Tracking & Verified Attendance | Mobile GPS Attendance",
+  title: "Field Staff Tracking & Verified Attendance | Mobile GPS Attendance | TimeWatch Infocom",
   description:
     "Track your field staff in real time with TimeWatch. GPS-based live tracking, task verification with photos, and automated reports for payroll & compliance.",
   alternates: {

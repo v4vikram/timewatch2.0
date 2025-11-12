@@ -5,7 +5,7 @@ import Head from "next/head";
 
 export const metadata = {
   title:
-    "Canteen Management System in India | Employee Dining Automation – TimeWatch",
+    "Canteen Management System in India | Employee Dining Automation | TimeWatch Infocom",
   description:
     "Automate canteen management with TimeWatch India. Biometric meal access, RFID, cashless dining & real-time reports for corporates, factories, hospitals & universities. Reduce wastage, save costs & improve satisfaction.",
     alternates: {

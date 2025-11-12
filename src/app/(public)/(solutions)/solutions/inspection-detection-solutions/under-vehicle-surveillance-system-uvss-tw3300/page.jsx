@@ -4,7 +4,7 @@ import SolutionsFaq from "@/components/SolutionsFaq";
 import Head from "next/head";
 
 export const metadata = {
-  title: "Under Vehicle Surveillance System (UVSS) in India | TimeWatch TW3300",
+  title: "Under Vehicle Surveillance System (UVSS) in India | TimeWatch Infocom",
   description:
     "Secure your premises with TW3300 UVSS by TimeWatch. High-resolution under-vehicle scanning, ALPR integration, and real-time monitoring for airports, metro, government buildings, and events.",
   alternates: {

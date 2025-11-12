@@ -4,7 +4,7 @@ import SolutionsFaq from "@/components/SolutionsFaq";
 import Head from "next/head";
 
 export const metadata = {
-  title: "X-Ray Baggage Scanner India & UAE | Enhance Security & Efficiency",
+  title: "X-Ray Baggage Scanner India & UAE | Enhance Security & Efficiency | TimeWatch Infocom",
   description:
     "Secure high-traffic facilities with TimeWatch’s advanced X-Ray baggage scanners. Deploy AI-enhanced screening at airports, metro stations, stadiums, and more across India and the Gulf.",
       alternates: {

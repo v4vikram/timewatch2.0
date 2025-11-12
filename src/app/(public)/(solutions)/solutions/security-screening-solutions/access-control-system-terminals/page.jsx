@@ -5,7 +5,7 @@ import Head from "next/head";
 
 export const metadata = {
   title:
-    "Access Control Systems & Biometric Terminals in India & UAE | TimeWatch",
+    "Access Control Systems & Biometric Terminals in India & UAE | TimeWatch Infocom",
   description:
     "Secure workplaces with TimeWatch Access Control Systems. Biometric face, fingerprint & RFID terminals integrated with HRMS. Trusted in India, Dubai & GCC.",
   alternates: {

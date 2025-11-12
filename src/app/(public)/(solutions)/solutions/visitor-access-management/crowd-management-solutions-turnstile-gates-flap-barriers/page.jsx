@@ -4,7 +4,7 @@ import SolutionsFaq from "@/components/SolutionsFaq";
 import Head from "next/head";
 
 export const metadata = {
-  title: "Crowd Management Solutions  Turnstile Gates & Flap Barriers",
+  title: "Crowd Management Solutions  Turnstile Gates & Flap Barriers | TimeWatch Infocom",
   description:
     "Ensure safe & efficient crowd flow with TimeWatch’s Turnstile Gates & Flap Barriers. Perfect for metros, railways, airports, schools, stadiums & events.",
   alternates: {

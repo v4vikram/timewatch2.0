@@ -4,8 +4,8 @@ import SolutionsFaq from "@/components/SolutionsFaq";
 import Head from "next/head";
 
 export const metadata = {
-  title: "TimeScan Vehicle & Cargo Inspection System | TimeWatch India",
-  description: "TimeScan Vehicle & Cargo Inspection System | TimeWatch India",
+  title: "TimeScan Vehicle & Cargo Inspection System | TimeWatch Infocom",
+  description: "TimeScan Vehicle & Cargo Inspection System | TimeWatch Infocom",
   alternates: {
     canonical:
       "https://www.timewatchindia.com/solutions/security-screening-solutions/timescan-cargo-vehicle-inspection-system",

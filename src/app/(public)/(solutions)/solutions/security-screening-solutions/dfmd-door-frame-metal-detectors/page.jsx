@@ -5,7 +5,7 @@ import Head from "next/head";
 
 export const metadata = {
   title:
-    "Door Frame Metal Detector in India & UAE | Multi-Zone DFMD by TimeWatch",
+    "Door Frame Metal Detector in India & UAE | Multi-Zone DFMD | TimeWatch Infocom",
   description:
     "Discover TimeWatch Door Frame Metal Detectors with 6, 12, and 24-zone detection. Perfect for airports, metros, stadiums, schools, malls, and corporate offices across India, the UAE, and the GCC.",
   alternates: {

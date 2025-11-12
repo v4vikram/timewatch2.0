@@ -21,7 +21,7 @@ import Image from "next/image";
 
 export const metadata = {
   title:
-    "TimeWatch | Mr. Virendra Kumar Founder & CEO",
+    "TimeWatch Infocom | Mr. Virendra Kumar Founder & CEO",
   description:
     "At TimeWatch, our mission is to simplify security through innovation – powered by technology and built on trust. We are committed to developing intelligent, efficient, and reliable solutions that redefine how organizations protect, manage, and connect",
      alternates: {

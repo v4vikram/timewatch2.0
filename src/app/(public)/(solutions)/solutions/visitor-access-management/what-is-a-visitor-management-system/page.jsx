@@ -4,7 +4,7 @@ import SolutionsFaq from "@/components/SolutionsFaq";
 import Head from "next/head";
 
 export const metadata = {
-  title: "Visitor Management System (VMS) in India & Middle East | TimeWatch",
+  title: "Visitor Management System (VMS) in India & Middle East | TimeWatch Infocom",
   description:
     "Simplify visitor check-in and enhance workplace security with TimeWatch Visitor Management System. Ideal for offices, hospitals, schools & factories across India, UAE & GCC.",
   alternates: {

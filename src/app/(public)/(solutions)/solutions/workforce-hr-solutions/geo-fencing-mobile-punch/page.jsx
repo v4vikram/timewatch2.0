@@ -4,7 +4,7 @@ import SolutionsFaq from "@/components/SolutionsFaq";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Geo-Fencing & Mobile Punch Attendance | Location-Verified HRMS",
+  title: "Geo-Fencing & Mobile Punch Attendance | Location-Verified HRMS | TimeWatch Infocom",
   description:
     "Enable secure mobile attendance with TimeWatch’s geo-fencing solution. Prevent buddy punching, ensure location-based clock-ins, and boost accountability.",
   alternates: {
