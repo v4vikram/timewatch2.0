@@ -52,6 +52,8 @@ export const metadata = {
   },
 };
 
+
+
 const EntranceControlPage = () => {
   const products = [
     {
