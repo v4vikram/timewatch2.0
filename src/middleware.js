@@ -15,10 +15,11 @@ export function middleware(request) {
   // Extract the full path (including query params)
   const path = request.nextUrl.pathname + request.nextUrl.search;
 
-  // console.log(":host", `http://${host}${path}`)
+  // console.log(":naked", `https://${NAKED_DOMAIN}${path}`)
+  // console.log(":WWW_DOMAIN", `https://${host}${path}`)
   // 1. Check if the host is the naked domain
   if (`https://${host}${path}` === `https://${NAKED_DOMAIN}${path}`) {
-    // console.log(":working", host)
+    // console.log(":working")
     // 2. Construct the full www URL, enforcing HTTPS
     const wwwUrl = `https://${WWW_DOMAIN}${path}`;
 
