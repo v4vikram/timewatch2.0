@@ -17,7 +17,7 @@ export function middleware(request) {
 
   // console.log(":host", `http://${host}${path}`)
   // 1. Check if the host is the naked domain
-  if (`http://${host}${path}` === `http://${NAKED_DOMAIN}${path}`) {
+  if (`https://${host}${path}` === `https://${NAKED_DOMAIN}${path}`) {
     // console.log(":working", host)
     // 2. Construct the full www URL, enforcing HTTPS
     const wwwUrl = `https://${WWW_DOMAIN}${path}`;
