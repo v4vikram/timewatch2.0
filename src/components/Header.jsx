@@ -8,8 +8,10 @@ import { SearchBar } from "./SearchBar";
 import PhoneHeaderNavigationMenu from "./PhoneHeaderNavigationMenu";
 import { Menu, X, Home, User, Settings, Mail, Info } from "lucide-react";
 import { useParams } from "next/navigation";
+import { useIsDesktop } from "@/hooks/useIsDesktop";
 
 const Header = () => {
+  const isDesktop = useIsDesktop();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const params = useParams();
 
@@ -32,11 +34,14 @@ const Header = () => {
             className="w-[180px] h-[70px] xl:w-[230px] xl:h-[80px]"
           />
         </Link>
-        {/* desktop menu */}
-        <div className="relative z-10 hidden xl:block">
-          <HeaderNavigationMenu />
-        </div>
-        {/* phone menu */}
+        {/* Desktop menu (render only on desktop!) */}
+        {isDesktop && (
+          <div className="relative z-10">
+            <HeaderNavigationMenu />
+          </div>
+        )}
+
+        {/* Mobile menu */}
         <div
           className={`fixed top-0 left-0 z-20  transform transition-transform xl:translate-x-0 duration-700 ease-in-out h-screen bg-white border-r border-r-gray-100 xl:hidden
             ${isMenuOpen ? "translate-x-0" : "-translate-x-[101%]"}`}

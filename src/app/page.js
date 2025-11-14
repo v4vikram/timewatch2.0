@@ -61,6 +61,21 @@ export const metadata = {
   },
 };
 
+const clients = [
+  "/images/clients/corporate-client/1.jpg",
+  "/images/clients/corporate-client/2.jpg",
+  "/images/clients/corporate-client/3.jpg",
+  "/images/clients/corporate-client/4.jpg",
+  "/images/clients/corporate-client/5.jpg",
+  "/images/clients/corporate-client/6.jpg",
+  "/images/clients/corporate-client/7.jpg",
+  "/images/clients/corporate-client/8.jpg",
+  "/images/clients/corporate-client/9.jpg",
+  "/images/clients/corporate-client/10.jpg",
+  "/images/clients/corporate-client/11.jpg",
+  "/images/clients/corporate-client/12.jpg",
+];
+
 // ISR: Regenerate every 1 hour (3600 seconds)
 async function getFeaturedProducts() {
   try {
@@ -93,7 +108,7 @@ export default async function HomePage() {
   }));
   return (
     <div>
-   
+
       <main>
         <section>
           <BannerSwiper />
@@ -247,11 +262,14 @@ export default async function HomePage() {
               <div className="lg:row-span-2">
                 <div className="group relative h-full xl:h-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10"></div>
-                  <img
-                    src="/images/solutions/home-baggage-scanner.jpg"
-                    alt="Access Control Systems"
-                    className="w-full h-[250px] md:h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                  <div className="relative w-full h-[250px] md:h-full overflow-hidden">
+                    <Image
+                      src="/images/solutions/home-baggage-scanner.jpg"
+                      alt="Access Control Systems"
+                      fill
+                      className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
                   <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
                     <div className="mb-4">
                       <span className="bg-[#d63438] text-white px-4 py-2 rounded-full font-medium text-sm">
@@ -279,24 +297,22 @@ export default async function HomePage() {
                   href="/solutions/workforce-hr-solutions/cloud-attendance-payroll-software"
                   className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col md:flex-row"
                 >
-                  <div className="md:w-2/5 relative overflow-hidden">
-                    <img
+                  <div className="md:w-2/5 relative overflow-hidden h-[180px] lg:h-[140px] xl:h-[180px]">
+                    <Image
                       src="/images/solutions/mobile-application-home.jpg"
-                      alt=" Attendance & Payroll Management Software"
-                      className="w-full h-[180px] lg:h-[140px] xl:h-[180px] object-cover group-hover:scale-110 transition-transform duration-500"
+                      alt="Attendance & Payroll Management Software"
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
+
                   <div className="md:w-3/5 p-3 md:p-6 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-xl md:text-2xl lg:text-lg xl:text-2xl font-bold text-[#6d6f72] mb-3 line-clamp-3 group-hover:text-[#d63438] transition-colors">
-                        Attendance & Payroll Management Software
-                      </h3>
-                    </div>
-                    <div className="max-w-[200px]">
-                      <span className="text-[#d63438] font-medium text-sm md:text-xl lg:text-sm xl:text-lg">
-                        Software Solutions
-                      </span>
-                    </div>
+                    <h3 className="text-xl md:text-2xl lg:text-lg xl:text-2xl font-bold text-[#6d6f72] mb-3 line-clamp-3 group-hover:text-[#d63438] transition-colors">
+                      Attendance & Payroll Management Software
+                    </h3>
+                    <span className="text-[#d63438] font-medium text-sm md:text-xl lg:text-sm xl:text-lg max-w-[200px]">
+                      Software Solutions
+                    </span>
                   </div>
                 </Link>
 
@@ -305,49 +321,46 @@ export default async function HomePage() {
                   href="/solutions/visitor-access-management/crowd-management-solutions-turnstile-gates-flap-barriers"
                   className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col md:flex-row"
                 >
-                  <div className="md:w-2/5 relative overflow-hidden">
-                    <img
+                  <div className="md:w-2/5 relative overflow-hidden h-[180px] lg:h-[140px] xl:h-[180px]">
+                    <Image
                       src="/images/solutions/entrance-system-home.jpg"
                       alt="Crowd Management Solutions in India – Turnstile Gates"
-                      className="w-full h-[180px] lg:h-[140px] xl:h-[180px] object-cover group-hover:scale-110 transition-transform duration-500"
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
+
                   <div className="md:w-3/5 p-3 md:p-6 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-xl md:text-2xl lg:text-lg xl:text-2xl font-bold text-[#6d6f72] mb-3 line-clamp-3 group-hover:text-[#d63438] transition-colors">
-                        Crowd Management Solutions in India – Turnstile Gates
-                      </h3>
-                    </div>
-                    <div className="max-w-[200px]">
-                      <span className="text-[#d63438] font-medium text-sm md:text-xl lg:text-sm xl:text-lg">
-                        Security Solutions
-                      </span>
-                    </div>
+                    <h3 className="text-xl md:text-2xl lg:text-lg xl:text-2xl font-bold text-[#6d6f72] mb-3 line-clamp-3 group-hover:text-[#d63438] transition-colors">
+                      Crowd Management Solutions in India – Turnstile Gates
+                    </h3>
+                    <span className="text-[#d63438] font-medium text-sm md:text-xl lg:text-sm xl:text-lg max-w-[200px]">
+                      Security Solutions
+                    </span>
                   </div>
                 </Link>
+
                 {/* Card 3 */}
                 <Link
                   href="/solutions/visitor-access-management/what-is-a-visitor-management-system"
                   className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col md:flex-row"
                 >
-                  <div className="md:w-2/5 relative overflow-hidden">
-                    <img
+                  <div className="md:w-2/5 relative overflow-hidden h=[180px] lg:h-[140px] xl:h-[180px]">
+                    <Image
                       src="/images/solutions/visitor-management-system.jpg"
-                      alt=" Visitor Management Systems"
-                      className="w-full h-[180px] lg:h-[140px] xl:h-[180px] object-cover group-hover:scale-110 transition-transform duration-500"
+                      alt="Visitor Management Systems"
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
+
                   <div className="md:w-3/5 p-3 md:p-6 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-xl md:text-2xl lg:text-lg xl:text-2xl font-bold text-[#6d6f72] mb-3 line-clamp-3 group-hover:text-[#d63438] transition-colors">
-                        Visitor Management Systems
-                      </h3>
-                    </div>
-                    <div className="max-w-[200px]">
-                      <span className="text-[#d63438] font-medium text-sm md:text-xl lg:text-sm xl:text-lg">
-                        Management
-                      </span>
-                    </div>
+                    <h3 className="text-xl md:text-2xl lg:text-lg xl:text-2xl font-bold text-[#6d6f72] mb-3 line-clamp-3 group-hover:text-[#d63438] transition-colors">
+                      Visitor Management Systems
+                    </h3>
+                    <span className="text-[#d63438] font-medium text-sm md:text-xl lg:text-sm xl:text-lg max-w-[200px]">
+                      Management
+                    </span>
                   </div>
                 </Link>
               </div>
@@ -455,109 +468,28 @@ export default async function HomePage() {
               Our Clients
             </h2>
             <p class="text-xl text-secondary max-w-3xl mx-auto"> “Want to join our list of satisfied clients? Contact our team today!”
-Get Catalog & Get a Free Consultation</p>
-           
+              Get Catalog & Get a Free Consultation</p>
+
           </div>
           <div className="container mx-auto grid gap-6 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center">
-            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
-              <img
-                src="/images/clients/corporate-client/1.jpg"
-                alt="Client 1 logo"
-                class="max-h-[150px] object-contain w-full"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
-              <img
-                src="/images/clients/corporate-client/2.jpg"
-                alt="Client 2 logo"
-                class="max-h-[150px] object-contain w-full"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
-              <img
-                src="/images/clients/corporate-client/3.jpg"
-                alt="Client 3 logo"
-                class="max-h-[150px] object-contain w-full"
-                loading="lazy"
-              />
-            </div>
-
-            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
-              <img
-                src="/images/clients/corporate-client/4.jpg"
-                alt="Client 4 logo"
-                class="max-h-[150px] object-contain w-full"
-                loading="lazy"
-              />
-            </div>
-            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
-              <img
-                src="/images/clients/corporate-client/5.jpg"
-                alt="Client 4 logo"
-                class="max-h-[150px] object-contain w-full"
-                loading="lazy"
-              />
-            </div>
-            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
-              <img
-                src="/images/clients/corporate-client/6.jpg"
-                alt="Client 4 logo"
-                class="max-h-[150px] object-contain w-full"
-                loading="lazy"
-              />
-            </div>
-            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
-              <img
-                src="/images/clients/corporate-client/7.jpg"
-                alt="Client 4 logo"
-                class="max-h-[150px] object-contain w-full"
-                loading="lazy"
-              />
-            </div>
-            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
-              <img
-                src="/images/clients/corporate-client/8.jpg"
-                alt="Client 4 logo"
-                class="max-h-[150px] object-contain w-full"
-                loading="lazy"
-              />
-            </div>
-            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
-              <img
-                src="/images/clients/corporate-client/9.jpg"
-                alt="Client 4 logo"
-                class="max-h-[150px] object-contain w-full"
-                loading="lazy"
-              />
-            </div>
-            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
-              <img
-                src="/images/clients/corporate-client/10.jpg"
-                alt="Client 4 logo"
-                class="max-h-[150px] object-contain w-full"
-                loading="lazy"
-              />
-            </div>
-            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
-              <img
-                src="/images/clients/corporate-client/11.jpg"
-                alt="Client 4 logo"
-                class="max-h-[150px] object-contain w-full"
-                loading="lazy"
-              />
-            </div>
-            <div class="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200">
-              <img
-                src="/images/clients/corporate-client/12.jpg"
-                alt="Client 4 logo"
-                class="max-h-[150px] object-contain w-full"
-                loading="lazy"
-              />
-            </div>
+            {clients.map((src, i) => (
+              <div
+                key={i}
+                className="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200"
+              >
+                <div className="relative w-full h-[150px]">
+                  <Image
+                    src={src}
+                    alt={`Client ${i + 1} logo`}
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 50vw,
+                     (max-width: 1024px) 33vw,
+                     25vw"
+                  />
+                </div>
+              </div>
+            ))}
           </div>
           {/* View All Button */}
           <div className="text-center mt-12 mb-16">
@@ -832,7 +764,7 @@ Get Catalog & Get a Free Consultation</p>
           </div>
         </section>
       </main>
-     
+
     </div>
   );
 }
