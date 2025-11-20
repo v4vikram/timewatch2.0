@@ -41,6 +41,7 @@ const ProductDetails = ({ product }) => {
     productFaq = [],
   } = product;
 
+  console.log("productImageproductImageproductImage", productImage)
   return (
     <div className="container mx-auto px-4 py-10">
       {/* Top Section */}

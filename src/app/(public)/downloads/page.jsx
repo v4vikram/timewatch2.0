@@ -50,7 +50,7 @@ const downloadPage = () => {
     {
       title: "TrueFace SDK",
       icon: "/images/google-drive.png",
-      url: "https://drive.google.com/file/d/1GNqtC0zAOINJna7L6JJnYPzVKOXwFAzD/view",
+      url: "https://drive.google.com/file/d/1sjntsUBbB2mVTcRZWDkpY6Ziw_niCbaa/view?usp=sharing",
     },
     {
       title: "Tams9.5",

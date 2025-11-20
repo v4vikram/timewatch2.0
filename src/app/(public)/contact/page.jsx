@@ -45,7 +45,7 @@ const addresses = [
     id: 3,
     title: "Mumbai Residence",
     name:"Amit Patel",
-    contact:"+91 8448485471",
+    contact:"+91 84484 85472",
     email:"Amit1@timewatchindia.com",
     lines: [
       "Suburban State: Maharashtra PIN Code: 400069",
