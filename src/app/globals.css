@@ -216,13 +216,5 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   }
 }
 
-/* Hide Next.js Dev Overlay Icons */
-/* #__next-build-watcher,
-#__next-build-indicator,
-[data-nextjs-toast],
-[data-nextjs-react-dev-overlay],
-[data-nextjs-tooltip],
-[data-nextjs-router-indicator],
-[data-nextjs-portal] {
-  display: none !important;
-} */
+/* Blog styling */
+

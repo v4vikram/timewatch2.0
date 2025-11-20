@@ -40,7 +40,10 @@ export default function SupportButtons() {
   // Check if the current pathname includes any excluded path
   const shouldExclude = excludedPaths.some((path) => pathname.includes(path));
 
-  if (!path.includes("/product-catalouge") && !path.includes("/biometric-attendance-system-bio-1se-india")) {
+  if (
+    !path.includes("/product-catalouge") &&
+    !path.includes("/biometric-attendance-system-bio-1se-india")
+  ) {
     return (
       <>
         {/* Right Side Support Buttons */}
@@ -58,13 +61,16 @@ export default function SupportButtons() {
             title="Chat on WhatsApp"
           >
             <div className="flex items-center justify-center w-[45px] h-[45px] lg:w-[55px] lg:h-[55px] shrink-0">
-              {/* <MessageCircleMore className="w-[24px] h-[24px]" /> */}
-              <img
+              <Image
                 src="/images/whatsapp.png"
                 alt="whatsapp-color"
-                className=""
+                width={55}
+                height={55}
+                className="w-full h-full object-contain"
+                priority={false}
               />
             </div>
+
             <span className="ml-2 text-sm font-medium opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap">
               WhatsApp
             </span>

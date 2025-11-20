@@ -45,7 +45,7 @@ const downloadPage = () => {
     {
       title: "TimeWatch Access Contol SDK",
       icon: "/images/google-drive.png",
-      url: "https://drive.google.com/file/d/1OpfTXM_vAwetewHxIAH6D8tXHpQDbLhy/view",
+      url: "https://drive.google.com/file/d/1sjntsUBbB2mVTcRZWDkpY6Ziw_niCbaa/view",
     },
     {
       title: "TrueFace SDK",

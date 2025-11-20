@@ -38,7 +38,7 @@ export default function BannerSwiper() {
                     <span className="text-secondary">Baggage Scanner</span>
                   </h1>
 
-                  <hr className="w-1/3 rounded-2xl h-1.5 mt-2 md:h-2 bg-primary border-0 " />
+                  <hr className="w-1/3 rounded-2xwhatsapp-colorl h-1.5 mt-2 md:h-2 bg-primary border-0 " />
 
                   <p className="text-md md:text-lg text-gray-600 mt-5 leading-relaxed">
                     We provide customized model solutions for our AI X-Ray baggage
