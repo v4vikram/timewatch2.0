@@ -4,6 +4,8 @@ import Link from "next/link";
 import axiosInstance from "@/lib/axiosInstance";
 import Image from "next/image";
 
+
+
 // ---------- Server-side Data Fetch -----------
 async function getBlog(slug) {
   try {
@@ -18,10 +20,10 @@ async function getBlog(slug) {
 
 async function getLatestBlogs() {
   try {
-    const res = await axiosInstance.get(`/blog`, {
+    const res = await axiosInstance.get(`/blog?status=published`, {
       headers: { "Cache-Control": "no-store" },
     });
-    return res.data.blog;
+    return res.data.blogs;
   } catch (err) {
     return [];
   }
@@ -30,6 +32,7 @@ async function getLatestBlogs() {
 // ---------- SEO META (SSR) ----------
 export async function generateMetadata({ params }) {
   const blog = await getBlog(params.slug);
+  console.log("params", params, blog.slug)
 
   // console.log("seo meta", blog)
   if (!blog) return { title: "Blog Not Found" };
@@ -37,6 +40,9 @@ export async function generateMetadata({ params }) {
   return {
     title: blog.title,
     description: blog.description,
+    alternates: {
+        canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/blogs/${blog.slug}`,
+      },
     openGraph: {
       title: blog.title,
       description: blog.description,
@@ -71,13 +77,13 @@ const BlogPage = async ({ params }) => {
             Back to Blog
           </Link>
 
-          <div className="mb-6">
+          <div className="mb-6 hidden md:block">
             <span className="bg-[#d63438] text-white px-3 py-1 rounded-full text-sm font-medium capitalize">
               {blog.mainCategory}
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-[#6d6f72] mb-6 max-w-4xl">
+          <h1 className="text-[25px] md:text-5xl font-bold text-[#6d6f72] mb-6 max-w-4xl">
             {blog.title}
           </h1>
 
@@ -100,7 +106,7 @@ const BlogPage = async ({ params }) => {
       <section className="container px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-x-10">
           {/* Content */}
-          <div className="xl:col-span-9">
+          <div className="xl:col-span-9 blog-content-column">
             <div className="prose prose-lg max-w-none">
               <div className="w-full h-[200px] md:h-[400px] lg:h-[500px] relative mb-8 rounded-lg overflow-hidden">
                 <Image
@@ -126,7 +132,7 @@ const BlogPage = async ({ params }) => {
               </h3>
 
               <div className="space-y-4">
-                {latestBlogs.slice(0, 4).map((item) => (
+                {latestBlogs?.slice(0, 4).map((item) => (
                   <Link
                     key={item._id}
                     href={`/blogs/${item.slug}`}

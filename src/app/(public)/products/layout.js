@@ -91,6 +91,7 @@ export default function CatLayout({ children }) {
 
     try {
       const res = await axiosInstance.get(url);
+      console.log("resresres url", res)
       const prod = Array.isArray(res.data)
         ? res.data
         : res.data?.products || [];

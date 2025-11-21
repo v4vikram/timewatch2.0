@@ -3,6 +3,8 @@ import ProductCard from "./ProductCard";
 
 
 const FilterContent = ({ filterProducts }) => {
+
+  console.log("filterProducts", filterProducts)
   
 
   return (

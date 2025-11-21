@@ -217,4 +217,18 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 }
 
 /* Blog styling */
+.blog-content-column{
+  p{
+    @apply m-0
+  }
+  h2{
+    @apply m-0 mb-2 text-2xl
+  }
+  ol {
+    @apply list-disc pl-[25px] m-0
+  }
+  p strong{
+    @apply text-xl
+  }
+}
 

@@ -190,7 +190,7 @@ const ProductDetails = ({ product }) => {
           <h2 className="text-3xl font-bold mb-4">Product Specifications</h2>
 
           <Table>
-            <TableCaption>Product Specifications</TableCaption>
+            {/* <TableCaption>Product Specifications</TableCaption> */}
             <TableHeader>
               <TableRow>
                 <TableHead className="text-2xl text-primary">Specification</TableHead>

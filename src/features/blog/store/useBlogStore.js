@@ -67,7 +67,7 @@ export const useBlogStore = create((set, get) => ({
             const res = await blogAPI.list();
             // console.log("all blog", res?.data.blog)
 
-            set({ loading: false, blogs:res?.data?.blog });
+            set({ loading: false, blogs:res?.data?.blogs });
             return res?.data;   // return the blog object
         } catch (error) {
             set({
