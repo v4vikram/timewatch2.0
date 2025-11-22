@@ -40,3 +40,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 ai-face-t7hd
+/biometric-attendance-india

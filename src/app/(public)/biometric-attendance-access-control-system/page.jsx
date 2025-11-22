@@ -164,7 +164,7 @@ const BiometricAttendancePage = () => {
         "Large Campuses",
         "Shopping Malls",
       ],
-      link: "https://www.timewatchindia.com/products/time-attendance-and-access-control/ai-speed-face-series",
+      link: "https://www.timewatchindia.com/products/time-attendance-and-access-control/iris-series",
       catalogueUrl: "#",
     },
     {
@@ -187,7 +187,7 @@ const BiometricAttendancePage = () => {
         "Premium Offices",
         "Clean Rooms",
       ],
-      link: "https://www.timewatchindia.com/products/time-attendance-and-access-control/face-palm-series",
+      link: "https://www.timewatchindia.com/products/time-attendance-and-access-control/face-palm-access-control-devices",
       catalogueUrl: "#",
     },
   ];

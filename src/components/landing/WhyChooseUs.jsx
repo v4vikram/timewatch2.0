@@ -27,7 +27,7 @@ const WhyChooseUs = ({
         {features.map((feature, index) => (
           <div key={index}>
             <div
-              className={`md:p-6 rounded-xl transition-all duration-300 cursor-pointer md:flex items-start space-x-4 ${
+              className={`md:p-6 rounded-xl transition-all duration-300 cursor-pointer md:flex items-center space-x-4 ${
                 hoveredFeature === index
                   ? "bg-red-50 ring-2 ring-red-200"
                   : "bg-white"
