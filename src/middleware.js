@@ -1,46 +1,51 @@
 // middleware.js
 
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
-// Define the two hosts you want to manage
-const NAKED_DOMAIN = 'timewatchindia.com';
-// const NAKED_DOMAIN = 'localhost:3000';
-const WWW_DOMAIN = 'www.timewatchindia.com';
+const NAKED_DOMAIN = "timewatchindia.com";
+const WWW_DOMAIN = "www.timewatchindia.com";
 
 export function middleware(request) {
-  // console.log(":request", request)
-  // Get the host header from the request
-  const host = request.headers.get('host');
+  const url = request.nextUrl;
+  const host = request.headers.get("host");
+  const pathname = url.pathname;
+  const search = url.search;
   
-  // Extract the full path (including query params)
-  const path = request.nextUrl.pathname + request.nextUrl.search;
+  let redirectUrl = null;
 
-  // console.log(":naked", `https://${NAKED_DOMAIN}${path}`)
-  // console.log(":WWW_DOMAIN", `https://${host}${path}`)
-  // 1. Check if the host is the naked domain
-  if (`https://${host}${path}` === `https://${NAKED_DOMAIN}${path}`) {
-    // console.log(":working")
-    // 2. Construct the full www URL, enforcing HTTPS
-    const wwwUrl = `https://${WWW_DOMAIN}${path}`;
+  // ------------------------------------------------------------
+  // 1️⃣ Force HTTPS + Force www (301)
+  // ------------------------------------------------------------
+  const isNaked = host === NAKED_DOMAIN;
+  const isWWW = host === WWW_DOMAIN;
 
-    // 3. Return a permanent (301) redirect response
-    // A 301 is crucial for SEO
-    return NextResponse.redirect(wwwUrl, 301);
+  if (isNaked) {
+    redirectUrl = `https://${WWW_DOMAIN}${pathname}${search}`;
   }
 
-  // If the host is already www, or any other subdomain, let the request continue
+  // ------------------------------------------------------------
+  // 2️⃣ Old URL → New URL redirect (market-place → products)
+  //    Works for both naked & www domains
+  // ------------------------------------------------------------
+  if (pathname.startsWith("/market-place/")) {
+    const newPath = pathname.replace("/market-place/", "/products/");
+    redirectUrl = `https://${WWW_DOMAIN}${newPath}${search}`;
+  }
+
+  // If redirectUrl was set → perform SEO redirect
+  if (redirectUrl) {
+    return NextResponse.redirect(redirectUrl, 301);
+  }
+
+  // Otherwise allow the request
   return NextResponse.next();
 }
 
-// Optional: Configure the matcher to run the middleware on all paths
+// ------------------------------------------------------------
+// ⛔ Exclude static files
+// ------------------------------------------------------------
 export const config = {
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - _next/static (static assets)
-     * - _next/image (image optimization files)
-     * - public files (e.g., favicon.ico)
-     */
-    '/((?!_next/static|_next/image|favicon.ico).*)',
+    "/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)",
   ],
 };
