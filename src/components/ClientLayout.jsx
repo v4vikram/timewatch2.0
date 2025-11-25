@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import SupportButtons from "@/components/SupportButtons";
 import { useEffect } from "react";
 import LandingHeader from "./LandingHeader";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function ClientLayout({ children }) {
   const pathname = usePathname();
@@ -35,7 +37,18 @@ export default function ClientLayout({ children }) {
       <div>{children}</div>
 
       {!hideLayout && <Footer />}
+
       <SupportButtons />
+      <Button asChild className={'fixed top-1/2 -translate-y-1/2 -right-7 z-10 -rotate-90'}>
+        <Link
+        target="_blank"
+          href={
+            "https://eazypay.icicibank.com/eazypayLink?P1=b65SESRZWRLVerKiBAGNcA==#"
+          }
+        >
+          Pay Now
+        </Link>
+      </Button>
     </>
   );
 }
