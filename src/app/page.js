@@ -345,7 +345,7 @@ export default async function HomePage() {
                   href="/solutions/visitor-access-management/what-is-a-visitor-management-system"
                   className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col md:flex-row"
                 >
-                  <div className="md:w-2/5 relative overflow-hidden h=[180px] lg:h-[140px] xl:h-[180px]">
+                  <div className="md:w-2/5 relative overflow-hidden h-[180px] lg:h-[140px] xl:h-[180px]">
                     <Image
                       src="/images/solutions/visitor-management-system.jpg"
                       alt="Visitor Management Systems"
@@ -378,6 +378,9 @@ export default async function HomePage() {
             </div>
           </div>
         </section>
+
+
+
 
         {/* Features Section */}
         <section id="features" className="lg:py-20 bg-white">
@@ -456,7 +459,46 @@ export default async function HomePage() {
             </div>
           </div>
         </section>
+        {/* India Section */}
+        <section className="py-20 ">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* 2 Column Grid */}
+            <div className="grid lg:grid-cols-2 lg:gap-8 items-start">
+              {/* Column 1 - Image */}
+              <div className="relative w-full h-52 md:h-80 rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/biometric-attendance-system.png"
+                  alt="Biometric Attendance System
+                  in India"
+                  fill
+                  className="object-contain w-full h-full"
+                />
+              </div>
 
+              {/* Column 2 - Content */}
+              <div className="flex flex-col justify-center items-start lg:items-start space-y-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#6d6f72] mb-4">
+                  Biometric Attendance System
+                  in India
+                </h2>
+                <p className="text-gray-600">
+                  Managing employee attendance in India has always been a challenge. With large teams, varied shifts, field staff, remote workers and compliance requirements, traditional methods like registers, swipe cards or PIN systems fail to provide accuracy and transparency. A Biometric Attendance System solves these problems by using unique human identifiers such as face, fingerprint, palm or iris to record attendance correctly every time.
+                </p>
+                <Link
+                  href="/biometric-attendance-system-in-india"
+                  target="_blank"
+                  className="group bg-[#d63438] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#6d6f72] transition-all duration-300 flex items-start gap-2 shadow-lg hover:shadow-xl w-fit"
+                >
+                  Learn More
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
+                </Link>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Clients */}
         <section class="">
           <div class="text-center mb-12">
             <div class="flex items-center justify-center space-x-4 mb-2">
@@ -477,7 +519,7 @@ export default async function HomePage() {
                 key={i}
                 className="client-card flex items-center justify-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-200"
               >
-                <div className="relative w-full h-[150px]">
+                <div className="relative w-full h-[100px] lg:h-[150px]">
                   <Image
                     src={src}
                     alt={`Client ${i + 1} logo`}
