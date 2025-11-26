@@ -26,7 +26,7 @@ export const metadata = {
     "biometric attendance system, biometric access control, face recognition device, fingerprint attendance machine, palm recognition, iris access control, AI biometric system, Wi-Fi attendance machine, cloud-based attendance, TimeWatch India",
   openGraph: {
     type: "website",
-    url: "https://www.timewatchindia.com/products/time-attendance-and-access-control/",
+    url: "https://www.timewatchindia.com/time-attendance-and-access-control/",
     title: "Biometric Attendance & Access Control Systems – TimeWatch India",
     description:
       "AI-powered Face Recognition, Fingerprint, Palm & Iris Biometric Devices. Cloud-connected, Wi-Fi enabled systems for offices, factories, schools & government facilities.",
@@ -50,7 +50,7 @@ export const metadata = {
   },
   alternates: {
     canonical:
-      "https://www.timewatchindia.com/products/time-attendance-and-access-control/",
+      "https://www.timewatchindia.com/time-attendance-and-access-control/",
   },
 };
 
@@ -75,7 +75,7 @@ const BiometricAttendancePage = () => {
         "Research Centers",
         "Healthcare Institutions",
       ],
-      link: "https://www.timewatchindia.com/products/time-attendance-and-access-control/iris-series",
+      link: "https://www.timewatchindia.com/time-attendance-and-access-control/iris-series",
       catalogueUrl: "#",
     },
     {
@@ -283,10 +283,10 @@ const BiometricAttendancePage = () => {
     name: "Biometric Attendance & Access Control Systems by TimeWatch",
     description:
       "AI-powered Biometric Attendance & Access Control Systems including face recognition, fingerprint, palm, and iris devices — all cloud-connected and Wi-Fi enabled.",
-    url: "https://www.timewatchindia.com/products/time-attendance-and-access-control",
+    url: "https://www.timewatchindia.com/time-attendance-and-access-control",
     brand: { "@type": "Brand", name: "TimeWatch India" },
     hasPart: products.map((product) => ({
-      "@type": "Product",
+      "@type": "WebPage",
       name: product.title,
       url: product.link,
     })),
@@ -599,6 +599,97 @@ const BiometricAttendancePage = () => {
         id="biometric-attendance-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Script
+        id="additional-ld-json"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebPage",
+                name: "Biometric Attendance and Access Control Systems",
+                url: "https://www.timewatchindia.com/biometric-attendance-access-control-system",
+                description:
+                  "Explore TimeWatch biometric attendance and access control systems including iris devices, fingerprint machines, AI face recognition terminals and palm authentication solutions. Designed for secure and automated workforce management across Indian organizations.",
+                inLanguage: "en-IN",
+                isPartOf: {
+                  "@type": "Website",
+                  name: "TimeWatch Infocom Pvt Ltd",
+                  url: "https://www.timewatchindia.com/",
+                },
+              },
+
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: "https://www.timewatchindia.com/",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Products",
+                    item: "https://www.timewatchindia.com/products/",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 3,
+                    name: "Biometric Attendance and Access Control Systems",
+                    item: "https://www.timewatchindia.com/biometric-attendance-access-control-system",
+                  },
+                ],
+              },
+
+              {
+                "@type": "ItemList",
+                name: "Biometric Device Categories",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Iris Series – High-Security Iris Recognition Devices",
+                    url: "https://www.timewatchindia.com/biometric-attendance-access-control-system#iris-series",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Attendance Series – Reliable Biometric Attendance Devices",
+                    url: "https://www.timewatchindia.com/biometric-attendance-access-control-system#attendance-series",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 3,
+                    name: "Network Elevator Controller",
+                    url: "https://www.timewatchindia.com/biometric-attendance-access-control-system#elevator-controller",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 4,
+                    name: "Card, Fingerprint and Face Series – Multi-Mode Devices",
+                    url: "https://www.timewatchindia.com/biometric-attendance-access-control-system#card-fingerprint-face-series",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 5,
+                    name: "AI-Based Speed Face Series",
+                    url: "https://www.timewatchindia.com/biometric-attendance-access-control-system#ai-speed-face-series",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 6,
+                    name: "Face Palm Access Control Devices",
+                    url: "https://www.timewatchindia.com/biometric-attendance-access-control-system#face-palm-series",
+                  },
+                ],
+              },
+            ],
+          }),
+        }}
       />
     </>
   );
