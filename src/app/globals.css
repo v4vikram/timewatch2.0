@@ -59,8 +59,8 @@
   --popover-foreground: oklch(0.13 0.028 261.692);
   /* --primary: oklch(0.21 0.034 264.665); */
   --primary: #d63438;
-  --primary-foreground: oklch(0.985 0.002 247.839);
   --secondary: #6d6f72;
+  --primary-foreground: oklch(0.985 0.002 247.839);
   --secondary-foreground: oklch(0.21 0.034 264.665);
   --muted: oklch(0.967 0.003 264.542);
   --muted-foreground: oklch(0.551 0.027 264.364);
@@ -229,6 +229,16 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   }
   p strong{
     @apply text-xl
+  }
+}
+
+/* product cat car */
+.product-cat-card{
+  .swiper-button-prev, .swiper-button-next{
+    @apply w-10 h-10 md:h-12 md:w-12 md:p-[25px] rounded-full bg-primary
+  }
+  .swiper-button-prev::after, .swiper-button-next::after{
+    @apply text-lg md:text-2xl text-white
   }
 }
 

@@ -22,11 +22,12 @@ import {
 } from "lucide-react";
 import AccordionItem from "@/components/landing/AccordionItem";
 import HomePageForm from "@/components/HomePageForm";
+import ProductCatCard from "@/features/singleProductByCat/components/ProductCatCard";
+import BioCards from "@/components/landing/BioCards";
 
 export default function BiometricAttendancePage() {
   const systems = [
     /* Face Recognition Attendance System */
-   
 
     /* Additional Fingerprint Machine Block */
     {
@@ -97,7 +98,7 @@ export default function BiometricAttendancePage() {
       color: "from-primary to-[#b82c30]",
       featured: true,
     },
-     {
+    {
       icon: Camera,
       title: "Face Recognition Attendance System",
       value:
@@ -191,7 +192,7 @@ export default function BiometricAttendancePage() {
           }}
         ></div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-40">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20 md:pb-40">
           <div className="text-center">
             {/* <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
               <Star className="w-4 h-4 text-yellow-300" fill="currentColor" />
@@ -200,9 +201,9 @@ export default function BiometricAttendancePage() {
               </span>
             </div> */}
 
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Biometric Attendance System
-              <br />
+              <br className="hidden md:block" />
               in India
             </h1>
 
@@ -212,19 +213,19 @@ export default function BiometricAttendancePage() {
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-6 py-3 text-white">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-2 md:px-6 py-3 text-white">
                 <div className="flex items-center gap-2">
                   <Shield className="w-5 h-5" />
                   <span className="font-semibold">100% Secure</span>
                 </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-6 py-3 text-white">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-2 md:px-6 py-3 text-white">
                 <div className="flex items-center gap-2">
                   <Zap className="w-5 h-5" />
                   <span className="font-semibold">Lightning Fast</span>
                 </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-6 py-3 text-white">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-2 md:px-6 py-3 text-white">
                 <div className="flex items-center gap-2">
                   <Cloud className="w-5 h-5" />
                   <span className="font-semibold">Cloud Enabled</span>
@@ -274,7 +275,7 @@ export default function BiometricAttendancePage() {
 
         {/* Evolution Timeline */}
         <div className="max-w-7xl mx-auto mb-20">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
             How Biometric Attendance Evolved in India
           </h2>
 
@@ -324,8 +325,8 @@ export default function BiometricAttendancePage() {
         </div>
 
         {/* Popular Types */}
-        <div className="container mx-auto mb-20">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+        <div className="container mx-auto mb-20 px-0">
+          <h2 className="text-3xl md:text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
             Popular Types of Biometric Attendance Systems in India
           </h2>
 
@@ -350,7 +351,7 @@ export default function BiometricAttendancePage() {
 
                     <div className="relative p-6 flex flex-col h-full">
                       {/* Icon with Floating Effect */}
-                      <div className="flex justify-center mb-4">
+                      <div className="flex justify-left mb-4">
                         <div
                           className={`relative w-16 h-16 bg-gradient-to-br ${spec.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-2xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}
                         >
@@ -367,7 +368,7 @@ export default function BiometricAttendancePage() {
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-lg font-bold text-gray-800 mb-3 text-left min-h-[56px] flex items-center justify-center group-hover:text-[#b82c30] transition-colors duration-300">
+                      <h3 className="text-lg font-bold text-gray-800 mb-3 text-left min-h-[56px] flex items-center justify-left group-hover:text-[#b82c30] transition-colors duration-300">
                         {spec.title}
                       </h3>
 
@@ -377,7 +378,7 @@ export default function BiometricAttendancePage() {
                       </p>
 
                       {/* Bottom Decorative Element */}
-                      <div className="mt-4 flex justify-center gap-1">
+                      {/* <div className="mt-4 flex justify-center gap-1">
                         {[0, 1, 2].map((i) => (
                           <div
                             key={i}
@@ -385,16 +386,14 @@ export default function BiometricAttendancePage() {
                             style={{ transitionDelay: `${i * 100}ms` }}
                           ></div>
                         ))}
-                      </div>
+                      </div> */}
 
                       {/* Featured Badge for Primary Items */}
-                      {spec.featured && (
-                        <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                          <div
-                            className={`w-2 h-2 rounded-full bg-gradient-to-r ${spec.color} animate-pulse`}
-                          ></div>
-                        </div>
-                      )}
+                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div
+                          className={`w-2 h-2 rounded-full bg-gradient-to-r ${spec.color} animate-pulse`}
+                        ></div>
+                      </div>
                     </div>
                   </div>
                 );
@@ -405,7 +404,7 @@ export default function BiometricAttendancePage() {
 
         {/* Industry Applications */}
         <div className="max-w-7xl mx-auto mb-20">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+          <h2 className="text-3xl md:text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
             Industry Wise Applications in India
           </h2>
 
@@ -431,7 +430,7 @@ export default function BiometricAttendancePage() {
                     </div>
 
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-0 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-secondary group-hover:to-primary transition-all duration-300">
+                      <h3 className="text-lg leading-[22px] md:leading-[28px] md:text-2xl font-bold text-gray-900 mb-0 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-secondary group-hover:to-primary transition-all duration-300">
                         {industry.title}
                       </h3>
                     </div>
@@ -453,8 +452,8 @@ export default function BiometricAttendancePage() {
         </div>
 
         {/* Why TimeWatch */}
-        <div className="max-w-7xl mx-auto mb-20 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-3xl p-10">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+        <div className="max-w-7xl mx-auto mb-20 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-3xl p-4 md:p-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
             Why TimeWatch is a Trusted Brand Across India
           </h2>
 
@@ -517,7 +516,7 @@ export default function BiometricAttendancePage() {
         </div> */}
 
         {/* Dedicated Keyword Section */}
-        <div className="max-w-7xl mx-auto mb-20 bg-gradient-to-br from-gray-500 to-primary rounded-3xl p-10 text-white">
+        <div className="max-w-7xl mx-auto mb-20 bg-gradient-to-br from-gray-500 to-primary rounded-3xl p-4 md:p-10 text-white">
           <h2 className="text-3xl font-bold mb-8">
             Availability Across Major Indian Cities
           </h2>
@@ -534,8 +533,26 @@ export default function BiometricAttendancePage() {
             </div>
           </div>
         </div>
+        {/* Related Products */}
+        <section>
+          <div className="container mx-auto mt-20">
+            <h2 class="text-center mb-8 text-3xl lg:text-4xl font-extrabold text-secondary">
+              Related Products
+            </h2>
+            <ProductCatCard categorySlug="time-attendance-and-access-control" />
+          </div>
+        </section>
 
-        {/* FAQ */}
+        {/* Related Pages */}
+        <section>
+          <div className="container mx-auto px-0 mt-14">
+            <h2 className="text-center text-3xl lg:text-4xl font-extrabold text-secondary">
+              Pan India Presence
+            </h2>
+            <BioCards />
+          </div>
+        </section>
+
         {/* FAQ SECTION */}
         <section className="container mx-auto py-12 px-0 sm:px-6 lg:px-8">
           <h2 className="text-center mb-8 text-3xl lg:text-4xl font-extrabold text-secondary">

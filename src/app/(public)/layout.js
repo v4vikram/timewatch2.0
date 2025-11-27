@@ -19,13 +19,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-   <>
-         {/* <Header/> */}
-         <div className=''>{children}</div>
-        <div>
-          {/* <Footer/> */}
-        </div>
-        <SupportButtons/>
-   </>
+    <>
+      <div className=''>{children}</div>
+      <SupportButtons />
+    </>
   );
 }

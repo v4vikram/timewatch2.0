@@ -378,12 +378,56 @@ export default async function HomePage() {
             </div>
           </div>
         </section>
+        {/* India Section */}
+        <section className="pb-20 ">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            {/* 2 Column Grid */}
+            <div className="grid lg:grid-cols-2 lg:gap-8 items-start">
+
+              {/* Column 1 - Image (mobile first) */}
+              <div className="relative w-full h-52 md:h-[430px] rounded-2xl overflow-hidden bg-gray-100 order-1 lg:order-2">
+                <Image
+                  src="/images/biometric-attendance-system.png"
+                  alt="Biometric Attendance System in India"
+                  fill
+                  className="object-contain w-full h-full p-6 lg:p-20"
+                />
+              </div>
+
+              {/* Column 2 - Content */}
+              <div className="flex flex-col justify-center items-start space-y-6 order-2 lg:order-1">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#6d6f72] mb-4 mt-4 md:mt-0">
+                  Biometric Attendance System
+                  in India
+                </h2>
+
+                <p className="text-gray-600 leading-[28px]">
+                  Biometric attendance systems eliminate these risks by creating tamper-proof digital records of entry and exit times. The system captures data in real-time, stores it securely, generates comprehensive reports automatically, and integrates seamlessly with payroll and HR systems. This automation saves administrative time and costs while building a culture of accountability, punctuality, and transparency throughout the organization, benefiting both employers and employees alike.
+                </p>
+                <p className="text-gray-600 leading-[28px]">
+                  In today's competitive business landscape, accurate attendance tracking directly impacts payroll accuracy, productivity measurement, labor cost management, and regulatory compliance. Indian & World labor laws, including the Factories Act and Shops and Establishment Acts, mandate precise maintenance of attendance records with penalties for non-compliance. Manual or card-based systems create opportunities for errors and fraud that lead to inflated costs, payroll discrepancies, and legal complications.
+                </p>
+
+                <Link
+                  href="/biometric-attendance-system-in-india"
+                  target="_blank"
+                  className="group bg-[#d63438] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#6d6f72] transition-all duration-300 flex items-start gap-2 shadow-lg hover:shadow-xl w-fit"
+                >
+                  Learn More
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
+                </Link>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
 
 
 
 
         {/* Features Section */}
-        <section id="features" className="lg:py-20 bg-white">
+        <section id="features" className="lg:pb-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-[#6d6f72] mb-4">
@@ -459,44 +503,7 @@ export default async function HomePage() {
             </div>
           </div>
         </section>
-        {/* India Section */}
-        <section className="py-20 ">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* 2 Column Grid */}
-            <div className="grid lg:grid-cols-2 lg:gap-8 items-start">
-              {/* Column 1 - Image */}
-              <div className="relative w-full h-52 md:h-80 rounded-2xl overflow-hidden">
-                <Image
-                  src="/images/biometric-attendance-system.png"
-                  alt="Biometric Attendance System
-                  in India"
-                  fill
-                  className="object-contain w-full h-full"
-                />
-              </div>
 
-              {/* Column 2 - Content */}
-              <div className="flex flex-col justify-center items-start lg:items-start space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#6d6f72] mb-4">
-                  Biometric Attendance System
-                  in India
-                </h2>
-                <p className="text-gray-600">
-                  Managing employee attendance in India has always been a challenge. With large teams, varied shifts, field staff, remote workers and compliance requirements, traditional methods like registers, swipe cards or PIN systems fail to provide accuracy and transparency. A Biometric Attendance System solves these problems by using unique human identifiers such as face, fingerprint, palm or iris to record attendance correctly every time.
-                </p>
-                <Link
-                  href="/biometric-attendance-system-in-india"
-                  target="_blank"
-                  className="group bg-[#d63438] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#6d6f72] transition-all duration-300 flex items-start gap-2 shadow-lg hover:shadow-xl w-fit"
-                >
-                  Learn More
-                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
-                </Link>
-
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Our Clients */}
         <section class="">

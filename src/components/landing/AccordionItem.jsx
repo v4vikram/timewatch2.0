@@ -8,7 +8,7 @@ const AccordionItem = ({ item, index, isFirst, parentId = "bio1seFAQ" }) => {
     <div className="border border-gray-200 rounded-lg overflow-hidden my-2">
       <h2 className="mb-0" id={`heading-${index}`}>
         <button
-          className="flex justify-between items-center w-full p-4 text-left font-semibold text-lg text-gray-800 bg-white hover:bg-gray-50 transition duration-150"
+          className="flex justify-between items-center w-full p-4 text-left font-semibold text-lg text-gray-800 bg-white hover:bg-gray-50 transition duration-150 cursor-pointer"
           type="button"
           onClick={() => setIsOpen(!isOpen)}
         >

@@ -1,15 +1,7 @@
-// app/not-found.jsx
-"use client";
-
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useEffect } from "react";
 
 export default function NotFound() {
-  useEffect(() => {
-    console.warn("404 - Page Not Found");
-  }, []);
-
   return (
     <div className="min-h-[50vh] flex items-center justify-center  px-6">
       <div className="text-center">

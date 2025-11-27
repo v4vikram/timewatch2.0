@@ -1,25 +1,28 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-images: {
-  domains: [
-    "localhost",
-    "storage.googleapis.com",
-    "timewatch2-0-311005204045.europe-west1.run.app",
-    "cdn.timewatchindia.com",
-  ],
-  remotePatterns: [
-    {
-      protocol: "https",
-      hostname: "cdn.timewatchindia.com",
-      pathname: "/uploads/**",
-    },
-  ],
-},
+  images: {
+    domains: [
+      "localhost",
+      "storage.googleapis.com",
+      "timewatch2-0-311005204045.europe-west1.run.app",
+      "cdn.timewatchindia.com",
+    ],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.timewatchindia.com",
+        pathname: "/uploads/**",
+      },
+    ],
+  },
+  // experimental: {
+  //   prefetchBrowser: false,
+  // },
 
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-    async redirects() {
+  async redirects() {
     return [
       // 🔁 General redirect: all /market-place/* → /products/*
       {
@@ -46,7 +49,7 @@ images: {
       {
         source:
           "/market-place/time-attendance-and-access-control/ai-based-speed-face-series/trueface1000d",
-        destination:"/products/time-attendance-and-access-control/ai-based-speed-face-series/trueface1000d",
+        destination: "/products/time-attendance-and-access-control/ai-based-speed-face-series/trueface1000d",
         permanent: true,
       },
       {

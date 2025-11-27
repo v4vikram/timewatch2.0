@@ -22,12 +22,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={rajdhani.className}>
       <head>
-        <GTM />
       </head>
+      <GTM />
       <body className={rajdhani.className}>
         <ClientLayout>
           {children}
-          </ClientLayout>
+        </ClientLayout>
       </body>
     </html>
   );

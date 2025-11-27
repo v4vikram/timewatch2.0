@@ -371,6 +371,7 @@ const aboutPage = () => {
             </div>
           </div>
         </section>
+        
         <section className="bg-gradient-to-br from-primary/10 to-[#6d6f72]/10 py-20 text-center">
           <div className="max-w-3xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-[#6d6f72] mb-4">
