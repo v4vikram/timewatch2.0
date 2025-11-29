@@ -4,7 +4,8 @@ import SolutionsFaq from "@/components/SolutionsFaq";
 import Head from "next/head";
 
 export const metadata = {
-  title: "Cloud-Based Attendance & Payroll Software in India | TimeWatch Infocom",
+  title:
+    "Cloud-Based Attendance & Payroll Software in India | TimeWatch Infocom",
   description:
     "Simplify attendance & payroll with TimeWatch's free cloud software for up to 250 users. Auto shift, mobile app, field staff tracking & payslip automation.",
   alternates: {
@@ -139,13 +140,14 @@ export default function CloudAttendancePayrollSoftware() {
           {/* main content */}
           <div className="flex-1">
             <section className="">
-              <div className="relative z-10 w-full h-[300px] md:h-[450px] rounded-lg overflow-hidden">
+              <div className="relative w-full h-[260px] md:h-[420px] rounded-lg overflow-hidden">
                 <Image
                   src="/images/solutions/sub/update-software.jpg"
-                  alt=" Attendance & Payroll Management Software for Indian Businesses"
+                  alt="Attendance & Payroll Management Software for Indian Businesses"
                   fill
-                  sizes="100"
-                  className="object-cover w-full h-full"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
                 />
               </div>
 

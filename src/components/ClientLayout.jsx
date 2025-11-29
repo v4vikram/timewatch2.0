@@ -39,7 +39,7 @@ export default function ClientLayout({ children }) {
       {!hideLayout && <Footer />}
 
       <SupportButtons />
-      <Button asChild className={'fixed top-1/2 -translate-y-1/2 -right-7 z-10 -rotate-90'}>
+      <Button asChild className={'fixed top-1/2 -translate-y-1/2 -right-7 z-10 -rotate-90 text-lg'}>
         <Link
         target="_blank"
           href={

@@ -19,12 +19,33 @@ export default function SupportButtons() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+useEffect(() => {
+  let timeout;
+
+  const handleScroll = () => {
+    setShowScroll(true); // show immediately on scroll
+
+    // clear previous timeout
+    if (timeout) clearTimeout(timeout);
+
+    // hide after 2 seconds of no scrolling
+    timeout = setTimeout(() => {
+      setShowScroll(false);
+    }, 1000);
   };
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
 
   const pathname = usePathname();
 
@@ -76,7 +97,7 @@ export default function SupportButtons() {
             </span>
           </a>
           {/* Call Button (visible only on mobile) */}
-          <a
+          {/* <a
             href="tel:+919599953921"
             className="group flex items-center bg-primary text-white rounded-full shadow-lg w-[45px] h-[45px] lg:w-[55px] lg:h-[55px] lg:w-[55px] lg:h-[55px] hover:w-36 transition-all duration-300 overflow-hidden md:hidden"
             title="Call Us"
@@ -87,7 +108,7 @@ export default function SupportButtons() {
             <span className="ml-2 text-sm font-medium opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap">
               Call Us
             </span>
-          </a>
+          </a> */}
         </div>
 
         {/* Scroll to Top Button (Left Bottom) */}

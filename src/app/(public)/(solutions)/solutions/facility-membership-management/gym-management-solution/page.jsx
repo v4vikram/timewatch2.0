@@ -8,7 +8,8 @@ export const metadata = {
   description:
     "Manage memberships, billing, trainers & attendance with TimeWatch Gym Management Software. Scalable for gyms in India, UAE, and the Middle East.",
   alternates: {
-    canonical: "https://www.timewatchindia.com/solutions/facility-membership-management/gym-management-solution",
+    canonical:
+      "https://www.timewatchindia.com/solutions/facility-membership-management/gym-management-solution",
   },
 };
 
@@ -103,16 +104,18 @@ export default function GymManagementSolution() {
 
         <section className="bg-gray-50 relative overflow-hidden h-[400px] md:h-[550px]">
           <div className="absolute inset-0 left-0 top-0 w-full h-full">
-            <div className="relative z-10 w-full h-[400px] md:h-[550px]">
+            <div className="relative w-full h-[320px] md:h-[500px]">
               <Image
                 src="/images/solutions/Gym-Management-Solution.png"
-                alt="Consulting Hero"
+                alt="Gym Management Solution"
                 fill
-                sizes="100"
-                className="object-cover w-full h-full"
+                priority
+                sizes="(max-width: 768px) 100vw, 100vw"
+                className="object-cover"
               />
-              {/* Gradient overlay on top of image */}
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 pointer-events-none z-10" />
+
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900/80" />
             </div>
           </div>
 
@@ -134,13 +137,14 @@ export default function GymManagementSolution() {
           {/* main content */}
           <div className="flex-1">
             <section className="">
-              <div className="relative z-10 w-full h-[300px] md:h-[450px] rounded-lg overflow-hidden">
+              <div className="relative w-full h-[260px] md:h-[420px] rounded-lg overflow-hidden">
                 <Image
                   src="/images/solutions/sub/Gym-Management.jpg"
-                  alt="Consulting Hero"
+                  alt="Gym Management"
                   fill
-                  sizes="100"
-                  className="object-cover w-full h-full"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
                 />
               </div>
 

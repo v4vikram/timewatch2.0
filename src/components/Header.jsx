@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 import { SearchBar } from "./SearchBar";
 import PhoneHeaderNavigationMenu from "./PhoneHeaderNavigationMenu";
-import { Menu, X, Home, User, Settings, Mail, Info } from "lucide-react";
+import { Menu, X, Home, User, Settings, Mail, Info, Phone } from "lucide-react";
 import { useParams } from "next/navigation";
 import { useIsDesktop } from "@/hooks/useIsDesktop";
 
@@ -36,9 +36,11 @@ const Header = () => {
         </Link>
         {/* Desktop menu (render only on desktop!) */}
         {isDesktop && (
-          <div className="relative z-10">
-            <HeaderNavigationMenu />
-          </div>
+          <>
+            <div className="relative z-10">
+              <HeaderNavigationMenu />
+            </div>
+          </>
         )}
 
         {/* Mobile menu */}
@@ -54,6 +56,9 @@ const Header = () => {
 
         {/* right side */}
         <div className="flex items-center">
+          <Link href="tel:+919599953921" className="block lg:hidden">
+            <Phone className="text-primary"/>
+          </Link>
           <SearchBar />
 
           <button
