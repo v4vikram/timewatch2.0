@@ -17,7 +17,8 @@ import Script from "next/script";
 import CatalogueDownload from "@/components/forms/CatalogueDownload";
 
 export const metadata = {
-  title: "Tripod Turnstiles by TimeWatch – Secure Pedestrian Access Control | TimeWatch Infocom",
+  title:
+    "Tripod Turnstiles by TimeWatch – Secure Pedestrian Access Control | TimeWatch Infocom",
   description:
     "Explore TWLD-TS2700 & TWLD-TS2715 tripod turnstiles with stainless steel design, anti-tailgating sensors, and RFID/biometric integration.",
   openGraph: {
@@ -83,17 +84,21 @@ const TWLDTS2715Page = () => {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
-        "@id": "https://www.timewatchindia.com/#organization",
-        name: "TimeWatch India Pvt. Ltd.",
-        url: "https://www.timewatchindia.com/",
-        logo: "https://www.timewatchindia.com/assets/images/logo.png",
-        sameAs: [
-          "https://www.linkedin.com/company/timewatchindia",
-          "https://www.facebook.com/timewatchindia",
-          "https://twitter.com/timewatchindia",
-        ],
+        "@type": "WebPage",
+        "@id":
+          "https://www.timewatchindia.com/access-control-security-gate-manufacturer-in-India#webpage",
+        name: "Tripod Turnstiles by TimeWatch | Access Control & Security Gates",
+        url: "https://www.timewatchindia.com/access-control-security-gate-manufacturer-in-India",
+        description:
+          "Tripod turnstiles by TimeWatch. Heavy-duty TWLD-TS2700 and TWLD-TS2715 tripod gates built from SS304 with anti-tailgating detection, retractable belt options, RFID and biometric integration. Designed for offices, campuses, metros and stadiums across India.",
+        inLanguage: "en-IN",
+        isPartOf: {
+          "@type": "Website",
+          name: "TimeWatch Infocom Pvt Ltd",
+          url: "https://www.timewatchindia.com/",
+        },
       },
+
       {
         "@type": "BreadcrumbList",
         itemListElement: [
@@ -112,42 +117,47 @@ const TWLDTS2715Page = () => {
           {
             "@type": "ListItem",
             position: 3,
+            name: "Access Control & Security Gates",
+            item: "https://www.timewatchindia.com/access-control-security-gate-manufacturer-in-India",
+          },
+          {
+            "@type": "ListItem",
+            position: 4,
             name: "Tripod Turnstiles",
-            item: "https://www.timewatchindia.com/products/tripod-turnstiles/",
+            item: "https://www.timewatchindia.com/access-control-security-gate-manufacturer-in-India#tripod-turnstiles",
           },
         ],
       },
+
       {
-        "@type": "Product",
-        name: "TimeWatch TWLD-TS2700 Tripod Turnstile",
-        image:
-          "https://www.timewatchindia.com/assets/images/products/twld-ts2700.jpg",
-        description:
-          "Heavy-duty tripod turnstile designed for reliable, cost-effective pedestrian access control with stainless steel construction, anti-tailgating sensors, and RFID/biometric compatibility.",
-        sku: "TWLD-TS2700",
-        brand: { "@type": "Brand", name: "TimeWatch" },
-        offers: {
-          "@type": "Offer",
-          url: "https://www.timewatchindia.com/products/tripod-turnstiles/twld-ts2700/",
-          priceCurrency: "INR",
-          availability: "https://schema.org/InStock",
-        },
-      },
-      {
-        "@type": "Product",
-        name: "TimeWatch TWLD-TS2715 Tripod Turnstile with Integrated Belt Barrier",
-        image:
-          "https://www.timewatchindia.com/assets/images/products/twld-ts2715.jpg",
-        description:
-          "Tripod turnstile with integrated belt barrier for enhanced crowd control, stainless steel housing, and infrared anti-tailgating detection.",
-        sku: "TWLD-TS2715",
-        brand: { "@type": "Brand", name: "TimeWatch" },
-        offers: {
-          "@type": "Offer",
-          url: "https://www.timewatchindia.com/products/tripod-turnstiles/twld-ts2715/",
-          priceCurrency: "INR",
-          availability: "https://schema.org/InStock",
-        },
+        "@type": "ItemList",
+        name: "Tripod Turnstile Models and Related Solutions",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "TWLD-TS2700 – Heavy-Duty Tripod Turnstile",
+            url: "https://www.timewatchindia.com/access-control-security-gate-manufacturer-in-India#twld-ts2700",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "TWLD-TS2715 – Tripod Turnstile with Retractable Belt",
+            url: "https://www.timewatchindia.com/access-control-security-gate-manufacturer-in-India#twld-ts2715",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "AI-Face-T7HD – AI Face Recognition Integration",
+            url: "https://www.timewatchindia.com/access-control-security-gate-manufacturer-in-India#aiface-t7hd",
+          },
+          {
+            "@type": "ListItem",
+            position: 4,
+            name: "Accessories and Integration Services",
+            url: "https://www.timewatchindia.com/access-control-security-gate-manufacturer-in-India#accessories",
+          },
+        ],
       },
     ],
   };
@@ -208,7 +218,6 @@ const TWLDTS2715Page = () => {
                   Tripod Turnstiles by TimeWatch <br />{" "}
                   <span className="text-primary">
                     Smart, Secure, and Stylish Access Control Solutions
-
                   </span>
                 </h1>
 
@@ -324,7 +333,11 @@ const TWLDTS2715Page = () => {
                 </ul>
 
                 <div class="flex flex-wrap gap-4 mt-5">
-                  <CatalogueDownload downloadLink={"https://storage.googleapis.com/timewatch-dashbord-bucket/uploads/docs/datasheet/twld-ts2700-datasheet-ver-2-0-bfctqz.pdf"} />
+                  <CatalogueDownload
+                    downloadLink={
+                      "https://storage.googleapis.com/timewatch-dashbord-bucket/uploads/docs/datasheet/twld-ts2700-datasheet-ver-2-0-bfctqz.pdf"
+                    }
+                  />
 
                   <a
                     class="bg-secondary  text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
@@ -381,7 +394,11 @@ const TWLDTS2715Page = () => {
                   </li>
                 </ul>
                 <div class="flex flex-wrap gap-4 mt-5">
-                    <CatalogueDownload downloadLink={"https://storage.googleapis.com/timewatch-dashbord-bucket/uploads/docs/datasheet/twld-ts2715-datasheet-ver-2-0-eohhb1.pdf"} />
+                  <CatalogueDownload
+                    downloadLink={
+                      "https://storage.googleapis.com/timewatch-dashbord-bucket/uploads/docs/datasheet/twld-ts2715-datasheet-ver-2-0-eohhb1.pdf"
+                    }
+                  />
 
                   <a
                     class="bg-secondary  text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center group"
@@ -417,7 +434,6 @@ const TWLDTS2715Page = () => {
               subtitle="Your trusted partner for biometric solutions across India"
               features={featureList}
               buttonText="Enquire Now"
-            
               footerText="Join 5,000+ Indian businesses already using TimeWatch solutions"
             />
           </div>
