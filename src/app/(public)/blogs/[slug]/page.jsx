@@ -3,8 +3,7 @@ import { ArrowRight, Clock, Calendar, User } from "lucide-react";
 import Link from "next/link";
 import axiosInstance from "@/lib/axiosInstance";
 import Image from "next/image";
-
-
+import ProductCatCard from "@/features/singleProductByCat/components/ProductCatCard";
 
 // ---------- Server-side Data Fetch -----------
 async function getBlog(slug) {
@@ -32,7 +31,7 @@ async function getLatestBlogs() {
 // ---------- SEO META (SSR) ----------
 export async function generateMetadata({ params }) {
   const blog = await getBlog(params.slug);
-  console.log("params", params, blog.slug)
+  // console.log("params", params, blog.slug);
 
   // console.log("seo meta", blog)
   if (!blog) return { title: "Blog Not Found" };
@@ -41,8 +40,8 @@ export async function generateMetadata({ params }) {
     title: blog.title,
     description: blog.description,
     alternates: {
-        canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/blogs/${blog.slug}`,
-      },
+      canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/blogs/${blog.slug}`,
+    },
     openGraph: {
       title: blog.title,
       description: blog.description,
@@ -55,6 +54,7 @@ export async function generateMetadata({ params }) {
 const BlogPage = async ({ params }) => {
   const blog = await getBlog(params.slug);
   const latestBlogs = await getLatestBlogs();
+  console.log(":blog", blog?.mainCategorySlug);
 
   if (!blog) {
     return (
@@ -110,8 +110,8 @@ const BlogPage = async ({ params }) => {
             <div className="prose prose-lg max-w-none">
               <div className="w-full h-[200px] md:h-[400px] lg:h-[500px] relative mb-8 rounded-lg overflow-hidden">
                 <Image
-                  src={blog.featuredImage}
-                  alt={blog.title}
+                  src={blog.featuredImage || `image-url`}
+                  alt={blog.title || `Image title`}
                   fill
                   className="object-cover"
                 />
@@ -165,6 +165,20 @@ const BlogPage = async ({ params }) => {
               </div>
             </div>
           </div>
+        </div>
+        {/* Related Product */}
+
+        <div className="container mx-auto px-0">
+          <h2 className="text-center mb-8 text-3xl lg:text-4xl font-extrabold text-secondary">
+            Related Products
+          </h2>
+          {blog?.mainCategorySlug ? (
+            <ProductCatCard categorySlug={blog.mainCategorySlug} />
+          ) : (
+            <p className="text-center text-gray-500">
+              No related products available.
+            </p>
+          )}
         </div>
       </section>
     </div>

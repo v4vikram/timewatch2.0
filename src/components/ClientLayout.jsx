@@ -17,7 +17,7 @@ export default function ClientLayout({ children }) {
   const hideLayout = [
     "/biometric-attendance-system-bio-1se-india",
     "/product-catalouge",
-    "/access-control-security-gate-manufacturer-in-India",
+    // "/access-control-security-gate-manufacturer-in-India",
     "/ai-face-t7hd",
     "/biometric-attendance-access-control-system",
     "/entrance-control-systems-secure-intelligent-pedestrian",

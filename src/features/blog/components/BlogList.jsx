@@ -9,7 +9,7 @@ const BlogList = () => {
   const { getAllBlog, blogs } = useBlogStore();
 
   useEffect(() => {
-    getAllBlog();
+    getAllBlog(); 
   }, []);
 
   return (

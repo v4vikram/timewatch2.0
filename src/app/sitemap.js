@@ -38,9 +38,10 @@ export default async function sitemap() {
 
   const staticUrls = staticPages.map((page) => ({
     url: `${baseUrl}/${page}`,
+    
     lastModified: new Date(),
     changeFrequency: "monthly",
-    priority: page === "" ? 10 : 0.8,
+    priority: page === "" ? 1.0 : 0.8,
   }));
 
   // -------- SOLUTION PAGES (Nested Folder Scan) --------
