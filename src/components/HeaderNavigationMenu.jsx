@@ -193,6 +193,12 @@ export function HeaderNavigationMenu() {
             <Link href="/ceo-desk">CEO's Desk</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
+        {/* Blogs */}
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild className={getLinkClass("/blogs")}>
+            <Link href="/blogs">Blogs</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
   );

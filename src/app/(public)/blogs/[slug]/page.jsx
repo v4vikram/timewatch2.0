@@ -108,6 +108,7 @@ const BlogPage = async ({ params }) => {
           {/* Content */}
           <div className="xl:col-span-9 blog-content-column">
             <div className="prose prose-lg max-w-none">
+              {/* Featured Image */}
               <div className="w-full h-[200px] md:h-[400px] lg:h-[500px] relative mb-8 rounded-lg overflow-hidden">
                 <Image
                   src={blog.featuredImage || `image-url`}
@@ -117,6 +118,19 @@ const BlogPage = async ({ params }) => {
                 />
               </div>
 
+              {/* Highlighted Title + Summary Section */}
+              {blog.summaryTitle && (
+                <div className="mb-8 p-6 bg-[#fff7f7] border-l-4 border-primary rounded-lg shadow-sm">
+                  <h2 className="text-3xl font-bold text-gray-800 mb-3">
+                    {blog.summaryTitle}
+                  </h2>
+                  <p className="text-gray-600 text-lg leading-relaxed">
+                    {blog.summaryDescription}
+                  </p>
+                </div>
+              )}
+
+              {/* Blog Content */}
               <div
                 className="text-gray-700 leading-relaxed space-y-6"
                 dangerouslySetInnerHTML={{ __html: blog.content }}
@@ -166,6 +180,7 @@ const BlogPage = async ({ params }) => {
             </div>
           </div>
         </div>
+
         {/* Related Product */}
 
         <div className="container mx-auto px-0">
