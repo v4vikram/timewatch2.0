@@ -7,6 +7,7 @@ const nextConfig = {
       "timewatch2-0-311005204045.europe-west1.run.app",
       "cdn.timewatchindia.com",
       "assets.timewatchindia.com",
+      "72.60.202.56",
     ],
     remotePatterns: [
       {
@@ -14,6 +15,13 @@ const nextConfig = {
         hostname: "cdn.timewatchindia.com",
         pathname: "/uploads/**",
       },
+      {
+        protocol: "http",
+        hostname: "72.60.202.56",
+        port: "3001",
+        pathname: "/**",
+      },
+      // add more
     ],
   },
   // experimental: {
