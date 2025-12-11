@@ -8,6 +8,8 @@ const nextConfig = {
       "cdn.timewatchindia.com",
       "assets.timewatchindia.com",
       "72.60.202.56",
+      "timewatchindia.com",
+      "www.timewatchindia.com",
     ],
     remotePatterns: [
       {
@@ -18,6 +20,12 @@ const nextConfig = {
       {
         protocol: "http",
         hostname: "72.60.202.56",
+        port: "3001",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "timewatchindia.com",
         port: "3001",
         pathname: "/**",
       },
