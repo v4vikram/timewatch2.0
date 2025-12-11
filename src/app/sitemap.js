@@ -5,7 +5,7 @@ export default async function sitemap() {
   const baseUrl = "https://www.timewatchindia.com";
 
   // -------- FETCH PRODUCTS --------
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/product`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/product`, {
     cache: "no-store",
   });
   const data = await res.json();
