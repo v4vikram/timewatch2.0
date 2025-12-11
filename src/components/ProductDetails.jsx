@@ -48,8 +48,6 @@ const ProductDetails = ({ product }) => {
       <div className="lg:flex gap-20">
         {/* Main Product Image */}
         <div className="md:w-[550px]">
-          <img src={productImage} alt="" />
-          {console.log(":image test", productImage)}
           <div className="w-full h-[300px] md:w-[550px] md:h-[500px] relative bg-gray-50 rounded-lg">
             <Image
               src={productImage || "/images/placeholder.jpeg"}
