@@ -7,3 +7,4 @@
 | SSR (`no-store`)          | ✅ Yes      | ❌ Slower | ✅ Real-time               | 🟨 Okay for SEO, but not ideal for performance        |
 # new-timewatch-website
 # new-timewatch-website
+# new-timewatch-website
